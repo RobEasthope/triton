@@ -1,7 +1,7 @@
 {
   "root": true,
   "project": {
-    "name": "Triton"
+    "name": "Triquetra"
   },
   "api": {
     "projectId": "xtxdr2ns",
@@ -16,9 +16,7 @@
   ],
   "env": {
     "development": {
-      "plugins": [
-        "@sanity/vision"
-      ]
+      "plugins": ["@sanity/vision"]
     }
   },
   "parts": [
