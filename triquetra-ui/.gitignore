@@ -12,6 +12,13 @@
 /.next/
 /out/
 
+# next-sitemap
+public/sitemap.xml
+public/robots.txt
+
+# storybook
+/storybook-static
+
 # production
 /build
 
@@ -25,6 +32,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
+.env
 .env.local
 .env.development.local
 .env.test.local
@@ -32,3 +40,12 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# yarn
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
