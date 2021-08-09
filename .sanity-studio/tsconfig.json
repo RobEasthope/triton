@@ -2,6 +2,5 @@
   // Note: This config is only used to help editors like VS Code understand/resolve
   // parts, the actual transpilation is done by babel. Any compiler configuration in
   // here will be ignored.
-  "extends": "eslint-config-wesbos/tsconfig.json",
   "include": ["./node_modules/@sanity/base/types/**/*.ts", "./**/*.ts", "./**/*.tsx"]
 }
