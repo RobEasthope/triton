@@ -1,0 +1,6 @@
+{
+  "extends": ["eslint-config-wesbos/typescript.js"],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  }
+}
