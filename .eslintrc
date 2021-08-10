@@ -19,9 +19,6 @@
       }
     }
   ],
-  "parserOptions": {
-    "project": "./tsconfig.json"
-  },
   "ignorePatterns": [
     "/node_modules",
     "/.vercel",
@@ -31,4 +28,7 @@
     "/.next",
     "/types/sanity-schema.d.ts"
   ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  }
 }
