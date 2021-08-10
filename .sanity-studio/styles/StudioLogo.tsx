@@ -1,8 +1,8 @@
 import React from 'react';
 import { GiTriquetra } from 'react-icons/gi';
 
-const idaLogo = () => (
+export const StudioLogo = () => (
   <GiTriquetra />
 );
 
-export default idaLogo;
+export default StudioLogo;
