@@ -1,7 +1,6 @@
-import { ReactNode } from 'react';
 import { hero } from './PageLayout.styles';
 
-export const PageLayout = (): ReactNode => (
+export const PageLayout = () => (
   <div>
     <h1 className={hero}>Welcome to Triquetra</h1>
   </div>
