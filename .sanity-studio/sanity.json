@@ -23,6 +23,14 @@
     {
       "name": "part:@sanity/base/schema",
       "path": "./schemas/schema"
+    },
+    {
+      "implements": "part:@sanity/base/theme/variables/override-style",
+      "path": "./styles/studio-styles.css"
+    },
+    {
+      "implements": "part:@sanity/base/brand-logo",
+      "path": "./styles/StudioLogo.tsx"
     }
   ]
 }
