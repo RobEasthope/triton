@@ -6,7 +6,6 @@ import {
   globalsQuery,
   pageSlugsQuery,
 } from 'sanity/queries';
-import CookieConsent from 'react-cookie-consent';
 
 import Custom404 from 'pages/404';
 import { PageLayout } from 'components/layouts/PageLayout/PageLayout';
@@ -64,7 +63,7 @@ export default function PageBySlug({
             locale={locale}
             preview={preview}
           />
-        )}
+      )}
 
       {!isFallback && data?.page?._type === 'successStoryPage' && (
         <SuccessStoryLayout
@@ -82,16 +81,6 @@ export default function PageBySlug({
           preview={preview}
         />
       )}
-
-      <CookieConsent
-        buttonText="I agree"
-        buttonClasses="btn-secondary-orange"
-        containerClasses="cookie-consent"
-        disableStyles
-      >
-        We use cookies to give you the best online experience. Please let us
-        know if you agree to all of these cookies.
-      </CookieConsent>
     </>
   );
 }
