@@ -1,4 +1,4 @@
-import { hero } from './PageLayout.styles';
+import { hero } from './PageLayout.css';
 
 export const PageLayout = () => (
   <div>
