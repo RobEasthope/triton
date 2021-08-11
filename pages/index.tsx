@@ -1,9 +1,10 @@
 import { ReactNode } from 'react';
+import { PageLayout } from '../components/layouts/PageLayout';
 
-export default function Home(): ReactNode {
+export default function Home() {
   return (
     <main>
-      <h1 className="">Welcome to Triquetra</h1>
+      <PageLayout />
     </main>
   );
 }
