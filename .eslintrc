@@ -1,5 +1,33 @@
 {
   "extends": ["next", "next/core-web-vitals", "eslint-config-wesbos/typescript.js"],
+  "overrides": [
+    {
+      "files": [
+        "./sanity-studio/**/*.*"
+      ],
+      "rules": {
+        "react/prop-types": "off",
+        "import/no-extraneous-dependencies": "off"
+      }
+    },
+    {
+      "files": [
+        "./sanity-studio/plugins/**/*.*"
+      ],
+      "rules": {
+        "import/no-unresolved": "off"
+      }
+    }
+  ],
+  "ignorePatterns": [
+    "/node_modules",
+    "/.vercel",
+    "/dist",
+    "/static",
+    "/storybook-static",
+    "/.next",
+    "/types/sanity-schema.d.ts"
+  ],
   "parserOptions": {
     "project": "./tsconfig.json"
   }
