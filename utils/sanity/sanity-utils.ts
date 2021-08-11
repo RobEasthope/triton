@@ -1,4 +1,3 @@
-/* eslint-disable unicorn/filename-case */
 import {
   createImageUrlBuilder,
   createPreviewSubscriptionHook,
