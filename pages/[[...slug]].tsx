@@ -54,7 +54,7 @@ export default function PageBySlug({
             globals={data?.globals}
             preview={preview}
           />
-      )}
+        )}
     </>
   );
 }
@@ -63,8 +63,6 @@ export const getStaticProps = async ({ params, preview = false }) => {
   const globals = await getClient(preview).fetch(globalsQuery, { locale });
 
   const { sanityQuery, queryParams } = selectSanityQuery(params.slug, locale);
-
-  // const page = await getClient(preview).fetch(sanityQuery, queryParams);
 
   const page = overlayDrafts(
     await getClient(preview).fetch(sanityQuery, queryParams)
