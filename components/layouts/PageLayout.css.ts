@@ -13,6 +13,5 @@ export const [themeClass, vars] = createTheme({
 
 export const hero = style({
   backgroundColor: vars.color.brand,
-  color: vars.color.white,
-  padding: vars.space.medium,
+  color: 'red',
 });
