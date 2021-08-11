@@ -10,17 +10,14 @@ const getSections = groq`
     "link": rawLink[0]{..., "to": {...internalUID->{...},  }},
     "bkg": rawBkg->,
   },
-  "orgs": rawOrgs[]->,
-  "filters": featureFilter[]->,
-  "stories": *[_type == "successStoryPage" && i18n == $locale] | order(publicationDate desc),
   "muxVideo": rawMuxVideo.asset->,
 }`;
 
 // Global meta data
 export const globalsQuery = groq`
   {
-    "globalMetadata": *[_type == "globalMetadata"  && i18n == $locale][0],
-    "header": *[_type == "header" && i18n == $locale][0]{
+    "globalMetadata": *[_type == "globalMetadata"][0],
+    "header": *[_type == "header"][0]{
   		...,
   		"navLinks": rawNavLinks[]{
         ...,
@@ -28,7 +25,7 @@ export const globalsQuery = groq`
         "navListing": rawNavLinks[]{..., "to": {...internalUID->{...},  }}
       },
   	},
-    "footer": *[_type == "footer" && i18n == $locale][0]{
+    "footer": *[_type == "footer"][0]{
   		...,
   		"navLinks": rawNavLinks[]{
         ...,
@@ -41,27 +38,17 @@ export const globalsQuery = groq`
         "navListing": rawNavLinks[]{..., "to": {...internalUID->{...},  }}
       },
   	},
-    "prefilledSections": *[_type == "prefilledSections" && i18n == $locale][0]{
-      ...,
-      "ctaPrefilledLink": rawCtaPrefilledLink[0]{..., "to": {...internalUID->{...,},  }},
-    },
+
     "settings": *[_type == "generalSettings"][0]{
       ...,
-      "basei18nCode": rawBaseLang->i18nCode.current
     },
     "error404": *[_type == "error404"]{
       ...
     },
-    "features": *[_type == "feature"]{
-      ...
-    }
   }
 `;
-export const ssRoutesQuery = groq`
-  *[_type == "generalSettings"][0].ssRoute
-`;
 
-// Home page
+// 404 page
 export const error404Query = groq`
   *[_type == "error404"]{
     ...
@@ -70,50 +57,25 @@ export const error404Query = groq`
 
 // Home page
 export const homePageQuery = groq`
-  *[_type == "homePage" && fullSlug.current == $slug && i18n == $locale][0]{
+  *[_type == "homePage" && slug.current == $slug][0]{
     ...,
     ${getSections}
   }
 `;
 
-// Page
-export const pageBySlugQuery = groq`
-  *[_type == "page" && fullSlug.current == $slug && i18n == $locale][0]{
-     ...,
-    ${getSections}
-  }
-`;
-
-// Success story pages
-export const successStoryPageBySlugQuery = groq`
-  *[_type == "successStoryPage" && fullSlug.current == $slug && i18n == $locale][0]{
-     ...,
-    ${getSections}
-  }
-`;
-// Success story pages
-export const hubspotFormPageBySlugQuery = groq`
-  *[_type == "hubspotFormPage" && fullSlug.current == $slug && i18n == $locale][0]{
-     ...
-  }
-`;
-
-// Search all doc types by slug and locale
+// Search all page doc types by slug
 export const anyPageBySlugQuery = groq`
-  *[_type in ["page", "successStoryPage", "hubspotFormPage", "homePage"] && fullSlug.current == $slug && i18n == $locale]{
+  *[_type in ["page", "homePage"] && slug.current == $slug]{
      ...,
     ${getSections},
-    "features": rawFeatures[]->
   }
 `;
 
 // All page slugs
 export const pageSlugsQuery = groq`
-  *[_type == "page" || _type == "homePage" || _type == "successStoryPage" || _type == "hubspotFormPage" && defined(slug.current)]{
-    fullSlug {
+  *[_type == "page" || _type == "homePage" && defined(slug.current)]{
+    slug {
       current
     },
-    i18n,
-    _type
   }
 `;
