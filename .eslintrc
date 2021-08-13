@@ -28,6 +28,15 @@
     "/.next",
     "/types/sanity-schema.d.ts"
   ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": [
+          "./"
+        ]
+      }
+    }
+  },
   "parserOptions": {
     "project": "./tsconfig.json"
   }
