@@ -19,6 +19,7 @@
     "@storybook/addon-a11y": "^6.3.7",
     "@whitespace/storybook-addon-html": "^5.0.0",
     "framer-motion": "^4",
+    "lodash": "^4.17.21",
     "next": "11.1.0",
     "path": "^0.12.7",
     "react": "17.0.2",
