@@ -10,8 +10,9 @@ module.exports = {
 
     // Order of the following components determines thier position in the addons bar
     "@storybook/addon-essentials",
-    '@storybook/addon-a11y',
-    'storybook-addon-performance/register',
+    "@storybook/addon-a11y",
+    "storybook-addon-performance/register",
+    "@whitespace/storybook-addon-html",
     "storybook-addon-code-preview"
   ],
   webpackFinal: async (config, { configType }) => {
