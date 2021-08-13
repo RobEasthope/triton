@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const CenterItem = styled.div`
+export const CenterTextComponent = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
