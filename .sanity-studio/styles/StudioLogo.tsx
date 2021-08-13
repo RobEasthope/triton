@@ -1,8 +1,8 @@
 import React from 'react';
-import { GiTriquetra } from 'react-icons/gi';
+import { GiTridentShield } from 'react-icons/gi';
 
 export const StudioLogo = () => (
-  <GiTriquetra />
+  <GiTridentShield />
 );
 
 export default StudioLogo;
