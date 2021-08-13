@@ -6,7 +6,7 @@ import {
   SanityImageHotspot,
 } from 'types/sanity-schema';
 import { getClient } from 'utils/sanity/sanity.server';
-import { useNextSanityImage } from 'utils/next-sanity-image';
+import { useNextSanityImage } from 'next-sanity-image';
 
 export interface ImageAssetProp {
   _type: 'image';
