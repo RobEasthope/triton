@@ -1,5 +1,5 @@
 {
-  "name": "triquetra-sanity-studio",
+  "name": "triton-sanity-studio",
   "private": true,
   "version": "1.0.0",
   "description": "",
@@ -35,6 +35,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/RobEasthope/triquetra.git"
+    "url": "https://github.com/RobEasthope/triton.git"
   }
 }
