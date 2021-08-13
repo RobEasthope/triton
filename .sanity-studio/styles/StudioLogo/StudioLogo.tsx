@@ -1,8 +1,7 @@
 import React from 'react';
-import { GiTridentShield } from 'react-icons/gi';
 
 export const StudioLogo = () => (
-  <GiTridentShield />
+  <img src="/static/triton-trident.svg" />
 );
 
 export default StudioLogo;
