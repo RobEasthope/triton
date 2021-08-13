@@ -7,7 +7,10 @@ module.exports = {
   ],
   "addons": [
     "@storybook/addon-links",
-    "@storybook/addon-essentials"
+
+    // Order of the following components determines thier position in the addons bar
+    "@storybook/addon-essentials",
+    "storybook-addon-code-preview"
   ],
   webpackFinal: async (config, { configType }) => {
     config.resolve.modules = [path.resolve(__dirname, ".."), "node_modules"];
