@@ -1,7 +1,10 @@
 import React from 'react';
 
 export const StudioLogo = () => (
-  <img src="/static/triton-trident.svg" />
+  <div style={{ display: 'flex', alignItems: 'center'}}>
+  <img src="/static/triton-trident-white.svg" style={{height: '28px'}} />
+    <span style={{fontSize: '18px', fontWeight: 'bold', marginLeft: '0.5em'}}>Triton</span>
+  </div>
 );
 
 export default StudioLogo;
