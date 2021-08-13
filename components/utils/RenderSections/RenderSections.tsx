@@ -1,9 +1,5 @@
 import * as SectionComponents from 'components/utils/RenderSections/section-index';
 
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable @typescript-eslint/no-unsafe-return */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { upperFirst } from 'lodash';
 
 function resolveSections(section) {
