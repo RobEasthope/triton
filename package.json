@@ -20,6 +20,7 @@
     "@whitespace/storybook-addon-html": "^5.0.0",
     "framer-motion": "^4",
     "next": "11.1.0",
+    "next-sanity-image": "^3.1.5",
     "path": "^0.12.7",
     "react": "17.0.2",
     "react-dom": "17.0.2",
