@@ -34,7 +34,7 @@
     },
     {
       "implements": "part:@sanity/base/brand-logo",
-      "path": "./styles/StudioLogo.tsx"
+      "path": "./styles/StudioLogo/StudioLogo.tsx"
     }
   ]
 }
