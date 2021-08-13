@@ -1,4 +1,4 @@
-import { Heading } from '../typography/Heading/Heading';
+import { Heading } from 'components/typography/Heading/Heading';
 
 export const PageLayout = () => (
   <div className="">
