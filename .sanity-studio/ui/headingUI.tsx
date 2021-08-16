@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function headingUI(title) {
+export function headingUI(title: string) {
   return {
     inputComponent: (field) => (
       <div
