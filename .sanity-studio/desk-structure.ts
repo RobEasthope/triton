@@ -24,7 +24,7 @@ export default () =>
         .title('Pages')
         .icon(ImNewspaper)
         .schemaType('page')
-        .child(S.documentTypeList('page').title('Pages').showIcons(false)),
+        .child(S.documentTypeList('page').title('Pages')),
       // S.listItem()
       //   .title('Success stories')
       //   .icon(TiStarburstOutline)
