@@ -7,7 +7,7 @@ import {
 } from 'utils/sanity/queries';
 
 import Custom404 from 'pages/404';
-import { PageLayout } from 'components/layouts/PageLayout/PageLayout';
+import { Page } from 'components/layouts/Page/Page';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { Loading } from 'components/utils/Loading/Loading';
@@ -49,12 +49,8 @@ export default function PageBySlug({
 
       {!isFallback &&
         (data?.page?._type === 'page' || data?.page?._type === 'homePage') && (
-          <PageLayout
-            page={data?.page}
-            globals={data?.globals}
-            preview={preview}
-          />
-        )}
+          <Page page={data?.page} globals={data?.globals} preview={preview} />
+      )}
     </>
   );
 }

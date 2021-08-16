@@ -1,9 +1,9 @@
-import { PageLayout } from 'components/layouts/PageLayout';
+import { Page } from 'components/layouts/Page/Page';
 
 export default function Home() {
   return (
     <main>
-      <PageLayout />
+      <Page />
     </main>
   );
 }
