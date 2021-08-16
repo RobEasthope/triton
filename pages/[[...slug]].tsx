@@ -31,7 +31,7 @@ export default function PageBySlug({
   } = usePreviewSubscription(anyPageBySlugQuery, {
     params: { slug: data?.page?.slug },
     initialData: data,
-    enabled: preview && slug,
+    // enabled: preview && slug,
   });
 
   if (data.page === null) {
