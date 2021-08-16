@@ -2,9 +2,9 @@ import { sectionsIndex } from '../../sections/sections-index';
 import { headingUI } from '../../../.sanity-studio/ui/headingUI';
 
 export default {
-  name: 'page',
+  name: 'homePage',
   type: 'document',
-  title: 'Page',
+  title: 'Home page',
   fields: [
     headingUI('Page details'),
     {
