@@ -42,7 +42,7 @@ export default function PageBySlug({
   return (
     <>
       <Head>
-        <title>Triquetra</title>
+        <title>Triton</title>
       </Head>
 
       {isFallback && <Loading />}
