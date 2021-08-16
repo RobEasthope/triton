@@ -18,7 +18,7 @@ import {
   getClient,
   overlayDrafts,
   sanityClient,
-} from '../sanity/sanity.server';
+} from 'utils/sanity/sanity.server';
 
 export default function PageBySlug({
   data,
