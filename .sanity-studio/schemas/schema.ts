@@ -5,11 +5,11 @@ import createSchema from 'part:@sanity/base/schema-creator';
 import schemaTypes from 'all:part:@sanity/base/schema-type';
 
 // Sections
-import textSection from '../../components/sections/TextSection/text-section-schema';
+import textSection from './sections/text-section';
 
 // Pages
-import homePage from '../../components/layouts/HomePage/home-page-schema';
-import page from '../../components/layouts/Page/page-schema';
+import homePage from './pages/home-page';
+import page from './pages/page';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({

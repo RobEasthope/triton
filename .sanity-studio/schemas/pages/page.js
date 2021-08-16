@@ -1,10 +1,10 @@
-import { sectionsIndex } from '../../sections/sections-index';
+import { sectionsIndex } from '../sections-index';
 import { headingUI } from '../../../.sanity-studio/ui/headingUI';
 
 export default {
-  name: 'homePage',
+  name: 'page',
   type: 'document',
-  title: 'Home page',
+  title: 'Page',
   fields: [
     headingUI('Page details'),
     {
@@ -44,7 +44,7 @@ export default {
     },
     prepare({ title }) {
       return {
-        title: title || 'Home page',
+        title,
       };
     },
   },
