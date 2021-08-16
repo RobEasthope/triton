@@ -1,24 +1,38 @@
 {
-  "name": "triquetra",
+  "name": "triton",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "build-storybook": "build-storybook",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "sanity": "cd ./.sanity-studio && sanity start",
+    "start": "next start",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "types": "cd ./.sanity-studio && npx sanity-codegen"
   },
   "dependencies": {
-    "next": "11.0.1",
+    "@chakra-ui/react": "^1.6.6",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "@sanity/block-content-to-react": "^3.0.0",
+    "@sanity/image-url": "^0.140.22",
+    "@storybook/addon-a11y": "^6.3.7",
+    "@whitespace/storybook-addon-html": "^5.0.0",
+    "framer-motion": "^4",
+    "next": "11.1.0",
+    "next-sanity": "^0.4.0",
+    "path": "^0.12.7",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "storybook-addon-code-preview": "^0.0.9",
+    "storybook-addon-performance": "^0.16.1"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
+    "@emotion/babel-plugin": "^11.3.0",
     "@storybook/addon-actions": "^6.3.6",
     "@storybook/addon-essentials": "^6.3.6",
     "@storybook/addon-links": "^6.3.6",
