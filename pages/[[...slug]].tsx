@@ -1,24 +1,23 @@
 import { GetStaticPaths, InferGetStaticPropsType } from 'next';
 
-import {
-  anyPageBySlugQuery,
-  globalsQuery,
-  pageSlugsQuery,
-} from 'utils/sanity/queries';
-
 import Custom404 from 'pages/404';
 import { Page } from 'components/layouts/Page/Page';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { Loading } from 'components/utils/Loading/Loading';
-import { selectSanityQuery } from 'utils/sanity/selectSanityQuery';
 
+import {
+  anyPageBySlugQuery,
+  globalsQuery,
+  pageSlugsQuery,
+} from 'utils/sanity/queries';
 import { usePreviewSubscription } from 'utils/sanity/sanity-utils';
 import {
   getClient,
   overlayDrafts,
   sanityClient,
 } from 'utils/sanity/sanity.server';
+import { selectSanityQuery } from 'utils/sanity/selectSanityQuery';
 
 export default function PageBySlug({
   data,
@@ -50,7 +49,7 @@ export default function PageBySlug({
       {!isFallback &&
         (data?.page?._type === 'page' || data?.page?._type === 'homePage') && (
           <Page page={data?.page} globals={data?.globals} preview={preview} />
-      )}
+        )}
     </>
   );
 }
