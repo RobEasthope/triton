@@ -4,6 +4,7 @@
  * code that is not used on the client side.
  */
 import { createClient } from 'next-sanity';
+import { HomePage, Page } from 'types/sanity-schema';
 
 import { sanityConfig } from './config';
 
@@ -15,9 +16,19 @@ export const previewClient = createClient({
   token: process.env.SANITY_API_TOKEN,
 });
 
-export const getClient = (preview) => (preview ? previewClient : sanityClient);
+export const getClient = (preview: boolean) =>
+  preview ? previewClient : sanityClient;
 
-export function overlayDrafts(docs) {
+interface PageProps extends Page {
+  _id: string;
+}
+interface HomePageProps extends HomePage {
+  _id: string;
+}
+
+export function overlayDrafts(
+  docs: [PageProps | HomePageProps]
+): [PageProps | HomePageProps] {
   const documents = docs || [];
   const overlayed = documents.reduce((map, doc) => {
     if (!doc._id) {
@@ -29,5 +40,5 @@ export function overlayDrafts(docs) {
     return isDraft || !map.has(id) ? map.set(id, doc) : map;
   }, new Map());
 
-  return [...overlayed.values()];
+  return [...overlayed.values()] as [PageProps | HomePageProps];
 }
