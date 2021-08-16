@@ -42,7 +42,7 @@ export default {
     select: {
       title: 'title',
     },
-    prepare({ title }: { title: string }): Record<string, unknown> {
+    prepare({ title }) {
       return {
         title: title || 'Home page',
       };
