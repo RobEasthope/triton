@@ -11,12 +11,9 @@ export default () =>
     .title('Triton')
     .items([
       S.listItem()
-        .title('Home')
-        .icon(RiHome4Line)
-        .schemaType('homePage')
+        .title('Home page')
         .child(
-          S.editor()
-            .id('homePage')
+          S.document()
             .schemaType('homePage')
             .documentId('homePage')
         ),
