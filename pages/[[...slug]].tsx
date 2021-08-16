@@ -53,7 +53,7 @@ export default function PageBySlug({
             // globals={data?.globals}
             preview={preview}
           />
-      )}
+        )}
     </>
   );
 }
