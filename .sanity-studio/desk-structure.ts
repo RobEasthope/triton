@@ -12,6 +12,7 @@ export default () =>
     .items([
       S.listItem()
         .title('Home page')
+        .icon(RiHome4Line)
         .child(
           S.document()
             .schemaType('homePage')
