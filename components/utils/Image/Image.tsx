@@ -1,4 +1,4 @@
-import Img from 'next/image';
+import Image from 'next/image';
 import styled from '@emotion/styled';
 import {
   SanityAsset,
@@ -15,7 +15,7 @@ export interface ImageAssetProp {
   hotspot?: SanityImageHotspot;
 }
 
-type ImageProps = {
+type ImgProps = {
   asset: ImageAssetProp;
   maxWidth: number;
   alt?: string;
@@ -39,7 +39,7 @@ const FillImageWrapper = styled.div<{ maxWidth?: number; className?: string }>`
   height: 100%;
 `;
 
-export const Image = ({
+export const Img = ({
   asset,
   maxWidth,
   alt,
@@ -47,38 +47,45 @@ export const Image = ({
   objectFit = 'cover',
   preview,
   className,
-}: ImageProps) => {
+}: ImgProps) => {
   const configuredSanityClient = getClient(preview);
   const imageProps = useNextSanityImage(configuredSanityClient, asset);
 
   switch (mode) {
     case 'responsive':
-      return (
-        <ResponsiveImageWrapper maxWidth={maxWidth} className={className}>
-          <Img
-            // eslint-disable-next-line react/jsx-props-no-spreading
-            {...imageProps}
-            placeholder="blur"
-            layout="responsive"
-            sizes={`(max-width: ${Math.ceil(maxWidth / 100) * 100}px) 100vw, ${
-              Math.ceil(maxWidth / 100) * 100
-            }px`}
-            alt={alt || ''}
-          />
-        </ResponsiveImageWrapper>
-      );
+      return () => {
+        if (imageProps) {
+          return (
+            <ResponsiveImageWrapper maxWidth={maxWidth} className={className}>
+              <Image
+                {...imageProps}
+                placeholder="blur"
+                layout="responsive"
+                sizes={`(max-width: ${
+                  Math.ceil(maxWidth / 100) * 100
+                }px) 100vw, ${Math.ceil(maxWidth / 100) * 100}px`}
+                alt={alt || ''}
+              />
+            </ResponsiveImageWrapper>
+          );
+        }
+      };
     case 'fill':
-      return (
-        <FillImageWrapper maxWidth={maxWidth} className={className}>
-          <Img
-            src={imageProps.src}
-            loader={imageProps.loader}
-            layout="fill"
-            objectFit={objectFit}
-            alt={alt || ''}
-          />
-        </FillImageWrapper>
-      );
+      return () => {
+        if (imageProps) {
+          return (
+            <FillImageWrapper maxWidth={maxWidth} className={className}>
+              <Image
+                src={imageProps.src}
+                loader={imageProps.loader}
+                layout="fill"
+                objectFit={objectFit}
+                alt={alt || ''}
+              />
+            </FillImageWrapper>
+          );
+        }
+      };
 
     default:
       return null;
