@@ -1,5 +1,5 @@
-import { sectionsIndex } from 'components/sections/sections-index';
-import { headingUI } from '.sanity-studio/ui/headingUI';
+import { sectionsIndex } from '../../sections/sections-index';
+import { headingUI } from '../../../.sanity-studio/ui/headingUI';
 
 export default {
   name: 'page',
