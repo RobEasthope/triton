@@ -5,12 +5,13 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "build-storybook": "build-storybook",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "sanity": "cd ./.sanity-studio && sanity start",
+    "start": "next start",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "types": "cd ./.sanity-studio && npx sanity-codegen"
   },
   "dependencies": {
     "@sanity/block-content-to-react": "^3.0.0",
