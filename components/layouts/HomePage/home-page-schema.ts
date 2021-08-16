@@ -38,9 +38,6 @@ export default {
         Rule.required().min(1).error('At least one page section is required'),
     },
   ],
-  initialValue: {
-    hidePage: false,
-  },
   preview: {
     select: {
       title: 'title',
