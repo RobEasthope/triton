@@ -13,7 +13,7 @@ export default {
     {
       name: 'text',
       title: 'Text',
-      type: 'fullText',
+      type: 'string',
       validation: (Rule) =>
         Rule.required().warning('Text section: Text is missing'),
     },
