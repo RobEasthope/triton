@@ -1,9 +1,9 @@
+import S from '@sanity/desk-tool/structure-builder';
+
 import {
   RiHome4Line,
 } from 'react-icons/ri';
-
 import { ImNewspaper } from 'react-icons/im';
-import S from '@sanity/desk-tool/structure-builder';
 
 export default () =>
   S.list()
