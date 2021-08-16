@@ -1,3 +1,4 @@
+// TODO Improve [[slug]] typings
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { GetStaticPaths, InferGetStaticPropsType } from 'next';

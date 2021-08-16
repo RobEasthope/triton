@@ -13,6 +13,7 @@ export default {
     {
       name: 'text',
       title: 'Text',
+      // TODO Use portable text
       type: 'string',
       validation: (Rule) =>
         Rule.required().warning('Text section: Text is missing'),
