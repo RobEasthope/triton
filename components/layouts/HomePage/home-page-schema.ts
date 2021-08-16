@@ -44,7 +44,7 @@ export default {
     },
     prepare({ title }: { title: string }): Record<string, unknown> {
       return {
-        title,
+        title: title || 'Home page',
       };
     },
   },
