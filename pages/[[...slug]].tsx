@@ -25,8 +25,10 @@ import { selectSanityQuery } from 'utils/sanity/selectSanityQuery';
 export default function PageBySlug({
   data,
   preview,
-}: // eslint-disable-next-line no-use-before-define
-InferGetStaticPropsType<typeof getStaticProps>) {
+}: {
+  data: { page: Record<string, unknown> };
+  preview: boolean;
+}) {
   const router = useRouter();
   const { isFallback } = router;
 
@@ -62,7 +64,13 @@ InferGetStaticPropsType<typeof getStaticProps>) {
   );
 }
 
-export const getStaticProps = async ({ params, preview = false }) => {
+export const getStaticProps = async ({
+  params,
+  preview = false,
+}: {
+  params: { slug: [] };
+  preview: boolean;
+}) => {
   const globals = await getClient(preview).fetch(globalsQuery);
 
   const { sanityQuery, queryParams } = selectSanityQuery(params.slug);
@@ -73,14 +81,14 @@ export const getStaticProps = async ({ params, preview = false }) => {
 
   return {
     props: {
-      data: { page: page?.[0] || null, globals },
+      data: { page: page || null, globals },
       preview,
       revalidate: 60,
     },
   };
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths = async () => {
   const paths = [];
 
   const pages = await sanityClient.fetch(pageSlugsQuery);
