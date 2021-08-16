@@ -48,8 +48,12 @@ export default function PageBySlug({
 
       {!isFallback &&
         (data?.page?._type === 'page' || data?.page?._type === 'homePage') && (
-          <Page page={data?.page} globals={data?.globals} preview={preview} />
-        )}
+          <Page
+            page={data?.page}
+            // globals={data?.globals}
+            preview={preview}
+          />
+      )}
     </>
   );
 }
