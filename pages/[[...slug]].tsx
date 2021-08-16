@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { GetStaticPaths, InferGetStaticPropsType } from 'next';
 
 import Custom404 from 'pages/404';
@@ -22,7 +24,8 @@ import { selectSanityQuery } from 'utils/sanity/selectSanityQuery';
 export default function PageBySlug({
   data,
   preview,
-}: InferGetStaticPropsType<typeof getStaticProps>) {
+}: // eslint-disable-next-line no-use-before-define
+InferGetStaticPropsType<typeof getStaticProps>) {
   const router = useRouter();
   const { isFallback } = router;
 
