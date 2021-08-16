@@ -29,6 +29,10 @@
       "path": "./utils/bundleChecker.ts"
     },
     {
+      "name": "part:@sanity/desk-tool/structure",
+      "path": "./desk-structure.ts"
+    },
+    {
       "implements": "part:@sanity/base/theme/variables/override-style",
       "path": "./styles/studio-styles.css"
     },

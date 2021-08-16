@@ -1,9 +1,7 @@
-/* eslint-disable react/destructuring-assignment */
 import React from 'react';
 
 export function headingUI(title) {
   return {
-    // eslint-disable-next-line react/display-name
     inputComponent: (field) => (
       <div
         style={{
