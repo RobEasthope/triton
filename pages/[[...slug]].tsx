@@ -59,9 +59,9 @@ export default function PageBySlug({
 }
 
 export const getStaticProps = async ({ params, preview = false }) => {
-  const globals = await getClient(preview).fetch(globalsQuery, { locale });
+  const globals = await getClient(preview).fetch(globalsQuery);
 
-  const { sanityQuery, queryParams } = selectSanityQuery(params.slug, locale);
+  const { sanityQuery, queryParams } = selectSanityQuery(params.slug);
 
   const page = overlayDrafts(
     await getClient(preview).fetch(sanityQuery, queryParams)
