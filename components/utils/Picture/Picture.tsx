@@ -15,7 +15,7 @@ export interface ImageAssetProp {
   hotspot?: SanityImageHotspot;
 }
 
-type ImgProps = {
+type PictureProps = {
   asset: ImageAssetProp;
   maxWidth: number;
   alt?: string;
@@ -39,7 +39,7 @@ const FillImageWrapper = styled.div<{ maxWidth?: number; className?: string }>`
   height: 100%;
 `;
 
-export const Img = ({
+export const Picture = ({
   asset,
   maxWidth,
   alt,
@@ -47,7 +47,7 @@ export const Img = ({
   objectFit = 'cover',
   preview,
   className,
-}: ImgProps) => {
+}: PictureProps) => {
   const configuredSanityClient = getClient(preview);
   const imageProps = useNextSanityImage(configuredSanityClient, asset);
 
