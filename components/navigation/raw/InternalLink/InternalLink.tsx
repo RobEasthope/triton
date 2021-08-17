@@ -1,13 +1,26 @@
 import Link from 'next/link';
+import {
+  InternalLinkSansTitleProp,
+  InternalLinkWithTitleProp,
+} from 'types/links';
 
-export const InternalLink = ({ link, onClick, children, className }) => (
+export type InternalLinkProps = {
+  link: InternalLinkWithTitleProp | InternalLinkSansTitleProp;
+  className?: string;
+  children: unknown;
+  onClick?: VoidFunction;
+};
+
+export const InternalLink = ({
+  link,
+  onClick,
+  children,
+  className,
+}: InternalLinkProps) => (
   <Link
     href={
-      link?.to?.fullSlug?.current === 'root'
-        ? '/'
-        : `/${link?.to?.fullSlug?.current}`
+      link?.to?.slug?.current === 'root' ? '/' : `/${link?.to?.slug?.current}`
     }
-    locale={link?.to?.i18n}
   >
     <a
       className={className}
