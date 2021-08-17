@@ -1,5 +1,5 @@
-import { sectionsIndex } from '../sections-index';
-import { headingUI } from '../../ui/headingUI';
+import { sectionsIndex } from '../../../.sanity-studio/schemas/sections-index';
+import { headingUI } from '../../../.sanity-studio/ui/headingUI';
 
 export default {
   name: 'homePage',
