@@ -1,3 +1,3 @@
-import textSection from '../../components/sections/TextSection/text-section-schema';
+import exampleSection from '../../components/sections/ExampleSection/example-section-schema';
 
-export const sectionsIndex = [{ type: textSection.name }];
+export const sectionsIndex = [{ type: exampleSection.name }];

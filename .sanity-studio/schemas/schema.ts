@@ -5,7 +5,7 @@ import createSchema from 'part:@sanity/base/schema-creator';
 import schemaTypes from 'all:part:@sanity/base/schema-type';
 
 // Sections
-import textSection from '../../components/sections/TextSection/text-section-schema';
+import exampleSection from '../../components/sections/ExampleSection/example-section-schema';
 
 // Pages
 import homePage from '../../components/layouts/HomePage/home-page-schema';
@@ -19,7 +19,7 @@ export default createSchema({
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
     // Sections
-    textSection,
+    exampleSection,
 
     // Pages
     homePage,

@@ -125,7 +125,7 @@ export interface Page extends SanityDocument {
 }
 
 export type TextSection = {
-  _type: "textSection";
+  _type: "exampleSection";
   /**
    * Heading — `string`
    *
