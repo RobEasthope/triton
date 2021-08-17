@@ -1,5 +1,6 @@
-import Link from 'next/link';
 import { LinkSansTitleProp, LinkWithTitleProp } from 'types/links';
+import { ExternalLink } from '../ExternalLink/ExternalLink';
+import { InternalLink } from '../InternalLink/InternalLink';
 
 type SuperLinkProp = {
   link: LinkWithTitleProp | LinkSansTitleProp;
@@ -17,37 +18,16 @@ export const SuperLink = ({
   switch (link._type) {
     case 'internalLinkWithTitle':
       return (
-        <Link
-          href={
-            link?.to?.fullSlug?.current === 'root'
-              ? '/'
-              : `/${link?.to?.fullSlug?.current}`
-          }
-          locale={link?.to?.i18n}
-        >
-          <a
-            className={className}
-            onClick={onClick}
-            onKeyDown={onClick}
-            role="link"
-            tabIndex={0}
-          >
-            {children}
-          </a>
-        </Link>
+        <InternalLink link={link} className={className} onClick={onClick}>
+          {children}
+        </InternalLink>
       );
 
     case 'externalLinkWithTitle':
       return (
-        <a
-          href={link.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={className}
-          onClick={onClick}
-        >
+        <ExternalLink link={link} className={className} onClick={onClick}>
           {children}
-        </a>
+        </ExternalLink>
       );
 
     default:
