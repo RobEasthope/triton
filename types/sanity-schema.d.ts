@@ -77,7 +77,7 @@ export interface HomePage extends SanityDocument {
    *
    *
    */
-  sections?: Array<SanityKeyed<TextSection>>;
+  sections?: Array<SanityKeyed<ExampleSection>>;
 }
 
 /**
@@ -121,11 +121,11 @@ export interface Page extends SanityDocument {
    *
    *
    */
-  sections?: Array<SanityKeyed<TextSection>>;
+  sections?: Array<SanityKeyed<ExampleSection>>;
 }
 
-export type TextSection = {
-  _type: "textSection";
+export type ExampleSection = {
+  _type: "exampleSection";
   /**
    * Heading — `string`
    *

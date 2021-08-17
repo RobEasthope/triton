@@ -1,6 +1,6 @@
 export default {
   type: 'object',
-  name: 'textSection',
+  name: 'exampleSection',
   title: 'Text',
   fields: [
     {
@@ -25,7 +25,7 @@ export default {
     },
     prepare({ title }) {
       return {
-        title: title || 'Text section',
+        title: title || 'Example section',
       };
     },
   },
