@@ -16,7 +16,7 @@ function resolveSections(section: PossibleSectionsArrayProp) {
     return Section;
   }
 
-  console.error('Cant find section', section); // eslint-disable-line no-console
+  console.error('Cant find section', section);
   return null;
 }
 
@@ -28,7 +28,6 @@ export function RenderSections({
   preview: boolean;
 }) {
   if (!sections) {
-    console.error('Missing section');
     return <div>Missing sections</div>;
   }
 
