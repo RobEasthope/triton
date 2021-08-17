@@ -21,7 +21,7 @@ export default {
   ],
 } as Meta;
 
-const Template: Story = (args) => <Heading {...args} />;
+const Template: Story = (args) => <Heading as={undefined} {...args} />;
 
 // H1 (Bold)
 export const Heading1 = Template.bind({}) as Record<string, unknown>;
