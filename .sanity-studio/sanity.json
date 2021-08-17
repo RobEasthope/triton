@@ -39,6 +39,10 @@
     {
       "implements": "part:@sanity/base/brand-logo",
       "path": "./styles/StudioLogo/StudioLogo.tsx"
+    },
+    {
+      "implements": "part:@sanity/production-preview/resolve-production-url",
+      "path": "./utils/resolvePreviewUrl.ts"
     }
   ]
 }
