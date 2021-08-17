@@ -30,6 +30,7 @@
     "path": "^0.12.7",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "sanity-codegen": "^0.9.5",
     "storybook-addon-code-preview": "^0.0.9",
     "storybook-addon-performance": "^0.16.1"
   },
@@ -59,7 +60,6 @@
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "prettier": "^2.2.1",
-    "sanity-codegen": "^0.9.5",
     "typescript": "^4.1.3"
   }
 }
