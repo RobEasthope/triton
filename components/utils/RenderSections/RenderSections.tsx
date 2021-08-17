@@ -14,15 +14,7 @@ function resolveSections(section) {
   return null;
 }
 
-export function RenderSections({
-  sections,
-  prefilledSections,
-  features,
-  settings,
-  locale,
-  preview,
-  overlayNav,
-}) {
+export function RenderSections({ sections, preview }) {
   if (!sections) {
     console.error('Missing section');
     return <div>Missing sections</div>;
@@ -44,12 +36,7 @@ export function RenderSections({
             // eslint-disable-next-line react/jsx-props-no-spreading
             {...section}
             key={`render-sections-${section._key as string}`}
-            prefilledSections={prefilledSections}
-            features={features}
-            settings={settings}
-            locale={locale}
             preview={preview}
-            overlayNav={overlayNav}
           />
         );
       })}
