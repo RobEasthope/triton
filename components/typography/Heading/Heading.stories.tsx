@@ -8,9 +8,6 @@ import { Heading } from './Heading';
 export default {
   title: 'Typography/Headings',
   component: Heading,
-  parameters: {
-    badges: ['dev'],
-  },
   decorators: [
     // eslint-disable-next-line @typescript-eslint/no-shadow, no-shadow
     (Story) => (
