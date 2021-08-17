@@ -2,7 +2,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { anyPageBySlugQuery } from 'sanity/queries';
 import { previewClient } from 'sanity/sanity.server';
 
-export default async function (req: NextApiRequest, res: NextApiResponse) {
+export default async function (
+  req: NextApiRequest,
+  res: NextApiResponse
+): Promise<void> {
   // Check the secret and next parameters
   // This secret should only be known to this API route and the CMS
   if (
