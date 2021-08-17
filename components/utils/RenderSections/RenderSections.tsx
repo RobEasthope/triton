@@ -1,16 +1,14 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable react/prop-types */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-return */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+import { upperFirst } from 'lodash';
+
 import * as SectionComponents from 'components/utils/RenderSections/section-index';
 
-import { upperFirst } from 'lodash';
-import {
-  PossibleSectionsArrayProp,
-  PossibleSectionsProp,
-} from 'types/section-types';
-
-function resolveSections(section: PossibleSectionsArrayProp) {
-  // eslint-disable-next-line import/namespace
-  const Section = SectionComponents[
-    upperFirst(section._type)
-  ] as PossibleSectionsProp;
+function resolveSections(section) {
+  const Section = SectionComponents[upperFirst(section._type)];
 
   if (Section) {
     return Section;
@@ -20,13 +18,7 @@ function resolveSections(section: PossibleSectionsArrayProp) {
   return null;
 }
 
-export function RenderSections({
-  sections,
-  preview,
-}: {
-  sections: PossibleSectionsArrayProp;
-  preview: boolean;
-}) {
+export function RenderSections({ sections, preview }) {
   if (!sections) {
     return <div>Missing sections</div>;
   }
@@ -38,6 +30,7 @@ export function RenderSections({
 
         if (!SectionComponent) {
           return (
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
             <div key={section?._key}>Missing section {section?._type}</div>
           );
         }
