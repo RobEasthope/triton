@@ -1,5 +1,9 @@
 const path = require('path');
 
+function getPackageDir(package) {
+  return path.dirname(require.resolve(path.join(package, 'package.json')))
+}
+
 module.exports = {
   "stories": [
     "./Introduction.stories.mdx",
@@ -20,6 +24,9 @@ module.exports = {
     config.resolve.alias = {
       ...config.resolve.alias,
       "@": path.resolve(__dirname, "../"),
+      "@emotion/core": getPackageDir("@emotion/react"),
+      "@emotion/styled": getPackageDir("@emotion/styled"),
+      "emotion-theming": getPackageDir("@emotion/react"),
     };
     return config;
   },
