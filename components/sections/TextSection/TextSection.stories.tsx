@@ -1,7 +1,6 @@
 // eslint-disable-next-line no-use-before-define
 import React from 'react';
 import faker from 'faker';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { Meta, Story } from '@storybook/react';
 import { TextSection as TextSectionProps } from 'types/sanity-schema';
 import { capitalizeFirstLetter } from '.storybook/utils/capitalizeFirstLetter';
