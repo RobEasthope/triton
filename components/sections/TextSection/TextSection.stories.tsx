@@ -4,7 +4,7 @@ import faker from 'faker';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Meta, Story } from '@storybook/react';
 import { TextSection as TextSectionProps } from 'types/sanity-schema';
-import { capitalizeFirstLetter } from 'utils/storybook/capitalizeFirstLetter';
+import { capitalizeFirstLetter } from '.storybook/utils/capitalizeFirstLetter';
 
 import { TextSection } from './TextSection';
 import { CenterComponent } from '.storybook/preview-ui/CenterComponent';
