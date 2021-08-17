@@ -8,7 +8,7 @@ module.exports = {
   "addons": [
     "@storybook/addon-links",
 
-    // Order of the following components determines thier position in the addons bar
+    // Order of the following components determines their position in the addons bar
     "@storybook/addon-essentials",
     "@storybook/addon-a11y",
     "storybook-addon-performance/register",
