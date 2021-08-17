@@ -44,7 +44,6 @@ export function RenderSections({
 
         return (
           <SectionComponent
-            // eslint-disable-next-line react/jsx-props-no-spreading
             {...section}
             key={`render-sections-${section._key as string}`}
             preview={preview}
