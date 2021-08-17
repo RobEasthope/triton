@@ -1,5 +1,15 @@
-export const ExampleSection = () => (
-  <div>
-    <h1>EXAMPLE SECTION</h1>
-  </div>
-);
+import { ExampleSection as ExampleSectionProps } from 'types/sanity-schema';
+
+export const ExampleSection = ({ heading, text }: ExampleSectionProps) => {
+  if (!heading && !text) {
+    return null;
+  }
+
+  return (
+    <section>
+      TEXT SECTION
+      {heading && <h1>{heading}</h1>}
+      {text && <p>{text}</p>}
+    </section>
+  );
+};
