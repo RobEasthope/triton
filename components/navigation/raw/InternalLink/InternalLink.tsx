@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export const InternalLink = ({ link }) => (
+export const InternalLink = ({ link, onClick, children, className }) => (
   <Link
     href={
       link?.to?.fullSlug?.current === 'root'
