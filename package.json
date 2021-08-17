@@ -11,7 +11,7 @@
     "sanity": "cd ./.sanity-studio && sanity start",
     "start": "next start",
     "storybook": "start-storybook -p 6006",
-    "types": "cd ./.sanity-studio && npx sanity-codegen"
+    "types": "npx sanity-codegen"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.6.6",
