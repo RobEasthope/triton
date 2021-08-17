@@ -12,7 +12,6 @@
     "build": "sanity build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "types": "npx sanity-codegen"
   },
   "keywords": [
     "sanity"
