@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-use-before-define
 import React from 'react';
 import faker from 'faker';
 import { Meta, Story } from '@storybook/react';
