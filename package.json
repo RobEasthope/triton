@@ -11,7 +11,7 @@
     "sanity": "cd ./.sanity-studio && sanity start",
     "start": "next start",
     "storybook": "start-storybook -p 6006",
-    "types": "cd ./.sanity-studio && npx sanity-codegen"
+    "types": "npx sanity-codegen"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.6.6",
@@ -25,11 +25,12 @@
     "framer-motion": "^4",
     "lodash": "^4.17.21",
     "next": "11.1.0",
-    "next-sanity-image": "^3.1.5",
     "next-sanity": "^0.4.0",
+    "next-sanity-image": "^3.1.5",
     "path": "^0.12.7",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "sanity-codegen": "^0.9.5",
     "storybook-addon-code-preview": "^0.0.9",
     "storybook-addon-performance": "^0.16.1"
   },

@@ -11,8 +11,7 @@
     "start": "sanity start",
     "build": "sanity build",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "types": "npx sanity-codegen"
+    "lint:fix": "eslint . --fix"
   },
   "keywords": [
     "sanity"
@@ -32,8 +31,7 @@
     "react-icons": "^4.2.0"
   },
   "devDependencies": {
-    "prettier": "^2.3.2",
-    "sanity-codegen": "^0.9.5"
+    "prettier": "^2.3.2"
   },
   "repository": {
     "type": "git",
