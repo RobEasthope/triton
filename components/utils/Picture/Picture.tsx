@@ -15,7 +15,7 @@ export interface ImageAssetProp {
   hotspot?: SanityImageHotspot;
 }
 
-type PictureProps = {
+export type PictureProps = {
   asset: ImageAssetProp;
   maxWidth: number;
   alt?: string;
@@ -70,6 +70,7 @@ export const Picture = ({
           );
         }
       };
+
     case 'fill':
       return () => {
         if (imageProps) {
