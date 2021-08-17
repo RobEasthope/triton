@@ -7,7 +7,6 @@ export const ExampleSection = ({ heading, text }: ExampleSectionProps) => {
 
   return (
     <section>
-      TEXT SECTION
       {heading && <h1>{heading}</h1>}
       {text && <p>{text}</p>}
     </section>
