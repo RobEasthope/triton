@@ -21,10 +21,10 @@ export default {
 
 const Template: Story<PictureProps> = (args) => <Picture {...args} />;
 
-// Primary
-export const Primary = Template.bind({}) as Record<string, unknown>;
+// Responsive
+export const Responsive = Template.bind({}) as Record<string, unknown>;
 
-Primary.args = {
+Responsive.args = {
   heading: capitalizeFirstLetter(faker.lorem.words()),
   text: capitalizeFirstLetter(faker.lorem.words()),
 };
