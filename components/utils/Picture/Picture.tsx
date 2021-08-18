@@ -1,16 +1,17 @@
 import Image from 'next/image';
 import styled from '@emotion/styled';
 import {
-  SanityAsset,
+  SanityImageAsset,
   SanityImageCrop,
   SanityImageHotspot,
+  SanityReference,
 } from 'types/sanity-schema';
 import { getClient } from 'utils/sanity/sanity.server';
 import { useNextSanityImage } from 'next-sanity-image';
 
 export interface ImageAssetProp {
   _type: 'image';
-  asset: SanityAsset;
+  asset: SanityReference<SanityImageAsset>;
   crop?: SanityImageCrop;
   hotspot?: SanityImageHotspot;
 }
