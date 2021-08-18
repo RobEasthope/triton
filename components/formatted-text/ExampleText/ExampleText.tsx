@@ -12,7 +12,7 @@ export interface ExampleTextProps {
   blocks: unknown;
   className?: string;
   as?: string;
-  preview?: boolean;
+  preview: boolean;
 }
 
 const BlockRenderer = (props) => {
