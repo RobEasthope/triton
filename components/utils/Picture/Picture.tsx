@@ -20,7 +20,7 @@ export type PictureProps = {
   asset: ImageAssetProp;
   maxWidth: number;
   alt?: string;
-  mode?: 'responsive' | 'cover' | 'contain';
+  mode: 'responsive' | 'cover' | 'contain';
   preview: boolean;
   className?: string;
 };
