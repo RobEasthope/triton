@@ -131,7 +131,7 @@ export type ExampleSection = {
    *
    *
    */
-  heading?: string;
+  heading: string;
 
   /**
    * Text — `string`
@@ -139,6 +139,32 @@ export type ExampleSection = {
    *
    */
   text?: string;
+
+  /**
+   * Image — `image`
+   *
+   *
+   */
+  image?: {
+    _type: "image";
+    asset: SanityReference<SanityImageAsset>;
+    crop?: SanityImageCrop;
+    hotspot?: SanityImageHotspot;
+
+    /**
+     * Caption — `string`
+     *
+     *
+     */
+    caption?: string;
+
+    /**
+     * Attribution — `string`
+     *
+     *
+     */
+    attribution?: string;
+  };
 };
 
 export type Documents = HomePage | Page;
