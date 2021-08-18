@@ -12,12 +12,7 @@ export default {
       name: 'internalUID',
       title: 'Page',
       type: 'reference',
-      to: [
-        { type: 'page' },
-        { type: 'homePage' },
-        { type: 'successStoryPage' },
-        { type: 'hubspotFormPage' },
-      ],
+      to: [{ type: 'page' }, { type: 'homePage' }],
       codegen: { required: true },
       validation: (Rule) => Rule.required(),
     },
