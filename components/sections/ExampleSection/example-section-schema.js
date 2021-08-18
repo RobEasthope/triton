@@ -7,8 +7,9 @@ export default {
       name: 'heading',
       title: 'Heading',
       type: 'string',
+      codegen: { required: true },
       validation: (Rule) =>
-        Rule.required().warning('Text Section: Heading is missing'),
+        Rule.required().error('Text Section: Heading is missing'),
     },
     {
       name: 'text',
