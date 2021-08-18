@@ -33,7 +33,7 @@ const ResponsiveImageWrapper = styled.div<{
 `;
 
 const FillImageWrapper = styled.div<{ maxWidth?: number; className?: string }>`
-  position: abolsute;
+  position: absolute;
   width: 100%;
   height: 100%;
 `;
