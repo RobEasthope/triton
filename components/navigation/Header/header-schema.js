@@ -13,8 +13,8 @@ export default {
       ],
     },
     {
-      name: 'headerLogo',
-      title: 'Header logo',
+      name: 'logo',
+      title: 'Logo',
       type: 'image',
     },
   ],
