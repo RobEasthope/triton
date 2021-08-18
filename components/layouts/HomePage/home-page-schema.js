@@ -18,11 +18,12 @@ export default {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
+      description: 'Set the page URL',
       options: {
         source: 'title',
         maxLength: 30,
       },
-      description: 'Set the page URL',
+      hidden: true,
       codegen: { required: true },
       validation: (Rule) => Rule.required(),
     },
@@ -38,6 +39,9 @@ export default {
         Rule.required().min(1).error('At least one page section is required'),
     },
   ],
+  initialValue: {
+    slug: { _type: 'slug', current: 'root' },
+  },
   preview: {
     select: {
       title: 'title',
