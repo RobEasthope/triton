@@ -38,6 +38,9 @@ export default {
         Rule.required().min(1).error('At least one page section is required'),
     },
   ],
+  initialValue: {
+    slug: { _type: 'slug', current: 'root' },
+  },
   preview: {
     select: {
       title: 'title',
