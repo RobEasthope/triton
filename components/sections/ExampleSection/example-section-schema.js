@@ -9,7 +9,7 @@ export default {
       type: 'string',
       codegen: { required: true },
       validation: (Rule) =>
-        Rule.required().error('Text Section: Heading is missing'),
+        Rule.required().error('Example Section: Heading is missing'),
     },
     {
       name: 'text',
@@ -17,14 +17,14 @@ export default {
       // TODO Use portable text
       type: 'string',
       validation: (Rule) =>
-        Rule.required().warning('Text section: Text is missing'),
+        Rule.required().warning('Example section: Text is missing'),
     },
     {
       name: 'image',
       title: 'Image',
       type: 'image',
       validation: (Rule) =>
-        Rule.required().warning('Text Section: Heading is missing'),
+        Rule.required().warning('Example Section: Heading is missing'),
     },
   ],
   preview: {
