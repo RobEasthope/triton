@@ -18,9 +18,6 @@ export default {
       </CenterComponent>
     ),
   ],
-  parameters: {
-    badges: ['dev'],
-  },
 } as Meta;
 
 const Template: Story<ExampleSectionProps> = (args) => (
