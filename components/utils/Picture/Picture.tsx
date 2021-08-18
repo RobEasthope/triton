@@ -19,8 +19,7 @@ export type PictureProps = {
   asset: ImageAssetProp;
   maxWidth: number;
   alt?: string;
-  mode?: 'responsive' | 'fill';
-  objectFit?: 'contain' | 'cover';
+  mode?: 'responsive' | 'cover' | 'contain';
   preview: boolean;
   className?: string;
 };
@@ -44,7 +43,6 @@ export const Picture = ({
   maxWidth,
   alt,
   mode = 'responsive',
-  objectFit = 'cover',
   preview,
   className,
 }: PictureProps) => {
@@ -67,14 +65,27 @@ export const Picture = ({
           </ResponsiveImageWrapper>
         );
 
-      case 'fill':
+      case 'cover':
         return (
           <FillImageWrapper maxWidth={maxWidth} className={className}>
             <Image
               src={imageProps.src}
               loader={imageProps.loader}
               layout="fill"
-              objectFit={objectFit}
+              objectFit="cover"
+              alt={alt || ''}
+            />
+          </FillImageWrapper>
+        );
+
+      case 'contain':
+        return (
+          <FillImageWrapper maxWidth={maxWidth} className={className}>
+            <Image
+              src={imageProps.src}
+              loader={imageProps.loader}
+              layout="fill"
+              objectFit="contain"
               alt={alt || ''}
             />
           </FillImageWrapper>
