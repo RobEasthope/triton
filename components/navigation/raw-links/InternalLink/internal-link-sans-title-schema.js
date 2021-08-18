@@ -1,4 +1,5 @@
 import React from 'react';
+import { ALL_PAGES_TYPES } from 'utils/sanity-snippets/ALL_PAGE_TYPES';
 
 const InternalLinkRender = ({ children }) => <span>{children} 🔗</span>;
 
@@ -12,7 +13,7 @@ export default {
       name: 'internalUID',
       title: 'Page',
       type: 'reference',
-      to: [{ type: 'page' }, { type: 'homePage' }],
+      to: ALL_PAGES_TYPES,
       codegen: { required: true },
       validation: (Rule) => Rule.required(),
     },
