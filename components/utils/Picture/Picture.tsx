@@ -50,45 +50,40 @@ export const Picture = ({
 }: PictureProps) => {
   const configuredSanityClient = getClient(preview);
   const imageProps = useNextSanityImage(configuredSanityClient, asset);
+  if (imageProps) {
+    switch (mode) {
+      case 'responsive':
+        return (
+          <ResponsiveImageWrapper maxWidth={maxWidth} className={className}>
+            <Image
+              {...imageProps}
+              placeholder="blur"
+              layout="responsive"
+              sizes={`(max-width: ${
+                Math.ceil(maxWidth / 100) * 100
+              }px) 100vw, ${Math.ceil(maxWidth / 100) * 100}px`}
+              alt={alt || ''}
+            />
+          </ResponsiveImageWrapper>
+        );
 
-  switch (mode) {
-    case 'responsive':
-      return () => {
-        if (imageProps) {
-          return (
-            <ResponsiveImageWrapper maxWidth={maxWidth} className={className}>
-              <Image
-                {...imageProps}
-                placeholder="blur"
-                layout="responsive"
-                sizes={`(max-width: ${
-                  Math.ceil(maxWidth / 100) * 100
-                }px) 100vw, ${Math.ceil(maxWidth / 100) * 100}px`}
-                alt={alt || ''}
-              />
-            </ResponsiveImageWrapper>
-          );
-        }
-      };
+      case 'fill':
+        return (
+          <FillImageWrapper maxWidth={maxWidth} className={className}>
+            <Image
+              src={imageProps.src}
+              loader={imageProps.loader}
+              layout="fill"
+              objectFit={objectFit}
+              alt={alt || ''}
+            />
+          </FillImageWrapper>
+        );
 
-    case 'fill':
-      return () => {
-        if (imageProps) {
-          return (
-            <FillImageWrapper maxWidth={maxWidth} className={className}>
-              <Image
-                src={imageProps.src}
-                loader={imageProps.loader}
-                layout="fill"
-                objectFit={objectFit}
-                alt={alt || ''}
-              />
-            </FillImageWrapper>
-          );
-        }
-      };
-
-    default:
-      return null;
+      default:
+        return null;
+    }
   }
+
+  return null;
 };
