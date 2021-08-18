@@ -25,8 +25,16 @@ const Template: Story<PictureProps> = (args) => <Picture {...args} />;
 export const Responsive = Template.bind({}) as Record<string, unknown>;
 
 Responsive.args = {
-  heading: capitalizeFirstLetter(faker.lorem.words()),
-  text: capitalizeFirstLetter(faker.lorem.words()),
+  asset: {
+    _type: 'image',
+    asset: {
+      _ref: 'image-9e3248f2b358adf609c136e4054e91ba132447e5-4032x3024-jpg',
+      _type: 'reference',
+    },
+    caption: 'Bassenthwaite Lake, Cumbria',
+  },
+  mode: 'responsive',
+  maxWidth: 400,
 };
 
 // No data
