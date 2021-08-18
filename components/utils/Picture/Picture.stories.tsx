@@ -50,7 +50,6 @@ Cover.args = {
     caption: 'Bassenthwaite Lake, Cumbria',
   },
   mode: 'cover',
-  maxWidth: 400,
 };
 
 // Contain
@@ -66,7 +65,6 @@ Contain.args = {
     caption: 'Bassenthwaite Lake, Cumbria',
   },
   mode: 'contain',
-  maxWidth: 400,
 };
 
 // No data
