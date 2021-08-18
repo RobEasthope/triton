@@ -18,6 +18,11 @@ export default {
       validation: (Rule) =>
         Rule.required().warning('Text section: Text is missing'),
     },
+    {
+      name: 'image',
+      title: 'Image',
+      type: 'image',
+    },
   ],
   preview: {
     select: {
