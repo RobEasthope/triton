@@ -1,7 +1,5 @@
 import React from 'react';
-import faker from 'faker';
 import { Meta, Story } from '@storybook/react';
-import { capitalizeFirstLetter } from '.storybook/utils/capitalizeFirstLetter';
 
 import { Picture, PictureProps } from './Picture';
 import { CenterComponent } from '.storybook/preview-ui/CenterComponent';
