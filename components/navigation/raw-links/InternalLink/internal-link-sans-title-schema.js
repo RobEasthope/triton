@@ -6,7 +6,7 @@ export default {
   title: 'Internal link',
   name: 'internalLinkSansTitle',
   type: 'object',
-  description: 'Locate a document you want to link to on ida.io',
+  description: 'Link to a document on the site',
   fields: [
     {
       name: 'internalUID',

@@ -6,7 +6,7 @@ export default {
   title: 'External link',
   name: 'externalLinkSansTitle',
   type: 'object',
-  description: 'Add a link to outside ida.io',
+  description: 'Add a link to outside the site',
   fields: [
     {
       name: 'url',
