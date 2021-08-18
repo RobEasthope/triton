@@ -1,9 +1,12 @@
+import { Picture } from 'components/utils/Picture/Picture';
 import { SuperLink } from '../raw-links/SuperLink/SuperLink';
 
 export const Header = ({ logo, navigation, preview }) => (
   <header>
     <nav>
-      <div>Triton</div>
+      <div>
+        <Picture asset={logo} mode="contain" maxWidth={32} preview={preview} />
+      </div>
       <div>
         <ul>
           {navigation?.length > 0 &&
