@@ -22,6 +22,8 @@ export default {
       name: 'image',
       title: 'Image',
       type: 'image',
+      validation: (Rule) =>
+        Rule.required().warning('Text Section: Heading is missing'),
     },
   ],
   preview: {
