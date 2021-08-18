@@ -19,7 +19,9 @@ export default {
   ],
 } as Meta;
 
-const Template: Story<PictureProps> = (args) => <Picture {...args} />;
+const Template: Story<PictureProps> = (args) => (
+  <Picture preview={false} {...args} />
+);
 
 // Responsive
 export const Responsive = Template.bind({}) as Record<string, unknown>;
