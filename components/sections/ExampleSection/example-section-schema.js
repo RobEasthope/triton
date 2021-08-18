@@ -1,7 +1,7 @@
 export default {
   type: 'object',
   name: 'exampleSection',
-  title: 'Text',
+  title: 'Example',
   fields: [
     {
       name: 'heading',
