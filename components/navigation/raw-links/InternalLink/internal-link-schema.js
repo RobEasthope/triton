@@ -1,13 +1,18 @@
 import React from 'react';
+import { RiLinksLine } from 'react-icons/ri';
 import { ALL_PAGES_TYPES } from '../../../../utils/sanity-snippets/ALL_PAGE_TYPES';
 
-const InternalLinkRender = ({ children }) => <span>{children} 🔗</span>;
+const InternalLinkRender = ({ children }) => (
+  <span>
+    {children} <RiLinksLine />
+  </span>
+);
 
 export default {
   title: 'Internal link',
   name: 'internalLink',
   type: 'object',
-  description: 'Link to a document on the site',
+  description: 'Link to a page on the site',
   fields: [
     {
       name: 'internalUID',
@@ -19,7 +24,7 @@ export default {
     },
   ],
   blockEditor: {
-    icon: () => '🔗',
+    icon: () => <RiLinksLine />,
     render: InternalLinkRender,
   },
   preview: {
@@ -34,4 +39,5 @@ export default {
       };
     },
   },
+  displayName: 'InternalLink',
 };
