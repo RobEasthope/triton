@@ -21,6 +21,7 @@ import {
   sanityClient,
 } from 'utils/sanity/sanity.server';
 import { selectSanityQuery } from 'utils/sanity/selectSanityQuery';
+import { HomePage } from 'components/layouts/HomePage/HomePage';
 
 export default function PageBySlug({
   data,
@@ -49,17 +50,13 @@ export default function PageBySlug({
       <Head>
         <title>Triton</title>
       </Head>
-
       {isFallback && <Loading />}
-
-      {!isFallback &&
-        (data?.page?._type === 'page' || data?.page?._type === 'homePage') && (
-          <Page
-            page={data?.page}
-            // globals={data?.globals}
-            preview={preview}
-          />
-        )}
+      {!isFallback && data?.page?._type === 'page' && (
+        <Page page={data?.page} preview={preview} />
+      )}
+      {!isFallback && data?.page?._type === 'homePage' && (
+        <HomePage page={data?.page} preview={preview} />
+      )}
     </>
   );
 }
@@ -81,7 +78,7 @@ export const getStaticProps = async ({
 
   return {
     props: {
-      data: { page: page || null, globals },
+      data: { page: page[0] || null, globals },
       preview,
       revalidate: 60,
     },

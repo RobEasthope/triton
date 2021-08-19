@@ -1,7 +1,7 @@
-/* eslint-disable no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable react/prop-types */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import { Heading } from 'components/typography/Heading/Heading';
+import { RenderSections } from 'components/utils/RenderSections/RenderSections';
 
 export const Page = ({
   page,
@@ -10,10 +10,11 @@ export const Page = ({
   page: Record<string, unknown>;
   preview: boolean;
 }) => (
-  <div className="">
-    <h1 className="">Welcome to Triton</h1>
-    <Heading as="h1" className="">
-      Heading
-    </Heading>
-  </div>
+  <>
+    <main className="">
+      {page?.sections && (
+        <RenderSections sections={page?.sections} preview={preview} />
+      )}
+    </main>
+  </>
 );

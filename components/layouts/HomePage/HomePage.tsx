@@ -1,10 +1,14 @@
-import { Heading } from 'components/typography/Heading/Heading';
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable react/prop-types */
+import { RenderSections } from 'components/utils/RenderSections/RenderSections';
 
-export const HomePage = () => (
-  <div className="">
-    <h1 className="">Welcome to Triton</h1>
-    <Heading as="h1" className="">
-      Heading
-    </Heading>
-  </div>
+export const HomePage = ({ page, preview }) => (
+  <>
+    <main className="">
+      {page?.sections && (
+        <RenderSections sections={page?.sections} preview={preview} />
+      )}
+    </main>
+  </>
 );
