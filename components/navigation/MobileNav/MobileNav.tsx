@@ -9,7 +9,9 @@ export interface MobileNavProps extends rawHeaderProps {
   navigation?: [ExternalLinkWithTitleProp, InternalLinkWithTitleProp];
 }
 
-export const MobileNav = ({ navigation }: MobileNavProps) => (
+export const MobileNav = ({
+  navigation,
+}: Pick<MobileNavProps, 'navigation'>) => (
   <nav>
     <ul>
       {navigation?.length > 0 &&
