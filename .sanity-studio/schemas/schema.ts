@@ -9,7 +9,7 @@ import internalLinkWithTitle from '../../components/navigation/raw-links/Interna
 import internalLinkSansTitle from '../../components/navigation/raw-links/InternalLink/internal-link-sans-title-schema.js';
 
 import externalLinkWithTitle from '../../components/navigation/raw-links/ExternalLink/external-link-with-title-schema.js';
-import externalLinkSansTitle from '../../components/navigation/raw-links/ExternalLink/external-link-sans-title-schema.js';
+import externalLinkSansTitle from '../../components/navigation/raw-links/ExternalLink/external-link-schema.js';
 
 // Formatted text
 import exampleText from '../../components/utils/formatted-text/ExampleText/example-text-schema';
@@ -33,7 +33,7 @@ export default createSchema({
     internalLinkSansTitle,
     externalLinkWithTitle,
     externalLinkSansTitle,
-    
+
     // Formatted text
     exampleText,
 
