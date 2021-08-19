@@ -35,6 +35,4 @@ export type LinkWithTitleProp =
   | ExternalLinkWithTitleProp
   | InternalLinkWithTitleProp;
 
-export type LinkSansTitleProp =
-  | ExternalLinkSansTitleProp
-  | InternalLinkSansTitleProp;
+export type LinkProp = ExternalLinkProp | InternalLinkProp;
