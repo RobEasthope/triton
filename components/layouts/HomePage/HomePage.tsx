@@ -4,7 +4,8 @@
 import { Footer } from 'components/navigation/Footer/Footer';
 import { FixedFooterLayout } from 'components/structural/FixedFooterLayout';
 import { MainContentLayout } from 'components/structural/MainContentLayout';
-import { RenderSections } from 'components/utils/RenderSections/RenderSections';
+import { RenderSections } from 'components/utils/structural/RenderSections/RenderSections';
+import { Metadata } from 'components/utils/structural/Metadata/Metadata';
 
 export const HomePage = ({ page, preview }) => (
   <>
