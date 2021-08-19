@@ -1,9 +1,18 @@
-import { LinkProp, LinkWithTitleProp } from 'types/links';
+import {
+  ExternalLinkProp,
+  ExternalLinkWithTitleProp,
+  InternalLinkProp,
+  InternalLinkWithTitleProp,
+} from 'types/links';
 import { ExternalLink } from '../ExternalLink/ExternalLink';
 import { InternalLink } from '../InternalLink/InternalLink';
 
 type SuperLinkProp = {
-  link: LinkWithTitleProp | LinkProp;
+  link:
+    | ExternalLinkProp
+    | InternalLinkProp
+    | ExternalLinkWithTitleProp
+    | InternalLinkWithTitleProp;
   className?: string;
   children: unknown;
   onClick?: VoidFunction;
