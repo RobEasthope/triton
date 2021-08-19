@@ -37,6 +37,36 @@ export type {
 };
 
 /**
+ * Header
+ *
+ *
+ */
+export interface Header extends SanityDocument {
+  _type: "header";
+
+  /**
+   * Header navigation — `array`
+   *
+   *
+   */
+  rawNavigation?: Array<
+    SanityKeyed<InternalLinkWithTitle> | SanityKeyed<ExternalLinkWithTitle>
+  >;
+
+  /**
+   * Logo — `image`
+   *
+   *
+   */
+  logo?: {
+    _type: "image";
+    asset: SanityReference<SanityImageAsset>;
+    crop?: SanityImageCrop;
+    hotspot?: SanityImageHotspot;
+  };
+}
+
+/**
  * Home page
  *
  *
@@ -223,4 +253,4 @@ export type ExampleSection = {
   };
 };
 
-export type Documents = HomePage | Page;
+export type Documents = Header | HomePage | Page;
