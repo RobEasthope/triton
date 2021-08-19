@@ -11,8 +11,8 @@ type MetadateType = {
 export const Metadata = ({ page, globalMetadata }: MetadateType) => (
   <Head>
     {/* Standard HTML */}
-    {page?.pageTitle && (
-      <title>{`${page?.pageTitle} ${
+    {page?.title && (
+      <title>{`${page?.title} ${
         globalMetadata?.globalTitleTemplate || ''
       }`}</title>
     )}
@@ -24,7 +24,7 @@ export const Metadata = ({ page, globalMetadata }: MetadateType) => (
     {page?.pageTitle && (
       <meta
         property="og:title"
-        content={`${page?.pageTitle} ${
+        content={`${page?.title} ${
           globalMetadata?.globalTitleTemplate || ''
         }`}
       />
@@ -40,7 +40,7 @@ export const Metadata = ({ page, globalMetadata }: MetadateType) => (
     )}
 
     {/* Twitter */}
-    {page?.pageTitle && <meta name="twitter:title" content={page?.pageTitle} />}
+    {page?.title && <meta name="twitter:title" content={page?.title} />}
     {page?.pageDescription && (
       <meta name="twitter:description" content={page?.pageDescription} />
     )}
