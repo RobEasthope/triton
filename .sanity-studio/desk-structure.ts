@@ -3,9 +3,11 @@ import S from '@sanity/desk-tool/structure-builder';
 import {
   RiHome4Line,
   RiGlobeLine,
-  RiNavigationFill
+  RiNavigationFill,
+  RiListSettingsLine,
 } from 'react-icons/ri';
 import { ImNewspaper } from 'react-icons/im';
+import { FaGlobeEurope } from 'react-icons/fa';
 
 export default () =>
   S.list()
@@ -40,6 +42,24 @@ export default () =>
                   S.document()
                     .schemaType('header')
                     .documentId('header')
+                ),
+            ])
+        ),
+        S.divider(),
+      S.listItem()
+        .title('Settings')
+        .icon(RiListSettingsLine)
+        .child(
+          S.list()
+            .title('Site details')
+            .items([
+              S.listItem()
+                .title('Site details')
+                .icon(FaGlobeEurope)
+                .child(
+                  S.document()
+                    .schemaType('globalMetadata')
+                    .documentId('globalMetadata')
                 ),
             ])
         ),
