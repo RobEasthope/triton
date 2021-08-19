@@ -16,35 +16,16 @@ const getSections = groq`
 // Global meta data
 export const globalsQuery = groq`
   {
-    "globalMetadata": *[_type == "globalMetadata"][0],
-    "header": *[_type == "header"][0]{
-  		...,
-  		"navLinks": rawNavLinks[]{
-        ...,
-        "to": internalUID->,
-        "navListing": rawNavLinks[]{..., "to": {...internalUID->{...},  }}
+    "header": *[_type== 'header'][0]{
+      logo,
+      "navigation": rawNavigation[]{
+        _key,
+        _type,
+        title,
+        url,
+        "to": internalUID->{slug},
       },
-  	},
-    "footer": *[_type == "footer"][0]{
-  		...,
-  		"navLinks": rawNavLinks[]{
-        ...,
-        "to": internalUID->,
-        "navListing": rawNavLinks[]{..., "to": {...internalUID->{...},  }}
-      },
-  		"legalNav": rawLegalLinks[]{
-        ...,
-        "to": internalUID->,
-        "navListing": rawNavLinks[]{..., "to": {...internalUID->{...},  }}
-      },
-  	},
-
-    "settings": *[_type == "generalSettings"][0]{
-      ...,
-    },
-    "error404": *[_type == "error404"]{
-      ...
-    },
+    }
   }
 `;
 
