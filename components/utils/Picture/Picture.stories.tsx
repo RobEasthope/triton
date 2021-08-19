@@ -3,6 +3,7 @@ import { Meta, Story } from '@storybook/react';
 
 import { Picture, PictureProps } from './Picture';
 import { CenterComponent } from '.storybook/preview-ui/CenterComponent';
+import { BASSENTHWAITE_IMAGE } from '.storybook/mock-data/sanity-images';
 
 export default {
   title: 'Utils/Picture',
@@ -56,14 +57,7 @@ Cover.args = {
 export const Contain = Template.bind({}) as Record<string, unknown>;
 
 Contain.args = {
-  asset: {
-    _type: 'image',
-    asset: {
-      _ref: 'image-9e3248f2b358adf609c136e4054e91ba132447e5-4032x3024-jpg',
-      _type: 'reference',
-    },
-    caption: 'Bassenthwaite Lake, Cumbria',
-  },
+  asset: BASSENTHWAITE_IMAGE,
   mode: 'contain',
 };
 
