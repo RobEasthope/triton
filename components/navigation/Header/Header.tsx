@@ -1,4 +1,4 @@
-import { Picture } from 'components/utils/Picture/Picture';
+import { Picture } from 'components/utils/media/Picture/Picture';
 import { SuperLink } from '../raw-links/SuperLink/SuperLink';
 
 export const Header = ({ logo, navigation, preview }) => (
