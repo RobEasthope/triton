@@ -2,6 +2,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Heading } from 'components/typography/Heading/Heading';
+import { RenderSections } from 'components/utils/RenderSections/RenderSections';
 
 export const Page = ({
   page,
@@ -15,5 +16,11 @@ export const Page = ({
     <Heading as="h1" className="">
       Heading
     </Heading>
+
+    <main className="">
+      {page?.sections && (
+        <RenderSections sections={page?.sections} preview={preview} />
+      )}
+    </main>
   </div>
 );
