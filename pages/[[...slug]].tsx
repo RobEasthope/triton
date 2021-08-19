@@ -49,10 +49,10 @@ export default function PageBySlug({ data, preview }) {
       </Head>
       {isFallback && <Loading />}
       {!isFallback && data?.page?._type === 'page' && (
-        <Page page={data?.page} preview={preview} />
+        <Page page={data?.page} globals={data?.globals} preview={preview} />
       )}
       {!isFallback && data?.page?._type === 'homePage' && (
-        <HomePage page={data?.page} preview={preview} />
+        <HomePage page={data?.page} globals={data?.globals} preview={preview} />
       )}
     </>
   );
