@@ -7,9 +7,10 @@ import schemaTypes from 'all:part:@sanity/base/schema-type';
 // Navigation
 import internalLink from '../../components/navigation/raw-links/InternalLink/internal-link-schema.js';
 import internalLinkWithTitle from '../../components/navigation/raw-links/InternalLink/internal-link-with-title-schema.js';
-
 import externalLink from '../../components/navigation/raw-links/ExternalLink/external-link-schema.js';
 import externalLinkWithTitle from '../../components/navigation/raw-links/ExternalLink/external-link-with-title-schema.js';
+
+import header from '../../components/navigation/Header/header-schema.js';
 
 // Formatted text
 import exampleText from '../../components/utils/formatted-text/ExampleText/example-text-schema';
@@ -33,6 +34,8 @@ export default createSchema({
     internalLinkWithTitle,
     externalLink,
     externalLinkWithTitle,
+
+    header,
 
     // Formatted text
     exampleText,
