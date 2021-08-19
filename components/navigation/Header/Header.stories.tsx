@@ -8,7 +8,7 @@ import { Header } from './Header';
 import { CenterComponent } from '.storybook/preview-ui/CenterComponent';
 
 export default {
-  title: 'Sections/Example',
+  title: 'Navigation/Header',
   component: Header,
   decorators: [
     // eslint-disable-next-line @typescript-eslint/no-shadow, no-shadow
