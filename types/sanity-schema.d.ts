@@ -67,6 +67,69 @@ export interface Header extends SanityDocument {
 }
 
 /**
+ * Global SEO metadata
+ *
+ *
+ */
+export interface GlobalMetadata extends SanityDocument {
+  _type: "globalMetadata";
+
+  /**
+   * Sitename — `string`
+   *
+   * Used for SEO & descriptive purposes
+   */
+  globalSitename: string;
+
+  /**
+   * Page title — `string`
+   *
+   * Can be overridden on a page by page basis in the pages "Metadata" tab.
+   */
+  globalTitle: string;
+
+  /**
+   * Page title template — `string`
+   *
+   * Displayed after the page title e.g. PAGE TITLE | Ida
+   */
+  globalTitleTemplate: string;
+
+  /**
+   * Page description — `text`
+   *
+   * Can be overridden on a page by page basis in the pages "Metadata" tab.
+   */
+  globalDescription: string;
+
+  /**
+   * Page thumbnail — `image`
+   *
+   * Can be overridden on a page by page basis in the pages "Metadata" tab.
+   */
+  globalThumbnail: {
+    _type: "image";
+    asset: SanityReference<SanityImageAsset>;
+    crop?: SanityImageCrop;
+    hotspot?: SanityImageHotspot;
+  };
+
+  /**
+   * Canonical URL — `url`
+   *
+   * The main site url. Used to create canonical url
+   */
+  canonicalUrl?: string;
+
+  /**
+   * Twitter site username — `string`
+   *
+   * https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started#attribution
+   */
+  globalTwitterSiteHandle?: string;
+}
+
+/**
  * Home page
  *
  *
@@ -253,4 +316,4 @@ export type ExampleSection = {
   };
 };
 
-export type Documents = Header | HomePage | Page;
+export type Documents = Header | GlobalMetadata | HomePage | Page;
