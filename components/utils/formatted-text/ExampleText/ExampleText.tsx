@@ -52,7 +52,7 @@ export const ExampleText = ({
   className,
   as,
   preview,
-}: PortableTextProps) => (
+}: ExampleTextProps) => (
   <div className={className}>
     <BlockContent
       as={as}
