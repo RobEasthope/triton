@@ -1,12 +1,7 @@
 import React from 'react';
-import { RiLinksLine } from 'react-icons/ri';
 import { ALL_PAGES_TYPES } from '../../../../utils/sanity-snippets/ALL_PAGE_TYPES';
 
-const InternalLinkRender = ({ children }) => (
-  <span>
-    {children} <RiLinksLine />
-  </span>
-);
+const InternalLinkRender = ({ children }) => <span>{children} 🔗</span>;
 
 export default {
   title: 'Internal link',
@@ -24,8 +19,7 @@ export default {
     },
   ],
   blockEditor: {
-    // eslint-disable-next-line react/display-name
-    icon: () => <RiLinksLine />,
+    icon: () => '🔗',
     render: InternalLinkRender,
   },
   preview: {

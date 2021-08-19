@@ -1,11 +1,6 @@
 import React from 'react';
-import { RiExternalLinkLine } from 'react-icons/ri';
 
-const ExternalLinkRender = ({ children }) => (
-  <span>
-    {children} <RiExternalLinkLine />
-  </span>
-);
+const ExternalLinkRender = ({ children }) => <span>{children} 🔗</span>;
 
 export default {
   title: 'External link',
@@ -25,8 +20,7 @@ export default {
     },
   ],
   blockEditor: {
-    // eslint-disable-next-line react/display-name
-    icon: () => <RiExternalLinkLine />,
+    icon: () => '🔗',
     render: ExternalLinkRender,
   },
   preview: {
