@@ -1,7 +1,7 @@
 // TODO Improve [[slug]] typings
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
-import { GetStaticPaths, InferGetStaticPropsType } from 'next';
+// import { GetStaticPaths, InferGetStaticPropsType } from 'next';
 
 import Custom404 from 'pages/404';
 import { Page } from 'components/layouts/Page/Page';
