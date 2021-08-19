@@ -8,7 +8,7 @@ export type ExternalLinkWithTitleProp = {
   url: string;
 };
 
-export type ExternalLinkSansTitleProp = {
+export type ExternalLinkProp = {
   _type: 'externalLinkSansTitle';
   _key: string;
   newTab: boolean;
@@ -24,7 +24,7 @@ export type InternalLinkWithTitleProp = {
   to: Page | HomePage;
 };
 
-export type InternalLinkSansTitleProp = {
+export type InternalLinkProp = {
   _type: 'internalLinkSansTitle';
   _key: string;
   internalUID: SanityReference<Page | HomePage>;
