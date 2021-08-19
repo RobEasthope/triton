@@ -1,11 +1,8 @@
 import Link from 'next/link';
-import {
-  InternalLinkSansTitleProp,
-  InternalLinkWithTitleProp,
-} from 'types/links';
+import { InternalLinkProp, InternalLinkWithTitleProp } from 'types/links';
 
 export type InternalLinkProps = {
-  link: InternalLinkWithTitleProp | InternalLinkSansTitleProp;
+  link: InternalLinkWithTitleProp | InternalLinkProp;
   className?: string;
   children: unknown;
   onClick?: VoidFunction;

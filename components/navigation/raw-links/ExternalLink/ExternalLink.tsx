@@ -1,10 +1,7 @@
-import {
-  ExternalLinkSansTitleProp,
-  ExternalLinkWithTitleProp,
-} from 'types/links';
+import { ExternalLinkProp, ExternalLinkWithTitleProp } from 'types/links';
 
 export type ExternalLinkProps = {
-  link: ExternalLinkWithTitleProp | ExternalLinkSansTitleProp;
+  link: ExternalLinkWithTitleProp | ExternalLinkProp;
   className?: string;
   children: unknown;
   onClick?: VoidFunction;
