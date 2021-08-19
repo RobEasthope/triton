@@ -1,15 +1,14 @@
 import React from 'react';
 import faker from 'faker';
 import { Meta, Story } from '@storybook/react';
-import { ExampleSection as ExampleSectionProps } from 'types/sanity-schema';
 import { capitalizeFirstLetter } from '.storybook/utils/capitalizeFirstLetter';
 
-import { ExampleSection } from './ExampleSection';
+import { ExampleText, ExampleTextProps } from './ExampleText';
 import { CenterComponent } from '.storybook/preview-ui/CenterComponent';
 
 export default {
-  title: 'Sections/Example',
-  component: ExampleSection,
+  title: 'Utils/Formatted text/Example',
+  component: ExampleText,
   decorators: [
     // eslint-disable-next-line @typescript-eslint/no-shadow, no-shadow
     (Story) => (
@@ -20,16 +19,15 @@ export default {
   ],
 } as Meta;
 
-const Template: Story<ExampleSectionProps> = (args) => (
-  <ExampleSection {...args} preview={false} />
+const Template: Story<ExampleTextProps> = (args) => (
+  <ExampleText {...args} preview={false} />
 );
 
 // Primary
 export const Primary = Template.bind({}) as Record<string, unknown>;
 
 Primary.args = {
-  heading: capitalizeFirstLetter(faker.lorem.words()),
-  // text: capitalizeFirstLetter(faker.lorem.words()),
+  blocks: {},
 };
 
 // No data

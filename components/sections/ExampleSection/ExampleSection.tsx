@@ -1,6 +1,15 @@
-import { ExampleSection as ExampleSectionProps } from 'types/sanity-schema';
+import { ExampleText } from 'components/utils/formatted-text/ExampleText/ExampleText';
+import { ExampleSection as rawExampleSectionProps } from 'types/sanity-schema';
 
-export const ExampleSection = ({ heading, text }: ExampleSectionProps) => {
+export interface ExampleSectionProps extends rawExampleSectionProps {
+  preview: boolean;
+}
+
+export const ExampleSection = ({
+  heading,
+  text,
+  preview,
+}: ExampleSectionProps) => {
   if (!heading && !text) {
     return null;
   }
@@ -8,7 +17,7 @@ export const ExampleSection = ({ heading, text }: ExampleSectionProps) => {
   return (
     <section>
       {heading && <h1>{heading}</h1>}
-      {text && <p>{text}</p>}
+      {text && <ExampleText blocks={text} preview={preview} />}
     </section>
   );
 };
