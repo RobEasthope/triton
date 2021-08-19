@@ -2,15 +2,18 @@ import React from 'react';
 import { addDecorator } from '@storybook/react';
 import { withPerformance } from 'storybook-addon-performance';
 import { globalStorybookStyles } from './preview-ui/globalStorybookStyles';
+import { ChakraProvider } from '@chakra-ui/react';
+
+import { theme } from '../theme/theme';
 
 addDecorator(withPerformance);
 
 export const decorators = [
   (Story) => (
-    <>
+    <ChakraProvider theme={theme}>
       {globalStorybookStyles}
       <Story />
-    </>
+    </ChakraProvider>
   ),
 ];
 
