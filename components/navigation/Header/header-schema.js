@@ -18,4 +18,11 @@ export default {
       type: 'image',
     },
   ],
+  preview: {
+    prepare() {
+      return {
+        title: 'Header',
+      };
+    },
+  },
 };
