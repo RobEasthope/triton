@@ -10,11 +10,11 @@ export const Page = ({
   page: Record<string, unknown>;
   preview: boolean;
 }) => (
-  <div className="">
+  <>
     <main className="">
       {page?.sections && (
         <RenderSections sections={page?.sections} preview={preview} />
       )}
     </main>
-  </div>
+  </>
 );
