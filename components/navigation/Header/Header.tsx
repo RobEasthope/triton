@@ -8,6 +8,7 @@ import {
   InternalLinkWithTitleProp,
 } from 'types/links';
 import styled from '@emotion/styled';
+import { Box, Flex, Grid } from '@chakra-ui/react';
 import { SuperLink } from '../raw-links/SuperLink/SuperLink';
 
 export interface HeaderProps extends rawHeaderProps {
@@ -15,8 +16,10 @@ export interface HeaderProps extends rawHeaderProps {
   preview: boolean;
 }
 
-const HeaderLogo = styled(Picture)`
-  max-width: 32px;
+const HeaderLogo = styled.div`
+  position: relative;
+  width: 32px;
+  height: 32px;
 `;
 
 export const Header = ({
@@ -25,15 +28,15 @@ export const Header = ({
   preview,
 }: Pick<HeaderProps, 'logo' | 'navigation' | 'preview'>) => (
   <header>
-    <nav>
-      <div>
-        <HeaderLogo
+    <div>
+      <HeaderLogo>
+        <Picture
           asset={logo as ImageAssetProp}
           mode="contain"
           maxWidth={32}
           preview={preview}
         />
-      </div>
+      </HeaderLogo>
       <div>
         <ul>
           {navigation?.length > 0 &&
@@ -46,6 +49,6 @@ export const Header = ({
             ))}
         </ul>
       </div>
-    </nav>
+    </div>
   </header>
 );
