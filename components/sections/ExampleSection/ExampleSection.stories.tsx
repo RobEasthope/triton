@@ -29,7 +29,7 @@ export const Primary = Template.bind({}) as Record<string, unknown>;
 
 Primary.args = {
   heading: capitalizeFirstLetter(faker.lorem.words()),
-  text: capitalizeFirstLetter(faker.lorem.words()),
+  // text: capitalizeFirstLetter(faker.lorem.words()),
 };
 
 // No data
