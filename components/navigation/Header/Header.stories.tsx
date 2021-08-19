@@ -22,10 +22,10 @@ const Template: Story<HeaderProps> = (args) => (
   <Header {...args} preview={false} />
 );
 
-// Primary
-export const Primary = Template.bind({}) as Record<string, unknown>;
+// Vanilla
+export const Vanilla = Template.bind({}) as Record<string, unknown>;
 
-Primary.args = {
+Vanilla.args = {
   logo: {
     _type: 'image',
     asset: {

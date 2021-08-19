@@ -24,10 +24,10 @@ const Template: Story<ExampleTextProps> = (args) => (
   <ExampleText {...args} preview={false} />
 );
 
-// Primary
-export const Primary = Template.bind({}) as Record<string, unknown>;
+// Vanilla
+export const Vanilla = Template.bind({}) as Record<string, unknown>;
 
-Primary.args = {
+Vanilla.args = {
   blocks: EXAMPLE_TEXT,
 };
 
