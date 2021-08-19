@@ -7,7 +7,7 @@ import Custom404 from 'pages/404';
 import { Page } from 'components/layouts/Page/Page';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
-import { Loading } from 'components/utils/Loading/Loading';
+import { Loading } from 'components/utils/structural/Loading/Loading';
 
 import {
   anyPageBySlugQuery,
