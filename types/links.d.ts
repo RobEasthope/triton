@@ -30,9 +30,3 @@ export type InternalLinkProp = {
   internalUID: SanityReference<Page | HomePage>;
   to: Page | HomePage;
 };
-
-export type LinkWithTitleProp =
-  | ExternalLinkWithTitleProp
-  | InternalLinkWithTitleProp;
-
-export type LinkProp = ExternalLinkProp | InternalLinkProp;
