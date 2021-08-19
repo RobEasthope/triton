@@ -3,6 +3,7 @@ import S from '@sanity/desk-tool/structure-builder';
 import {
   RiHome4Line,
   RiGlobeLine,
+  RiCompasses2Line,
   RiNavigationFill,
   RiListSettingsLine,
 } from 'react-icons/ri';
@@ -30,7 +31,7 @@ export default () =>
       S.divider(),
       S.listItem()
         .title('Navigation')
-        .icon(RiGlobeLine)
+        .icon(RiCompasses2Line)
         .child(
           S.list()
             .title('Navigation')
