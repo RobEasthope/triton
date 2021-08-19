@@ -16,7 +16,6 @@ const getSections = groq`
 // Global meta data
 export const globalsQuery = groq`
   {
-    "globalMetadata": *[_type == "globalMetadata"][0],
     "header": *[_type == "header"][0]{
   		...,
   		"navLinks": rawNavigation[]{
@@ -24,12 +23,6 @@ export const globalsQuery = groq`
         "to": internalUID->,
       },
   	},
-    "settings": *[_type == "generalSettings"][0]{
-      ...,
-    },
-    "error404": *[_type == "error404"]{
-      ...
-    },
   }
 `;
 
