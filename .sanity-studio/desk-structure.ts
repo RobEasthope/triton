@@ -35,10 +35,10 @@ export default () =>
         .child(
           S.list()
             .title('Navigation')
+            .showIcons(false)
             .items([
               S.listItem()
                 .title('Header')
-                .icon(RiNavigationFill)
                 .child(
                   S.document()
                     .schemaType('header')
