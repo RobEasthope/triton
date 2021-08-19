@@ -6,7 +6,7 @@ import { CenterComponent } from '.storybook/preview-ui/CenterComponent';
 import { BASSENTHWAITE_IMAGE } from '.storybook/mock-data/sanity-images';
 
 export default {
-  title: 'Utils/Picture',
+  title: 'Utils/Media/Picture',
   component: Picture,
   decorators: [
     // eslint-disable-next-line @typescript-eslint/no-shadow, no-shadow

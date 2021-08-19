@@ -7,7 +7,7 @@ import { ExampleText, ExampleTextProps } from './ExampleText';
 import { CenterComponent } from '.storybook/preview-ui/CenterComponent';
 
 export default {
-  title: 'Formatted text/Example',
+  title: 'Utils/Formatted text/Example',
   component: ExampleText,
   decorators: [
     // eslint-disable-next-line @typescript-eslint/no-shadow, no-shadow
