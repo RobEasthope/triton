@@ -14,7 +14,11 @@ export interface HeaderProps extends rawHeaderProps {
   preview: boolean;
 }
 
-export const Header = ({ logo, navigation, preview }: HeaderProps) => (
+export const Header = ({
+  logo,
+  navigation,
+  preview,
+}: Pick<HeaderProps, 'logo' | 'navigation' | 'preview'>) => (
   <header>
     <nav>
       <div>
