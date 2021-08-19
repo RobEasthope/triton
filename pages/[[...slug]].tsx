@@ -1,10 +1,14 @@
 // TODO Improve [[slug]] typings
+
+/* eslint-disable react/prop-types */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 // import { GetStaticPaths, InferGetStaticPropsType } from 'next';
 
 import Custom404 from 'pages/404';
 import { Page } from 'components/layouts/Page/Page';
+import { HomePage } from 'components/layouts/HomePage/HomePage';
+
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { Loading } from 'components/utils/structural/Loading/Loading';
@@ -21,15 +25,8 @@ import {
   sanityClient,
 } from 'utils/sanity/sanity.server';
 import { selectSanityQuery } from 'utils/sanity/selectSanityQuery';
-import { HomePage } from 'components/layouts/HomePage/HomePage';
 
-export default function PageBySlug({
-  data,
-  preview,
-}: {
-  data: { page: Record<string, unknown> };
-  preview: boolean;
-}) {
+export default function PageBySlug({ data, preview }) {
   const router = useRouter();
   const { isFallback } = router;
 
