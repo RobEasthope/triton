@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
 import { urlForImage } from 'utils/sanity/sanity-utils';
-import { HomePage, Page } from 'types/sanity-schema';
+import { GlobalMetadata, HomePage, Page } from 'types/sanity-schema';
 
 type MetadateType = {
   page: Page | HomePage;
@@ -24,9 +24,7 @@ export const Metadata = ({ page, globalMetadata }: MetadateType) => (
     {page?.pageTitle && (
       <meta
         property="og:title"
-        content={`${page?.title} ${
-          globalMetadata?.globalTitleTemplate || ''
-        }`}
+        content={`${page?.title} ${globalMetadata?.globalTitleTemplate || ''}`}
       />
     )}
     {page?.pageDescription && (
