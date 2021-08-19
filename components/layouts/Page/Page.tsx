@@ -12,11 +12,6 @@ export const Page = ({
   preview: boolean;
 }) => (
   <div className="">
-    <h1 className="">Welcome to Triton</h1>
-    <Heading as="h1" className="">
-      Heading
-    </Heading>
-
     <main className="">
       {page?.sections && (
         <RenderSections sections={page?.sections} preview={preview} />
