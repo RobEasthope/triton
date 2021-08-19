@@ -1,3 +1,4 @@
+import { ExampleText } from 'components/formatted-text/ExampleText/ExampleText';
 import { ExampleSection as ExampleSectionProps } from 'types/sanity-schema';
 
 export const ExampleSection = ({ heading, text }: ExampleSectionProps) => {
@@ -8,7 +9,7 @@ export const ExampleSection = ({ heading, text }: ExampleSectionProps) => {
   return (
     <section>
       {heading && <h1>{heading}</h1>}
-      {text && <p>{text}</p>}
+      {text && <ExampleText blocks={text} />}
     </section>
   );
 };
