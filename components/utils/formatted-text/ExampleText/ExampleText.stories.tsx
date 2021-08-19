@@ -5,6 +5,7 @@ import { capitalizeFirstLetter } from '.storybook/utils/capitalizeFirstLetter';
 
 import { ExampleText, ExampleTextProps } from './ExampleText';
 import { CenterComponent } from '.storybook/preview-ui/CenterComponent';
+import { EXAMPLE_TEXT } from '.storybook/mock-data/sanity-text';
 
 export default {
   title: 'Utils/Formatted text/Example',
@@ -27,7 +28,7 @@ const Template: Story<ExampleTextProps> = (args) => (
 export const Primary = Template.bind({}) as Record<string, unknown>;
 
 Primary.args = {
-  blocks: {},
+  blocks: EXAMPLE_TEXT,
 };
 
 // No data
