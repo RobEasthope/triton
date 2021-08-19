@@ -25,20 +25,6 @@ export const globalsQuery = groq`
         "navListing": rawNavLinks[]{..., "to": {...internalUID->{...},  }}
       },
   	},
-    "footer": *[_type == "footer"][0]{
-  		...,
-  		"navLinks": rawNavLinks[]{
-        ...,
-        "to": internalUID->,
-        "navListing": rawNavLinks[]{..., "to": {...internalUID->{...},  }}
-      },
-  		"legalNav": rawLegalLinks[]{
-        ...,
-        "to": internalUID->,
-        "navListing": rawNavLinks[]{..., "to": {...internalUID->{...},  }}
-      },
-  	},
-
     "settings": *[_type == "generalSettings"][0]{
       ...,
     },
