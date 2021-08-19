@@ -12,8 +12,8 @@ export const Header = ({ logo, navigation, preview }) => (
           {navigation?.length > 0 &&
             navigation.map((nav) => (
               <li key={nav?._key} className="link">
-                <SuperLink className="" link={nav?.link}>
-                  {link.title}
+                <SuperLink className="" link={nav}>
+                  {nav.title}
                 </SuperLink>
               </li>
             ))}
