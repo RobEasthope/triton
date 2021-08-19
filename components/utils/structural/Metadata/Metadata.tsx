@@ -16,9 +16,9 @@ export const Metadata = ({ page, globalMetadata }: MetadateType) => (
         globalMetadata?.globalTitleTemplate || ''
       }`}</title>
     )}
-    {page?.pageDescription && (
+    {/* {page?.pageDescription && (
       <meta name="description" content={page?.pageDescription} />
-    )}
+    )} */}
 
     {/* Opengraph */}
     {page?.title && (
@@ -27,7 +27,7 @@ export const Metadata = ({ page, globalMetadata }: MetadateType) => (
         content={`${page?.title} ${globalMetadata?.globalTitleTemplate || ''}`}
       />
     )}
-    {page?.pageDescription && (
+    {/* {page?.pageDescription && (
       <meta property="og:description" content={page?.pageDescription} />
     )}
     {page?.pageThumbnail && (
@@ -35,11 +35,11 @@ export const Metadata = ({ page, globalMetadata }: MetadateType) => (
         property="og:image"
         content={urlForImage(page?.pageThumbnail).width(1200).height(630).url()}
       />
-    )}
+    )} */}
 
     {/* Twitter */}
     {page?.title && <meta name="twitter:title" content={page?.title} />}
-    {page?.pageDescription && (
+    {/* {page?.pageDescription && (
       <meta name="twitter:description" content={page?.pageDescription} />
     )}
     {page?.pageThumbnail && (
@@ -47,6 +47,6 @@ export const Metadata = ({ page, globalMetadata }: MetadateType) => (
         name="twitter:image"
         content={urlForImage(page?.pageThumbnail).width(1200).height(630).url()}
       />
-    )}
+    )} */}
   </Head>
 );
