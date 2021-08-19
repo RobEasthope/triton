@@ -22,7 +22,7 @@
   "parts": [
     {
       "name": "part:@sanity/base/schema",
-      "path": "./schemas/schema"
+      "path": "./schemas/schema-index"
     },
     {
       "implements": "part:@sanity/base/absolutes",
