@@ -25,6 +25,9 @@ export const globalsQuery = groq`
         url,
         "to": internalUID->{slug},
       },
+    },
+    "metadata": *[_type== 'globalMetadata'][0]{
+      ...
     }
   }
 `;
