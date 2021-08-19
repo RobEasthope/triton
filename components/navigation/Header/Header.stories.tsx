@@ -20,7 +20,9 @@ export default {
   ],
 } as Meta;
 
-const Template: Story<HeaderProps> = (args) => <Header {...args} />;
+const Template: Story<HeaderProps> = (args) => (
+  <Header {...args} preview={false} />
+);
 
 // Primary
 export const Primary = Template.bind({}) as Record<string, unknown>;
