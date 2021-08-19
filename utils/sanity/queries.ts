@@ -19,10 +19,9 @@ export const globalsQuery = groq`
     "globalMetadata": *[_type == "globalMetadata"][0],
     "header": *[_type == "header"][0]{
   		...,
-  		"navLinks": rawNavLinks[]{
+  		"navLinks": rawNavigation[]{
         ...,
         "to": internalUID->,
-        "navListing": rawNavLinks[]{..., "to": {...internalUID->{...},  }}
       },
   	},
     "settings": *[_type == "generalSettings"][0]{
