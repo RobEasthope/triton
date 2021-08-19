@@ -21,7 +21,7 @@ export const Metadata = ({ page, globalMetadata }: MetadateType) => (
     )}
 
     {/* Opengraph */}
-    {page?.pageTitle && (
+    {page?.title && (
       <meta
         property="og:title"
         content={`${page?.title} ${globalMetadata?.globalTitleTemplate || ''}`}
