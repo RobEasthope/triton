@@ -22,6 +22,7 @@ export const globalsQuery = groq`
         _key,
         _type,
         title,
+        url,
         "to": internalUID->{slug},
       },
     }
