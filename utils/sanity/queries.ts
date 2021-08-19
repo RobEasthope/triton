@@ -16,13 +16,15 @@ const getSections = groq`
 // Global meta data
 export const globalsQuery = groq`
   {
-    "header": *[_type == "header"][0]{
-  		...,
-  		"navLinks": rawNavigation[]{
-        ...,
-        "to": internalUID->,
+    "header": *[_type== 'header'][0]{
+      logo,
+      "navigation": rawNavigation[]{
+        _key,
+        _type,
+        title,
+        "to": internalUID->{slug},
       },
-  	},
+    }
   }
 `;
 
