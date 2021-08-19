@@ -37,6 +37,36 @@ export type {
 };
 
 /**
+ * Header
+ *
+ *
+ */
+export interface Header extends SanityDocument {
+  _type: "header";
+
+  /**
+   * Header navigation — `array`
+   *
+   *
+   */
+  rawNavigation?: Array<
+    SanityKeyed<InternalLinkWithTitle> | SanityKeyed<ExternalLinkWithTitle>
+  >;
+
+  /**
+   * Logo — `image`
+   *
+   *
+   */
+  logo?: {
+    _type: "image";
+    asset: SanityReference<SanityImageAsset>;
+    crop?: SanityImageCrop;
+    hotspot?: SanityImageHotspot;
+  };
+}
+
+/**
  * Home page
  *
  *
@@ -124,6 +154,62 @@ export interface Page extends SanityDocument {
   sections?: Array<SanityKeyed<ExampleSection>>;
 }
 
+export type InternalLink = {
+  _type: "internalLink";
+  /**
+   * Page — `reference`
+   *
+   *
+   */
+  internalUID: SanityReference<Page | HomePage>;
+};
+
+export type InternalLinkWithTitle = {
+  _type: "internalLinkWithTitle";
+  /**
+   * Title — `string`
+   *
+   *
+   */
+  title: string;
+
+  /**
+   * Page — `reference`
+   *
+   *
+   */
+  internalUID: SanityReference<Page | HomePage>;
+};
+
+export type ExternalLink = {
+  _type: "externalLink";
+  /**
+   * URL — `url`
+   *
+   *
+   */
+  url?: string;
+};
+
+export type ExternalLinkWithTitle = {
+  _type: "externalLinkWithTitle";
+  /**
+   * Title — `string`
+   *
+   *
+   */
+  title: string;
+
+  /**
+   * URL — `url`
+   *
+   *
+   */
+  url?: string;
+};
+
+export type ExampleText = Array<SanityKeyed<SanityBlock>>;
+
 export type ExampleSection = {
   _type: "exampleSection";
   /**
@@ -134,11 +220,11 @@ export type ExampleSection = {
   heading: string;
 
   /**
-   * Text — `string`
+   * Text — `exampleText`
    *
    *
    */
-  text?: string;
+  text?: ExampleText;
 
   /**
    * Image — `image`
@@ -167,4 +253,4 @@ export type ExampleSection = {
   };
 };
 
-export type Documents = HomePage | Page;
+export type Documents = Header | HomePage | Page;

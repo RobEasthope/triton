@@ -8,10 +8,6 @@
 # testing
 /coverage
 
-# next.js
-/.next/
-/out/
-
 # next-sitemap
 public/sitemap.xml
 public/robots.txt
@@ -20,7 +16,7 @@ public/robots.txt
 /storybook-static
 
 # production
-/build
+/dist
 
 # misc
 .DS_Store

@@ -24,10 +24,10 @@ const Template: Story<ExampleSectionProps> = (args) => (
   <ExampleSection {...args} preview={false} />
 );
 
-// Primary
-export const Primary = Template.bind({}) as Record<string, unknown>;
+// Vanilla
+export const Vanilla = Template.bind({}) as Record<string, unknown>;
 
-Primary.args = {
+Vanilla.args = {
   heading: capitalizeFirstLetter(faker.lorem.words()),
   // text: capitalizeFirstLetter(faker.lorem.words()),
 };
