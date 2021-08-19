@@ -7,12 +7,17 @@ import {
   ExternalLinkWithTitleProp,
   InternalLinkWithTitleProp,
 } from 'types/links';
+import styled from '@emotion/styled';
 import { SuperLink } from '../raw-links/SuperLink/SuperLink';
 
 export interface HeaderProps extends rawHeaderProps {
   navigation?: [ExternalLinkWithTitleProp, InternalLinkWithTitleProp];
   preview: boolean;
 }
+
+const HeaderLogo = styled(Picture)`
+  max-width: 32px;
+`;
 
 export const Header = ({
   logo,
@@ -22,7 +27,7 @@ export const Header = ({
   <header>
     <nav>
       <div>
-        <Picture
+        <HeaderLogo
           asset={logo as ImageAssetProp}
           mode="contain"
           maxWidth={32}
