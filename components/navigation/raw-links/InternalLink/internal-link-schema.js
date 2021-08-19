@@ -5,7 +5,7 @@ const InternalLinkRender = ({ children }) => <span>{children} 🔗</span>;
 
 export default {
   title: 'Internal link',
-  name: 'internalLinkSansTitle',
+  name: 'internalLink',
   type: 'object',
   description: 'Link to a document on the site',
   fields: [

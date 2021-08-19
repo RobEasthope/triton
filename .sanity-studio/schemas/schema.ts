@@ -5,11 +5,11 @@ import createSchema from 'part:@sanity/base/schema-creator';
 import schemaTypes from 'all:part:@sanity/base/schema-type';
 
 // Navigation
+import internalLink from '../../components/navigation/raw-links/InternalLink/internal-link-schema.js';
 import internalLinkWithTitle from '../../components/navigation/raw-links/InternalLink/internal-link-with-title-schema.js';
-import internalLinkSansTitle from '../../components/navigation/raw-links/InternalLink/internal-link-sans-title-schema.js';
 
+import externalLink from '../../components/navigation/raw-links/ExternalLink/external-link-schema.js';
 import externalLinkWithTitle from '../../components/navigation/raw-links/ExternalLink/external-link-with-title-schema.js';
-import externalLinkSansTitle from '../../components/navigation/raw-links/ExternalLink/external-link-schema.js';
 
 // Formatted text
 import exampleText from '../../components/utils/formatted-text/ExampleText/example-text-schema';
@@ -29,10 +29,10 @@ export default createSchema({
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
     // Navigation
+    internalLink,
     internalLinkWithTitle,
-    internalLinkSansTitle,
+    externalLink,
     externalLinkWithTitle,
-    externalLinkSansTitle,
 
     // Formatted text
     exampleText,
