@@ -25,6 +25,7 @@ export default {
     },
   ],
   blockEditor: {
+    // eslint-disable-next-line react/display-name
     icon: () => <RiExternalLinkLine />,
     render: ExternalLinkRender,
   },
