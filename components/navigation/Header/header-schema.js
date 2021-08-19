@@ -8,8 +8,8 @@ export default {
       title: 'Header navigation',
       type: 'array',
       of: [
-        { type: 'primaryInternalNavLink' },
-        { type: 'primaryExternalNavLink' },
+        { type: 'internalLinkWithTitle' },
+        { type: 'externalLinkWithTitle' },
       ],
     },
     {
