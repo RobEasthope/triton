@@ -124,6 +124,62 @@ export interface Page extends SanityDocument {
   sections?: Array<SanityKeyed<ExampleSection>>;
 }
 
+export type InternalLink = {
+  _type: "internalLink";
+  /**
+   * Page — `reference`
+   *
+   *
+   */
+  internalUID: SanityReference<Page | HomePage>;
+};
+
+export type InternalLinkWithTitle = {
+  _type: "internalLinkWithTitle";
+  /**
+   * Title — `string`
+   *
+   *
+   */
+  title: string;
+
+  /**
+   * Page — `reference`
+   *
+   *
+   */
+  internalUID: SanityReference<Page | HomePage>;
+};
+
+export type ExternalLink = {
+  _type: "externalLink";
+  /**
+   * URL — `url`
+   *
+   *
+   */
+  url?: string;
+};
+
+export type ExternalLinkWithTitle = {
+  _type: "externalLinkWithTitle";
+  /**
+   * Title — `string`
+   *
+   *
+   */
+  title: string;
+
+  /**
+   * URL — `url`
+   *
+   *
+   */
+  url?: string;
+};
+
+export type ExampleText = Array<SanityKeyed<SanityBlock>>;
+
 export type ExampleSection = {
   _type: "exampleSection";
   /**
@@ -134,11 +190,11 @@ export type ExampleSection = {
   heading: string;
 
   /**
-   * Text — `string`
+   * Text — `exampleText`
    *
    *
    */
-  text?: string;
+  text?: ExampleText;
 
   /**
    * Image — `image`
