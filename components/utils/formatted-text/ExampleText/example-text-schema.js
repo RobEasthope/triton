@@ -18,8 +18,8 @@ export default {
           { title: 'Code', value: 'code' },
         ],
         annotations: [
-          { type: 'externalLinkBlock' },
-          { type: 'internalLinkBlock' },
+          // { type: 'externalLinkBlock' },
+          // { type: 'internalLinkBlock' },
         ],
       },
     },
