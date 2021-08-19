@@ -1,8 +1,6 @@
 import React from 'react';
-import faker from 'faker';
 import { Meta, Story } from '@storybook/react';
 import { Header as HeaderProps } from 'types/sanity-schema';
-import { capitalizeFirstLetter } from '.storybook/utils/capitalizeFirstLetter';
 
 import { Header } from './Header';
 import { CenterComponent } from '.storybook/preview-ui/CenterComponent';
