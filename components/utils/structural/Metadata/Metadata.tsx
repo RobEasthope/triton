@@ -1,16 +1,10 @@
 import Head from 'next/head';
 
-import { urlForImage } from 'sanity/sanity-utils';
-import {
-  GlobalMetadata,
-  HomePage,
-  HubspotFormPage,
-  Page,
-  SuccessStoryPage,
-} from 'types/sanity-schema';
+import { urlForImage } from 'utils/sanity/sanity-utils';
+import { HomePage, Page } from 'types/sanity-schema';
 
 type MetadateType = {
-  page: Page | HomePage | SuccessStoryPage | HubspotFormPage;
+  page: Page | HomePage;
   globalMetadata: GlobalMetadata;
 };
 
