@@ -1,7 +1,6 @@
-/* eslint-disable no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable react/prop-types */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import { Heading } from 'components/typography/Heading/Heading';
 import { RenderSections } from 'components/utils/RenderSections/RenderSections';
 
 export const Page = ({
