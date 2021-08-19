@@ -8,8 +8,8 @@ import schemaTypes from 'all:part:@sanity/base/schema-type';
 import exampleSection from '../../components/sections/ExampleSection/example-section-schema';
 
 // Pages
-import homePage from '../../components/pages/HomePage/home-page-schema';
-import page from '../../components/pages/Page/page-schema';
+import homePage from '../../components/layouts/HomePage/home-page-schema';
+import page from '../../components/layouts/Page/page-schema';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({

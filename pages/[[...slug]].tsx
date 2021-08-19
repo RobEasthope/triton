@@ -4,7 +4,7 @@
 import { GetStaticPaths, InferGetStaticPropsType } from 'next';
 
 import Custom404 from 'pages/404';
-import { Page } from 'components/pages/Page/Page';
+import { Page } from 'components/layouts/Page/Page';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { Loading } from 'components/utils/Loading/Loading';
