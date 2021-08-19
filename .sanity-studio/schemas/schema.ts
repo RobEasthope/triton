@@ -11,6 +11,9 @@ import internalLinkSansTitle from '../../components/navigation/raw-links/Interna
 import externalLinkWithTitle from '../../components/navigation/raw-links/ExternalLink/external-link-with-title-schema.js';
 import externalLinkSansTitle from '../../components/navigation/raw-links/ExternalLink/external-link-sans-title-schema.js';
 
+// Formatted text
+import exampleText from '../../components/utils/formatted-text/ExampleText/example-text-schema';
+
 // Sections
 import exampleSection from '../../components/sections/ExampleSection/example-section-schema';
 
@@ -30,6 +33,9 @@ export default createSchema({
     internalLinkSansTitle,
     externalLinkWithTitle,
     externalLinkSansTitle,
+    
+    // Formatted text
+    exampleText,
 
     // Sections
     exampleSection,
