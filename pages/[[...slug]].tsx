@@ -49,9 +49,7 @@ export default function PageBySlug({
       <Head>
         <title>Triton</title>
       </Head>
-
       {isFallback && <Loading />}
-
       {!isFallback &&
         (data?.page?._type === 'page' || data?.page?._type === 'homePage') && (
           <Page
@@ -81,7 +79,7 @@ export const getStaticProps = async ({
 
   return {
     props: {
-      data: { page: page || null, globals },
+      data: { page: page[0] || null, globals },
       preview,
       revalidate: 60,
     },
