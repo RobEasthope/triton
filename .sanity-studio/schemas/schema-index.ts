@@ -12,6 +12,9 @@ import externalLinkWithTitle from '../../components/navigation/raw-links/Externa
 
 import header from '../../components/navigation/Header/header-schema.js';
 
+// Settings
+import globalMetadata from '../../components/utils/structural/Metadata/global-metadata-schema';
+
 // Formatted text
 import exampleText from '../../components/utils/formatted-text/ExampleText/example-text-schema';
 
@@ -36,6 +39,9 @@ export default createSchema({
     externalLinkWithTitle,
 
     header,
+
+    // Settings
+    globalMetadata,
 
     // Formatted text
     exampleText,
