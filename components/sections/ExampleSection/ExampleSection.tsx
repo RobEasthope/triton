@@ -1,4 +1,4 @@
-import { ExampleText } from 'components/formatted-text/ExampleText/ExampleText';
+import { ExampleText } from 'components/utils/formatted-text/ExampleText/ExampleText';
 import { ExampleSection as ExampleSectionProps } from 'types/sanity-schema';
 
 export const ExampleSection = ({ heading, text }: ExampleSectionProps) => {
