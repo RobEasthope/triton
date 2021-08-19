@@ -9,7 +9,7 @@ const ExternalLinkRender = ({ children }) => (
 
 export default {
   title: 'External link',
-  name: 'externalLinkSansTitle',
+  name: 'externalLink',
   type: 'object',
   description: 'Add a link to outside the site',
   fields: [
@@ -40,5 +40,5 @@ export default {
       };
     },
   },
-  displayName: 'ExternalLinkBlock',
+  displayName: 'ExternalLink',
 };
