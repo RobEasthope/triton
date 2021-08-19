@@ -17,10 +17,7 @@ export default {
           { title: 'Emphasis', value: 'em' },
           { title: 'Code', value: 'code' },
         ],
-        annotations: [
-          // { type: 'externalLinkBlock' },
-          // { type: 'internalLinkBlock' },
-        ],
+        annotations: [{ type: 'externalLink' }, { type: 'internalLink' }],
       },
     },
     // { type: 'youtubeBlock' },
