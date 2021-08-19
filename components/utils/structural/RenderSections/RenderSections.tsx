@@ -5,7 +5,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { upperFirst } from 'lodash';
 
-import * as SectionComponents from 'components/utils/RenderSections/section-index';
+import * as SectionComponents from 'components/utils/structural/RenderSections/section-index';
 
 function resolveSections(section) {
   const Section = SectionComponents[upperFirst(section._type)];
