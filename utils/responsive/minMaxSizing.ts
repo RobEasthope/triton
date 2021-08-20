@@ -1,5 +1,3 @@
-import { RESPONSIVE } from '../../constants/responsive';
-
 type PropTypes = {
   css: string;
   min: number;
@@ -10,14 +8,7 @@ type PropTypes = {
 };
 
 export function minMaxSizing(props: PropTypes) {
-  const {
-    css,
-    min,
-    max,
-    unit = 'px',
-    minWidth = RESPONSIVE.MIN_DEFAULT_SIZE,
-    maxWidth = RESPONSIVE.MAX_DEFAULT_SIZE,
-  } = props;
+  const { css, min, max, unit = 'px', minWidth = 320, maxWidth = 1600 } = props;
 
   return `
     ${css}: ${min}${unit};
