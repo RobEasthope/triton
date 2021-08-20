@@ -6,6 +6,7 @@ import { capitalizeFirstLetter } from '.storybook/utils/capitalizeFirstLetter';
 
 import { ExampleSection } from './ExampleSection';
 import { CenterComponent } from '.storybook/preview-ui/CenterComponent';
+import { EXAMPLE_TEXT } from '.storybook/mock-data/sanity-text';
 
 export default {
   title: 'Sections/ExampleSections',
@@ -29,7 +30,7 @@ export const Vanilla = Template.bind({}) as Record<string, unknown>;
 
 Vanilla.args = {
   heading: capitalizeFirstLetter(faker.lorem.words()),
-  // text: capitalizeFirstLetter(faker.lorem.words()),
+  text: EXAMPLE_TEXT,
 };
 
 // No data
