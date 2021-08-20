@@ -57,7 +57,7 @@ export const RawHeading = styled.div<RawHeadingProps>`
   ${(props) =>
     props.my &&
     `margin-top: ${props.my && props.my / props.max}em;
-    margin-padding: ${props.my && props.my / props.max}em;`}
+    margin-bottom: ${props.my && props.my / props.max}em;`}
   ${(props) =>
     props.mx &&
     `margin-left: ${props.mx && props.mx / props.max}em;
