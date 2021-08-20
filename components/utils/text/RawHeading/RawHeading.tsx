@@ -17,12 +17,16 @@ export type RawHeadingProps = {
   mr?: number;
   mb?: number;
   ml?: number;
+  mx?: number;
+  my?: number;
 
   // Padding
   pt?: number;
   pr?: number;
   pb?: number;
   pl?: number;
+  px?: number;
+  py?: number;
 };
 
 export const RawHeading = styled.div<RawHeadingProps>`
@@ -40,7 +44,7 @@ export const RawHeading = styled.div<RawHeadingProps>`
     font-size: ${(props) => (props.max ? `${props.max}${unit}` : '1em')};
   }
 
-  /* Margin */
+  /* Single margin */
   ${(props) => props.mt && `margin-top: ${props.mt && props.mt / props.max}em;`}
   ${(props) =>
     props.mr && `margin-right: ${props.mr && props.mr / props.max}em;`}
@@ -49,7 +53,17 @@ export const RawHeading = styled.div<RawHeadingProps>`
   ${(props) =>
     props.ml && `margin-left: ${props.ml && props.ml / props.max}em;`}
 
-  /* Padding */
+  /* Combo margins */
+  ${(props) =>
+    props.mx &&
+    `margin-top: ${props.mx && props.mx / props.max}em;
+    margin-bottom: ${props.mx && props.mx / props.max}em;`}
+  ${(props) =>
+    props.my &&
+    `margin-left: ${props.my && props.my / props.max}em;
+    margin-right: ${props.my && props.my / props.max}em;`}
+
+  /* Single padding */
   ${(props) =>
     props.pt && `padding-top: ${props.pt && props.pt / props.max}em;`}
   ${(props) =>
@@ -58,4 +72,14 @@ export const RawHeading = styled.div<RawHeadingProps>`
     props.pb && `padding-bottom: ${props.pb && props.pb / props.max}em;`}
   ${(props) =>
     props.pl && `padding-left: ${props.pl && props.pl / props.max}em;`}
+
+  /* Combo padding */
+  ${(props) =>
+    props.px &&
+    `padding-top: ${props.px && props.px / props.max}em;
+  padding-bottom: ${props.px && props.px / props.max}em;`}
+  ${(props) =>
+    props.py &&
+    `padding-left: ${props.py && props.py / props.max}em;
+    padding-right: ${props.py && props.py / props.max}em;`}
 `;
