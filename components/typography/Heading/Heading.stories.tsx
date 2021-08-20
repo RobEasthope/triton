@@ -18,13 +18,16 @@ export default {
   ],
 } as Meta;
 
-const Template: Story = (args) => <Heading as={undefined} {...args} />;
+const Template: Story = (args) => (
+  <Heading as={undefined} min={undefined} max={undefined} {...args} />
+);
 
 // H1 (Bold)
 export const Heading1 = Template.bind({}) as Record<string, unknown>;
 Heading1.args = {
   as: 'h1',
-  className: 'h1',
+  min: 32,
+  max: 64,
   children: faker.lorem.words(),
 };
 
@@ -32,6 +35,7 @@ Heading1.args = {
 export const Heading2 = Template.bind({}) as Record<string, unknown>;
 Heading2.args = {
   as: 'h2',
-  className: 'h2',
+  min: 18,
+  max: 24,
   children: faker.lorem.words(),
 };
