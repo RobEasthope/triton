@@ -26,10 +26,21 @@ export type HeadingProps = {
 };
 
 export const Heading = styled.div<HeadingProps>`
-  font-size: ${(props) =>
-    props.min &&
-    `${`calc(${props.min}${unit} + (${props.max} - ${props.min}) * ((100vw - ${minWidth}${unit}) / (${maxWidth} - ${minWidth})))`}`};
+  /* Font sizing */
+  font-size: ${(props) => (props.min ? `${props.min}${unit}` : '1em')};
 
+  @media (min-width: ${minWidth}px) {
+    font-size: ${(props) =>
+      props.min && props.max
+        ? `${`calc(${props.min}${unit} + (${props.max} - ${props.min}) * ((100vw - ${minWidth}${unit}) / (${maxWidth} - ${minWidth})))`}`
+        : 'font-size: 1em'};
+  }
+
+  @media (min-width: ${maxWidth}px) {
+    font-size: ${(props) => (props.max ? `${props.max}${unit}` : '1em')};
+  }
+
+  /* Margin */
   ${(props) => props.mt && `margin-top: ${props.mt && props.mt / props.max}em;`}
   ${(props) =>
     props.mr && `margin-right: ${props.mr && props.mr / props.max}em;`}
@@ -38,6 +49,7 @@ export const Heading = styled.div<HeadingProps>`
   ${(props) =>
     props.ml && `margin-left: ${props.ml && props.ml / props.max}em;`}
 
+  /* Padding */
   ${(props) =>
     props.pt && `padding-top: ${props.pt && props.pt / props.max}em;`}
   ${(props) =>
