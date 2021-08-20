@@ -45,7 +45,7 @@ export default function PageBySlug({ data, preview }) {
   return (
     <>
       <Head>
-        <title>Triton</title>
+        <title>Triquetra</title>
       </Head>
       {isFallback && <Loading />}
       {!isFallback && data?.page?._type === 'page' && (

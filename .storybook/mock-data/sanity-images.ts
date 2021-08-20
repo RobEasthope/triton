@@ -6,3 +6,11 @@ export const BASSENTHWAITE_IMAGE = {
     },
     caption: 'Bassenthwaite Lake, Cumbria',
   }
+
+export const TRIQUETRA_LOGO = {
+    _type: 'image',
+    asset: {
+      _ref: 'image-4954fadfe0d52dac93b575b16c3f6892f54add7e-512x480-svg',
+      _type: 'reference',
+    },
+  } 

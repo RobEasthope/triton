@@ -1,5 +1,5 @@
 {
-  "name": "triton",
+  "name": "triquetra",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,7 @@
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "sanity": "cd ./.sanity-studio && sanity start",
+    "sanity-build": "cd ./.sanity-studio && sanity build",
     "start": "next start",
     "storybook": "start-storybook -p 6006",
     "types": "npx sanity-codegen"

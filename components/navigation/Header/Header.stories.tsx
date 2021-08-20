@@ -4,6 +4,7 @@ import { Header as HeaderProps } from 'types/sanity-schema';
 
 import { Header } from './Header';
 import { CenterComponent } from '.storybook/preview-ui/CenterComponent';
+import { TRIQUETRA_LOGO } from '.storybook/mock-data/sanity-images';
 
 export default {
   title: 'Navigation/Header',
@@ -26,13 +27,7 @@ const Template: Story<HeaderProps> = (args) => (
 export const Vanilla = Template.bind({}) as Record<string, unknown>;
 
 Vanilla.args = {
-  logo: {
-    _type: 'image',
-    asset: {
-      _ref: 'image-b89231c30f9483550700246b4153e268b9235997-352x664-svg',
-      _type: 'reference',
-    },
-  },
+  logo: TRIQUETRA_LOGO,
   navigation: [
     {
       _key: '7c4bc9de2735',
