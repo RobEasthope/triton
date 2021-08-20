@@ -4,6 +4,7 @@ import { Meta, Story } from '@storybook/react';
 
 import { CenterTextComponent } from '.storybook/preview-ui/CenterTextComponent';
 import { RawHeading } from './RawHeading';
+import { capitalizeFirstLetter } from '.storybook/utils/capitalizeFirstLetter';
 
 export default {
   title: 'Utils/Text/RawHeading',
@@ -28,5 +29,5 @@ Prototype.args = {
   min: 32,
   max: 64,
   mb: 64,
-  children: faker.lorem.words(),
+  children: capitalizeFirstLetter(faker.lorem.words()),
 };
