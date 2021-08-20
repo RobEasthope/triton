@@ -4,7 +4,7 @@ import { MobileNav, MobileNavProps } from './MobileNav';
 import { CenterComponent } from '.storybook/preview-ui/CenterComponent';
 
 export default {
-  title: 'Navigation/Mobile Nav',
+  title: 'Navigation/MobileNav',
   component: MobileNav,
   decorators: [
     // eslint-disable-next-line @typescript-eslint/no-shadow, no-shadow

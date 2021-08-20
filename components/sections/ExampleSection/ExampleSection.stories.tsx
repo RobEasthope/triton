@@ -8,7 +8,7 @@ import { ExampleSection } from './ExampleSection';
 import { CenterComponent } from '.storybook/preview-ui/CenterComponent';
 
 export default {
-  title: 'Sections/Example',
+  title: 'Sections/ExampleSections',
   component: ExampleSection,
   decorators: [
     // eslint-disable-next-line @typescript-eslint/no-shadow, no-shadow

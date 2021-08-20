@@ -6,7 +6,7 @@ import { CenterTextComponent } from '.storybook/preview-ui/CenterTextComponent';
 import { RawHeading } from './RawHeading';
 
 export default {
-  title: 'Utils/Text/Raw heading',
+  title: 'Utils/Text/RawHeading',
   component: RawHeading,
   decorators: [
     // eslint-disable-next-line @typescript-eslint/no-shadow, no-shadow

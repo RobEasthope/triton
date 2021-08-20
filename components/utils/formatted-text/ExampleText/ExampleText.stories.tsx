@@ -6,7 +6,7 @@ import { CenterComponent } from '.storybook/preview-ui/CenterComponent';
 import { EXAMPLE_TEXT } from '.storybook/mock-data/sanity-text';
 
 export default {
-  title: 'Utils/Formatted text/Example text',
+  title: 'Utils/Formatted text/ExampleText',
   component: ExampleText,
   decorators: [
     // eslint-disable-next-line @typescript-eslint/no-shadow, no-shadow
