@@ -1,7 +1,7 @@
 type PropTypes = {
   css: string;
-  min: number;
-  max: number;
+  min: number | string;
+  max: number | string;
   unit?: string;
   minWidth?: number;
   maxWidth?: number;
