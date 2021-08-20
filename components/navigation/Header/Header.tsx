@@ -8,7 +8,6 @@ import {
   InternalLinkWithTitleProp,
 } from 'types/links';
 import styled from '@emotion/styled';
-import { Box, Flex, Grid } from '@chakra-ui/react';
 import { SuperLink } from '../raw-links/SuperLink/SuperLink';
 
 export interface HeaderProps extends rawHeaderProps {
