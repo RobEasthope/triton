@@ -9,6 +9,7 @@ import { RenderSections } from 'components/utils/structural/RenderSections/Rende
 import { Metadata } from 'components/utils/structural/Metadata/Metadata';
 import { HomePage as HomePageProps, GlobalMetadata } from 'types/sanity-schema';
 import { MobileNav } from 'components/navigation/MobileNav/MobileNav';
+import { Sandbox } from 'components/utils/Sandbox/Sandbox';
 
 export const HomePage = ({
   page,
@@ -35,6 +36,7 @@ export const HomePage = ({
       )}
 
       <MainContentLayout as="main">
+        <Sandbox />
         {page?.sections && (
           <RenderSections sections={page?.sections} preview={preview} />
         )}
