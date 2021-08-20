@@ -5,7 +5,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import BlockContent from '@sanity/block-content-to-react';
 
-import { Heading } from 'components/typography/Heading/Heading';
+import { RawHeading } from 'components/utils/text/RawHeading/RawHeading';
 // import { YoutubeBlock } from 'components/blocks/YoutubeBlock/YoutubeBlock';
 
 export interface ExampleTextProps {
@@ -19,14 +19,26 @@ const BlockRenderer = (props) => {
   const { style = 'normal' } = props?.node as Record<string, unknown>;
 
   if (style === 'h2') {
-    return <Heading as="h2">{props.children}</Heading>;
+    return (
+      <RawHeading as="h2" min={28} max={72}>
+        {props.children}
+      </RawHeading>
+    );
   }
   if (style === 'h3') {
-    return <Heading as="h3">{props.children}</Heading>;
+    return (
+      <RawHeading as="h3" min={21} max={32}>
+        {props.children}
+      </RawHeading>
+    );
   }
 
   if (style === 'h4') {
-    return <Heading as="h4">{props.children}</Heading>;
+    return (
+      <RawHeading as="h4" min={18} max={24}>
+        {props.children}
+      </RawHeading>
+    );
   }
 
   // Fall back to default handling
