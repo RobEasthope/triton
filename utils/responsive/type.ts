@@ -8,6 +8,8 @@ type TypeProps = {
   mb?: number;
   ml?: number;
   mr?: number;
+  mx?: number;
+  my?: number;
   pt?: number;
   pb?: number;
   pl?: number;
@@ -23,6 +25,8 @@ export function type({
   mb,
   ml,
   mr,
+  mx,
+  my,
   pt,
   pb,
   pl,
@@ -42,5 +46,20 @@ export function type({
     ${responsiveTypeSpacing({ css: 'padding-bottom', value: pb, max })}
     ${responsiveTypeSpacing({ css: 'padding-left', value: pl, max })}
     ${responsiveTypeSpacing({ css: 'padding-right', value: pr, max })}
+
+    ${
+      my &&
+      `
+      ${responsiveTypeSpacing({ css: 'margin-top', value: my, max })}
+      ${responsiveTypeSpacing({ css: 'margin-bottom', value: my, max })}
+    `
+    }
+    ${
+      mx &&
+      `
+      ${responsiveTypeSpacing({ css: 'margin-left', value: mx, max })}
+    ${responsiveTypeSpacing({ css: 'margin-right', value: mx, max })}
+    `
+    }
   `;
 }
