@@ -7,7 +7,7 @@ type PropTypes = {
   maxWidth?: number;
 };
 
-export function minMaxSizing(props: PropTypes) {
+export function minMaxSizing(props: PropTypes): string {
   const { css, min, max, unit = 'px', minWidth = 320, maxWidth = 1600 } = props;
 
   return `

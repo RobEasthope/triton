@@ -8,7 +8,7 @@ export function responsiveTypeSpacing({
   css,
   value,
   max,
-}: ResponsiveTypeSpacingProps) {
+}: ResponsiveTypeSpacingProps): string {
   if (value) {
     return `${css}: ${value && value / max}em;`;
   }
