@@ -17,12 +17,11 @@ export const Heading = styled.div<{
     props.min &&
     `${`calc(${props.min}${unit} + (${props.max} - ${props.min}) * ((100vw - ${minWidth}${unit}) / (${maxWidth} - ${minWidth})))`}`};
 
+  ${(props) => props.mt && `margin-top: ${props.mt && props.mt / props.max}em;`}
   ${(props) =>
-    props.mt && `margin-bottom: ${props.mt && props.mt / props.max}em;`}
-  ${(props) =>
-    props.mr && `margin-bottom: ${props.mr && props.mr / props.max}em;`}
+    props.mr && `margin-right: ${props.mr && props.mr / props.max}em;`}
   ${(props) =>
     props.mb && `margin-bottom: ${props.mb && props.mb / props.max}em;`}
   ${(props) =>
-    props.ml && `margin-bottom: ${props.ml && props.ml / props.max}em;`}
+    props.ml && `margin-left: ${props.ml && props.ml / props.max}em;`}
 `;
