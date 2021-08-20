@@ -13,7 +13,7 @@ import { FaGlobeEurope } from 'react-icons/fa';
 export default () =>
   S.list()
     .id('__root__')
-    .title('Triton')
+    .title('Triquetra')
     .items([
       S.listItem()
         .title('Home page')
