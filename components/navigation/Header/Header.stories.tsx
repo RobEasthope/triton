@@ -29,7 +29,7 @@ Vanilla.args = {
   logo: {
     _type: 'image',
     asset: {
-      _ref: 'image-b89231c30f9483550700246b4153e268b9235997-352x664-svg',
+      _ref: 'image-4954fadfe0d52dac93b575b16c3f6892f54add7e-512x480-svg',
       _type: 'reference',
     },
   },
