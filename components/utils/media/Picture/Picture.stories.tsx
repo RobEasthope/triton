@@ -44,31 +44,59 @@ Responsive.args = {
 
 // Cover - full size
 export const CoverFullSize = Template.bind({}) as Record<string, unknown>;
-
 CoverFullSize.args = {
   asset: RED_ARROWS,
   mode: 'cover',
 };
 
-// Cover - full size
+// Cover - Square
 export const CoverSquare = Template.bind({}) as Record<string, unknown>;
 CoverSquare.decorators = [
+  // eslint-disable-next-line @typescript-eslint/no-shadow, no-shadow
   (Story) => (
     <AspectRatio width="400px" ratio={1}>
       <Story />
     </AspectRatio>
   ),
 ];
-
 CoverSquare.args = {
   asset: RED_ARROWS,
   mode: 'cover',
 };
 
-// Contain
-export const Contain = Template.bind({}) as Record<string, unknown>;
+// Cover - Landscape
+export const CoverLandscape = Template.bind({}) as Record<string, unknown>;
+CoverLandscape.decorators = [
+  // eslint-disable-next-line @typescript-eslint/no-shadow, no-shadow
+  (Story) => (
+    <AspectRatio width="400px" ratio={16 / 9}>
+      <Story />
+    </AspectRatio>
+  ),
+];
+CoverLandscape.args = {
+  asset: RED_ARROWS,
+  mode: 'cover',
+};
 
-Contain.args = {
+// Cover - Portrait
+export const CoverPortrait = Template.bind({}) as Record<string, unknown>;
+CoverPortrait.decorators = [
+  // eslint-disable-next-line @typescript-eslint/no-shadow, no-shadow
+  (Story) => (
+    <AspectRatio width="400px" ratio={9 / 16}>
+      <Story />
+    </AspectRatio>
+  ),
+];
+CoverPortrait.args = {
+  asset: RED_ARROWS,
+  mode: 'cover',
+};
+
+// Contain - Full screen
+export const ContainFullScreen = Template.bind({}) as Record<string, unknown>;
+ContainFullScreen.args = {
   asset: BASSENTHWAITE_IMAGE,
   mode: 'contain',
 };
