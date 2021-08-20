@@ -28,6 +28,7 @@ Heading1.args = {
   as: 'h1',
   min: 32,
   max: 64,
+  mb: 64,
   children: faker.lorem.words(),
 };
 
