@@ -4,8 +4,8 @@ const unit = 'px';
 const minWidth = 320;
 const maxWidth = 1400;
 
-export type HeadingProps = {
-  // Heading type
+export type RawHeadingProps = {
+  // RawHeading type
   as: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
   // Font sizes
@@ -25,7 +25,7 @@ export type HeadingProps = {
   pl?: number;
 };
 
-export const Heading = styled.div<HeadingProps>`
+export const RawHeading = styled.div<RawHeadingProps>`
   /* Font sizing */
   font-size: ${(props) => (props.min ? `${props.min}${unit}` : '1em')};
 

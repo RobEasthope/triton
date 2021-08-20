@@ -5,7 +5,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import BlockContent from '@sanity/block-content-to-react';
 
-import { Heading } from 'components/typography/Heading/Heading';
+import { Heading } from 'components/utils/text/RawHeading/RawHeading';
 // import { YoutubeBlock } from 'components/blocks/YoutubeBlock/YoutubeBlock';
 
 export interface ExampleTextProps {
