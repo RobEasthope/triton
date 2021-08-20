@@ -6,7 +6,7 @@ import { RawHeading } from '../text/RawHeading/RawHeading';
 
 export const Sandbox = () => (
   <section>
-    <RawHeading as="h1" min={18} max={32} my={18}>
+    <RawHeading as="h1" min={18} max={32} my={32}>
       {capitalizeFirstLetter(faker.lorem.words())}
     </RawHeading>
 
