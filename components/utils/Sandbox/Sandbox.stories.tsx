@@ -3,7 +3,7 @@ import React from 'react';
 import { Meta, Story } from '@storybook/react';
 
 import { Sandbox as SandboxComponent } from './Sandbox';
-import { CenterComponent } from '.storybook/preview-ui/CenterComponent';
+import { CenterTextComponent } from '.storybook/preview-ui/CenterTextComponent';
 
 export default {
   title: 'Utils/Sandbox',
@@ -11,9 +11,9 @@ export default {
   decorators: [
     // eslint-disable-next-line @typescript-eslint/no-shadow, no-shadow
     (Story) => (
-      <CenterComponent>
+      <CenterTextComponent>
         <Story />
-      </CenterComponent>
+      </CenterTextComponent>
     ),
   ],
 } as Meta;
