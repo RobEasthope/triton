@@ -14,6 +14,8 @@ type TypeProps = {
   pb?: number;
   pl?: number;
   pr?: number;
+  px?: number;
+  py?: number;
   minWidth?: number;
   maxWidth?: number;
 };
@@ -31,6 +33,8 @@ export function type({
   pb,
   pl,
   pr,
+  px,
+  py,
   minWidth,
   maxWidth,
 }: TypeProps): string {
@@ -54,11 +58,28 @@ export function type({
       ${responsiveTypeSpacing({ css: 'margin-bottom', value: my, max })}
     `
     }
+
     ${
       mx &&
       `
       ${responsiveTypeSpacing({ css: 'margin-left', value: mx, max })}
-    ${responsiveTypeSpacing({ css: 'margin-right', value: mx, max })}
+      ${responsiveTypeSpacing({ css: 'margin-right', value: mx, max })}
+    `
+    }
+
+    ${
+      py &&
+      `
+      ${responsiveTypeSpacing({ css: 'padding-top', value: py, max })}
+      ${responsiveTypeSpacing({ css: 'padding-bottom', value: py, max })}
+    `
+    }
+
+    ${
+      px &&
+      `
+      ${responsiveTypeSpacing({ css: 'padding-left', value: px, max })}
+      ${responsiveTypeSpacing({ css: 'padding-right', value: px, max })}
     `
     }
   `;
