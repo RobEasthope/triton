@@ -5,13 +5,24 @@ const minWidth = 320;
 const maxWidth = 1400;
 
 export const Heading = styled.div<{
+  // Heading type
   as: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+
+  // Font sizes
   min: number;
   max: number;
+
+  // Margin
   mt?: number;
   mr?: number;
   mb?: number;
   ml?: number;
+
+  // Padding
+  pt?: number;
+  pr?: number;
+  pb?: number;
+  pl?: number;
 }>`
   font-size: ${(props) =>
     props.min &&
@@ -24,4 +35,13 @@ export const Heading = styled.div<{
     props.mb && `margin-bottom: ${props.mb && props.mb / props.max}em;`}
   ${(props) =>
     props.ml && `margin-left: ${props.ml && props.ml / props.max}em;`}
+
+  ${(props) =>
+    props.pt && `padding-top: ${props.pt && props.pt / props.max}em;`}
+  ${(props) =>
+    props.pr && `padding-right: ${props.pr && props.pr / props.max}em;`}
+  ${(props) =>
+    props.pb && `padding-bottom: ${props.pb && props.pb / props.max}em;`}
+  ${(props) =>
+    props.pl && `padding-left: ${props.pl && props.pl / props.max}em;`}
 `;
