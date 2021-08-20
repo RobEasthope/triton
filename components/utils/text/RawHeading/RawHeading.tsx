@@ -55,13 +55,13 @@ export const RawHeading = styled.div<RawHeadingProps>`
 
   /* Combo margins */
   ${(props) =>
-    props.mx &&
-    `margin-top: ${props.mx && props.mx / props.max}em;
-    margin-bottom: ${props.mx && props.mx / props.max}em;`}
-  ${(props) =>
     props.my &&
-    `margin-left: ${props.my && props.my / props.max}em;
-    margin-right: ${props.my && props.my / props.max}em;`}
+    `margin-top: ${props.my && props.my / props.max}em;
+    margin-padding: ${props.my && props.my / props.max}em;`}
+  ${(props) =>
+    props.mx &&
+    `margin-left: ${props.mx && props.mx / props.max}em;
+    margin-right: ${props.mx && props.mx / props.max}em;`}
 
   /* Single padding */
   ${(props) =>
@@ -75,11 +75,11 @@ export const RawHeading = styled.div<RawHeadingProps>`
 
   /* Combo padding */
   ${(props) =>
-    props.px &&
-    `padding-top: ${props.px && props.px / props.max}em;
-  padding-bottom: ${props.px && props.px / props.max}em;`}
-  ${(props) =>
     props.py &&
-    `padding-left: ${props.py && props.py / props.max}em;
-    padding-right: ${props.py && props.py / props.max}em;`}
+    `padding-top: ${props.py && props.py / props.max}em;
+    padding-bottom: ${props.py && props.py / props.max}em;`}
+  ${(props) =>
+    props.px &&
+    `padding-left: ${props.px && props.px / props.max}em;
+  padding-right: ${props.px && props.px / props.max}em;`}
 `;
