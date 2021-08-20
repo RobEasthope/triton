@@ -11,6 +11,7 @@
     ]
   ],
   "plugins": [
-    "@emotion/babel-plugin"
+    "@emotion/babel-plugin",
+    "@vanilla-extract/babel-plugin"
   ]
 }
