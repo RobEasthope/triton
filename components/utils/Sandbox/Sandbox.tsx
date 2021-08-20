@@ -1,13 +1,15 @@
-import faker from 'faker';
 import { ExampleText } from 'components/utils/formatted-text/ExampleText/ExampleText';
 import { EXAMPLE_TEXT } from '.storybook/mock-data/sanity-text';
-import { capitalizeFirstLetter } from '.storybook/utils/capitalizeFirstLetter';
 import { RawHeading } from '../text/RawHeading/RawHeading';
 
+import { themeClass, exampleStyle } from './styles.css';
+
 export const Sandbox = () => (
-  <section>
+  <section className={themeClass}>
+    <h1 className={exampleStyle}>Hello world!</h1>
+
     <RawHeading as="h1" min={18} max={32} my={32}>
-      {capitalizeFirstLetter(faker.lorem.words())}
+      Lorem ipsum
     </RawHeading>
 
     <ExampleText blocks={EXAMPLE_TEXT} preview={false} />
