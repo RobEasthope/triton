@@ -1,9 +1,13 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 
+import { AspectRatio } from '@chakra-ui/react';
 import { Picture, PictureProps } from './Picture';
 import { CenterComponent } from '.storybook/preview-ui/CenterComponent';
-import { BASSENTHWAITE_IMAGE } from '.storybook/mock-data/sanity-images';
+import {
+  BASSENTHWAITE_IMAGE,
+  RED_ARROWS,
+} from '.storybook/mock-data/sanity-images';
 
 export default {
   title: 'Utils/Media/Picture',
@@ -38,18 +42,26 @@ Responsive.args = {
   maxWidth: 400,
 };
 
-// Cover
-export const Cover = Template.bind({}) as Record<string, unknown>;
+// Cover - full size
+export const CoverFullSize = Template.bind({}) as Record<string, unknown>;
 
-Cover.args = {
-  asset: {
-    _type: 'image',
-    asset: {
-      _ref: 'image-9e3248f2b358adf609c136e4054e91ba132447e5-4032x3024-jpg',
-      _type: 'reference',
-    },
-    caption: 'Bassenthwaite Lake, Cumbria',
-  },
+CoverFullSize.args = {
+  asset: RED_ARROWS,
+  mode: 'cover',
+};
+
+// Cover - full size
+export const CoverSquare = Template.bind({}) as Record<string, unknown>;
+CoverSquare.decorators = [
+  (Story) => (
+    <AspectRatio width="400px" ratio={1}>
+      <Story />
+    </AspectRatio>
+  ),
+];
+
+CoverSquare.args = {
+  asset: RED_ARROWS,
   mode: 'cover',
 };
 
