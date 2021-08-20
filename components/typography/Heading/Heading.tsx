@@ -4,7 +4,7 @@ const unit = 'px';
 const minWidth = 320;
 const maxWidth = 1400;
 
-export const Heading = styled.div<{
+export type HeadingProps = {
   // Heading type
   as: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
@@ -23,7 +23,9 @@ export const Heading = styled.div<{
   pr?: number;
   pb?: number;
   pl?: number;
-}>`
+};
+
+export const Heading = styled.div<HeadingProps>`
   font-size: ${(props) =>
     props.min &&
     `${`calc(${props.min}${unit} + (${props.max} - ${props.min}) * ((100vw - ${minWidth}${unit}) / (${maxWidth} - ${minWidth})))`}`};
