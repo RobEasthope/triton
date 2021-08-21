@@ -34,6 +34,7 @@
     "next": "11.1.0",
     "next-sanity": "^0.4.0",
     "next-sanity-image": "^3.1.5",
+    "next-vanilla-extract": "^1.0.0",
     "path": "^0.12.7",
     "react": "17.0.2",
     "react-dom": "17.0.2",

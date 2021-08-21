@@ -9526,6 +9526,11 @@ next-sanity@^0.4.0:
     groq "^2.14.0"
     use-deep-compare-effect "^1.6.1"
 
+next-vanilla-extract@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/next-vanilla-extract/-/next-vanilla-extract-1.0.0.tgz#1dc6b3ad2492445c43aa413e6e992789fbf8d394"
+  integrity sha512-tUWFALfD7BW06QwOj46j8RSLyuyNaGR4jmX2hGFuXEHBEnL53HYxiVWw3FrWAJLDa3M0WIZAh49kYnd6c30erA==
+
 next@11.1.0:
   version "11.1.0"
   resolved "https://registry.yarnpkg.com/next/-/next-11.1.0.tgz#767d4c4fa0b9b0c768cdbd6c9f03dd86b5d701c0"
