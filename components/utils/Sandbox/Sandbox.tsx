@@ -2,10 +2,10 @@ import { ExampleText } from 'components/utils/formatted-text/ExampleText/Example
 import { EXAMPLE_TEXT } from '.storybook/mock-data/sanity-text';
 import { RawHeading } from '../text/RawHeading/RawHeading';
 
-import { themeClass, exampleStyle } from './styles.css';
+import { exampleStyle } from './styles.css';
 
 export const Sandbox = () => (
-  <section className={themeClass}>
+  <section>
     <h1 className={exampleStyle}>Hello world!</h1>
 
     <RawHeading as="h1" min={18} max={32} my={32}>
