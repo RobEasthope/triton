@@ -41,8 +41,7 @@ export default {
     {
       name: 'metadataTitle',
       title: 'Metadata title',
-      description:
-        'Used in browser tab titles and social media. Falls back to global metadata settings if not set',
+      description: 'Used in browser tab titles and social media',
       type: 'string',
       codegen: { required: true },
       validation: (Rule) =>
@@ -64,8 +63,7 @@ export default {
     {
       name: 'metadataImage',
       title: 'Metadata image',
-      description:
-        'Used in social media and search engine listings. Falls back to global metadata settings if not set',
+      description: 'Used in social media and search engine listings.',
       type: 'text',
       codegen: { required: true },
       validation: (Rule) =>
