@@ -15,7 +15,7 @@ export const mobileNavSlice = createSlice({
       state.mobileNavOpen = false;
     },
     toggleMobileNav: (state) => {
-      state.mobileNavOpen != state.mobileNavOpen;
+      state.mobileNavOpen = !state.mobileNavOpen;
     },
   },
 });
