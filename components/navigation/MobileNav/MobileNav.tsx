@@ -14,7 +14,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {
   closeMobileNav,
   selectMobileNavStatus,
-} from 'redux/slices/mobileNavSlice';
+} from 'components/navigation/MobileNav/mobileNav.slice';
 import { RiCloseLine } from 'react-icons/ri';
 import { SuperLink } from '../raw-links/SuperLink/SuperLink';
 
