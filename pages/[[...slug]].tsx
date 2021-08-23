@@ -25,6 +25,7 @@ import {
   sanityClient,
 } from 'utils/sanity/sanity.server';
 import { selectSanityQuery } from 'utils/sanity/selectSanityQuery';
+import { METADATA_FALLBACK } from 'settings/consts/metadata-fallback';
 
 export default function PageBySlug({ data, preview }) {
   const router = useRouter();
@@ -45,7 +46,7 @@ export default function PageBySlug({ data, preview }) {
   return (
     <>
       <Head>
-        <title>Triquetra</title>
+        <title>{METADATA_FALLBACK.TITLE}</title>
       </Head>
       {isFallback && <Loading />}
       {!isFallback && data?.page?._type === 'page' && (
