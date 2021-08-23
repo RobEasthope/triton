@@ -1,16 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-type MobileNavSliceProps = {
-  mobileNavOpen: boolean;
+export type MobileNavSliceProps = {
+  mobileNav: { mobileNavOpen: boolean };
 };
 
-const initialState: MobileNavSliceProps = {
-  mobileNavOpen: false,
-};
+export type MobileNavSliceStateProps = { mobileNavOpen: boolean };
 
 export const mobileNavSlice = createSlice({
   name: 'mobileNav',
-  initialState,
+  initialState: {
+    mobileNavOpen: false,
+  } as MobileNavSliceStateProps,
   reducers: {
     openMobileNav: (state) => {
       state.mobileNavOpen = true;
@@ -27,6 +27,8 @@ export const mobileNavSlice = createSlice({
 export const { openMobileNav, closeMobileNav, toggleMobileNav } =
   mobileNavSlice.actions;
 
-export const selectMobileNavStatus = (state) => state.mobileNav.mobileNavOpen;
+export const selectMobileNavStatus = (state: {
+  mobileNav: { mobileNavOpen: boolean };
+}): boolean => state.mobileNav.mobileNavOpen;
 
 export default mobileNavSlice.reducer;
