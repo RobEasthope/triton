@@ -1,6 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = {
+type MobileNavSliceProps = {
+  mobileNavOpen: boolean;
+};
+
+const initialState: MobileNavSliceProps = {
   mobileNavOpen: false,
 };
 
