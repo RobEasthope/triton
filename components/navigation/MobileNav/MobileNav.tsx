@@ -34,7 +34,7 @@ export const MobileNav = ({
     >
       <DrawerOverlay />
       <DrawerContent>
-        {/* <DrawerCloseButton /> */}
+        <DrawerCloseButton />
 
         <DrawerBody>
           <nav>
