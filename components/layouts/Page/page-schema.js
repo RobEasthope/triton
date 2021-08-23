@@ -37,6 +37,42 @@ export default {
       validation: (Rule) =>
         Rule.required().min(1).error('At least one page section is required'),
     },
+    headingUI('Page metadata'),
+    {
+      name: 'metadataTitle',
+      title: 'Metadata title',
+      description:
+        'Used in browser tab titles and social media. Falls back to global metadata settings if not set',
+      type: 'string',
+      codegen: { required: true },
+      validation: (Rule) =>
+        Rule.required().warning(
+          'Metadata title has not been set and will fall back to global metadata settings'
+        ),
+    },
+    {
+      name: 'metadataDescription',
+      title: 'Metadata description',
+      description: 'Used in social media and search engine listings',
+      type: 'text',
+      codegen: { required: true },
+      validation: (Rule) =>
+        Rule.required().warning(
+          'Metadata description has not been set and will fall back to global metadata settings'
+        ),
+    },
+    {
+      name: 'metadataImage',
+      title: 'Metadata image',
+      description:
+        'Used in social media and search engine listings. Falls back to global metadata settings if not set',
+      type: 'text',
+      codegen: { required: true },
+      validation: (Rule) =>
+        Rule.required().warning(
+          'Metadata image has not been set and will fall back to global metadata settings'
+        ),
+    },
   ],
   preview: {
     select: {
