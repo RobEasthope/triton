@@ -39,6 +39,7 @@ export const HomePage = ({
           <RenderSections sections={page?.sections} preview={preview} />
         )}
       </MainContentLayout>
+
       <Footer />
     </FixedFooterLayout>
   </>
