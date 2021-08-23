@@ -13,7 +13,6 @@ import { useDispatch } from 'react-redux';
 import { useRef } from 'react';
 import { RiMenuLine } from 'react-icons/ri';
 import { SuperLink } from '../raw-links/SuperLink/SuperLink';
-import { MobileNav } from '../MobileNav/MobileNav';
 
 export interface HeaderProps extends rawHeaderProps {
   navigation?: [ExternalLinkWithTitleProp, InternalLinkWithTitleProp];
@@ -68,7 +67,6 @@ export const Header = ({
           </button>
         </div>
       </header>
-      <MobileNav navigation={navigation} />
     </>
   );
 };
