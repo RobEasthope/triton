@@ -8,7 +8,10 @@ import { FixedFooterLayout } from 'components/structural/FixedFooterLayout';
 import { MainContentLayout } from 'components/structural/MainContentLayout';
 import { Metadata } from 'components/utils/structural/Metadata/Metadata';
 import { RenderSections } from 'components/utils/structural/RenderSections/RenderSections';
-import { Page as PageProps, GlobalMetadata } from 'types/sanity-schema';
+import {
+  Page as PageProps,
+  GlobalMetadata,
+} from 'settings/types/sanity-schema';
 
 export const Page = ({
   page,

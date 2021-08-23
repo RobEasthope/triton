@@ -9,7 +9,7 @@
  * code that is not used on the client side.
  */
 import { createClient } from 'next-sanity';
-import { HomePage, Page } from 'types/sanity-schema';
+import { HomePage, Page } from 'settings/types/sanity-schema';
 
 import { sanityConfig } from './config';
 

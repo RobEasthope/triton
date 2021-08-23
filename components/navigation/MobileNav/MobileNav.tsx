@@ -1,8 +1,8 @@
-import { Header as rawHeaderProps } from 'types/sanity-schema';
+import { Header as rawHeaderProps } from 'settings/types/sanity-schema';
 import {
   ExternalLinkWithTitleProp,
   InternalLinkWithTitleProp,
-} from 'types/links';
+} from 'settings/types/links';
 import {
   Drawer,
   DrawerBody,
