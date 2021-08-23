@@ -171,6 +171,34 @@ export interface HomePage extends SanityDocument {
    *
    */
   sections?: Array<SanityKeyed<ExampleSection>>;
+
+  /**
+   * Page metadata — `string`
+   *
+   *
+   */
+  headingpagemetadata?: string;
+
+  /**
+   * Metadata title — `string`
+   *
+   * Used in browser tab titles and social media. Custom title highlt recommeneded
+   */
+  metadataTitle: string;
+
+  /**
+   * Metadata description — `text`
+   *
+   * Used in social media and search engine listings
+   */
+  metadataDescription: string;
+
+  /**
+   * Metadata image — `text`
+   *
+   * Used in social media and search engine listings
+   */
+  metadataImage: string;
 }
 
 /**
@@ -215,6 +243,34 @@ export interface Page extends SanityDocument {
    *
    */
   sections?: Array<SanityKeyed<ExampleSection>>;
+
+  /**
+   * Page metadata — `string`
+   *
+   *
+   */
+  headingpagemetadata?: string;
+
+  /**
+   * Metadata title — `string`
+   *
+   * Used in browser tab titles and social media
+   */
+  metadataTitle: string;
+
+  /**
+   * Metadata description — `text`
+   *
+   * Used in social media and search engine listings
+   */
+  metadataDescription: string;
+
+  /**
+   * Metadata image — `text`
+   *
+   * Used in social media and search engine listings.
+   */
+  metadataImage: string;
 }
 
 export type InternalLink = {
