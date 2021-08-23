@@ -26,7 +26,7 @@ export const Header = ({
 
   return (
     <header>
-      <div>
+      <nav>
         <HeaderLogo logo={logo} preview={preview} />
 
         <div>
@@ -49,7 +49,7 @@ export const Header = ({
         >
           <RiMenuLine />
         </button>
-      </div>
+      </nav>
     </header>
   );
 };
