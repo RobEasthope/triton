@@ -13,6 +13,7 @@ import { useDispatch } from 'react-redux';
 import { useRef } from 'react';
 import { RiMenuLine } from 'react-icons/ri';
 import { SuperLink } from '../raw-links/SuperLink/SuperLink';
+import { HomeLink } from '../raw-links/HomeLink/HomeLink';
 
 export interface HeaderProps extends rawHeaderProps {
   navigation?: [ExternalLinkWithTitleProp, InternalLinkWithTitleProp];
@@ -37,13 +38,16 @@ export const Header = ({
     <header>
       <div>
         <HeaderLogo>
-          <Picture
-            asset={logo as ImageAssetProp}
-            mode="contain"
-            maxWidth={32}
-            preview={preview}
-          />
+          <HomeLink>
+            <Picture
+              asset={logo as ImageAssetProp}
+              mode="contain"
+              maxWidth={32}
+              preview={preview}
+            />
+          </HomeLink>
         </HeaderLogo>
+
         <div>
           <ul>
             {navigation?.length > 0 &&
