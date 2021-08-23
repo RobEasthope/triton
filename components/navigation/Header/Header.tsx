@@ -8,9 +8,10 @@ import {
   InternalLinkWithTitleProp,
 } from 'types/links';
 import styled from '@emotion/styled';
-import { Button } from '@chakra-ui/react';
 import { openMobileNav } from 'redux/slices/mobileNavSlice';
 import { useDispatch } from 'react-redux';
+import { useRef } from 'react';
+import { RiMenuLine } from 'react-icons/ri';
 import { SuperLink } from '../raw-links/SuperLink/SuperLink';
 import { MobileNav } from '../MobileNav/MobileNav';
 
@@ -31,6 +32,7 @@ export const Header = ({
   preview,
 }: Pick<HeaderProps, 'logo' | 'navigation' | 'preview'>) => {
   const dispatch = useDispatch();
+  const OpenNavBtnRef = useRef();
 
   return (
     <>
@@ -58,10 +60,11 @@ export const Header = ({
           </div>
           <button
             type="button"
-            aria-label="Increment value"
+            aria-label="Open mobile navigation"
+            ref={OpenNavBtnRef}
             onClick={() => dispatch(openMobileNav())}
           >
-            Nav
+            <RiMenuLine />
           </button>
         </div>
       </header>

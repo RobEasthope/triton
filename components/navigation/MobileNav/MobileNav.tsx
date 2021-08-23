@@ -11,8 +11,12 @@ import {
   DrawerOverlay,
   useDisclosure,
 } from '@chakra-ui/react';
-import { useSelector } from 'react-redux';
-import { selectMobileNavStatus } from 'redux/slices/mobileNavSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  closeMobileNav,
+  selectMobileNavStatus,
+} from 'redux/slices/mobileNavSlice';
+import { RiCloseLine } from 'react-icons/ri';
 import { SuperLink } from '../raw-links/SuperLink/SuperLink';
 
 export interface MobileNavProps extends rawHeaderProps {
@@ -22,7 +26,8 @@ export interface MobileNavProps extends rawHeaderProps {
 export const MobileNav = ({
   navigation,
 }: Pick<MobileNavProps, 'navigation'>) => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const dispatch = useDispatch();
+  const { onClose } = useDisclosure();
   const mobileNavOpen = useSelector(selectMobileNavStatus);
 
   return (
@@ -34,7 +39,13 @@ export const MobileNav = ({
     >
       <DrawerOverlay />
       <DrawerContent>
-        <DrawerCloseButton />
+        <button
+          type="button"
+          aria-label="Increment value"
+          onClick={() => dispatch(closeMobileNav())}
+        >
+          <RiCloseLine />
+        </button>
 
         <DrawerBody>
           <nav>
