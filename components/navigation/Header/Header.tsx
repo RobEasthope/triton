@@ -34,39 +34,37 @@ export const Header = ({
   const OpenNavBtnRef = useRef();
 
   return (
-    <>
-      <header>
+    <header>
+      <div>
+        <HeaderLogo>
+          <Picture
+            asset={logo as ImageAssetProp}
+            mode="contain"
+            maxWidth={32}
+            preview={preview}
+          />
+        </HeaderLogo>
         <div>
-          <HeaderLogo>
-            <Picture
-              asset={logo as ImageAssetProp}
-              mode="contain"
-              maxWidth={32}
-              preview={preview}
-            />
-          </HeaderLogo>
-          <div>
-            <ul>
-              {navigation?.length > 0 &&
-                navigation.map((nav) => (
-                  <li key={nav?._key} className="link">
-                    <SuperLink className="" link={nav}>
-                      {nav.title}
-                    </SuperLink>
-                  </li>
-                ))}
-            </ul>
-          </div>
-          <button
-            type="button"
-            aria-label="Open mobile navigation"
-            ref={OpenNavBtnRef}
-            onClick={() => dispatch(openMobileNav())}
-          >
-            <RiMenuLine />
-          </button>
+          <ul>
+            {navigation?.length > 0 &&
+              navigation.map((nav) => (
+                <li key={nav?._key} className="link">
+                  <SuperLink className="" link={nav}>
+                    {nav.title}
+                  </SuperLink>
+                </li>
+              ))}
+          </ul>
         </div>
-      </header>
-    </>
+        <button
+          type="button"
+          aria-label="Open mobile navigation"
+          ref={OpenNavBtnRef}
+          onClick={() => dispatch(openMobileNav())}
+        >
+          <RiMenuLine />
+        </button>
+      </div>
+    </header>
   );
 };
