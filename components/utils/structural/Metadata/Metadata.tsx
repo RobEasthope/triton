@@ -11,42 +11,46 @@ type MetadateType = {
 export const Metadata = ({ page, globalMetadata }: MetadateType) => (
   <Head>
     {/* Standard HTML */}
-    {page?.title && (
-      <title>{`${page?.title} ${
+    {page?.metadataTitle && (
+      <title>{`${page?.metadataTitle} ${
         globalMetadata?.globalTitleTemplate || ''
       }`}</title>
     )}
-    {/* {page?.pageDescription && (
-      <meta name="description" content={page?.pageDescription} />
-    )} */}
+    {page?.metadataDescription && (
+      <meta name="description" content={page?.metadataDescription} />
+    )}
 
     {/* Opengraph */}
-    {page?.title && (
+    {page?.metadataTitle && (
       <meta
         property="og:title"
-        content={`${page?.title} ${globalMetadata?.globalTitleTemplate || ''}`}
+        content={`${page?.metadataTitle} ${
+          globalMetadata?.globalTitleTemplate || ''
+        }`}
       />
     )}
-    {/* {page?.pageDescription && (
-      <meta property="og:description" content={page?.pageDescription} />
+    {page?.metadataDescription && (
+      <meta property="og:description" content={page?.metadataDescription} />
     )}
-    {page?.pageThumbnail && (
+    {page?.metadataImage && (
       <meta
         property="og:image"
-        content={urlForImage(page?.pageThumbnail).width(1200).height(630).url()}
+        content={urlForImage(page?.metadataImage).width(1200).height(630).url()}
       />
-    )} */}
+    )}
 
     {/* Twitter */}
-    {page?.title && <meta name="twitter:title" content={page?.title} />}
-    {/* {page?.pageDescription && (
-      <meta name="twitter:description" content={page?.pageDescription} />
+    {page?.metadataTitle && (
+      <meta name="twitter:title" content={page?.metadataTitle} />
     )}
-    {page?.pageThumbnail && (
+    {page?.metadataDescription && (
+      <meta name="twitter:description" content={page?.metadataDescription} />
+    )}
+    {page?.metadataImage && (
       <meta
         name="twitter:image"
-        content={urlForImage(page?.pageThumbnail).width(1200).height(630).url()}
+        content={urlForImage(page?.metadataImage).width(1200).height(630).url()}
       />
-    )} */}
+    )}
   </Head>
 );
