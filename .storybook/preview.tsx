@@ -4,7 +4,7 @@ import { withPerformance } from 'storybook-addon-performance';
 import { globalStorybookStyles } from './preview-ui/globalStorybookStyles';
 import { ChakraProvider } from '@chakra-ui/react';
 
-import { theme } from '../theme/theme';
+import { theme } from '../settings/theme/theme';
 
 addDecorator(withPerformance);
 

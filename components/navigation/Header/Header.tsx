@@ -1,4 +1,4 @@
-import { Header as rawHeaderProps } from 'types/sanity-schema';
+import { Header as rawHeaderProps } from 'settings/types/sanity-schema';
 import {
   ImageAssetProp,
   Picture,
@@ -6,9 +6,9 @@ import {
 import {
   ExternalLinkWithTitleProp,
   InternalLinkWithTitleProp,
-} from 'types/links';
+} from 'settings/types/links';
 import styled from '@emotion/styled';
-import { openMobileNav } from 'redux/slices/mobileNavSlice';
+import { openMobileNav } from 'components/navigation/MobileNav/mobileNav.slice';
 import { useDispatch } from 'react-redux';
 import { useRef } from 'react';
 import { RiMenuLine } from 'react-icons/ri';

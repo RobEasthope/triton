@@ -1,4 +1,4 @@
-import { SanityReference, Page, HomePage } from 'types/sanity-schema';
+import { SanityReference, Page, HomePage } from 'settings/types/sanity-schema';
 
 export type ExternalLinkWithTitleProp = {
   _type: 'externalLinkWithTitle';

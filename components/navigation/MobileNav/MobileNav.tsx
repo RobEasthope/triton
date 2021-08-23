@@ -1,8 +1,8 @@
-import { Header as rawHeaderProps } from 'types/sanity-schema';
+import { Header as rawHeaderProps } from 'settings/types/sanity-schema';
 import {
   ExternalLinkWithTitleProp,
   InternalLinkWithTitleProp,
-} from 'types/links';
+} from 'settings/types/links';
 import {
   Drawer,
   DrawerBody,
@@ -14,7 +14,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {
   closeMobileNav,
   selectMobileNavStatus,
-} from 'redux/slices/mobileNavSlice';
+} from 'components/navigation/MobileNav/mobileNav.slice';
 import { RiCloseLine } from 'react-icons/ri';
 import { SuperLink } from '../raw-links/SuperLink/SuperLink';
 

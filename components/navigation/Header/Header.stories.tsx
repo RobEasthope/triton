@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { Header as HeaderProps } from 'types/sanity-schema';
+import { Header as HeaderProps } from 'settings/types/sanity-schema';
 
 import { Header } from './Header';
 import { CenterComponent } from '.storybook/preview-ui/CenterComponent';

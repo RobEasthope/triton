@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import mobileNavReducer from 'redux/slices/mobileNavSlice';
+import mobileNavReducer from 'components/navigation/MobileNav/mobileNav.slice';
 
 const store = configureStore({
   reducer: {

@@ -3,7 +3,7 @@ import {
   ExternalLinkWithTitleProp,
   InternalLinkProp,
   InternalLinkWithTitleProp,
-} from 'types/links';
+} from 'settings/types/links';
 import { ExternalLink } from '../ExternalLink/ExternalLink';
 import { InternalLink } from '../InternalLink/InternalLink';
 
