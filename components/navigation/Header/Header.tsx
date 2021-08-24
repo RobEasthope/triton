@@ -13,6 +13,7 @@ import { useDispatch } from 'react-redux';
 import { useRef } from 'react';
 import { RiMenuLine } from 'react-icons/ri';
 import { SuperLink } from '../raw-links/SuperLink/SuperLink';
+import { HeaderStyles } from './Header.styles';
 
 export interface HeaderProps extends rawHeaderProps {
   navigation?: [ExternalLinkWithTitleProp, InternalLinkWithTitleProp];
@@ -34,7 +35,7 @@ export const Header = ({
   const OpenNavBtnRef = useRef();
 
   return (
-    <header>
+    <HeaderStyles>
       <div>
         <HeaderLogo>
           <Picture
@@ -65,6 +66,6 @@ export const Header = ({
           <RiMenuLine />
         </button>
       </div>
-    </header>
+    </Header>
   );
 };
