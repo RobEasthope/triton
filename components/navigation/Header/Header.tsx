@@ -29,23 +29,26 @@ export const Header = ({
   return (
     <HeaderStyles>
       <MaxPageWidth as="nav">
-        <HeaderLogo logo={logo} preview={preview} />
-        <ul>
-          {navigation?.length > 0 &&
-            navigation.map((nav) => (
-              <li key={nav?._key}>
-                <SuperLink link={nav}>{nav.title}</SuperLink>
-              </li>
-            ))}
-        </ul>
-        <button
-          type="button"
-          aria-label="Open mobile navigation"
-          ref={OpenNavBtnRef}
-          onClick={() => dispatch(openMobileNav())}
-        >
-          <RiMenuLine />
-        </button>
+        <div className="layout">
+          <HeaderLogo logo={logo} preview={preview} />
+          <ul className="navigation">
+            {navigation?.length > 0 &&
+              navigation.map((nav) => (
+                <li key={nav?._key}>
+                  <SuperLink link={nav}>{nav.title}</SuperLink>
+                </li>
+              ))}
+          </ul>
+          <button
+            type="button"
+            aria-label="Open mobile navigation"
+            ref={OpenNavBtnRef}
+            onClick={() => dispatch(openMobileNav())}
+            className="mobile-nav-btn"
+          >
+            <RiMenuLine />
+          </button>
+        </div>
       </MaxPageWidth>
     </HeaderStyles>
   );
