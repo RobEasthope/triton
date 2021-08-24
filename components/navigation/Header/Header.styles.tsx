@@ -1,7 +1,8 @@
 import styled from '@emotion/styled';
 import { theme } from 'settings/theme/theme';
+import { PaddedComponent } from 'components/utils/styles/PaddedComponent';
 
-export const HeaderStyles = styled.div`
+export const HeaderStyles = styled(PaddedComponent)`
   .layout {
     display: flex;
     align-items: center;
