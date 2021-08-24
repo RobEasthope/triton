@@ -11,7 +11,7 @@ import { HomePage } from 'components/layouts/HomePage/HomePage';
 
 import { useRouter } from 'next/router';
 import Head from 'next/head';
-import { Loading } from 'components/utils/structural/Loading/Loading';
+import { Loading } from 'components/utils/rendering/Loading/Loading';
 
 import {
   anyPageBySlugQuery,

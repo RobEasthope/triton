@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { theme } from 'settings/theme/theme';
-import { PaddedComponent } from 'components/utils/styles/PaddedComponent';
+import { PaddedComponent } from 'components/utils/styles/PaddedComponent/PaddedComponent';
 
 export const HeaderStyles = styled(PaddedComponent)`
   .layout {

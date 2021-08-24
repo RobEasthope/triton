@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { HomeLink } from 'components/navigation/raw-links/HomeLink/HomeLink';
+import { HomeLink } from 'components/utils/links/HomeLink/HomeLink';
 import {
   ImageAssetProp,
   Picture,

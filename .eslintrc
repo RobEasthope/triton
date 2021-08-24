@@ -24,7 +24,7 @@
     },
     {
       "files": [
-        "./**/*-schema.js"
+        "./**/*.schema.js"
       ],
       "rules": {
         "@typescript-eslint/explicit-module-boundary-types": "off",

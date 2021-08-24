@@ -8,7 +8,7 @@ import BlockContent from '@sanity/block-content-to-react';
 import { RawHeading } from 'components/utils/text/RawHeading/RawHeading';
 // import { YoutubeBlock } from 'components/blocks/YoutubeBlock/YoutubeBlock';
 
-export interface ExampleTextProps {
+export interface ExampleFormattedTextProps {
   blocks: unknown;
   className?: string;
   as?: string;
@@ -59,12 +59,12 @@ const serializers = {
   },
 };
 
-export const ExampleText = ({
+export const ExampleFormattedText = ({
   blocks,
   className,
   as,
   preview,
-}: ExampleTextProps) => (
+}: ExampleFormattedTextProps) => (
   <div className={className}>
     <BlockContent
       as={as}

@@ -11,7 +11,7 @@
 import { createClient } from 'next-sanity';
 import { HomePage, Page } from 'settings/types/sanity-schema';
 
-import { sanityConfig } from './config';
+import { sanityConfig } from './sanity-config';
 
 export const sanityClient = createClient(sanityConfig);
 

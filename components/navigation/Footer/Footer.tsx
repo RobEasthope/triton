@@ -1,5 +1,5 @@
-import { MaxPageWidth } from 'components/utils/structural/MaxPageWidth/MaxPageWidth';
-import { PaddedComponent } from 'components/utils/styles/PaddedComponent';
+import { MaxPageWidth } from 'components/utils/styles/MaxPageWidth/MaxPageWidth';
+import { PaddedComponent } from 'components/utils/styles/PaddedComponent/PaddedComponent';
 
 export const Footer = () => (
   <PaddedComponent as="footer">

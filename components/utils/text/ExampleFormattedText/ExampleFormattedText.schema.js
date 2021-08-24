@@ -1,6 +1,6 @@
 export default {
   title: 'Example text',
-  name: 'exampleText',
+  name: 'exampleFormattedText',
   type: 'array',
   of: [
     {

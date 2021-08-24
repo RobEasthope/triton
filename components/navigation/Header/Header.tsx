@@ -4,8 +4,8 @@ import {
   ExternalLinkWithTitleProp,
   InternalLinkWithTitleProp,
 } from 'settings/types/links';
-import { MaxPageWidth } from 'components/utils/structural/MaxPageWidth/MaxPageWidth';
-import { SuperLink } from '../raw-links/SuperLink/SuperLink';
+import { MaxPageWidth } from 'components/utils/styles/MaxPageWidth/MaxPageWidth';
+import { SuperLink } from '../../utils/links/SuperLink/SuperLink';
 import { HeaderStyles } from './Header.styles';
 import { HeaderLogo } from './components/HeaderLogo/HeaderLogo';
 import { MobileNavBtn } from './components/MobileNavBtn/MobileNavBtn';

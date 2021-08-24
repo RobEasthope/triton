@@ -1,5 +1,5 @@
-import { ExampleText } from 'components/utils/formatted-text/ExampleText/ExampleText';
-import { MaxPageWidth } from 'components/utils/structural/MaxPageWidth/MaxPageWidth';
+import { ExampleFormattedText } from 'components/utils/text/ExampleFormattedText/ExampleFormattedText';
+import { MaxPageWidth } from 'components/utils/styles/MaxPageWidth/MaxPageWidth';
 import { ExampleSection as rawExampleSectionProps } from 'settings/types/sanity-schema';
 import { ExampleSectionStyles } from './ExampleSection.styles';
 
@@ -20,7 +20,7 @@ export const ExampleSection = ({
     <ExampleSectionStyles as="section">
       <MaxPageWidth>
         {heading && <h1>{heading}</h1>}
-        {text && <ExampleText blocks={text} preview={preview} />}
+        {text && <ExampleFormattedText blocks={text} preview={preview} />}
       </MaxPageWidth>
     </ExampleSectionStyles>
   );

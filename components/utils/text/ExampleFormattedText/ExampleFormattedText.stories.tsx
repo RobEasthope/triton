@@ -1,13 +1,16 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 
-import { ExampleText, ExampleTextProps } from './ExampleText';
+import {
+  ExampleFormattedText,
+  ExampleFormattedTextProps,
+} from './ExampleFormattedText';
 import { CenterComponent } from '.storybook/preview-ui/CenterComponent';
 import { EXAMPLE_TEXT } from '.storybook/mock-data/sanity-text';
 
 export default {
-  title: 'Utils/Formatted text/ExampleText',
-  component: ExampleText,
+  title: 'Utils/Formatted text/ExampleFormattedText',
+  component: ExampleFormattedText,
   decorators: [
     // eslint-disable-next-line @typescript-eslint/no-shadow, no-shadow
     (Story) => (
@@ -18,8 +21,8 @@ export default {
   ],
 } as Meta;
 
-const Template: Story<ExampleTextProps> = (args) => (
-  <ExampleText {...args} preview={false} />
+const Template: Story<ExampleFormattedTextProps> = (args) => (
+  <ExampleFormattedText {...args} preview={false} />
 );
 
 // Vanilla

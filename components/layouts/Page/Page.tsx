@@ -6,8 +6,8 @@ import { Header, HeaderProps } from 'components/navigation/Header/Header';
 import { MobileNav } from 'components/navigation/MobileNav/MobileNav';
 import { FixedFooterLayout } from 'components/structural/FixedFooterLayout';
 import { MainContentLayout } from 'components/structural/MainContentLayout';
-import { Metadata } from 'components/utils/structural/Metadata/Metadata';
-import { RenderSections } from 'components/utils/structural/RenderSections/RenderSections';
+import { Metadata } from 'components/utils/rendering/Metadata/Metadata';
+import { RenderSections } from 'components/utils/rendering/RenderSections/RenderSections';
 import {
   Page as PageProps,
   GlobalMetadata,
