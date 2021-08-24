@@ -12,6 +12,7 @@ type HeaderLogoProps = {
 
 const StyledHomeLink = styled(HomeLink)`
   position: relative;
+  display: inline-block;
   width: 32px;
   height: 32px;
 `;
