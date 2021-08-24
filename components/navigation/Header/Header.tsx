@@ -33,10 +33,8 @@ export const Header = ({
         <ul>
           {navigation?.length > 0 &&
             navigation.map((nav) => (
-              <li key={nav?._key} className="link">
-                <SuperLink className="" link={nav}>
-                  {nav.title}
-                </SuperLink>
+              <li key={nav?._key}>
+                <SuperLink link={nav}>{nav.title}</SuperLink>
               </li>
             ))}
         </ul>
