@@ -8,6 +8,7 @@ import { openMobileNav } from 'components/navigation/MobileNav/mobileNav.slice';
 import { useDispatch } from 'react-redux';
 import { useRef } from 'react';
 import { RiMenuLine } from 'react-icons/ri';
+import { MaxPageWidth } from 'components/utils/structural/MaxPageWidth/MaxPageWidth';
 import { SuperLink } from '../raw-links/SuperLink/SuperLink';
 import { HeaderStyles } from './Header.styles';
 import { HeaderLogo } from './components/HeaderLogo/HeaderLogo';
@@ -27,20 +28,18 @@ export const Header = ({
 
   return (
     <HeaderStyles>
-      <nav>
+      <MaxPageWidth as="nav">
         <HeaderLogo logo={logo} preview={preview} />
-        <div>
-          <ul>
-            {navigation?.length > 0 &&
-              navigation.map((nav) => (
-                <li key={nav?._key} className="link">
-                  <SuperLink className="" link={nav}>
-                    {nav.title}
-                  </SuperLink>
-                </li>
-              ))}
-          </ul>
-        </div>
+        <ul>
+          {navigation?.length > 0 &&
+            navigation.map((nav) => (
+              <li key={nav?._key} className="link">
+                <SuperLink className="" link={nav}>
+                  {nav.title}
+                </SuperLink>
+              </li>
+            ))}
+        </ul>
         <button
           type="button"
           aria-label="Open mobile navigation"
@@ -49,7 +48,7 @@ export const Header = ({
         >
           <RiMenuLine />
         </button>
-      </nav>
+      </MaxPageWidth>
     </HeaderStyles>
   );
 };
