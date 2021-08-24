@@ -27,7 +27,7 @@ export const Header = ({
   const OpenNavBtnRef = useRef();
 
   return (
-    <HeaderStyles>
+    <HeaderStyles as="header">
       <MaxPageWidth as="nav">
         <div className="layout">
           <HeaderLogo logo={logo} preview={preview} />
