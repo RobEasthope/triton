@@ -4,14 +4,11 @@ import {
   ExternalLinkWithTitleProp,
   InternalLinkWithTitleProp,
 } from 'settings/types/links';
-import { openMobileNav } from 'components/navigation/MobileNav/mobileNav.slice';
-import { useDispatch } from 'react-redux';
-import { useRef } from 'react';
-import { RiMenuLine } from 'react-icons/ri';
 import { MaxPageWidth } from 'components/utils/structural/MaxPageWidth/MaxPageWidth';
 import { SuperLink } from '../raw-links/SuperLink/SuperLink';
 import { HeaderStyles } from './Header.styles';
 import { HeaderLogo } from './components/HeaderLogo/HeaderLogo';
+import { MobileNavBtn } from './components/MobileNavBtn/MobileNavBtn';
 
 export interface HeaderProps extends rawHeaderProps {
   navigation?: [ExternalLinkWithTitleProp, InternalLinkWithTitleProp];
@@ -22,34 +19,23 @@ export const Header = ({
   logo,
   navigation,
   preview,
-}: Pick<HeaderProps, 'logo' | 'navigation' | 'preview'>) => {
-  const dispatch = useDispatch();
-  const OpenNavBtnRef = useRef();
+}: Pick<HeaderProps, 'logo' | 'navigation' | 'preview'>) => (
+  <HeaderStyles as="header">
+    <MaxPageWidth as="nav">
+      <div className="layout">
+        <HeaderLogo logo={logo} preview={preview} />
 
-  return (
-    <HeaderStyles as="header">
-      <MaxPageWidth as="nav">
-        <div className="layout">
-          <HeaderLogo logo={logo} preview={preview} />
-          <ul className="navigation">
-            {navigation?.length > 0 &&
-              navigation.map((nav) => (
-                <li key={nav?._key}>
-                  <SuperLink link={nav}>{nav.title}</SuperLink>
-                </li>
-              ))}
-          </ul>
-          <button
-            type="button"
-            aria-label="Open mobile navigation"
-            ref={OpenNavBtnRef}
-            onClick={() => dispatch(openMobileNav())}
-            className="mobile-nav-btn"
-          >
-            <RiMenuLine />
-          </button>
-        </div>
-      </MaxPageWidth>
-    </HeaderStyles>
-  );
-};
+        <ul className="navigation">
+          {navigation?.length > 0 &&
+            navigation.map((nav) => (
+              <li key={nav?._key}>
+                <SuperLink link={nav}>{nav.title}</SuperLink>
+              </li>
+            ))}
+        </ul>
+
+        <MobileNavBtn className="mobile-nav-btn" />
+      </div>
+    </MaxPageWidth>
+  </HeaderStyles>
+);
