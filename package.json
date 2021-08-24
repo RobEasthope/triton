@@ -34,6 +34,7 @@
     "@whitespace/storybook-addon-html": "^5.0.0",
     "faker": "^5.5.3",
     "framer-motion": "^4",
+    "lint-staged": "^11.1.2",
     "lodash": "^4.17.21",
     "next": "11.1.0",
     "next-sanity": "^0.4.0",
