@@ -13,7 +13,8 @@
     "start": "next start",
     "storybook": "start-storybook -p 6006",
     "type-check": "tsc --pretty --noEmit",
-    "types": "npx sanity-codegen"
+    "types": "npx sanity-codegen",
+    "prepare": "husky install"
   },
   "husky": {
     "hooks": {
