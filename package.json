@@ -12,6 +12,8 @@
     "sanity-build": "cd ./.sanity-studio && sanity build",
     "start": "next start",
     "storybook": "start-storybook -p 6006",
+    "test": "jest --watch",
+    "test:ci": "jest --ci",
     "types": "npx sanity-codegen"
   },
   "dependencies": {
