@@ -1,5 +1,5 @@
 import faker from 'faker';
-import { ExampleFormattedText } from 'components/utils/formatted-text/ExampleFormattedText/ExampleFormattedText';
+import { ExampleFormattedText } from 'components/utils/text/ExampleFormattedText/ExampleFormattedText';
 import { EXAMPLE_TEXT } from '.storybook/mock-data/sanity-text';
 import { capitalizeFirstLetter } from '.storybook/utils/capitalizeFirstLetter';
 import { RawHeading } from '../text/RawHeading/RawHeading';
