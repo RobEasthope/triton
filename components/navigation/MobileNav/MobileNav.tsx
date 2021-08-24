@@ -16,7 +16,7 @@ import {
   selectMobileNavStatus,
 } from 'components/navigation/MobileNav/mobileNav.slice';
 import { RiCloseLine } from 'react-icons/ri';
-import { SuperLink } from '../raw-links/SuperLink/SuperLink';
+import { SuperLink } from '../../utils/links/SuperLink/SuperLink';
 
 export interface MobileNavProps extends rawHeaderProps {
   navigation?: [ExternalLinkWithTitleProp, InternalLinkWithTitleProp];

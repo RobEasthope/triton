@@ -5,10 +5,10 @@ import createSchema from 'part:@sanity/base/schema-creator';
 import schemaTypes from 'all:part:@sanity/base/schema-type';
 
 // Navigation
-import internalLink from '../../components/navigation/raw-links/InternalLink/InternalLink.schema.js';
-import internalLinkWithTitle from '../../components/navigation/raw-links/InternalLink/InternalLinkWithTitle.schema.js';
-import externalLink from '../../components/navigation/raw-links/ExternalLink/ExternalLink.schema.js';
-import externalLinkWithTitle from '../../components/navigation/raw-links/ExternalLink/ExternalLinkWithTitle.schema.js';
+import internalLink from '../../components/utils/links/InternalLink/InternalLink.schema.js';
+import internalLinkWithTitle from '../../components/utils/links/InternalLink/InternalLinkWithTitle.schema.js';
+import externalLink from '../../components/utils/links/ExternalLink/ExternalLink.schema.js';
+import externalLinkWithTitle from '../../components/utils/links/ExternalLink/ExternalLinkWithTitle.schema.js';
 
 import header from '../../components/navigation/Header/Header.schema.js';
 
