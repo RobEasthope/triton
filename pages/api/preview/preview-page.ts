@@ -16,13 +16,11 @@ export default async function (
   }
   // const { sanityQuery, queryParams } = selectSanityQuery(params.slug, locale);
   // Check if the page with the given `slug` exists
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const pageData = await previewClient.fetch(anyPageBySlugQuery, {
     slug: req.query.fullSlug,
     locale: req.query.locale,
   });
 
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
   const page = pageData[0];
 
   // If the slug doesn't exist prevent preview mode from being enabled
@@ -36,7 +34,6 @@ export default async function (
   // Redirect to the path from the fetched page
   // We don't redirect to req.query.slug as that might lead to open redirect vulnerabilities
   res.writeHead(307, {
-    // eslint-disable-next-line @typescript-eslint/restrict-template-expressions, @typescript-eslint/no-unsafe-member-access
     Location: `/${page?.slug?.current}`,
   });
   res.end();

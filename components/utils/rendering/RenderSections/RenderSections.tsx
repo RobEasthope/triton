@@ -1,8 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable react/prop-types */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-unsafe-return */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { upperFirst } from 'lodash';
 
 import * as SectionComponents from 'components/utils/rendering/RenderSections/section-index';
@@ -30,7 +25,6 @@ export function RenderSections({ sections, preview }) {
 
         if (!SectionComponent) {
           return (
-            // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
             <div key={section?._key}>Missing section {section?._type}</div>
           );
         }

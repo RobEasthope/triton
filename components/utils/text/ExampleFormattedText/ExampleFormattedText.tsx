@@ -1,8 +1,3 @@
-/* eslint-disable react/display-name */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/no-unsafe-return */
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import BlockContent from '@sanity/block-content-to-react';
 
 import { RawHeading } from 'components/utils/text/RawHeading/RawHeading';
@@ -51,7 +46,6 @@ const serializers = {
 
     // Youtube block
     // youtubeBlock: (props) => {
-    //   // eslint-disable-next-line react/destructuring-assignment, @typescript-eslint/naming-convention
     //   const { _type, url } = props?.node;
 
     //   return <YoutubeBlock _type={_type} url={url} />;

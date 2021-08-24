@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable react/prop-types */
 import { Footer } from 'components/navigation/Footer/Footer';
 import { Header, HeaderProps } from 'components/navigation/Header/Header';
 import { FixedFooterLayout } from 'components/structural/FixedFooterLayout';
