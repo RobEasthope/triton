@@ -13,7 +13,7 @@ import externalLinkWithTitle from '../../components/utils/links/ExternalLink/Ext
 import header from '../../components/navigation/Header/Header.schema.js';
 
 // Settings
-import globalMetadata from '../../components/utils/rendering/Metadata/global-metadata-schema';
+import globalMetadata from '../../components/utils/rendering/Metadata/GlobalMetadata.schema';
 
 // Formatted text
 import exampleText from '../../components/utils/text/ExampleFormattedText/ExampleFormattedText.schema';
