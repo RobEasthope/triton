@@ -13,10 +13,10 @@ import externalLinkWithTitle from '../../components/utils/links/ExternalLink/Ext
 import header from '../../components/navigation/Header/Header.schema.js';
 
 // Settings
-import globalMetadata from '../../components/utils/structural/Metadata/global-metadata-schema';
+import globalMetadata from '../../components/utils/rendering/Metadata/global-metadata-schema';
 
 // Formatted text
-import exampleText from '../../components/utils/formatted-text/ExampleText/example-text-schema';
+import exampleText from '../../components/utils/formatted-text/ExampleText/ExampleText.schema';
 
 // Sections
 import exampleSection from '../../components/sections/ExampleSection/ExampleSection.schema';
