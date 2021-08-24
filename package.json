@@ -14,6 +14,7 @@
     "storybook": "start-storybook -p 6006",
     "test": "jest --watch",
     "test:ci": "jest --ci",
+    "type-check": "tsc --pretty --noEmit",
     "types": "npx sanity-codegen"
   },
   "dependencies": {
