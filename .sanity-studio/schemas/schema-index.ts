@@ -16,7 +16,7 @@ import header from '../../components/navigation/Header/Header.schema.js';
 import globalMetadata from '../../components/utils/rendering/Metadata/global-metadata-schema';
 
 // Formatted text
-import exampleText from '../../components/utils/formatted-text/ExampleText/ExampleText.schema';
+import exampleText from '../../components/utils/formatted-text/ExampleFormattedText/ExampleFormattedText.schema';
 
 // Sections
 import exampleSection from '../../components/sections/ExampleSection/ExampleSection.schema';
