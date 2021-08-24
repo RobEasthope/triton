@@ -1,5 +1,5 @@
 import { ExampleText } from 'components/utils/formatted-text/ExampleText/ExampleText';
-import { MaxPageWidth } from 'components/utils/structural/MaxPageWidth/MaxPageWidth';
+import { MaxPageWidth } from 'components/utils/styles/MaxPageWidth/MaxPageWidth';
 import { ExampleSection as rawExampleSectionProps } from 'settings/types/sanity-schema';
 import { ExampleSectionStyles } from './ExampleSection.styles';
 

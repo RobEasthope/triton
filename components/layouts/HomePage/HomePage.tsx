@@ -5,8 +5,8 @@ import { Footer } from 'components/navigation/Footer/Footer';
 import { Header, HeaderProps } from 'components/navigation/Header/Header';
 import { FixedFooterLayout } from 'components/structural/FixedFooterLayout';
 import { MainContentLayout } from 'components/structural/MainContentLayout';
-import { RenderSections } from 'components/utils/structural/RenderSections/RenderSections';
-import { Metadata } from 'components/utils/structural/Metadata/Metadata';
+import { RenderSections } from 'components/utils/rendering/RenderSections/RenderSections';
+import { Metadata } from 'components/utils/rendering/Metadata/Metadata';
 import {
   HomePage as HomePageProps,
   GlobalMetadata,
