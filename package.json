@@ -17,9 +17,15 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn run lint",
+      "pre-commit": "lint-staged",
       "pre-push": "yarn run type-check"
     }
+  },
+  "lint-staged": {
+    "*.@(ts|tsx)": [
+      "yarn lint",
+      "yarn format"
+    ]
   },
   "dependencies": {
     "@chakra-ui/react": "^1.6.6",
