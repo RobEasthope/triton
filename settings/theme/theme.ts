@@ -4,7 +4,7 @@ import { extendTheme } from '@chakra-ui/react';
 export const theme = extendTheme({
   sizes: {
     container: {
-      page: '1400px',
+      page: '1200px',
     },
   },
 });
