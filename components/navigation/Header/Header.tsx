@@ -6,10 +6,10 @@ import {
 } from 'settings/types/links';
 import { MaxPageWidth } from 'components/utils/styles/MaxPageWidth/MaxPageWidth';
 import { useDisclosure } from '@chakra-ui/react';
+import { RiMenuLine } from 'react-icons/ri';
 import { SuperLink } from '../../utils/links/SuperLink/SuperLink';
 import { HeaderStyles } from './Header.styles';
 import { HeaderLogo } from './components/HeaderLogo/HeaderLogo';
-import { MobileNavBtn } from './components/MobileNavBtn/MobileNavBtn';
 import { MobileNav } from '../MobileNav/MobileNav';
 
 export interface HeaderProps extends rawHeaderProps {
@@ -40,7 +40,14 @@ export const Header = ({
                 ))}
             </ul>
 
-            <MobileNavBtn className="mobile-nav-btn" onClick={onOpen} />
+            <button
+              type="button"
+              aria-label="Open mobile navigation"
+              onClick={() => onOpen()}
+              className="mobile-nav-btn"
+            >
+              <RiMenuLine />
+            </button>
           </div>
         </MaxPageWidth>
       </HeaderStyles>
