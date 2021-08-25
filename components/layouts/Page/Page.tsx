@@ -27,7 +27,6 @@ export const Page = ({
     <FixedFooterLayout>
       {Object.keys(globals?.header).length > 0 && (
         <>
-          <MobileNav navigation={globals?.header?.navigation} />
           <Header
             logo={globals?.header?.logo}
             navigation={globals?.header?.navigation}

@@ -6,14 +6,14 @@ type MobileNavBtnProps = {
   className?: string;
 };
 
-export const MobileNavBtn = ({ className }: MobileNavBtnProps) => {
+export const MobileNavBtn = ({ className, onClick }: MobileNavBtnProps) => {
   const dispatch = useDispatch();
 
   return (
     <button
       type="button"
       aria-label="Open mobile navigation"
-      onClick={() => dispatch(openMobileNav())}
+      onClick={() => onClick()}
       className={className}
     >
       <RiMenuLine />

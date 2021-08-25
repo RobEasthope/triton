@@ -24,14 +24,15 @@ export interface MobileNavProps extends rawHeaderProps {
 
 export const MobileNav = ({
   navigation,
+  isOpen,
+  onClose,
 }: Pick<MobileNavProps, 'navigation'>) => {
   const dispatch = useDispatch();
-  const { onClose } = useDisclosure();
   const mobileNavOpen = useSelector(selectMobileNavStatus);
 
   return (
     <Drawer
-      isOpen={mobileNavOpen}
+      isOpen={isOpen}
       placement="left"
       onClose={onClose}
       closeOnOverlayClick
