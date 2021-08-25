@@ -32,11 +32,7 @@ export const MobileNav = ({
   >
     <DrawerOverlay />
     <DrawerContent>
-      <button
-        type="button"
-        aria-label="Increment value"
-        onClick={() => onClose()}
-      >
+      <button type="button" aria-label="Increment value" onClick={onClose}>
         <RiCloseLine />
       </button>
 

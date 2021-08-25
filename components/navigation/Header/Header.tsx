@@ -43,7 +43,7 @@ export const Header = ({
             <button
               type="button"
               aria-label="Open mobile navigation"
-              onClick={() => onOpen()}
+              onClick={onOpen}
               className="mobile-nav-btn"
             >
               <RiMenuLine />
