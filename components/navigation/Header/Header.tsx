@@ -26,6 +26,7 @@ export const Header = ({
 
   return (
     <>
+      {/* Large nav */}
       <HeaderStyles as="header">
         <MaxPageWidth as="nav">
           <div className="layout">
@@ -52,6 +53,7 @@ export const Header = ({
         </MaxPageWidth>
       </HeaderStyles>
 
+      {/* Small Nav */}
       <MobileNav navigation={navigation} isOpen={isOpen} onClose={onClose} />
     </>
   );
