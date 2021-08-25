@@ -15,13 +15,15 @@ import { SuperLink } from '../../utils/links/SuperLink/SuperLink';
 
 export interface MobileNavProps extends rawHeaderProps {
   navigation?: [ExternalLinkWithTitleProp, InternalLinkWithTitleProp];
+  isOpen: boolean;
+  onClose: VoidFunction;
 }
 
 export const MobileNav = ({
   navigation,
   isOpen,
   onClose,
-}: Pick<MobileNavProps, 'navigation'>) => (
+}: Pick<MobileNavProps, 'navigation' | 'isOpen' | 'onClose'>) => (
   <Drawer
     isOpen={isOpen}
     placement="left"
