@@ -22,5 +22,5 @@ jobs:
       - name: Install deps
         run: npm ci
 
-      - name: Validate
+      - name: Linting
         run: npm run lint
