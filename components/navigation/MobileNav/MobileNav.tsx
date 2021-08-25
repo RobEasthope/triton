@@ -26,8 +26,6 @@ export const MobileNav = ({
     isOpen={isOpen}
     placement="left"
     onClose={onClose}
-    closeOnOverlayClick
-    closeOnEsc
     // finalFocusRef={btnRef}
   >
     <DrawerOverlay />
