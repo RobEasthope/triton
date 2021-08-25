@@ -23,4 +23,4 @@ jobs:
         run: npm ci
 
       - name: Validate
-        run: npm run lint
+        run: yarn run lint
