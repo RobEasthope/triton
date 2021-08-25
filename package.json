@@ -15,7 +15,11 @@
     "test": "jest --watch",
     "test:ci": "jest --ci",
     "type-check": "tsc --pretty --noEmit",
-    "types": "npx sanity-codegen"
+    "types": "npx sanity-codegen",
+    "cypress": "cypress open",
+    "cypress:headless": "cypress run",
+    "e2e": "start-server-and-test dev http://localhost:3000 cypress",
+    "e2e:headless": "start-server-and-test dev http://localhost:3000 cypress:headless"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.6.6",
