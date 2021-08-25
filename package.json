@@ -5,17 +5,21 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build-storybook": "build-storybook",
-    "lint": "next lint",
-    "lint:fix": "next lint --fix",
     "sanity": "cd ./.sanity-studio && sanity start",
     "sanity-build": "cd ./.sanity-studio && sanity build",
-    "start": "next start",
     "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "types": "npx sanity-codegen",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "type-check": "tsc --pretty --noEmit",
     "test": "jest --watch",
     "test:ci": "jest --ci",
-    "type-check": "tsc --pretty --noEmit",
-    "types": "npx sanity-codegen"
+    "cypress": "cypress open",
+    "cypress:headless": "cypress run",
+    "e2e": "start-server-and-test dev http://localhost:3000 cypress",
+    "e2e:headless": "start-server-and-test dev http://localhost:3000 cypress:headless"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.6.6",
@@ -58,6 +62,7 @@
     "babel-eslint": "^10.1.0",
     "babel-jest": "^27.0.6",
     "babel-loader": "^8.2.2",
+    "cypress": "^8.3.0",
     "eslint": "^7.17.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-airbnb-typescript": "^12.0.0",
@@ -74,6 +79,7 @@
     "jest": "^27.0.6",
     "prettier": "^2.2.1",
     "react-test-renderer": "^17.0.2",
+    "start-server-and-test": "^1.13.1",
     "typescript": "^4.1.3"
   }
 }
