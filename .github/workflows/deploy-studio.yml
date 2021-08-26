@@ -12,7 +12,7 @@ jobs:
         with:
           filters: |
             src:
-              - '.sanity-studio'
+              - '.sanity-studio/**/*.*'
               - '**./*.schema.js'
 
       - if: steps.changes.outputs.src == 'true'
