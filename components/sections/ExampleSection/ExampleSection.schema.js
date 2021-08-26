@@ -4,6 +4,15 @@ export default {
   title: 'Example',
   fields: [
     {
+      name: 'storybook',
+      title: 'Storybook',
+      type: 'note',
+      options: {
+        message:
+          '<a href="https://triquetra-storybook.vercel.app/?path=/story/sections-examplesection--vanilla">Storybook UI preview</a>',
+      },
+    },
+    {
       name: 'heading',
       title: 'Heading',
       type: 'string',
