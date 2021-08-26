@@ -1,0 +1,19 @@
+name: Build Sanity Studio
+on: [push]
+jobs:
+  Build-Sanity-Studio:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - uses: dorny/paths-filter@v2
+        id: changes
+        with:
+          filters: |
+            src:
+              - '.sanity-studio'
+              - '**./*.schema.js'
+
+      - if: steps.changes.outputs.src == 'true'
+        run: echo "🖥️ The workflow is now ready to run the remaining actions"
