@@ -1423,6 +1423,19 @@
     postcss-value-parser "^3.3.0"
     source-list-map "^2.0.0"
 
+"@sanity/dashboard@^2.17.0":
+  version "2.17.0"
+  resolved "https://registry.npmjs.org/@sanity/dashboard/-/dashboard-2.17.0.tgz#ee2aa9be2966d3dcf67e0a4de66a63083f765d67"
+  integrity sha512-xBvBsuRyyU+mJSn/Oo/9dvPcQCNVt3p03FX5kIS3Q6e3OOQ8nl4NAa9eiRgHxx/0fXPwoPuzv1Z/Xe1aoF0iWg==
+  dependencies:
+    "@sanity/icons" "^1.1.4"
+    "@sanity/image-url" "^0.140.19"
+    "@sanity/types" "2.17.0"
+    "@sanity/ui" "^0.36.0"
+    lodash "^4.17.15"
+    rxjs "^6.5.3"
+    styled-components "^5.2.1"
+
 "@sanity/data-aspects@2.15.0":
   version "2.15.0"
   resolved "https://registry.yarnpkg.com/@sanity/data-aspects/-/data-aspects-2.15.0.tgz#be0873a27aa56ddc98edf7ea35fded345d695e61"
