@@ -16,4 +16,6 @@ jobs:
               - '**./*.schema.js'
 
       - if: steps.changes.outputs.src == 'true'
-        run: echo "🖥️ The workflow is now ready to run the remaining actions"
+        run: echo "✅ The workflow is now ready to run the remaining actions"
+      - if: steps.changes.outputs.src == 'false'
+        run: echo "🚨 The workflow is not ready to run the remaining actions"
