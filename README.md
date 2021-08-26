@@ -2,6 +2,6 @@
 
 First, run the development servers:
 
-- Next dev: `yarn dev`
-- Storybook: `yarn run storybook`
-- Sanity: `yarn run sanity`
+- Next dev: `npm run dev`
+- Storybook: `npm run storybook`
+- Sanity: `npm run sanity`
