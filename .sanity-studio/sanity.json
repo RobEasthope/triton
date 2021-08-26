@@ -15,7 +15,8 @@
     "@sanity/desk-tool",
     "media",
     "dashboard-widget-vercel",
-    "@sanity/dashboard"
+    "@sanity/dashboard",
+    "note-field"
   ],
   "env": {
     "development": {

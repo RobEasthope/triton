@@ -4,6 +4,15 @@ export default {
   title: 'Example',
   fields: [
     {
+      name: 'storybook',
+      title: 'Storybook',
+      type: 'note',
+      options: {
+        message:
+          '<a href="https://triquetra-storybook.vercel.app/?path=/story/sections-examplesection--vanilla">Storybook UI preview</a>',
+      },
+    },
+    {
       name: 'heading',
       title: 'Heading',
       type: 'string',
@@ -15,7 +24,7 @@ export default {
       name: 'text',
       title: 'Text',
       // TODO Use portable text
-      type: 'exampleText',
+      type: 'exampleFormattedText',
       validation: (Rule) =>
         Rule.required().warning('Example section: Text is missing'),
     },
