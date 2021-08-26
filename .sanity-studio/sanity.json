@@ -14,8 +14,9 @@
     "@sanity/default-login",
     "@sanity/desk-tool",
     "vercel-deploy",
+    "@sanity/dashboard",
     "media",
-    "@sanity/dashboard"
+    "note-field"
   ],
   "env": {
     "development": {
