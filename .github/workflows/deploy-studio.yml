@@ -1,4 +1,5 @@
-name: Triquetra
+name: Sanity Studio
+
 on: [push]
 jobs:
   Sanity-Studio:
