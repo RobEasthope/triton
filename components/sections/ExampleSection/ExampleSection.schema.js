@@ -15,7 +15,7 @@ export default {
       name: 'text',
       title: 'Text',
       // TODO Use portable text
-      type: 'exampleText',
+      type: 'exampleFormattedText',
       validation: (Rule) =>
         Rule.required().warning('Example section: Text is missing'),
     },
