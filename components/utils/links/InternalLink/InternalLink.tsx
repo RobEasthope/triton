@@ -1,8 +1,5 @@
 import Link from 'next/link';
-import {
-  InternalLinkProp,
-  InternalLinkWithTitleProp,
-} from 'settings/types/links';
+import { InternalLinkProp, InternalLinkWithTitleProp } from 'types/links';
 
 export type InternalLinkProps = {
   link: InternalLinkWithTitleProp | InternalLinkProp;

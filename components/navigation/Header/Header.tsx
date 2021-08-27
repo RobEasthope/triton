@@ -1,9 +1,9 @@
-import { Header as rawHeaderProps } from 'settings/types/sanity-schema';
+import { Header as rawHeaderProps } from 'types/sanity-schema';
 
 import {
   ExternalLinkWithTitleProp,
   InternalLinkWithTitleProp,
-} from 'settings/types/links';
+} from 'types/links';
 import { MaxPageWidth } from 'components/utils/styles/MaxPageWidth/MaxPageWidth';
 import { useDisclosure } from '@chakra-ui/react';
 import { RiMenuLine } from 'react-icons/ri';

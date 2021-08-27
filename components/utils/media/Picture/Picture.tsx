@@ -5,7 +5,7 @@ import {
   SanityImageCrop,
   SanityImageHotspot,
   SanityReference,
-} from 'settings/types/sanity-schema';
+} from 'types/sanity-schema';
 import { getClient } from 'utils/sanity/sanity.server';
 import { useNextSanityImage } from 'next-sanity-image';
 
