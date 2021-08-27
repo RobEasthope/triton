@@ -16,6 +16,8 @@
     "vercel-deploy",
     "@sanity/dashboard",
     "media",
+    "graph-view",
+    "asset-source-unsplash",
     "note-field"
   ],
   "env": {
