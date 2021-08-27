@@ -55,6 +55,10 @@
     {
       "implements": "part:@sanity/form-builder/input/image/asset-sources",
       "path": "./parts/assetSources.js"
+    },
+    { 
+      "implements": "part:@sanity/dashboard/config", 
+      "path": "./dashboard-config.js" 
     }
   ]
 }
