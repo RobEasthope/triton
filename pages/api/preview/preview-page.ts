@@ -10,7 +10,7 @@ export default async function (
   // This secret should only be known to this API route and the CMS
   if (
     req.query.secret !== process.env.SANITY_PREVIEW_SECRET ||
-    !req.query.fullSlug
+    !req.query.slug
   ) {
     return res.status(401).json({ message: 'Invalid token' });
   }
@@ -18,7 +18,7 @@ export default async function (
   // Check if the page with the given `slug` exists
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const pageData = await previewClient.fetch(anyPageBySlugQuery, {
-    slug: req.query.fullSlug,
+    slug: req.query.slug,
     locale: req.query.locale,
   });
 
