@@ -13,7 +13,7 @@ export default function resolvePreviewUrl(document) {
 
   return `${
     process.env.SANITY_STUDIO_PREVIEW_SITE
-  }/api/preview/preview-page?secret=${
+  }/api/preview/preview-page?slug=${document.slug.current}&secret=${
     process.env.SANITY_STUDIO_PREVIEW_SECRET
-  }&slug=${document.slug.current}`;
+  }`;
 }
