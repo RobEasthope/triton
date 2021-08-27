@@ -7,7 +7,7 @@ export default function resolvePreviewUrl(document) {
     console.log('No preview site url provided');
   }
 
-  if (!document.fullSlug.current) {
+  if (!document.slug.current) {
     console.log('No slug has been provided');
   }
 
@@ -15,5 +15,5 @@ export default function resolvePreviewUrl(document) {
     process.env.SANITY_STUDIO_PREVIEW_SITE
   }/api/preview/preview-page?secret=${
     process.env.SANITY_STUDIO_PREVIEW_SECRET
-  }&fullSlug=${document.slug.current}`;
+  }&slug=${document.slug.current}`;
 }
