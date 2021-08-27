@@ -16,6 +16,8 @@
     "media",
     "dashboard-widget-vercel",
     "@sanity/dashboard",
+    "graph-view",
+    "asset-source-unsplash",
     "note-field"
   ],
   "env": {

@@ -1,4 +1,5 @@
 import S from '@sanity/desk-tool/structure-builder';
+import { createSuperPane } from 'sanity-super-pane';
 
 import {
   RiHome4Line,
@@ -27,7 +28,7 @@ export default () =>
         .title('Pages')
         .icon(ImNewspaper)
         .schemaType('page')
-        .child(S.documentTypeList('page').title('Pages')),
+        .child(createSuperPane('page', S)),
       S.divider(),
       S.listItem()
         .title('Navigation')
