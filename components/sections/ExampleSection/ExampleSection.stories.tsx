@@ -9,7 +9,7 @@ import { CenterComponent } from '.storybook/preview-ui/CenterComponent';
 import { EXAMPLE_TEXT } from '.storybook/mock-data/sanity-text';
 
 export default {
-  title: 'Sections/ExampleSections',
+  title: 'Sections/ExampleSection',
   component: ExampleSection,
   decorators: [
     // eslint-disable-next-line @typescript-eslint/no-shadow, no-shadow

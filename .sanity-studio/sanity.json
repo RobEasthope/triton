@@ -14,7 +14,9 @@
     "@sanity/default-login",
     "@sanity/desk-tool",
     "media",
-    "graph-view"
+    "graph-view",
+    "asset-source-unsplash",
+    "note-field"
   ],
   "env": {
     "development": {
