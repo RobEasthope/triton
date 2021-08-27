@@ -7,10 +7,16 @@ export default {
       },
     },
     {
-      name: 'project-info'
+      name: 'project-info',
+      layout: {
+        width: 'large', // full width is recommended!
+      },
     },
     {
-      name: 'project-users'
+      name: 'project-users',
+      layout: {
+        width: 'medium', // full width is recommended!
+      },
     }
   ],
 }
