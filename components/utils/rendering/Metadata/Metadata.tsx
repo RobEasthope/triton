@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
 import { urlForImage } from 'utils/sanity/sanity-utils';
-import { GlobalMetadata, HomePage, Page } from 'settings/types/sanity-schema';
+import { GlobalMetadata, HomePage, Page } from 'types/sanity-schema';
 
 type MetadateType = {
   page: Page | HomePage;

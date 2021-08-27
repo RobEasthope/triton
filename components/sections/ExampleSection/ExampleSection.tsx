@@ -1,6 +1,6 @@
 import { ExampleFormattedText } from 'components/utils/text/ExampleFormattedText/ExampleFormattedText';
 import { MaxPageWidth } from 'components/utils/styles/MaxPageWidth/MaxPageWidth';
-import { ExampleSection as rawExampleSectionProps } from 'settings/types/sanity-schema';
+import { ExampleSection as rawExampleSectionProps } from 'types/sanity-schema';
 import { ExampleSectionStyles } from './ExampleSection.styles';
 
 export interface ExampleSectionProps extends rawExampleSectionProps {

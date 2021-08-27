@@ -1,7 +1,4 @@
-import {
-  ExternalLinkProp,
-  ExternalLinkWithTitleProp,
-} from 'settings/types/links';
+import { ExternalLinkProp, ExternalLinkWithTitleProp } from 'types/links';
 
 export type ExternalLinkProps = {
   link: ExternalLinkWithTitleProp | ExternalLinkProp;
