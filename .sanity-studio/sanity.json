@@ -16,7 +16,8 @@
     "media",
     "graph-view",
     "asset-source-unsplash",
-    "note-field"
+    "note-field",
+    "social-preview"
   ],
   "env": {
     "development": {
