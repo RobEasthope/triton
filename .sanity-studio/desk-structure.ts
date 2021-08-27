@@ -3,9 +3,7 @@ import { createSuperPane } from 'sanity-super-pane';
 
 import {
   RiHome4Line,
-  RiGlobeLine,
   RiCompasses2Line,
-  RiNavigationFill,
   RiListSettingsLine,
 } from 'react-icons/ri';
 import { ImNewspaper } from 'react-icons/im';
