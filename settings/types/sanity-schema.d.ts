@@ -327,7 +327,7 @@ export type ExternalLinkWithTitle = {
   url?: string;
 };
 
-export type ExampleText = Array<SanityKeyed<SanityBlock>>;
+export type ExampleFormattedText = Array<SanityKeyed<SanityBlock>>;
 
 export type ExampleSection = {
   _type: "exampleSection";
@@ -339,11 +339,11 @@ export type ExampleSection = {
   heading: string;
 
   /**
-   * Text — `exampleText`
+   * Text — `exampleFormattedText`
    *
    *
    */
-  text?: ExampleText;
+  text?: ExampleFormattedText;
 
   /**
    * Image — `image`
