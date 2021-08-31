@@ -20,6 +20,7 @@ class MyDocument extends Document {
         <Head>
           <style
             id="stitches"
+            // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{ __html: getCssText() }}
           />
         </Head>
