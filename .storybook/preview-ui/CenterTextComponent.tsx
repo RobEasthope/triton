@@ -1,11 +1,12 @@
-import styled from '@emotion/styled';
+import { styled } from '../../stitches.config';
 
-export const CenterTextComponent = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  min-height: 100%;
-  max-width: 38em;
-  margin: 0 auto;
-`;
+export const CenterTextComponent = styled('div', {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  width: '100%',
+  minHeight: '100%',
+  maxWidth: '38em',
+  margin: '0 auto',
+});
+  
