@@ -1,5 +1,5 @@
-import styled from '@emotion/styled';
+import { styled } from 'stitches.config';
 
-export const MainContentLayout = styled.div`
-  flex: 1;
-`;
+export const MainContentLayout = styled('div', {
+  flex: 1,
+});
