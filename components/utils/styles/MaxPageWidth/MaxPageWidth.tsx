@@ -1,7 +1,6 @@
-import styled from '@emotion/styled';
-import { theme } from 'settings/theme/theme';
+import { styled } from 'stitches.config';
 
-export const MaxPageWidth = styled.div`
-  max-width: ${theme.sizes.container.page};
-  margin: 0 auto;
-`;
+export const MaxPageWidth = styled('div', {
+  maxWidth: '1200px',
+  marginX: 'auto',
+});
