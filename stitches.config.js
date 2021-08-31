@@ -1,4 +1,4 @@
-import { createStitches } from '@stitches/react'
+import { createStitches } from '@stitches/react';
 
 export const { css, styled, global, getCssText } = createStitches({
   theme: {
@@ -70,4 +70,4 @@ export const { css, styled, global, getCssText } = createStitches({
     bp1: '(min-width: 520px)',
     bp2: '(min-width: 900px)',
   },
-})
+});
