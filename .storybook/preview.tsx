@@ -11,7 +11,7 @@ addDecorator(withPerformance);
 export const decorators = [
   (Story) => (
     <ChakraProvider theme={theme}>
-      {globalStorybookStyles}
+      {/* {globalStorybookStyles} */}
       <Story />
     </ChakraProvider>
   ),
