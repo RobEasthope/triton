@@ -43,10 +43,10 @@ export const typeSize = ({
   return {
     // Font size
     fontSize: `${min}${unit}`,
-    '@bp1': {
+    '@minWidth': {
       fontSize: `calc(${min}${unit} + (${max} - ${min}) * ((100vw - ${minWidth}${unit}) / (${maxWidth} - ${minWidth})))`,
     },
-    '@bp2': {
+    '@maxWidth': {
       fontSize: `${max}${unit}`,
     },
 

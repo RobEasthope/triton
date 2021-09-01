@@ -70,5 +70,7 @@ export const { css, styled, globalCss, getCssText } = createStitches({
   media: {
     bp1: '(min-width: 320px)',
     bp2: '(min-width: 1200px)',
+    minWidth: '(min-width: 320px)',
+    maxWidth: '(min-width: 1200px)',
   },
 });
