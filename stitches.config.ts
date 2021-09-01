@@ -49,23 +49,19 @@ export const { css, styled, globalCss, getCssText } = createStitches({
     },
   },
   utils: {
-    marginX: (value) => ({
+    marginX: (value: string) => ({
       marginLeft: value,
       marginRight: value,
     }),
-    marginY: (value) => ({
+    marginY: (value: string) => ({
       marginTop: value,
       marginBottom: value,
     }),
-    paddingX: (value) => ({
+    paddingX: (value: string) => ({
       paddingLeft: value,
       paddingRight: value,
     }),
-    paddingY: (value) => ({
-      paddingTop: value,
-      paddingBottom: value,
-    }),
-    type: (value) => ({
+    paddingY: (value: string) => ({
       paddingTop: value,
       paddingBottom: value,
     }),
