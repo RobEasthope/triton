@@ -25,14 +25,9 @@ export type PictureProps = {
   className?: string;
 };
 
-const ResponsiveImageWrapper = styled.div<{
-  maxWidth?: number;
-  className?: string;
-}>`
-  width: 100%;
-  max-width: ${(props) => (props.maxWidth ? `${props.maxWidth}px` : '100% ')};
-`;
-
+export const ResponsiveImageWrapper = styled('div', {
+  width: '100%',
+});
 
 export const FillImageWrapper = styled('div', {
   position: 'absolute',
@@ -54,7 +49,10 @@ export const Picture = ({
     switch (mode) {
       case 'responsive':
         return (
-          <ResponsiveImageWrapper maxWidth={maxWidth} className={className}>
+          <ResponsiveImageWrapper
+            style={{ maxWidth: `${maxWidth}px` }}
+            className={className}
+          >
             <Image
               {...imageProps}
               placeholder="blur"
@@ -69,7 +67,10 @@ export const Picture = ({
 
       case 'cover':
         return (
-          <FillImageWrapper maxWidth={maxWidth} className={className}>
+          <FillImageWrapper
+            style={{ maxWidth: `${maxWidth}px` }}
+            className={className}
+          >
             <Image
               src={imageProps.src}
               loader={imageProps.loader}
@@ -82,7 +83,10 @@ export const Picture = ({
 
       case 'contain':
         return (
-          <FillImageWrapper maxWidth={maxWidth} className={className}>
+          <FillImageWrapper
+            style={{ maxWidth: `${maxWidth}px` }}
+            className={className}
+          >
             <Image
               src={imageProps.src}
               loader={imageProps.loader}
