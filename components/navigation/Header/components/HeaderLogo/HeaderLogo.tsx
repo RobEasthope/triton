@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import { styled } from 'stitches.config';
 import { HomeLink } from 'components/utils/links/HomeLink/HomeLink';
 import {
   ImageAssetProp,
@@ -10,12 +10,12 @@ type HeaderLogoProps = {
   preview: boolean;
 };
 
-const StyledHomeLink = styled(HomeLink)`
-  position: relative;
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-`;
+const StyledHomeLink = styled(HomeLink, {
+  position: 'relative',
+  display: 'inline-block',
+  width: '32px',
+  height: '32px',
+});
 
 export const HeaderLogo = ({ logo, preview }: HeaderLogoProps) => (
   <StyledHomeLink>
