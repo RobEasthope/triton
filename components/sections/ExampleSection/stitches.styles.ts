@@ -3,5 +3,5 @@ import { typeSize } from 'utils/responsive/typeSize';
 
 export const StitchesText = styled('p', {
   color: 'red',
-  type: typeSize({ min: 18, max: 32 }),
+  type: typeSize({ min: 18, max: 32, mt: 64, mb: 64 }),
 });
