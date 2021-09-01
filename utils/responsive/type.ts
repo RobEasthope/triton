@@ -1,4 +1,4 @@
-type TypeSizeProps = {
+type TypeProps = {
   // Font sizes
   min: number;
   max: number;
@@ -20,7 +20,7 @@ type TypeSizeProps = {
   py?: number;
 };
 
-export const typeSize = ({
+export const type = ({
   min,
   max,
   mt,
@@ -35,7 +35,7 @@ export const typeSize = ({
   pl,
   px,
   py,
-}: TypeSizeProps) => {
+}: TypeProps) => {
   const minWidth = 320;
   const maxWidth = 1200;
   const unit = 'px';
