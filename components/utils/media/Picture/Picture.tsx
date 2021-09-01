@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import styled from '@emotion/styled';
+import { styled } from 'stitches.config';
 import {
   SanityImageAsset,
   SanityImageCrop,
@@ -33,11 +33,12 @@ const ResponsiveImageWrapper = styled.div<{
   max-width: ${(props) => (props.maxWidth ? `${props.maxWidth}px` : '100% ')};
 `;
 
-const FillImageWrapper = styled.div<{ maxWidth?: number; className?: string }>`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-`;
+
+export const FillImageWrapper = styled('div', {
+  position: 'absolute',
+  width: '100%',
+  height: '100%',
+});
 
 export const Picture = ({
   asset,
