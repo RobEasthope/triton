@@ -70,7 +70,7 @@ export const { css, styled, globalCss, getCssText } = createStitches({
     }),
   },
   media: {
-    bp1: '(min-width: 520px)',
-    bp2: '(min-width: 900px)',
+    bp1: '(min-width: 320px)',
+    bp2: '(min-width: 1200px)',
   },
 });
