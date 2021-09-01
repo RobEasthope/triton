@@ -65,6 +65,9 @@ export const { css, styled, globalCss, getCssText } = createStitches({
       paddingTop: value,
       paddingBottom: value,
     }),
+    typeSize: (value: string) => ({
+      fontSize: value,
+    }),
   },
   media: {
     bp1: '(min-width: 520px)',
