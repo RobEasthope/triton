@@ -20,6 +20,29 @@ type TypeProps = {
   py?: number;
 };
 
+type TypeReturnProps = {
+  // Font sizes
+  fontSize: string;
+  '@minWidth': { fontSize: string };
+  '@maxWidth': { fontSize: string };
+
+  // Margin
+  marginTop?: string;
+  marginRight?: string;
+  marginBottom?: string;
+  marginLeft?: string;
+  marginX?: string;
+  marginY?: string;
+
+  // Padding
+  paddingTop?: string;
+  paddingRight?: string;
+  paddingBottom?: string;
+  paddingLeft?: string;
+  paddingX?: string;
+  paddingY?: string;
+};
+
 export const type = ({
   min,
   max,
@@ -35,7 +58,7 @@ export const type = ({
   pl,
   px,
   py,
-}: TypeProps) => {
+}: TypeProps): TypeReturnProps => {
   const minWidth = 320;
   const maxWidth = 1200;
   const unit = 'px';
