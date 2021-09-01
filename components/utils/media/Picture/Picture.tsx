@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { styled } from 'stitches.config';
 import {
   SanityImageAsset,
   SanityImageCrop,
@@ -8,6 +7,7 @@ import {
 } from 'types/sanity-schema';
 import { getClient } from 'utils/sanity/sanity.server';
 import { useNextSanityImage } from 'next-sanity-image';
+import { ResponsiveImageWrapper, FillImageWrapper } from './Picture.styles.tsx';
 
 export interface ImageAssetProp {
   _type: 'image';
@@ -24,16 +24,6 @@ export type PictureProps = {
   preview: boolean;
   className?: string;
 };
-
-export const ResponsiveImageWrapper = styled('div', {
-  width: '100%',
-});
-
-export const FillImageWrapper = styled('div', {
-  position: 'absolute',
-  width: '100%',
-  height: '100%',
-});
 
 export const Picture = ({
   asset,
