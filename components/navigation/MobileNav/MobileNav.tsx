@@ -7,6 +7,7 @@ import {
 import { RiCloseLine, RiMenuLine } from 'react-icons/ri';
 import * as DialogPrimative from '@radix-ui/react-dialog';
 import { SuperLink } from '../../utils/links/SuperLink/SuperLink';
+import { MobileNavButton } from './MobileNav.styles';
 
 export interface MobileNavProps extends rawHeaderProps {
   navigation?: [ExternalLinkWithTitleProp, InternalLinkWithTitleProp];
@@ -16,14 +17,11 @@ export const MobileNav = ({
   navigation,
 }: Pick<MobileNavProps, 'navigation'>) => (
   <DialogPrimative.Root>
-    <DialogPrimative.Trigger>
+    <MobileNavButton>
       <RiMenuLine />
-    </DialogPrimative.Trigger>
+    </MobileNavButton>
     <DialogPrimative.Overlay />
     <DialogPrimative.Content>
-      <DialogPrimative.Title />
-      <DialogPrimative.Description />
-
       <DialogPrimative.Close>
         <RiCloseLine />
       </DialogPrimative.Close>
