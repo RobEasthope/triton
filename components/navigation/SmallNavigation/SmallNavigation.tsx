@@ -7,7 +7,10 @@ import {
 import { RiCloseLine, RiMenuLine } from 'react-icons/ri';
 import * as DialogPrimative from '@radix-ui/react-dialog';
 import { SuperLink } from '../../utils/links/SuperLink/SuperLink';
-import { SmallNavigationButton } from './SmallNavigation.styles';
+import {
+  OpenSmallNavigationButton,
+  CloseSmallNavigationButton,
+} from './SmallNavigation.styles';
 
 export interface SmallNavigationProps extends rawHeaderProps {
   navigation?: [ExternalLinkWithTitleProp, InternalLinkWithTitleProp];
@@ -17,14 +20,14 @@ export const SmallNavigation = ({
   navigation,
 }: Pick<SmallNavigationProps, 'navigation'>) => (
   <DialogPrimative.Root>
-    <SmallNavigationButton>
+    <OpenSmallNavigationButton>
       <RiMenuLine />
-    </SmallNavigationButton>
+    </OpenSmallNavigationButton>
     <DialogPrimative.Overlay />
     <DialogPrimative.Content>
-      <DialogPrimative.Close>
+      <CloseSmallNavigationButton>
         <RiCloseLine />
-      </DialogPrimative.Close>
+      </CloseSmallNavigationButton>
       <nav>
         <ul>
           {navigation?.length > 0 &&
