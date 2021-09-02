@@ -1,5 +1,6 @@
 import { styled } from 'stitches.config';
-import { PaddedComponent } from 'components/utils/styles/PaddedComponent/PaddedComponent';
 
-export const ExampleSectionStyles = styled(PaddedComponent, {
+export const StitchesText = styled('p', {
+  color: 'red',
+  type: { min: 18, max: 32, mt: 64, mb: 64 },
 });
