@@ -10,6 +10,8 @@ import { SuperLink } from '../../utils/links/SuperLink/SuperLink';
 import {
   OpenSmallNavigationButton,
   CloseSmallNavigationButton,
+  DialogOverlay,
+  DialogContent,
 } from './SmallNavigation.styles';
 
 export interface SmallNavigationProps extends rawHeaderProps {
@@ -23,11 +25,11 @@ export const SmallNavigation = ({
     <OpenSmallNavigationButton>
       <RiMenuLine />
     </OpenSmallNavigationButton>
-    <DialogPrimative.Overlay />
-    <DialogPrimative.Content>
-      <CloseSmallNavigationButton>
-        <RiCloseLine />
-      </CloseSmallNavigationButton>
+
+    <DialogOverlay />
+
+    <DialogContent>
+      <CloseSmallNavigationButton>Close</CloseSmallNavigationButton>
       <nav>
         <ul>
           {navigation?.length > 0 &&
@@ -40,6 +42,6 @@ export const SmallNavigation = ({
             ))}
         </ul>
       </nav>
-    </DialogPrimative.Content>
+    </DialogContent>
   </DialogPrimative.Root>
 );
