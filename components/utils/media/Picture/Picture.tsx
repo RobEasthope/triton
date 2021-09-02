@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import styled from '@emotion/styled';
 import {
   SanityImageAsset,
   SanityImageCrop,
@@ -8,6 +7,7 @@ import {
 } from 'types/sanity-schema';
 import { getClient } from 'utils/sanity/sanity.server';
 import { useNextSanityImage } from 'next-sanity-image';
+import { ResponsiveImageWrapper, FillImageWrapper } from './Picture.styles';
 
 export interface ImageAssetProp {
   _type: 'image';
@@ -25,20 +25,6 @@ export type PictureProps = {
   className?: string;
 };
 
-const ResponsiveImageWrapper = styled.div<{
-  maxWidth?: number;
-  className?: string;
-}>`
-  width: 100%;
-  max-width: ${(props) => (props.maxWidth ? `${props.maxWidth}px` : '100% ')};
-`;
-
-const FillImageWrapper = styled.div<{ maxWidth?: number; className?: string }>`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-`;
-
 export const Picture = ({
   asset,
   maxWidth,
@@ -53,7 +39,10 @@ export const Picture = ({
     switch (mode) {
       case 'responsive':
         return (
-          <ResponsiveImageWrapper maxWidth={maxWidth} className={className}>
+          <ResponsiveImageWrapper
+            style={{ maxWidth: `${maxWidth}px` }}
+            className={className}
+          >
             <Image
               {...imageProps}
               placeholder="blur"
@@ -68,7 +57,10 @@ export const Picture = ({
 
       case 'cover':
         return (
-          <FillImageWrapper maxWidth={maxWidth} className={className}>
+          <FillImageWrapper
+            style={{ maxWidth: `${maxWidth}px` }}
+            className={className}
+          >
             <Image
               src={imageProps.src}
               loader={imageProps.loader}
@@ -81,7 +73,10 @@ export const Picture = ({
 
       case 'contain':
         return (
-          <FillImageWrapper maxWidth={maxWidth} className={className}>
+          <FillImageWrapper
+            style={{ maxWidth: `${maxWidth}px` }}
+            className={className}
+          >
             <Image
               src={imageProps.src}
               loader={imageProps.loader}

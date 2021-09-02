@@ -1,4 +1,6 @@
-import styled from '@emotion/styled';
-import { PaddedComponent } from 'components/utils/styles/PaddedComponent/PaddedComponent';
+import { styled } from 'stitches.config';
 
-export const ExampleSectionStyles = styled(PaddedComponent)``;
+export const Heading = styled('p', {
+  type: { min: 18, max: 32, mb: 32 },
+  fontWeight: 'bold',
+});

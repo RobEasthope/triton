@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 
-import { AspectRatio } from '@chakra-ui/react';
+import * as AspectRatioPrimative from '@radix-ui/react-aspect-ratio';
 import { Picture, PictureProps } from './Picture';
 import { CenterComponent } from '.storybook/preview-ui/CenterComponent';
 import {
@@ -54,9 +54,11 @@ export const CoverSquare = Template.bind({}) as Record<string, unknown>;
 CoverSquare.decorators = [
   // eslint-disable-next-line @typescript-eslint/no-shadow, no-shadow
   (Story) => (
-    <AspectRatio width="400px" ratio={1}>
-      <Story />
-    </AspectRatio>
+    <div style={{ width: '100%', maxWidth: '600px' }}>
+      <AspectRatioPrimative.Root ratio={1 / 1}>
+        <Story />
+      </AspectRatioPrimative.Root>
+    </div>
   ),
 ];
 CoverSquare.args = {
@@ -69,9 +71,11 @@ export const CoverLandscape = Template.bind({}) as Record<string, unknown>;
 CoverLandscape.decorators = [
   // eslint-disable-next-line @typescript-eslint/no-shadow, no-shadow
   (Story) => (
-    <AspectRatio width="400px" ratio={16 / 9}>
-      <Story />
-    </AspectRatio>
+    <div style={{ width: '100%', maxWidth: '600px' }}>
+      <AspectRatioPrimative.Root ratio={16 / 9}>
+        <Story />
+      </AspectRatioPrimative.Root>
+    </div>
   ),
 ];
 CoverLandscape.args = {
@@ -84,9 +88,11 @@ export const CoverPortrait = Template.bind({}) as Record<string, unknown>;
 CoverPortrait.decorators = [
   // eslint-disable-next-line @typescript-eslint/no-shadow, no-shadow
   (Story) => (
-    <AspectRatio width="400px" ratio={9 / 16}>
-      <Story />
-    </AspectRatio>
+    <div style={{ width: '100%', maxWidth: '200px' }}>
+      <AspectRatioPrimative.Root ratio={9 / 16}>
+        <Story />
+      </AspectRatioPrimative.Root>
+    </div>
   ),
 ];
 CoverPortrait.args = {

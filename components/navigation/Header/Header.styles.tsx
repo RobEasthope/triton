@@ -1,34 +1,31 @@
-import styled from '@emotion/styled';
-import { theme } from 'settings/theme/theme';
-import { PaddedComponent } from 'components/utils/styles/PaddedComponent/PaddedComponent';
+import { styled } from 'stitches.config';
+import { HomeLink } from 'components/utils/links/HomeLink/HomeLink';
 
-export const HeaderStyles = styled(PaddedComponent)`
-  .layout {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+export const HeaderLayout = styled('div', {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+});
 
-  .navigation {
-    display: none;
-    visibility: hidden;
+export const StyledHomeLink = styled(HomeLink, {
+  position: 'relative',
+  display: 'inline-block',
+  width: '32px',
+  height: '32px',
+});
 
-    @media (min-width: ${theme.breakpoints.md}) {
-      display: flex;
-      visibility: visible;
-      gap: 1em;
-    }
-    list-style: none;
+export const LargeNavigation = styled('ul', {
+  display: 'none',
+  visibility: 'hidden',
+  listStyle: 'none',
 
-    li {
-      display: inline-block;
-    }
-  }
+  '@media (min-width: 800px)': {
+    display: 'flex',
+    visibility: 'visible',
+    gap: '1em',
+  },
 
-  .mobile-nav-btn {
-    @media (min-width: ${theme.breakpoints.md}) {
-      display: none;
-      visibility: hidden;
-    }
-  }
-`;
+  '& li': {
+    display: 'inline-block',
+  },
+});

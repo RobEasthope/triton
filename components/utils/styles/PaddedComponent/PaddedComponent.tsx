@@ -1,6 +1,6 @@
-import styled from '@emotion/styled';
+import { styled } from 'stitches.config';
 
-export const PaddedComponent = styled.div<{ as: string }>`
-  padding-left: 1em;
-  padding-right: 1em;
-`;
+export const PaddedComponent = styled('div', {
+  paddingLeft: '1em',
+  paddingRight: '1em',
+});

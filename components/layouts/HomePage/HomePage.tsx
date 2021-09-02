@@ -8,7 +8,6 @@ import { MainContentLayout } from 'components/structural/MainContentLayout';
 import { RenderSections } from 'components/utils/rendering/RenderSections/RenderSections';
 import { Metadata } from 'components/utils/rendering/Metadata/Metadata';
 import { HomePage as HomePageProps, GlobalMetadata } from 'types/sanity-schema';
-import { MobileNav } from 'components/navigation/MobileNav/MobileNav';
 
 export const HomePage = ({
   page,

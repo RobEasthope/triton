@@ -3,7 +3,6 @@
 /* eslint-disable react/prop-types */
 import { Footer } from 'components/navigation/Footer/Footer';
 import { Header, HeaderProps } from 'components/navigation/Header/Header';
-import { MobileNav } from 'components/navigation/MobileNav/MobileNav';
 import { FixedFooterLayout } from 'components/structural/FixedFooterLayout';
 import { MainContentLayout } from 'components/structural/MainContentLayout';
 import { Metadata } from 'components/utils/rendering/Metadata/Metadata';
