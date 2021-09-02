@@ -5,14 +5,10 @@ import {
   InternalLinkWithTitleProp,
 } from 'types/links';
 import { MaxPageWidth } from 'components/utils/styles/MaxPageWidth/MaxPageWidth';
-import { RiMenuLine } from 'react-icons/ri';
+
 import { PaddedComponent } from 'components/utils/styles/PaddedComponent/PaddedComponent';
 import { SuperLink } from '../../utils/links/SuperLink/SuperLink';
-import {
-  HeaderLayout,
-  LargeNavigation,
-  MobileNavButton,
-} from './Header.styles';
+import { HeaderLayout, LargeNavigation } from './Header.styles';
 import { HeaderLogo } from './components/HeaderLogo/HeaderLogo';
 import { MobileNav } from '../MobileNav/MobileNav';
 
