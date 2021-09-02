@@ -7,7 +7,7 @@ import {
 } from 'types/sanity-schema';
 import { getClient } from 'utils/sanity/sanity.server';
 import { useNextSanityImage } from 'next-sanity-image';
-import { ResponsiveImageWrapper, FillImageWrapper } from './Picture.styles.tsx';
+import { ResponsiveImageWrapper, FillImageWrapper } from './Picture.styles';
 
 export interface ImageAssetProp {
   _type: 'image';
