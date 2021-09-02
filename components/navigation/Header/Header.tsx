@@ -7,8 +7,14 @@ import {
 import { MaxPageWidth } from 'components/utils/styles/MaxPageWidth/MaxPageWidth';
 import { useDisclosure } from '@chakra-ui/react';
 import { RiMenuLine } from 'react-icons/ri';
+import { PaddedComponent } from 'components/utils/styles/PaddedComponent/PaddedComponent';
 import { SuperLink } from '../../utils/links/SuperLink/SuperLink';
-import { HeaderStyles } from './Header.styles';
+import {
+  HeaderLayout,
+  HeaderStyles,
+  LargeNavigation,
+  MobileNavButton,
+} from './Header.styles';
 import { HeaderLogo } from './components/HeaderLogo/HeaderLogo';
 import { MobileNav } from '../MobileNav/MobileNav';
 
@@ -27,31 +33,31 @@ export const Header = ({
   return (
     <>
       {/* Large nav */}
-      <HeaderStyles as="header">
+      <PaddedComponent as="header">
         <MaxPageWidth as="nav">
-          <div className="layout">
+          <HeaderLayout>
             <HeaderLogo logo={logo} preview={preview} />
 
-            <ul className="navigation">
+            <LargeNavigation className="navigation">
               {navigation?.length > 0 &&
                 navigation.map((nav) => (
                   <li key={nav?._key}>
                     <SuperLink link={nav}>{nav.title}</SuperLink>
                   </li>
                 ))}
-            </ul>
+            </LargeNavigation>
 
-            <button
+            <MobileNavButton
               type="button"
               aria-label="Open mobile navigation"
               onClick={onOpen}
               className="mobile-nav-btn"
             >
               <RiMenuLine />
-            </button>
-          </div>
+            </MobileNavButton>
+          </HeaderLayout>
         </MaxPageWidth>
-      </HeaderStyles>
+      </PaddedComponent>
 
       {/* Small Nav */}
       <MobileNav navigation={navigation} isOpen={isOpen} onClose={onClose} />

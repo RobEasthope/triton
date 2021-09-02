@@ -1,34 +1,30 @@
-import styled from '@emotion/styled';
-import { theme } from 'settings/theme/theme';
-import { PaddedComponent } from 'components/utils/styles/PaddedComponent/PaddedComponent';
+import { styled } from 'stitches.config';
 
-export const HeaderStyles = styled(PaddedComponent)`
-  .layout {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+export const HeaderLayout = styled('div', {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+});
 
-  .navigation {
-    display: none;
-    visibility: hidden;
+export const LargeNavigation = styled('ul', {
+  display: 'none',
+  visibility: 'hidden',
+  listStyle: 'none',
 
-    @media (min-width: ${theme.breakpoints.md}) {
-      display: flex;
-      visibility: visible;
-      gap: 1em;
-    }
-    list-style: none;
+  '@media (min-width: 800px)': {
+    display: 'flex',
+    visibility: 'visible',
+    gap: '1em',
+  },
 
-    li {
-      display: inline-block;
-    }
-  }
+  '& li': {
+    display: 'inline-block',
+  },
+});
 
-  .mobile-nav-btn {
-    @media (min-width: ${theme.breakpoints.md}) {
-      display: none;
-      visibility: hidden;
-    }
-  }
-`;
+export const MobileNavButton = styled('button', {
+  '@media (min-width: 800px)': {
+    display: 'none',
+    visibility: 'hidden',
+  },
+});
