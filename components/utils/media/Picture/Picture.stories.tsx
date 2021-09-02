@@ -54,7 +54,7 @@ export const CoverSquare = Template.bind({}) as Record<string, unknown>;
 CoverSquare.decorators = [
   // eslint-disable-next-line @typescript-eslint/no-shadow, no-shadow
   (Story) => (
-    <div style={{ width: '400px' }}>
+    <div style={{ width: '100%', maxWidth: '600px' }}>
       <AspectRatioPrimative.Root ratio={1 / 1}>
         <Story />
       </AspectRatioPrimative.Root>
@@ -71,7 +71,7 @@ export const CoverLandscape = Template.bind({}) as Record<string, unknown>;
 CoverLandscape.decorators = [
   // eslint-disable-next-line @typescript-eslint/no-shadow, no-shadow
   (Story) => (
-    <div style={{ width: '400px' }}>
+    <div style={{ width: '100%', maxWidth: '600px' }}>
       <AspectRatioPrimative.Root ratio={16 / 9}>
         <Story />
       </AspectRatioPrimative.Root>
@@ -88,7 +88,7 @@ export const CoverPortrait = Template.bind({}) as Record<string, unknown>;
 CoverPortrait.decorators = [
   // eslint-disable-next-line @typescript-eslint/no-shadow, no-shadow
   (Story) => (
-    <div style={{ width: '400px' }}>
+    <div style={{ width: '100%', maxWidth: '200px' }}>
       <AspectRatioPrimative.Root ratio={9 / 16}>
         <Story />
       </AspectRatioPrimative.Root>
