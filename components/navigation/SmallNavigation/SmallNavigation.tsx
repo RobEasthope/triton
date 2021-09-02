@@ -4,7 +4,7 @@ import {
   InternalLinkWithTitleProp,
 } from 'types/links';
 
-import { RiCloseLine, RiMenuLine } from 'react-icons/ri';
+import { RiMenuLine } from 'react-icons/ri';
 import * as DialogPrimative from '@radix-ui/react-dialog';
 import { SuperLink } from '../../utils/links/SuperLink/SuperLink';
 import {
