@@ -25,6 +25,7 @@
     "@chakra-ui/react": "^1.6.6",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
+    "@radix-ui/react-aspect-ratio": "^0.0.15",
     "@sanity/block-content-to-react": "^3.0.0",
     "@sanity/image-url": "^0.140.22",
     "@stitches/react": "^1.0.0",
