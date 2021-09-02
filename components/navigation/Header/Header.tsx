@@ -11,7 +11,6 @@ import { PaddedComponent } from 'components/utils/styles/PaddedComponent/PaddedC
 import { SuperLink } from '../../utils/links/SuperLink/SuperLink';
 import {
   HeaderLayout,
-  HeaderStyles,
   LargeNavigation,
   MobileNavButton,
 } from './Header.styles';
@@ -32,7 +31,6 @@ export const Header = ({
 
   return (
     <>
-      {/* Large nav */}
       <PaddedComponent as="header">
         <MaxPageWidth as="nav">
           <HeaderLayout>
