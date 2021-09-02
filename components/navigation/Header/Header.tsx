@@ -37,7 +37,6 @@ export const Header = ({
               ))}
           </LargeNavigation>
 
-          {/* Small Nav */}
           <SmallNavigation navigation={navigation} />
         </HeaderLayout>
       </MaxPageWidth>
