@@ -71,9 +71,11 @@ export const CoverLandscape = Template.bind({}) as Record<string, unknown>;
 CoverLandscape.decorators = [
   // eslint-disable-next-line @typescript-eslint/no-shadow, no-shadow
   (Story) => (
-    <AspectRatio width="400px" ratio={16 / 9}>
-      <Story />
-    </AspectRatio>
+    <div style={{ width: '400px' }}>
+      <AspectRatioPrimative.Root ratio={16 / 9}>
+        <Story />
+      </AspectRatioPrimative.Root>
+    </div>
   ),
 ];
 CoverLandscape.args = {
@@ -86,9 +88,11 @@ export const CoverPortrait = Template.bind({}) as Record<string, unknown>;
 CoverPortrait.decorators = [
   // eslint-disable-next-line @typescript-eslint/no-shadow, no-shadow
   (Story) => (
-    <AspectRatio width="400px" ratio={9 / 16}>
-      <Story />
-    </AspectRatio>
+    <div style={{ width: '400px' }}>
+      <AspectRatioPrimative.Root ratio={9 / 16}>
+        <Story />
+      </AspectRatioPrimative.Root>
+    </div>
   ),
 ];
 CoverPortrait.args = {
