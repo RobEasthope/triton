@@ -7,9 +7,9 @@ import {
 import { MaxPageWidth } from 'components/utils/styles/MaxPageWidth/MaxPageWidth';
 
 import { PaddedComponent } from 'components/utils/styles/PaddedComponent/PaddedComponent';
+import { Picture } from 'components/utils/media/Picture/Picture';
 import { SuperLink } from '../../utils/links/SuperLink/SuperLink';
-import { HeaderLayout, LargeNavigation } from './Header.styles';
-import { HeaderLogo } from './components/HeaderLogo/HeaderLogo';
+import { HeaderLayout, LargeNavigation, StyledHomeLink } from './Header.styles';
 import { SmallNavigation } from '../SmallNavigation/SmallNavigation';
 
 export interface HeaderProps extends rawHeaderProps {
@@ -25,10 +25,17 @@ export const Header = ({
   <>
     <PaddedComponent as="header">
       <MaxPageWidth as="nav">
-        <HeaderLayout>
-          <HeaderLogo logo={logo} preview={preview} />
+        <HeaderLayout as="div">
+          <StyledHomeLink>
+            <Picture
+              asset={logo}
+              mode="contain"
+              maxWidth={32}
+              preview={preview}
+            />
+          </StyledHomeLink>
 
-          <LargeNavigation className="navigation">
+          <LargeNavigation as="ul">
             {navigation?.length > 0 &&
               navigation.map((nav) => (
                 <li key={nav?._key}>

@@ -30,6 +30,7 @@ export const SmallNavigation = ({
 
     <DialogContent>
       <CloseSmallNavigationButton>Close</CloseSmallNavigationButton>
+
       <nav>
         <ul>
           {navigation?.length > 0 &&
