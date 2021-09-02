@@ -1,11 +1,11 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { MobileNav, MobileNavProps } from './MobileNav';
+import { SmallNavigation, SmallNavigationProps } from './SmallNavigation';
 import { CenterComponent } from '.storybook/preview-ui/CenterComponent';
 
 export default {
-  title: 'Navigation/MobileNav',
-  component: MobileNav,
+  title: 'Navigation/SmallNavigation',
+  component: SmallNavigation,
   decorators: [
     // eslint-disable-next-line @typescript-eslint/no-shadow, no-shadow
     (Story) => (
@@ -16,7 +16,9 @@ export default {
   ],
 } as Meta;
 
-const Template: Story<MobileNavProps> = (args) => <MobileNav {...args} />;
+const Template: Story<SmallNavigationProps> = (args) => (
+  <SmallNavigation {...args} />
+);
 
 // Vanilla
 export const Vanilla = Template.bind({}) as Record<string, unknown>;

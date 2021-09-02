@@ -10,7 +10,7 @@ import { PaddedComponent } from 'components/utils/styles/PaddedComponent/PaddedC
 import { SuperLink } from '../../utils/links/SuperLink/SuperLink';
 import { HeaderLayout, LargeNavigation } from './Header.styles';
 import { HeaderLogo } from './components/HeaderLogo/HeaderLogo';
-import { MobileNav } from '../MobileNav/MobileNav';
+import { SmallNavigation } from '../SmallNavigation/SmallNavigation';
 
 export interface HeaderProps extends rawHeaderProps {
   navigation?: [ExternalLinkWithTitleProp, InternalLinkWithTitleProp];
@@ -38,7 +38,7 @@ export const Header = ({
           </LargeNavigation>
 
           {/* Small Nav */}
-          <MobileNav navigation={navigation} />
+          <SmallNavigation navigation={navigation} />
         </HeaderLayout>
       </MaxPageWidth>
     </PaddedComponent>
