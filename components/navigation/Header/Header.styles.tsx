@@ -21,10 +21,3 @@ export const LargeNavigation = styled('ul', {
     display: 'inline-block',
   },
 });
-
-export const MobileNavButton = styled('button', {
-  '@media (min-width: 800px)': {
-    display: 'none',
-    visibility: 'hidden',
-  },
-});
