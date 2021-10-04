@@ -1,0 +1,22 @@
+{
+  "folders": [
+    {
+      "name": "Root",
+      "path": "../"
+    },
+    {
+      "name": "Next",
+      "path": "../packages/next"
+    },
+    {
+      "name": "Sanity",
+      "path": "../packages/sanity"
+    },
+  ],
+  "settings": {
+    "files.exclude": {
+      "node_modules/": true,
+      "packages/": true
+    },
+  }
+}
