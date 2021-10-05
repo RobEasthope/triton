@@ -2,7 +2,7 @@ import React from 'react';
 import faker from 'faker';
 import { Meta, Story } from '@storybook/react';
 import { ExampleSection as ExampleSectionProps } from 'types/sanity-schema';
-import { capitalizeFirstLetter } from '.storybook/utils/capitalizeFirstLetter';
+import { capitalizeFirstLetter } from 'utils/capitalizeFirstLetter';
 
 import { ExampleSection } from './ExampleSection';
 import { CenterComponent } from '.storybook/components/CenterComponent';
