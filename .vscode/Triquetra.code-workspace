@@ -6,17 +6,17 @@
     },
     {
       "name": "Next",
-      "path": "../packages/next"
+      "path": "../apps/next"
     },
     {
       "name": "Sanity",
-      "path": "../packages/sanity"
+      "path": "../apps/sanity"
     },
   ],
   "settings": {
     "files.exclude": {
       "node_modules/": true,
-      "packages/": true
+      "apps/": true
     },
   }
 }
