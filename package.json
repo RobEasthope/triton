@@ -1,5 +1,5 @@
 {
-  "name": "free-flight-academy",
+  "name": "triquetra",
   "private": true,
   "workspaces": [
     "packages/*"
