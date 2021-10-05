@@ -1,5 +1,9 @@
 {
-  "extends": ["next", "next/core-web-vitals", "eslint-config-wesbos/typescript.js"],
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "wesbos/typescript"
+  ],
   "rules": {
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": "warn"
