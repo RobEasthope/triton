@@ -10,7 +10,7 @@
         "./**/*.tsx"
       ],
       "rules": {
-        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off"
       }
     },
     {
@@ -27,29 +27,13 @@
         "./**/*.schema.js"
       ],
       "rules": {
-        "@typescript-eslint/explicit-module-boundary-types": "off",
-        "@typescript-eslint/no-unsafe-member-access": "off",
-        "@typescript-eslint/no-unsafe-call": "off",
-        "@typescript-eslint/no-unsafe-assignment": "off",
-        "@typescript-eslint/no-unsafe-return": "off",
-        "react/prop-types": "off"
-      }
-    },
-    {
-      "files": [
-        "./sanity-studio/**/*.*"
-      ],
-      "rules": {
         "react/prop-types": "off",
-        "import/no-extraneous-dependencies": "off"
-      }
-    },
-    {
-      "files": [
-        "./sanity-studio/plugins/**/*.*"
-      ],
-      "rules": {
-        "import/no-unresolved": "off"
+        "@typescript-eslint/restrict-template-expressions": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/no-unsafe-assignment": "off",
+        "@typescript-eslint/no-unsafe-call": "off",
+        "@typescript-eslint/no-unsafe-member-access": "off",
+        "@typescript-eslint/no-unsafe-return": "off"
       }
     }
   ],
