@@ -49,7 +49,7 @@ export interface Header extends SanityDocument {
    *
    *
    */
-  rawNavigation?: Array<
+  rawNavigation: Array<
     SanityKeyed<InternalLinkWithTitle> | SanityKeyed<ExternalLinkWithTitle>
   >;
 
@@ -58,7 +58,7 @@ export interface Header extends SanityDocument {
    *
    *
    */
-  logo?: {
+  logo: {
     _type: "image";
     asset: SanityReference<SanityImageAsset>;
     crop?: SanityImageCrop;
@@ -332,6 +332,13 @@ export type ExampleFormattedText = Array<SanityKeyed<SanityBlock>>;
 export type ExampleSection = {
   _type: "exampleSection";
   /**
+   * Storybook — `note`
+   *
+   *
+   */
+  storybook?: Note;
+
+  /**
    * Heading — `string`
    *
    *
@@ -373,3 +380,10 @@ export type ExampleSection = {
 };
 
 export type Documents = Header | GlobalMetadata | Home | Page;
+
+/**
+ * This interface is a stub. It was referenced in your sanity schema but
+ * the definition was not actually found. Future versions of
+ * sanity-codegen will let you type this explicity.
+ */
+type Note = any;
