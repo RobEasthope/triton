@@ -23,7 +23,7 @@ import {
   sanityClient,
 } from 'utils/sanity/sanity.server';
 import { selectSanityQuery } from 'utils/sanity/selectSanityQuery';
-import { METADATA_FALLBACK } from 'settings/consts/metadata-fallback';
+import { METADATA } from 'settings/consts/METADATA';
 
 export default function PageBySlug({ data, preview }) {
   const router = useRouter();
@@ -44,7 +44,7 @@ export default function PageBySlug({ data, preview }) {
   return (
     <>
       <Head>
-        <title>{METADATA_FALLBACK.TITLE}</title>
+        <title>{METADATA.TITLE}</title>
 
         {/* Favicons */}
         <link
