@@ -1,5 +1,5 @@
-import { sectionsIndex } from '../../../.sanity-studio/schemas/sections-index';
-import { headingUI } from '../../../.sanity-studio/ui/headingUI';
+import { SECTIONS_INDEX } from '../../content/SECTIONS_INDEX';
+import { headingUI } from '../../../utils/headingUI';
 
 export default {
   name: 'page',
@@ -32,7 +32,7 @@ export default {
       name: 'sections',
       title: 'Page sections',
       type: 'array',
-      of: sectionsIndex,
+      of: SECTIONS_INDEX,
       options: { editModal: 'fullscreen' },
       validation: (Rule) =>
         Rule.required().min(1).error('At least one page section is required'),
