@@ -8,7 +8,6 @@ import { Page } from 'components/docs/Page/Page';
 import { Home } from 'components/docs/Home/Home';
 
 import { useRouter } from 'next/router';
-import Head from 'next/head';
 import { Loading } from 'components/base/app/Loading/Loading';
 
 import {
@@ -23,7 +22,6 @@ import {
   sanityClient,
 } from 'utils/sanity/sanity.server';
 import { selectSanityQuery } from 'utils/sanity/selectSanityQuery';
-import { METADATA } from 'settings/METADATA';
 import { AppMetadata } from 'components/base/app/AppMetadata/AppMetadata';
 
 export default function PageBySlug({ data, preview }) {
