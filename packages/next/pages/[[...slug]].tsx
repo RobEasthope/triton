@@ -23,7 +23,7 @@ import {
   sanityClient,
 } from 'utils/sanity/sanity.server';
 import { selectSanityQuery } from 'utils/sanity/selectSanityQuery';
-import { METADATA } from 'settings/consts/METADATA';
+import { METADATA } from 'settings/METADATA';
 
 export default function PageBySlug({ data, preview }) {
   const router = useRouter();
