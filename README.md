@@ -1,7 +1,13 @@
-## Getting Started
+# Free Flight Academy
 
-First, run the development servers:
+## Getting started
 
-- Next dev: `npm run dev`
-- Storybook: `npm run storybook`
-- Sanity: `npm run sanity`
+- Next dev: `yarn dev`
+- Storybook: `yarn storybook`
+- Sanity: `yarn sanity`
+
+## Ignore build deployment rules
+
+Next: `git diff --quiet HEAD^ HEAD ./`
+Storybook: `git diff --quiet HEAD^ HEAD ./`
+Sanity: `git diff --quiet HEAD^ HEAD ./ ../next/*.schema.js ../next/utils`
