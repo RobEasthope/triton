@@ -5,7 +5,7 @@ import { ExampleSection as ExampleSectionProps } from 'types/sanity-schema';
 import { capitalizeFirstLetter } from '.storybook/utils/capitalizeFirstLetter';
 
 import { ExampleSection } from './ExampleSection';
-import { CenterComponent } from '.storybook/preview-ui/CenterComponent';
+import { CenterComponent } from '.storybook/components/CenterComponent';
 import { EXAMPLE_TEXT } from '.storybook/mock-data/sanity-text';
 
 export default {

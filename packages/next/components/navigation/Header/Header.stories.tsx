@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react';
 import { Header as HeaderProps } from 'types/sanity-schema';
 
 import { Header } from './Header';
-import { CenterComponent } from '.storybook/preview-ui/CenterComponent';
+import { CenterComponent } from '.storybook/components/CenterComponent';
 import { TRIQUETRA_LOGO } from '.storybook/mock-data/sanity-images';
 
 export default {

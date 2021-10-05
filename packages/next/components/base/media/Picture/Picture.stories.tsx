@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react';
 
 import * as AspectRatioPrimative from '@radix-ui/react-aspect-ratio';
 import { Picture, PictureProps } from './Picture';
-import { CenterComponent } from '.storybook/preview-ui/CenterComponent';
+import { CenterComponent } from '.storybook/components/CenterComponent';
 import {
   BASSENTHWAITE_IMAGE,
   RED_ARROWS,
