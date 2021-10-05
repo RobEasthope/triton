@@ -26,8 +26,8 @@ import globalMetadata from '../next/components/utils/rendering/Metadata/GlobalMe
 import exampleSection from '../next/components/sections/ExampleSection/ExampleSection.schema';
 
 // Pages
-import homePage from '../next/components/layouts/HomePage/HomePage.schema';
-import page from '../next/components/layouts/Page/Page.schema';
+import homePage from '../next/components/docs/HomePage/HomePage.schema';
+import page from '../next/components/docs/Page/Page.schema';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({

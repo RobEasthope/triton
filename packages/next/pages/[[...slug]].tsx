@@ -1,13 +1,11 @@
-// TODO Improve [[slug]] typings
-
 /* eslint-disable react/prop-types */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 // import { GetStaticPaths, InferGetStaticPropsType } from 'next';
 
 import Custom404 from 'pages/404';
-import { Page } from 'components/layouts/Page/Page';
-import { HomePage } from 'components/layouts/HomePage/HomePage';
+import { Page } from 'components/docs/Page/Page';
+import { HomePage } from 'components/docs/HomePage/HomePage';
 
 import { useRouter } from 'next/router';
 import Head from 'next/head';
