@@ -35,14 +35,6 @@ const BlockRenderer = (props) => {
 const serializers = {
   types: {
     block: BlockRenderer,
-
-    // Youtube block
-    // youtubeBlock: (props) => {
-    //   // eslint-disable-next-line react/destructuring-assignment, @typescript-eslint/naming-convention
-    //   const { _type, url } = props?.node;
-
-    //   return <YoutubeBlock _type={_type} url={url} />;
-    // },
   },
 };
 

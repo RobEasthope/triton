@@ -20,6 +20,5 @@ export default {
         annotations: [{ type: 'internalLink' }, { type: 'externalLink' }],
       },
     },
-    // { type: 'youtubeBlock' },
   ],
 };
