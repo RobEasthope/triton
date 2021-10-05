@@ -1,0 +1,22 @@
+{
+  "folders": [
+    {
+      "name": "Root",
+      "path": "../"
+    },
+    {
+      "name": "Next",
+      "path": "../apps/next"
+    },
+    {
+      "name": "Sanity",
+      "path": "../apps/sanity"
+    },
+  ],
+  "settings": {
+    "files.exclude": {
+      "node_modules/": true,
+      "apps/": true
+    },
+  }
+}
