@@ -9,7 +9,7 @@ import { HomePage } from 'components/docs/HomePage/HomePage';
 
 import { useRouter } from 'next/router';
 import Head from 'next/head';
-import { Loading } from 'components/base/rendering/Loading/Loading';
+import { Loading } from 'components/base/app/Loading/Loading';
 
 import {
   anyPageBySlugQuery,
@@ -69,6 +69,7 @@ export default function PageBySlug({ data, preview }) {
         <meta name="msapplication-TileColor" content="#3fc0ac" />
         <meta name="theme-color" content="#3fc0ac" />
       </Head>
+
       {isFallback && <Loading />}
       {!isFallback && data?.page?._type === 'page' && (
         <Page page={data?.page} globals={data?.globals} preview={preview} />

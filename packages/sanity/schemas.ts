@@ -18,7 +18,7 @@ import header from '../next/components/navigation/Header/Header.schema.js';
 import exampleText from '../next/components/base/text/ExampleFormattedText/ExampleFormattedText.schema';
 
 // Settings
-import globalMetadata from '../next/components/base/rendering/Metadata/GlobalMetadata.schema';
+import globalMetadata from '../next/components/base/app/Metadata/GlobalMetadata.schema';
 
 
 

@@ -5,8 +5,8 @@ import { Footer } from 'components/navigation/Footer/Footer';
 import { Header, HeaderProps } from 'components/navigation/Header/Header';
 import { FixedFooterLayout } from 'components/structural/FixedFooterLayout';
 import { MainContentLayout } from 'components/structural/MainContentLayout';
-import { RenderSections } from 'components/base/rendering/RenderSections/RenderSections';
-import { Metadata } from 'components/base/rendering/Metadata/Metadata';
+import { RenderSections } from 'components/base/app/RenderSections/RenderSections';
+import { Metadata } from 'components/base/app/Metadata/Metadata';
 import { HomePage as HomePageProps, GlobalMetadata } from 'types/sanity-schema';
 
 export const HomePage = ({
