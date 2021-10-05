@@ -24,6 +24,7 @@ import {
 } from 'utils/sanity/sanity.server';
 import { selectSanityQuery } from 'utils/sanity/selectSanityQuery';
 import { METADATA } from 'settings/METADATA';
+import { AppMetadata } from 'components/base/app/AppMetadata/AppMetadata';
 
 export default function PageBySlug({ data, preview }) {
   const router = useRouter();
@@ -43,32 +44,7 @@ export default function PageBySlug({ data, preview }) {
 
   return (
     <>
-      <Head>
-        <title>{METADATA.TITLE}</title>
-
-        {/* Favicons */}
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#3fc0ac" />
-        <meta name="msapplication-TileColor" content="#3fc0ac" />
-        <meta name="theme-color" content="#3fc0ac" />
-      </Head>
+      <AppMetadata />
 
       {isFallback && <Loading />}
       {!isFallback && data?.page?._type === 'page' && (
