@@ -1,1 +1,1 @@
-export { ExampleSection } from 'components/sections/ExampleSection/ExampleSection';
+export { ExampleSection } from 'components/content/ExampleSection/ExampleSection';

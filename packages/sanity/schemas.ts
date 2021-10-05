@@ -23,7 +23,7 @@ import globalMetadata from '../next/components/base/rendering/Metadata/GlobalMet
 
 
 // Content
-import exampleSection from '../next/components/sections/ExampleSection/ExampleSection.schema';
+import exampleSection from '../next/components/content/ExampleSection/ExampleSection.schema';
 
 // Pages
 import homePage from '../next/components/docs/HomePage/HomePage.schema';
