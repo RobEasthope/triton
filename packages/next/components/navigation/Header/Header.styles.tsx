@@ -1,5 +1,5 @@
 import { styled } from 'stitches.config';
-import { HomeLink } from 'components/utils/links/HomeLink/HomeLink';
+import { HomeLink } from 'components/base/links/HomeLink/HomeLink';
 
 export const HeaderLayout = styled('div', {
   display: 'flex',

@@ -4,11 +4,11 @@ import {
   ExternalLinkWithTitleProp,
   InternalLinkWithTitleProp,
 } from 'types/links';
-import { MaxPageWidth } from 'components/utils/styles/MaxPageWidth/MaxPageWidth';
+import { MaxPageWidth } from 'components/base/styles/MaxPageWidth/MaxPageWidth';
 
-import { PaddedComponent } from 'components/utils/styles/PaddedComponent/PaddedComponent';
-import { Picture } from 'components/utils/media/Picture/Picture';
-import { SuperLink } from '../../utils/links/SuperLink/SuperLink';
+import { PaddedComponent } from 'components/base/styles/PaddedComponent/PaddedComponent';
+import { Picture } from 'components/base/media/Picture/Picture';
+import { SuperLink } from '../../base/links/SuperLink/SuperLink';
 import { HeaderLayout, LargeNavigation, StyledHomeLink } from './Header.styles';
 import { SmallNavigation } from '../SmallNavigation/SmallNavigation';
 

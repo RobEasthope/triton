@@ -5,20 +5,20 @@ import createSchema from 'part:@sanity/base/schema-creator';
 import schemaTypes from 'all:part:@sanity/base/schema-type';
 
 //Links
-import internalLink from '../next/components/utils/links/InternalLink/InternalLink.schema.js';
-import internalLinkWithTitle from '../next/components/utils/links/InternalLink/InternalLinkWithTitle.schema.js';
-import externalLink from '../next/components/utils/links/ExternalLink/ExternalLink.schema.js';
-import externalLinkWithTitle from '../next/components/utils/links/ExternalLink/ExternalLinkWithTitle.schema.js';
+import internalLink from '../next/components/base/links/InternalLink/InternalLink.schema.js';
+import internalLinkWithTitle from '../next/components/base/links/InternalLink/InternalLinkWithTitle.schema.js';
+import externalLink from '../next/components/base/links/ExternalLink/ExternalLink.schema.js';
+import externalLinkWithTitle from '../next/components/base/links/ExternalLink/ExternalLinkWithTitle.schema.js';
 
 // Navigation
 
 import header from '../next/components/navigation/Header/Header.schema.js';
 
 // Formatted text
-import exampleText from '../next/components/utils/text/ExampleFormattedText/ExampleFormattedText.schema';
+import exampleText from '../next/components/base/text/ExampleFormattedText/ExampleFormattedText.schema';
 
 // Settings
-import globalMetadata from '../next/components/utils/rendering/Metadata/GlobalMetadata.schema';
+import globalMetadata from '../next/components/base/rendering/Metadata/GlobalMetadata.schema';
 
 
 

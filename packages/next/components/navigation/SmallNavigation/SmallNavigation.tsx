@@ -6,7 +6,7 @@ import {
 
 import { RiMenuLine } from 'react-icons/ri';
 import * as DialogPrimative from '@radix-ui/react-dialog';
-import { SuperLink } from '../../utils/links/SuperLink/SuperLink';
+import { SuperLink } from '../../base/links/SuperLink/SuperLink';
 import {
   OpenSmallNavigationButton,
   CloseSmallNavigationButton,
