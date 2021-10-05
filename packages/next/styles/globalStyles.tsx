@@ -1,4 +1,4 @@
-import { globalCss } from 'stitches.config';
+import { globalCss } from 'styles/stitches.config';
 import 'sanitize.css';
 import 'sanitize.css/typography.css';
 import 'sanitize.css/assets.css';

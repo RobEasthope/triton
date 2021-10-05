@@ -1,4 +1,4 @@
-import { styled } from 'stitches.config';
+import { styled } from 'styles/stitches.config';
 import { HomeLink } from 'components/base/links/HomeLink/HomeLink';
 
 export const HeaderLayout = styled('div', {
