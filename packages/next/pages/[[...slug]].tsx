@@ -5,7 +5,7 @@
 
 import Custom404 from 'pages/404';
 import { Page } from 'components/docs/Page/Page';
-import { HomePage } from 'components/docs/HomePage/HomePage';
+import { Home } from 'components/docs/Home/Home';
 
 import { useRouter } from 'next/router';
 import Head from 'next/head';
@@ -47,11 +47,11 @@ export default function PageBySlug({ data, preview }) {
       <AppMetadata />
 
       {isFallback && <Loading />}
-      {!isFallback && data?.page?._type === 'page' && (
+      {!isFallback && data?.page?._type === 'Page' && (
         <Page page={data?.page} globals={data?.globals} preview={preview} />
       )}
-      {!isFallback && data?.page?._type === 'homePage' && (
-        <HomePage page={data?.page} globals={data?.globals} preview={preview} />
+      {!isFallback && data?.page?._type === 'Home' && (
+        <Home page={data?.page} globals={data?.globals} preview={preview} />
       )}
     </>
   );

@@ -1,10 +1,10 @@
 import Head from 'next/head';
 
 import { urlForImage } from 'utils/sanity/sanity-utils';
-import { GlobalMetadata, HomePage, Page } from 'types/sanity-schema';
+import { GlobalMetadata, Home, Page } from 'types/sanity-schema';
 
 type MetadateType = {
-  page: Page | HomePage;
+  page: Page | Home;
   globalMetadata: GlobalMetadata;
 };
 

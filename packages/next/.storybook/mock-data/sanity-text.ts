@@ -76,7 +76,7 @@ export const EXAMPLE_TEXT = [
         "_key": "83f1f25ea064",
         "_type": "internalLink",
         "internalUID": {
-          "_ref": "homePage",
+          "_ref": "Home",
           "_type": "reference"
         }
       }

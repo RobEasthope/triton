@@ -134,8 +134,8 @@ export interface GlobalMetadata extends SanityDocument {
  *
  *
  */
-export interface HomePage extends SanityDocument {
-  _type: "homePage";
+export interface Home extends SanityDocument {
+  _type: "Home";
 
   /**
    * Page details — `string`
@@ -280,7 +280,7 @@ export type InternalLink = {
    *
    *
    */
-  internalUID: SanityReference<Page | HomePage>;
+  internalUID: SanityReference<Page | Home>;
 };
 
 export type InternalLinkWithTitle = {
@@ -297,7 +297,7 @@ export type InternalLinkWithTitle = {
    *
    *
    */
-  internalUID: SanityReference<Page | HomePage>;
+  internalUID: SanityReference<Page | Home>;
 };
 
 export type ExternalLink = {
@@ -372,4 +372,4 @@ export type ExampleSection = {
   };
 };
 
-export type Documents = Header | GlobalMetadata | HomePage | Page;
+export type Documents = Header | GlobalMetadata | Home | Page;

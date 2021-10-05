@@ -19,8 +19,8 @@ export default () =>
         .icon(RiHome4Line)
         .child(
           S.document()
-            .schemaType('homePage')
-            .documentId('homePage')
+            .schemaType('Home')
+            .documentId('Home')
         ),
       S.listItem()
         .title('Pages')

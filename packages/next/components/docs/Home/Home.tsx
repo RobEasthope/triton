@@ -7,14 +7,14 @@ import { FixedFooterLayout } from 'components/structural/FixedFooterLayout';
 import { MainContentLayout } from 'components/structural/MainContentLayout';
 import { RenderSections } from 'components/base/app/RenderSections/RenderSections';
 import { Metadata } from 'components/base/app/Metadata/Metadata';
-import { HomePage as HomePageProps, GlobalMetadata } from 'types/sanity-schema';
+import { Home as HomeProps, GlobalMetadata } from 'types/sanity-schema';
 
-export const HomePage = ({
+export const Home = ({
   page,
   globals,
   preview,
 }: {
-  page: HomePageProps;
+  page: HomeProps;
   globals: { header: HeaderProps; metadata: GlobalMetadata };
   preview: boolean;
 }) => (

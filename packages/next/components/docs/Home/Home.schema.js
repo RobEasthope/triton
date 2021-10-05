@@ -2,7 +2,7 @@ import { sectionsIndex } from '../../../.sanity-studio/schemas/sections-index';
 import { headingUI } from '../../../.sanity-studio/ui/headingUI';
 
 export default {
-  name: 'homePage',
+  name: 'Home',
   type: 'document',
   title: 'Home page',
   fields: [
