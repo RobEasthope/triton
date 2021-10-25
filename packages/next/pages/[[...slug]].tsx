@@ -45,10 +45,10 @@ export default function PageBySlug({ data, preview }) {
       <AppMetadata />
 
       {isFallback && <Loading />}
-      {!isFallback && data?.page?._type === 'Page' && (
+      {!isFallback && data?.page?._type === 'page' && (
         <Page page={data?.page} globals={data?.globals} preview={preview} />
       )}
-      {!isFallback && data?.page?._type === 'Home' && (
+      {!isFallback && data?.page?._type === 'home' && (
         <Home page={data?.page} globals={data?.globals} preview={preview} />
       )}
     </>
