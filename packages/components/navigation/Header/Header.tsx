@@ -1,15 +1,15 @@
-import { Header as rawHeaderProps } from 'types/sanity-schema';
+import { Header as rawHeaderProps } from '@/components/types/sanity-schema';
 
 import {
   ExternalLinkWithTitleProp,
   InternalLinkWithTitleProp,
-} from 'types/links';
-import { MaxPageWidth } from 'base/styles/MaxPageWidth/MaxPageWidth';
+} from '@/components/types/links';
+import { MaxPageWidth } from '@/components/base/styles/MaxPageWidth/MaxPageWidth';
 
-import { PaddedComponent } from 'base/styles/PaddedComponent/PaddedComponent';
-import { Picture } from 'base/media/Picture/Picture';
-import { SuperLink } from 'base/links/SuperLink/SuperLink';
-import { SmallNavigation } from 'navigation/SmallNavigation/SmallNavigation';
+import { PaddedComponent } from '@/components/base/styles/PaddedComponent/PaddedComponent';
+import { Picture } from '@/components/base/media/Picture/Picture';
+import { SuperLink } from '@/components/base/links/SuperLink/SuperLink';
+import { SmallNavigation } from '@/components/navigation/SmallNavigation/SmallNavigation';
 import { HeaderLayout, LargeNavigation, StyledHomeLink } from './Header.styles';
 
 export interface HeaderProps extends rawHeaderProps {

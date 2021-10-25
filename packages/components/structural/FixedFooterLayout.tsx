@@ -1,4 +1,4 @@
-import { styled } from 'styles/stitches.config';
+import { styled } from '@/components/styles/stitches.config';
 
 export const FixedFooterLayout = styled('div', {
   display: 'flex',

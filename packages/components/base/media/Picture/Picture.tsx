@@ -1,12 +1,12 @@
 import Image from 'next/image';
+import { useNextSanityImage } from 'next-sanity-image';
 import {
   SanityImageAsset,
   SanityImageCrop,
   SanityImageHotspot,
   SanityReference,
-} from 'types/sanity-schema';
-import { getClient } from 'utils/sanity/sanity.server';
-import { useNextSanityImage } from 'next-sanity-image';
+} from '@/components/types/sanity-schema';
+import { getClient } from '@/components/utils/sanity/sanity.server';
 import { ResponsiveImageWrapper, FillImageWrapper } from './Picture.styles';
 
 export interface ImageAssetProp {

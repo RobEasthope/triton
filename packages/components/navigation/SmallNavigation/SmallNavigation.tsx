@@ -1,12 +1,12 @@
-import { Header as rawHeaderProps } from 'types/sanity-schema';
+import { RiMenuLine } from 'react-icons/ri';
+import * as DialogPrimative from '@radix-ui/react-dialog';
+import { Header as rawHeaderProps } from '@/components/types/sanity-schema';
 import {
   ExternalLinkWithTitleProp,
   InternalLinkWithTitleProp,
-} from 'types/links';
+} from '@/components/types/links';
 
-import { RiMenuLine } from 'react-icons/ri';
-import * as DialogPrimative from '@radix-ui/react-dialog';
-import { SuperLink } from 'base/links/SuperLink/SuperLink';
+import { SuperLink } from '@/components/base/links/SuperLink/SuperLink';
 import {
   OpenSmallNavigationButton,
   CloseSmallNavigationButton,

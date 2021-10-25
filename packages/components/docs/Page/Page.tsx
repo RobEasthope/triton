@@ -1,13 +1,16 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable react/prop-types */
-import { Footer } from 'navigation/Footer/Footer';
-import { Header, HeaderProps } from 'navigation/Header/Header';
-import { FixedFooterLayout } from 'structural/FixedFooterLayout';
-import { MainContentLayout } from 'structural/MainContentLayout';
-import { Metadata } from 'base/app/Metadata/Metadata';
-import { RenderSections } from 'base/app/RenderSections/RenderSections';
-import { Page as PageProps, GlobalMetadata } from 'types/sanity-schema';
+import { Footer } from '@/components/navigation/Footer/Footer';
+import { Header, HeaderProps } from '@/components/navigation/Header/Header';
+import { FixedFooterLayout } from '@/components/structural/FixedFooterLayout';
+import { MainContentLayout } from '@/components/structural/MainContentLayout';
+import { Metadata } from '@/components/base/app/Metadata/Metadata';
+import { RenderSections } from '@/components/base/app/RenderSections/RenderSections';
+import {
+  Page as PageProps,
+  GlobalMetadata,
+} from '@/components/types/sanity-schema';
 
 export const Page = ({
   page,

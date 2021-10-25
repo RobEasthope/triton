@@ -1,4 +1,4 @@
-import { anyPageBySlugQuery } from 'utils/sanity/queries';
+import { anyPageBySlugQuery } from '@/components/utils/sanity/queries';
 
 import { createSlugFromQuery } from './createSlugFromQuery';
 
