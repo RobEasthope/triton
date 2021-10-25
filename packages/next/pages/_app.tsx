@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app';
 import { ReactNode } from 'react';
-import { globalStyles } from 'styles/globalStyles';
+import { globalStyles } from '@/components/styles/globalStyles';
 
 function MyApp({ Component, pageProps }: AppProps): ReactNode {
   return (

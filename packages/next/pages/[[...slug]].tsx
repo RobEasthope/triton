@@ -4,25 +4,25 @@
 // import { GetStaticPaths, InferGetStaticPropsType } from 'next';
 
 import Custom404 from 'pages/404';
-import { Page } from 'components/docs/Page/Page';
-import { Home } from 'components/docs/Home/Home';
-
 import { useRouter } from 'next/router';
-import { Loading } from 'components/base/app/Loading/Loading';
+
+import { Page } from '@/components/docs/Page/Page';
+import { Home } from '@/components/docs/Home/Home';
+import { Loading } from '@/components/base/app/Loading/Loading';
 
 import {
   anyPageBySlugQuery,
   globalsQuery,
   pageSlugsQuery,
-} from 'utils/sanity/queries';
-import { usePreviewSubscription } from 'utils/sanity/sanity-utils';
+} from '@/utils/sanity/queries';
+import { usePreviewSubscription } from '@/utils/sanity/sanity-utils';
 import {
   getClient,
   overlayDrafts,
   sanityClient,
-} from 'utils/sanity/sanity.server';
-import { selectSanityQuery } from 'utils/sanity/selectSanityQuery';
-import { AppMetadata } from 'components/base/app/AppMetadata/AppMetadata';
+} from '@/utils/sanity/sanity.server';
+import { selectSanityQuery } from '@/utils/sanity/selectSanityQuery';
+import { AppMetadata } from '@/components/base/app/AppMetadata/AppMetadata';
 
 export default function PageBySlug({ data, preview }) {
   const router = useRouter();
