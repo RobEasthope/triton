@@ -9,6 +9,10 @@
       "path": "../packages/next"
     },
     {
+      "name": "Components",
+      "path": "../packages/components"
+    },
+    {
       "name": "Sanity",
       "path": "../packages/sanity"
     },
