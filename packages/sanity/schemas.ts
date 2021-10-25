@@ -5,29 +5,29 @@ import createSchema from 'part:@sanity/base/schema-creator';
 import schemaTypes from 'all:part:@sanity/base/schema-type';
 
 //Links
-import internalLink from '../next/components/base/links/InternalLink/InternalLink.schema.js';
-import internalLinkWithTitle from '../next/components/base/links/InternalLink/InternalLinkWithTitle.schema.js';
-import externalLink from '../next/components/base/links/ExternalLink/ExternalLink.schema.js';
-import externalLinkWithTitle from '../next/components/base/links/ExternalLink/ExternalLinkWithTitle.schema.js';
+import internalLink from '../components/base/links/InternalLink/InternalLink.schema.js';
+import internalLinkWithTitle from '../components/base/links/InternalLink/InternalLinkWithTitle.schema.js';
+import externalLink from '../components/base/links/ExternalLink/ExternalLink.schema.js';
+import externalLinkWithTitle from '../components/base/links/ExternalLink/ExternalLinkWithTitle.schema.js';
 
 // Navigation
 
-import header from '../next/components/navigation/Header/Header.schema.js';
+import header from '../components/navigation/Header/Header.schema.js';
 
 // Formatted text
-import exampleText from '../next/components/base/text/ExampleFormattedText/ExampleFormattedText.schema';
+import exampleText from '../components/base/text/ExampleFormattedText/ExampleFormattedText.schema';
 
 // Settings
-import globalMetadata from '../next/components/base/app/Metadata/GlobalMetadata.schema';
+import globalMetadata from '../components/base/app/Metadata/GlobalMetadata.schema';
 
 
 
 // Content
-import exampleSection from '../next/components/content/ExampleSection/ExampleSection.schema';
+import exampleSection from '../components/content/ExampleSection/ExampleSection.schema';
 
 // Pages
-import Home from '../next/components/docs/Home/Home.schema';
-import page from '../next/components/docs/Page/Page.schema';
+import Home from '../components/docs/Home/Home.schema';
+import page from '../components/docs/Page/Page.schema';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
