@@ -1,5 +1,5 @@
-import { SECTIONS_INDEX } from '../../content/SECTIONS_INDEX';
-import { headingUI } from '../../../utils/headingUI';
+import { SECTIONS_INDEX } from '../../../components/content/SECTIONS_INDEX';
+import { headingUI } from '../../../components/utils/headingUI';
 
 export default {
   name: 'Home',
