@@ -5,16 +5,20 @@
       "path": "../"
     },
     {
-      "name": "Next",
-      "path": "../packages/next"
-    },
-    {
-      "name": "Components",
+      "name": "UI Components (Pkg)",
       "path": "../packages/components"
     },
     {
-      "name": "Sanity",
-      "path": "../packages/sanity"
+      "name": "Utils (Pkg)",
+      "path": "../packages/utils"
+    },
+    {
+      "name": "FFA (App)",
+      "path": "../apps/ffa-next"
+    },
+    {
+      "name": "Sanity (App)",
+      "path": "../apps/ffa-sanity"
     },
   ],
   "settings": {

@@ -3,10 +3,10 @@
     "baseUrl": ".",
     "paths": {
       "@/components/*": [
-        "../components/*"
+        "../../packages/components/*"
       ],
       "@/utils/*": [
-        "../components/utils/*"
+        "../../packages/components/utils/*"
       ]
     },
     "target": "es5",
