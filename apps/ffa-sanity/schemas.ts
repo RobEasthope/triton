@@ -26,8 +26,8 @@ import globalMetadata from '../../packages/components/base/app/Metadata/GlobalMe
 import exampleSection from '../../packages/components/content/ExampleSection/ExampleSection.schema';
 
 // Pages
-import Home from '../../packages/components/docs/Home/Home.schema';
-import page from '../../packages/components/docs/Page/Page.schema';
+import Home from '../../packages/components/pages/Home/Home.schema';
+import page from '../../packages/components/pages/Page/Page.schema';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
