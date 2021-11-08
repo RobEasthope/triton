@@ -13,12 +13,12 @@
       "path": "../packages/utils"
     },
     {
-      "name": "FFA (App)",
-      "path": "../apps/ffa-next"
+      "name": "Next (App)",
+      "path": "../apps/triquetra-next"
     },
     {
       "name": "Sanity (App)",
-      "path": "../apps/ffa-sanity"
+      "path": "../apps/triquetra-sanity"
     },
   ],
   "settings": {
