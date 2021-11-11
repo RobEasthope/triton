@@ -6,7 +6,7 @@
         "../../packages/components/*"
       ],
       "@/utils/*": [
-        "../../packages/components/utils/*"
+        "../../packages/utils/*"
       ]
     },
     "target": "es5",
