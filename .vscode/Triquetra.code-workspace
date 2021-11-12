@@ -25,7 +25,11 @@
   "settings": {
     "files.exclude": {
       "node_modules/": true,
-      "packages/": true
+      "packages/": true,
+      "storybook-static": true,
+      ".next": true,
+      "tsconfig.tsbuildinfo": true,
+      "dist": true
     },
   }
 }
