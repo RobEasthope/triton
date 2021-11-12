@@ -1,5 +1,5 @@
 import React from 'react';
-import { ALL_PAGES_TYPES } from '../../../utils/sanity-snippets/ALL_PAGE_TYPES';
+import { ALL_PAGES_TYPES } from '../../../utils/sanity/ALL_PAGE_TYPES';
 
 const InternalLinkRender = ({ children }) => <span>{children} 🔗</span>;
 

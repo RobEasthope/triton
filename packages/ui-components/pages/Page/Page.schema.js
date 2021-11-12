@@ -1,5 +1,5 @@
 import { SECTIONS_INDEX } from '../../content/SECTIONS_INDEX';
-import { headingUI } from '../../utils/headingUI';
+import { headingUI } from '../../utils/sanity/headingUI';
 
 export default {
   name: 'page',
