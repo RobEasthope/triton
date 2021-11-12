@@ -2,7 +2,7 @@ import { SanityCodegenConfig } from 'sanity-codegen';
 
 const config: SanityCodegenConfig = {
   schemaPath: './packages/triquetra-sanity/schemas.ts',
-  outputPath: './packages/components/types/sanity-schema.d.ts',
+  outputPath: './packages/ui-components/types/sanity-schema.d.ts',
 
   // NOTE: The CLI ships with a pre-configured babel config that shims out
   // the Sanity parts system. This babel config does not read from any
