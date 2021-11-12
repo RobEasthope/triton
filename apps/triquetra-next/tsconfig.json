@@ -29,6 +29,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "downlevelIteration": true,
+    "incremental": true,
   },
   "extends": "eslint-config-wesbos/tsconfig.json",
   "include": [
