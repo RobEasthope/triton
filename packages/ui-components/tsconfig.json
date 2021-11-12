@@ -2,11 +2,17 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/components/*": [
+      "@/TRQ/*": [
+        "../../apps/triquetra-next/*"
+      ],
+      "@/UI/*": [
         "./*"
       ],
-      "@/utils/*": [
+      "@/UTILS/*": [
         "../utils/*"
+      ],
+      "@/STORYBOOK/*": [
+        "./.storybook/*"
       ]
     },
     "target": "es5",
@@ -31,6 +37,6 @@
     "**/*.jsx",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, ".storybook/utils/capitalizeFirstLetter.ts"  ],
   "exclude": ["node_modules"]
 }
