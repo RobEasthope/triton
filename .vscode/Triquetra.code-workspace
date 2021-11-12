@@ -8,10 +8,7 @@
       "name": "UI Components (Pkg)",
       "path": "../packages/components"
     },
-    {
-      "name": "Utils (Pkg)",
-      "path": "../packages/utils"
-    },
+    
     {
       "name": "Next (App)",
       "path": "../apps/triquetra-next"
@@ -19,6 +16,10 @@
     {
       "name": "Sanity (App)",
       "path": "../apps/triquetra-sanity"
+    },
+    {
+      "name": "Utils (Pkg)",
+      "path": "../packages/utils"
     },
   ],
   "settings": {
