@@ -1,5 +1,8 @@
 import { createStitches } from '@stitches/react';
-import { TypeProps, TypeReturnProps } from 'types/utils';
+
+import { SizeProps, TypeProps } from '@/UI/types/utils';
+import { type } from '@/UI/styles/utils/type';
+import { size } from '@/UI/styles/utils/size';
 
 const minWidth = 320;
 const maxWidth = 1200;
@@ -70,8 +73,7 @@ export const { css, styled, globalCss, getCssText } = createStitches({
       paddingBottom: value,
     }),
     type: ({
-      min,
-      max,
+      fontSize,
       mt,
       mr,
       mb,
@@ -84,36 +86,23 @@ export const { css, styled, globalCss, getCssText } = createStitches({
       pl,
       px,
       py,
-    }: TypeProps): TypeReturnProps => ({
-      // Minimum font size
-      fontSize: `${min}px`,
-
-      // Dynamic font size
-      '@minWidth': {
-        fontSize: `calc(${min}px + (${max} - ${min}) * ((100vw - ${minWidth}px) / (${maxWidth} - ${minWidth})))`,
-      },
-
-      // Maximum font size
-      '@maxWidth': {
-        fontSize: `${max}px`,
-      },
-
-      // Margin
-      marginTop: `${mt ? `${mt / max}em` : null}`,
-      marginBottom: `${mb ? `${mb / max}em` : null}`,
-      marginLeft: `${ml ? `${ml / max}em` : null}`,
-      marginRight: `${mr ? `${mr / max}em` : null}`,
-      marginX: `${mx ? `${mx / max}em` : null}`,
-      marginY: `${my ? `${my / max}em` : null}`,
-
-      // Padding
-      paddingTop: `${pt ? `${pt / max}em` : null}`,
-      paddingBottom: `${pb ? `${pb / max}em` : null}`,
-      paddingLeft: `${pl ? `${pl / max}em` : null}`,
-      paddingRight: `${pr ? `${pr / max}em` : null}`,
-      paddingX: `${px ? `${px / max}em` : null}`,
-      paddingY: `${py ? `${py / max}em` : null}`,
-    }),
+    }: TypeProps) =>
+      type({
+        fontSize,
+        mt,
+        mr,
+        mb,
+        ml,
+        mx,
+        my,
+        pt,
+        pr,
+        pb,
+        pl,
+        px,
+        py,
+      }),
+    size: ({ selector, min, max }: SizeProps) => size({ selector, min, max }),
   },
   media: {
     bp1: '(min-width: 320px)',
