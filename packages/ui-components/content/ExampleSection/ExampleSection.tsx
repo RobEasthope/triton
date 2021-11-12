@@ -1,8 +1,8 @@
-import { ExampleFormattedText } from '@/components/base/text/ExampleFormattedText/ExampleFormattedText';
-import { MaxPageWidth } from '@/components/base/styles/MaxPageWidth/MaxPageWidth';
-import { ExampleSection as rawExampleSectionProps } from '@/components/types/sanity-schema';
-import { PaddedComponent } from '@/components/base/styles/PaddedComponent/PaddedComponent';
-import { Picture } from '@/components/base/media/Picture/Picture';
+import { ExampleFormattedText } from '@/UI/base/text/ExampleFormattedText/ExampleFormattedText';
+import { MaxPageWidth } from '@/UI/base/styles/MaxPageWidth/MaxPageWidth';
+import { ExampleSection as rawExampleSectionProps } from '@/UI/types/sanity-schema';
+import { PaddedComponent } from '@/UI/base/styles/PaddedComponent/PaddedComponent';
+import { Picture } from '@/UI/base/media/Picture/Picture';
 import { Heading } from './ExampleSection.styles';
 
 export interface ExampleSectionProps extends rawExampleSectionProps {

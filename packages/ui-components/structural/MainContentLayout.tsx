@@ -1,4 +1,4 @@
-import { styled } from '@/components/styles/stitches.config';
+import { styled } from '@/UI/styles/stitches.config';
 
 export const MainContentLayout = styled('div', {
   flex: 1,

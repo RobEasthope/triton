@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { METADATA } from '@/components/settings/METADATA';
+import { METADATA } from '@/UI/settings/METADATA';
 
 export const AppMetadata = () => (
   <Head>

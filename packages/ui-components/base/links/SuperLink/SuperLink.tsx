@@ -3,9 +3,9 @@ import {
   ExternalLinkWithTitleProp,
   InternalLinkProp,
   InternalLinkWithTitleProp,
-} from '@/components/types/links';
-import { ExternalLink } from '@/components/base/links/ExternalLink/ExternalLink';
-import { InternalLink } from '@/components/base/links/InternalLink/InternalLink';
+} from '@/UI/types/links';
+import { ExternalLink } from '@/UI/base/links/ExternalLink/ExternalLink';
+import { InternalLink } from '@/UI/base/links/InternalLink/InternalLink';
 
 type SuperLinkProp = {
   link:

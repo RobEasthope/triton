@@ -6,23 +6,23 @@
 import Custom404 from 'pages/404';
 import { useRouter } from 'next/router';
 
-import { Page } from '@/components/docs/Page/Page';
-import { Home } from '@/components/docs/Home/Home';
-import { Loading } from '@/components/base/app/Loading/Loading';
+import { Page } from '@/UI/docs/Page/Page';
+import { Home } from '@/UI/docs/Home/Home';
+import { Loading } from '@/UI/base/app/Loading/Loading';
 
 import {
   anyPageBySlugQuery,
   globalsQuery,
   pageSlugsQuery,
-} from '@/utils/sanity/queries';
-import { usePreviewSubscription } from '@/utils/sanity/sanity-utils';
+} from '@/UTILS/sanity/queries';
+import { usePreviewSubscription } from '@/UTILS/sanity/sanity-utils';
 import {
   getClient,
   overlayDrafts,
   sanityClient,
-} from '@/utils/sanity/sanity.server';
-import { selectSanityQuery } from '@/utils/sanity/selectSanityQuery';
-import { AppMetadata } from '@/components/base/app/AppMetadata/AppMetadata';
+} from '@/UTILS/sanity/sanity.server';
+import { selectSanityQuery } from '@/UTILS/sanity/selectSanityQuery';
+import { AppMetadata } from '@/UI/base/app/AppMetadata/AppMetadata';
 
 export default function PageBySlug({ data, preview }) {
   const router = useRouter();

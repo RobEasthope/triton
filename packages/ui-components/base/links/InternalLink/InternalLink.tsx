@@ -2,7 +2,7 @@ import Link from 'next/link';
 import {
   InternalLinkProp,
   InternalLinkWithTitleProp,
-} from '@/components/types/links';
+} from '@/UI/types/links';
 
 export type InternalLinkProps = {
   link: InternalLinkWithTitleProp | InternalLinkProp;

@@ -1,5 +1,5 @@
 import * as DialogPrimative from '@radix-ui/react-dialog';
-import { styled } from '@/components/styles/stitches.config';
+import { styled } from '@/UI/styles/stitches.config';
 
 export const DialogContent = styled(DialogPrimative.Content, {
   backgroundColor: 'white',

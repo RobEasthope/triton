@@ -1,7 +1,7 @@
 import {
   ExternalLinkProp,
   ExternalLinkWithTitleProp,
-} from '@/components/types/links';
+} from '@/UI/types/links';
 
 export type ExternalLinkProps = {
   link: ExternalLinkWithTitleProp | ExternalLinkProp;
