@@ -1,20 +1,20 @@
 {
   "folders": [
     {
-      "name": "Root",
+      "name": "Monorepo settings",
       "path": "../"
     },
     {
       "name": "UI Components (Pkg)",
-      "path": "../packages/components"
+      "path": "../packages/ui-components"
     },
     
     {
-      "name": "Next (App)",
+      "name": "Triquetra (App)",
       "path": "../apps/triquetra-next"
     },
     {
-      "name": "Sanity (App)",
+      "name": "Sanity Studio (App)",
       "path": "../apps/triquetra-sanity"
     },
     {
@@ -25,7 +25,8 @@
   "settings": {
     "files.exclude": {
       "node_modules/": true,
-      "packages/": true,
+      // "apps/": true,
+      // "packages/": true,
       "storybook-static": true,
       ".next": true,
       "tsconfig.tsbuildinfo": true,
