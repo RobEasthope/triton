@@ -1,14 +1,22 @@
+import { styled } from '@/UI/styles/stitches.config';
 import { ExampleFormattedText } from '@/UI/base/text/ExampleFormattedText/ExampleFormattedText';
 import { MaxPageWidth } from '@/TRQ/../../packages/ui-components/base/layout/MaxPageWidth/MaxPageWidth';
 import { ExampleSection as rawExampleSectionProps } from '@/UI/types/sanity-schema';
 import { PaddedComponent } from '@/TRQ/../../packages/ui-components/base/layout/PaddedComponent/PaddedComponent';
 import { Picture } from '@/UI/base/media/Picture/Picture';
-import { Heading } from './ExampleSection.styles';
 
+// Styles
+export const Heading = styled('p', {
+  type: { min: 18, max: 32, mb: 32 },
+  fontWeight: 'bold',
+});
+
+// Types
 export interface ExampleSectionProps extends rawExampleSectionProps {
   preview: boolean;
 }
 
+// Markup
 export const ExampleSection = ({
   heading,
   text,

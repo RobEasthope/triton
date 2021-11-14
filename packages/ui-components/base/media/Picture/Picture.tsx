@@ -1,14 +1,26 @@
 import Image from 'next/image';
 import { useNextSanityImage } from 'next-sanity-image';
+import { styled } from '@/UI/styles/stitches.config';
 import {
   SanityImageAsset,
   SanityImageCrop,
   SanityImageHotspot,
   SanityReference,
 } from '@/UI/types/sanity-schema';
-import { ResponsiveImageWrapper, FillImageWrapper } from './Picture.styles';
 import { getClient } from '@/UTILS/sanity/sanity.server';
 
+// Styles
+export const ResponsiveImageWrapper = styled('div', {
+  width: '100%',
+});
+
+export const FillImageWrapper = styled('div', {
+  position: 'absolute',
+  width: '100%',
+  height: '100%',
+});
+
+// Types
 export interface ImageAssetProp {
   _type: 'image';
   asset: SanityReference<SanityImageAsset>;
@@ -25,6 +37,7 @@ export type PictureProps = {
   className?: string;
 };
 
+// Markup
 export const Picture = ({
   asset,
   maxWidth,
@@ -35,6 +48,7 @@ export const Picture = ({
 }: PictureProps) => {
   const configuredSanityClient = getClient(preview);
   const imageProps = useNextSanityImage(configuredSanityClient, asset);
+  
   if (imageProps) {
     switch (mode) {
       case 'responsive':
