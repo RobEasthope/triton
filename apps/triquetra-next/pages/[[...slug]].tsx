@@ -21,7 +21,7 @@ import {
   overlayDrafts,
   sanityClient,
 } from '@/UTILS/sanity/sanity.server';
-import { selectSanityQuery } from '@/UTILS/sanity/selectSanityQuery';
+import { selectSanityQuery } from '@/TRQ/sanity-api/selectSanityQuery';
 
 export default function PageBySlug({ data, preview }) {
   const router = useRouter();
