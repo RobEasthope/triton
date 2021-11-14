@@ -6,8 +6,8 @@ import {
   SanityImageHotspot,
   SanityReference,
 } from '@/UI/types/sanity-schema';
-import { getClient } from '@/UI/utils/sanity/sanity.server';
 import { ResponsiveImageWrapper, FillImageWrapper } from './Picture.styles';
+import { getClient } from '@/UTILS/sanity/sanity.server';
 
 export interface ImageAssetProp {
   _type: 'image';
