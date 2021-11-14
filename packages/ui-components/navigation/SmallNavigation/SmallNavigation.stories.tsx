@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 import { SmallNavigation, SmallNavigationProps } from './SmallNavigation';
-import { CenterComponent } from '.storybook/components/CenterComponent';
+import { CenterComponent } from '@/STORYBOOK/components/CenterComponent';
 
 export default {
   title: 'Navigation/SmallNavigation',

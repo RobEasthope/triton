@@ -1,12 +1,12 @@
 import React from 'react';
 import faker from 'faker';
 import { Meta, Story } from '@storybook/react';
-import { ExampleSection as ExampleSectionProps } from 'types/sanity-schema';
-import { capitalizeFirstLetter } from 'utils/capitalizeFirstLetter';
+import { ExampleSection as ExampleSectionProps } from '@/UI/types/sanity-schema';
+import { capitalizeFirstLetter } from '@/STORYBOOK/utils/capitalizeFirstLetter';
 
 import { ExampleSection } from './ExampleSection';
-import { CenterComponent } from '.storybook/components/CenterComponent';
-import { EXAMPLE_TEXT } from '.storybook/mock-data/sanity-text';
+import { CenterComponent } from '@/STORYBOOK/components/CenterComponent';
+import { EXAMPLE_TEXT } from '@/STORYBOOK/mock-data/sanity-text';
 
 export default {
   title: 'Sections/ExampleSection',

@@ -3,8 +3,8 @@ import { Meta, Story } from '@storybook/react';
 import { Header as HeaderProps } from 'types/sanity-schema';
 
 import { Header } from './Header';
-import { CenterComponent } from '.storybook/components/CenterComponent';
-import { TRIQUETRA_LOGO } from '.storybook/mock-data/sanity-images';
+import { CenterComponent } from '@/STORYBOOK/components/CenterComponent';
+import { TRIQUETRA_LOGO } from '@/STORYBOOK/mock-data/sanity-images';
 
 export default {
   title: 'Navigation/Header',
