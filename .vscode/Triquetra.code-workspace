@@ -8,7 +8,6 @@
       "name": "UI Components (Pkg)",
       "path": "../packages/ui-components"
     },
-    
     {
       "name": "Triquetra (App)",
       "path": "../apps/triquetra-next"
