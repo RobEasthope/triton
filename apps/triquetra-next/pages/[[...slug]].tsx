@@ -6,8 +6,8 @@
 import Custom404 from 'pages/404';
 import { useRouter } from 'next/router';
 
-import { Page } from '@/UI/docs/Page/Page';
-import { Home } from '@/UI/docs/Home/Home';
+import { Page } from '@/UI/pages/Page/Page';
+import { Home } from '@/UI/pages/Home/Home';
 import { Loading } from '@/UI/base/app/Loading/Loading';
 
 import {
