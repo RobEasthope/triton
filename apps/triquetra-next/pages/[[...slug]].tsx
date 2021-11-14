@@ -22,7 +22,6 @@ import {
   sanityClient,
 } from '@/UTILS/sanity/sanity.server';
 import { selectSanityQuery } from '@/UTILS/sanity/selectSanityQuery';
-import { AppMetadata } from '@/UI/base/app/AppMetadata/AppMetadata';
 
 export default function PageBySlug({ data, preview }) {
   const router = useRouter();
@@ -42,8 +41,6 @@ export default function PageBySlug({ data, preview }) {
 
   return (
     <>
-      <AppMetadata />
-
       {isFallback && <Loading />}
       {!isFallback && data?.page?._type === 'page' && (
         <Page page={data?.page} globals={data?.globals} preview={preview} />

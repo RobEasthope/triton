@@ -2,6 +2,7 @@ import Head from 'next/head';
 
 import { urlForImage } from '@/UI/utils/sanity/sanity-utils';
 import { GlobalMetadata, Home, Page } from '@/UI/types/sanity-schema';
+import { METADATA } from '@/UI/settings/METADATA';
 
 type MetadateType = {
   page: Page | Home;
@@ -14,7 +15,7 @@ export const Metadata = ({ page, globalMetadata }: MetadateType) => (
     {page?.metadataTitle && (
       <title>{`${page?.metadataTitle} ${
         globalMetadata?.globalTitleTemplate || ''
-      }`}</title>
+      }` || METADATA.TITLE}</title>
     )}
     {page?.metadataDescription && (
       <meta name="description" content={page?.metadataDescription} />
