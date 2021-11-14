@@ -4,7 +4,7 @@
 import { Footer } from '@/UI/navigation/Footer/Footer';
 import { Header, HeaderProps } from '@/UI/navigation/Header/Header';
 import { FixedFooterLayout } from '@/UI/base/layout/FixedFooterLayout/FixedFooterLayout';
-import { MainContentLayout } from '@/UI/structural/MainContentLayout';
+import { MainContentLayout } from '@/UI/base/layout/MainContentLayout/MainContentLayout';
 import { RenderSections } from '@/UI/base/app/RenderSections/RenderSections';
 import { Metadata } from '@/UI/base/app/Metadata/Metadata';
 import {
