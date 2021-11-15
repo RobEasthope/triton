@@ -14,7 +14,7 @@ import {
   anyPageBySlugQuery,
   globalsQuery,
   pageSlugsQuery,
-} from '@/UTILS/sanity/queries';
+} from '@/TRQ/sanity-api/queries';
 import { usePreviewSubscription } from '@/UTILS/sanity/sanity-utils';
 import {
   getClient,
