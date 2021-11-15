@@ -6,7 +6,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "types": "npx sanity-codegen",
-    "lint": "lint",
+    "lint": "eslint .",
     "lint:fix": "next lint --fix",
     "type-check": "tsc --pretty --noEmit"
   },
