@@ -13,9 +13,11 @@ export const Metadata = ({ page, globalMetadata }: MetadateType) => (
   <Head>
     {/* Standard HTML */}
     {page?.metadataTitle && (
-      <title>{`${page?.metadataTitle} ${
-        globalMetadata?.globalTitleTemplate || ''
-      }` || METADATA.TITLE}</title>
+      <title>
+        {`${page?.metadataTitle} ${
+          globalMetadata?.globalTitleTemplate || ''
+        }` || METADATA.TITLE}
+      </title>
     )}
     {page?.metadataDescription && (
       <meta name="description" content={page?.metadataDescription} />

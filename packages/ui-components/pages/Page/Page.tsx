@@ -7,10 +7,7 @@ import { FixedFooterLayout } from '@/UI/base/layout/FixedFooterLayout/FixedFoote
 import { MainContentLayout } from '@/UI/base/layout/MainContentLayout/MainContentLayout';
 import { Metadata } from '@/UI/base/app/Metadata/Metadata';
 import { RenderSections } from '@/UI/base/app/RenderSections/RenderSections';
-import {
-  Page as PageProps,
-  GlobalMetadata,
-} from '@/UI/types/sanity-schema';
+import { Page as PageProps, GlobalMetadata } from '@/UI/types/sanity-schema';
 
 export const Page = ({
   page,

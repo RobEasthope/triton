@@ -9,7 +9,7 @@ import {
 
 import { SuperLink } from '@/UI/base/links/SuperLink/SuperLink';
 
-// Styles 
+// Styles
 export const DialogContent = styled(DialogPrimative.Content, {
   backgroundColor: 'white',
 

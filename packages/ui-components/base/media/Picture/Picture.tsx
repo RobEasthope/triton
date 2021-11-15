@@ -48,7 +48,7 @@ export const Picture = ({
 }: PictureProps) => {
   const configuredSanityClient = getClient(preview);
   const imageProps = useNextSanityImage(configuredSanityClient, asset);
-  
+
   if (imageProps) {
     switch (mode) {
       case 'responsive':
