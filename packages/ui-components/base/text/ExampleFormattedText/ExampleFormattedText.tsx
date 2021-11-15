@@ -17,19 +17,20 @@ const BlockRenderer = (props: {
 }) => {
   // eslint-disable-next-line react/destructuring-assignment
   const { style = 'normal' } = props?.node;
+  const { children } = props;
 
   if (style === 'h2') {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, react/prop-types
-    return <h2>{props.children}</h2>;
+    return <h2>{children}</h2>;
   }
   if (style === 'h3') {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, react/prop-types
-    return <h3>{props.children}</h3>;
+    return <h3>{children}</h3>;
   }
 
   if (style === 'h4') {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, react/prop-types
-    return <h4>{props.children}</h4>;
+    return <h4>{children}</h4>;
   }
 
   // Fall back to default handling
