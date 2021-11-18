@@ -7,7 +7,7 @@
   ],
   "scripts": {
     "trq": "cd ./apps/triquetra-next && yarn dev",
-    "build": "cd ./apps/triquetra-next && yarn build",
+    "trq:build": "cd ./apps/triquetra-next && yarn build",
     "sanity": "cd ./apps/triquetra-sanity && yarn start",
     "sanity:build": "cd ./apps/triquetra-sanity && yarn sanity-build",
     "storybook": "cd ./packages/ui-components && yarn storybook",
