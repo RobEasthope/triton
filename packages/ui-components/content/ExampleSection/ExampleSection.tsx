@@ -4,10 +4,11 @@ import { MaxPageWidth } from '@/TRQ/../../packages/ui-components/base/layout/Max
 import { ExampleSection as rawExampleSectionProps } from '@/UI/types/sanity-schema';
 import { PaddedComponent } from '@/TRQ/../../packages/ui-components/base/layout/PaddedComponent/PaddedComponent';
 import { Picture } from '@/UI/base/media/Picture/Picture';
+import { TYPE_SCALE } from '@/UI/styles/constants/TYPE_SCALE';
 
 // Styles
 export const Heading = styled('p', {
-  type: { min: 18, max: 32, mb: 32 },
+  type: { fontSize: TYPE_SCALE.STANDARD, mb: 32 },
   fontWeight: 'bold',
 });
 
