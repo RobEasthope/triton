@@ -1,5 +1,4 @@
-import { anyPageBySlugQuery } from '@/TRQ/utils/sanity/queries';
-
+import { anyPageBySlugQuery } from '@/TRQ/sanity-api/queries';
 import { createSlugFromQuery } from '@/UTILS/sanity/createSlugFromQuery';
 
 export function selectSanityQuery(slugArray = []) {
