@@ -1,5 +1,5 @@
-import { SECTIONS_INDEX } from '@/UI/content/SECTIONS_INDEX';
-import { headingUI } from '@/UI/utils/sanity/headingUI';
+import { SECTIONS_INDEX } from '../../content/SECTIONS_INDEX';
+import { headingUI } from '../../utils/sanity/headingUI';
 
 export default {
   name: 'Home',
