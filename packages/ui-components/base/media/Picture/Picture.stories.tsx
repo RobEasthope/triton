@@ -1,13 +1,10 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 
-import * as AspectRatioPrimative from '@radix-ui/react-aspect-ratio';
+import * as AspectRatio from '@radix-ui/react-aspect-ratio';
 import { Picture, PictureProps } from './Picture';
-import { CenterComponent } from '.storybook/components/CenterComponent';
-import {
-  BASSENTHWAITE_IMAGE,
-  RED_ARROWS,
-} from '.storybook/mock-data/sanity-images';
+import { CenterComponent } from '@/STORYBOOK/components/CenterComponent';
+import { MOROCCO_IMAGE, RED_ARROWS } from '@/STORYBOOK/mock-data/SANITY_IMAGE';
 
 export default {
   title: 'Utils/Media/Picture',
@@ -22,9 +19,7 @@ export default {
   ],
 } as Meta;
 
-const Template: Story<PictureProps> = (args) => (
-  <Picture preview={false} {...args} />
-);
+const Template: Story<PictureProps> = (args) => <Picture {...args} />;
 
 // Responsive
 export const Responsive = Template.bind({}) as Record<string, unknown>;
@@ -55,9 +50,9 @@ CoverSquare.decorators = [
   // eslint-disable-next-line @typescript-eslint/no-shadow, no-shadow
   (Story) => (
     <div style={{ width: '100%', maxWidth: '600px' }}>
-      <AspectRatioPrimative.Root ratio={1 / 1}>
+      <AspectRatio.Root ratio={1 / 1}>
         <Story />
-      </AspectRatioPrimative.Root>
+      </AspectRatio.Root>
     </div>
   ),
 ];
@@ -72,9 +67,9 @@ CoverLandscape.decorators = [
   // eslint-disable-next-line @typescript-eslint/no-shadow, no-shadow
   (Story) => (
     <div style={{ width: '100%', maxWidth: '600px' }}>
-      <AspectRatioPrimative.Root ratio={16 / 9}>
+      <AspectRatio.Root ratio={16 / 9}>
         <Story />
-      </AspectRatioPrimative.Root>
+      </AspectRatio.Root>
     </div>
   ),
 ];
@@ -89,9 +84,9 @@ CoverPortrait.decorators = [
   // eslint-disable-next-line @typescript-eslint/no-shadow, no-shadow
   (Story) => (
     <div style={{ width: '100%', maxWidth: '200px' }}>
-      <AspectRatioPrimative.Root ratio={9 / 16}>
+      <AspectRatio.Root ratio={9 / 16}>
         <Story />
-      </AspectRatioPrimative.Root>
+      </AspectRatio.Root>
     </div>
   ),
 ];
@@ -103,7 +98,7 @@ CoverPortrait.args = {
 // Contain - Full screen
 export const ContainFullScreen = Template.bind({}) as Record<string, unknown>;
 ContainFullScreen.args = {
-  asset: BASSENTHWAITE_IMAGE,
+  asset: MOROCCO_IMAGE,
   mode: 'contain',
 };
 
