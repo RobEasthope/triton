@@ -10,11 +10,11 @@
     },
     {
       "name": "Triquetra (App)",
-      "path": "../apps/triquetra-next"
+      "path": "../apps/trq-next"
     },
     {
       "name": "Sanity Studio (App)",
-      "path": "../apps/triquetra-sanity"
+      "path": "../apps/trq-sanity"
     },
     {
       "name": "Utils (Pkg)",
