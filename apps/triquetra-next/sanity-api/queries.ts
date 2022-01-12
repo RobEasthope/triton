@@ -31,12 +31,3 @@ export const globalsQuery = groq`
     }
   }
 `;
-
-// 404 page
-export const error404Query = groq`
-  *[_type == "error404"]{
-    ...
-  }
-`;
-
-// Search all page doc types by slug
