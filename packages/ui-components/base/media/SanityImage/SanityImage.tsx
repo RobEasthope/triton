@@ -5,7 +5,7 @@ import {
   SanityImageHotspot,
   SanityReference,
 } from '@/UI/types/sanity-schema';
-import { sanityConfig } from '@/UTILS/sanity-api/sanity-config';
+import { sanityConfig } from '@/UTILS/sanity/sanity-config';
 import { BlurrableImage } from '../BlurrableImage/BlurrableImage';
 // eslint-disable-next-line import/no-cycle
 import { FadingImage, Wrapper } from './SanityImage.styles';
