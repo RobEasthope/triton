@@ -3,7 +3,7 @@ import { ExampleFormattedText } from '@/UI/base/text/ExampleFormattedText/Exampl
 import { MaxPageWidth } from '@/UI/base/layout/MaxPageWidth/MaxPageWidth';
 import { ExampleSection as rawExampleSectionProps } from '@/UI/types/sanity-schema';
 import { PaddedComponent } from '@/UI/base/layout/PaddedComponent/PaddedComponent';
-// import { Picture } from '@/UI/base/media/Picture/Picture';
+import { Picture } from '@/UI/base/media/Picture/Picture';
 import { TYPE_SCALE } from '@/UI/styles/constants/TYPE_SCALE';
 
 // Styles
@@ -21,7 +21,7 @@ export interface ExampleSectionProps extends rawExampleSectionProps {
 export const ExampleSection = ({
   heading,
   text,
-  // image,
+  image,
   preview,
 }: ExampleSectionProps) => {
   if (!heading && !text) {
@@ -33,14 +33,14 @@ export const ExampleSection = ({
       <MaxPageWidth>
         {heading && <Heading as="h1">{heading}</Heading>}
         {text && <ExampleFormattedText blocks={text} preview={preview} />}
-        {/* {text && (
+        {text && (
           <Picture
             asset={image}
             mode="responsive"
             maxWidth={800}
             preview={preview}
           />
-        )} */}
+        )}
       </MaxPageWidth>
     </PaddedComponent>
   );
