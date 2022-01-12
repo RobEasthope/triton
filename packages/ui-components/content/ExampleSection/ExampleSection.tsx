@@ -1,8 +1,8 @@
 import { styled } from '@/UI/styles/stitches.config';
 import { ExampleFormattedText } from '@/UI/base/text/ExampleFormattedText/ExampleFormattedText';
-import { MaxPageWidth } from '@/TRQ/../../packages/ui-components/base/layout/MaxPageWidth/MaxPageWidth';
+import { MaxPageWidth } from '@/UI/base/layout/MaxPageWidth/MaxPageWidth';
 import { ExampleSection as rawExampleSectionProps } from '@/UI/types/sanity-schema';
-import { PaddedComponent } from '@/TRQ/../../packages/ui-components/base/layout/PaddedComponent/PaddedComponent';
+import { PaddedComponent } from '@/UI/base/layout/PaddedComponent/PaddedComponent';
 // import { Picture } from '@/UI/base/media/Picture/Picture';
 import { TYPE_SCALE } from '@/UI/styles/constants/TYPE_SCALE';
 

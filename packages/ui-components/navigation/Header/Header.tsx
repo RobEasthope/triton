@@ -5,8 +5,8 @@ import {
 } from '@/UI/types/links';
 import { styled } from '@/UI/styles/stitches.config';
 
-import { MaxPageWidth } from '@/TRQ/../../packages/ui-components/base/layout/MaxPageWidth/MaxPageWidth';
-import { PaddedComponent } from '@/TRQ/../../packages/ui-components/base/layout/PaddedComponent/PaddedComponent';
+import { MaxPageWidth } from '@/UI/base/layout/MaxPageWidth/MaxPageWidth';
+import { PaddedComponent } from '@/UI/base/layout/PaddedComponent/PaddedComponent';
 import { Picture } from '@/UI/base/media/Picture/Picture';
 import { SuperLink } from '@/UI/base/links/SuperLink/SuperLink';
 import { SmallNavigation } from '@/UI/navigation/SmallNavigation/SmallNavigation';
