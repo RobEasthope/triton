@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { anyPageBySlugQuery } from '@/TRQ/sanity-api/queries';
+import { anyPageBySlugQuery } from '@/UI/pages/Page/Page.queries';
 import { previewClient } from '@/UTILS/sanity/sanity.server';
 
 export default async function (
