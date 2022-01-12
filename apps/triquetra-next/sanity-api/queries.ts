@@ -39,14 +39,6 @@ export const error404Query = groq`
   }
 `;
 
-// Home page
-export const HomeQuery = groq`
-  *[_type == "homePage" && slug.current == $slug][0]{
-    ...,
-    ${getSections}
-  }
-`;
-
 // Search all page doc types by slug
 export const anyPageBySlugQuery = groq`
   *[_type in ["page", "homePage"] && slug.current == $slug]{
