@@ -10,11 +10,9 @@ import { Page } from '@/UI/pages/Page/Page';
 import { Home } from '@/UI/pages/Home/Home';
 import { Loading } from '@/UI/base/app/Loading/Loading';
 
-import {
-  anyPageBySlugQuery,
-  globalsQuery,
-  pageSlugsQuery,
-} from '@/TRQ/sanity-api/queries';
+
+import { anyPageBySlugQuery, pageSlugsQuery } from '@/UI/pages/Page/Page.queries';
+import { globalsQuery } from '@/TRQ/sanity-api/queries';
 import { usePreviewSubscription } from '@/UTILS/sanity/sanity-utils';
 import {
   getClient,

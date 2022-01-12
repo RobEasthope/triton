@@ -40,18 +40,3 @@ export const error404Query = groq`
 `;
 
 // Search all page doc types by slug
-export const anyPageBySlugQuery = groq`
-  *[_type in ["page", "homePage"] && slug.current == $slug]{
-     ...,
-    ${getSections},
-  }
-`;
-
-// All page slugs
-export const pageSlugsQuery = groq`
-  *[_type == "page" || _type == "homePage" && defined(slug.current)]{
-    slug {
-      current
-    },
-  }
-`;
