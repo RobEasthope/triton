@@ -1,4 +1,4 @@
-import { styled } from '../../stitches.config';
+import { styled } from '../../styles/stitches.config';
 
 export const CenterTextComponent = styled('div', {
   display: 'flex',
