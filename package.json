@@ -18,7 +18,6 @@
     "lint:fix": "cd ./packages/ui-components && yarn lint:fix && cd ../../apps/trq-next && yarn lint:fix && cd ../trq-sanity && yarn lint:fix",
     "type-check": "cd ./packages/ui-components && yarn type-check && cd ../../apps/trq-next && yarn type-check",
     "types": "npx sanity-codegen",
-
     "test": "cd ./apps/trq-next && yarn test",
     "test:ci": "cd ./apps/trq-next && yarn test:ci",
     "cypress": "cd ./apps/trq-next && yarn cypress",
