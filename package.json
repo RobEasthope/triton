@@ -10,6 +10,7 @@
     "trq:build": "cd ./apps/trq-next && yarn build",
     "sanity": "cd ./apps/trq-sanity && yarn start",
     "sanity:build": "cd ./apps/trq-sanity && yarn sanity-build",
+    "sanity-upgrade": "cd ./apps/trq-sanity && sanity upgrade",
     "storybook": "cd ./packages/ui-components && yarn storybook",
     "storybook:build": "cd ./packages/ui-components && build-storybook",
     "linting": "yarn lint && yarn type-check",
