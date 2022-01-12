@@ -3,7 +3,7 @@
     "baseUrl": ".",
     "paths": {
       "@/TRQ/*": [
-        "./*"
+        "../../apps/trq-next/*"
       ],
       "@/UI/*": [
         "../../packages/ui-components/*"

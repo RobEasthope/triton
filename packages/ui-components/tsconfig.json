@@ -3,16 +3,16 @@
     "baseUrl": ".",
     "paths": {
       "@/TRQ/*": [
-        "../../apps/triquetra-next/*"
+        "../../apps/trq-next/*"
       ],
       "@/UI/*": [
-        "./*"
+        "../../packages/ui-components/*"
       ],
       "@/UTILS/*": [
-        "../utils/*"
+        "../../packages/utils/*"
       ],
       "@/STORYBOOK/*": [
-        "./.storybook/*"
+        "../../packages/ui-components/.storybook/*"
       ]
     },
     "target": "es5",

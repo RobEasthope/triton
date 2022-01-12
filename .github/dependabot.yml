@@ -10,10 +10,10 @@ updates:
     schedule:
       interval: "weekly"
   - package-ecosystem: "npm" # See documentation for possible values
-    directory: "/apps/triquetra-next" # Location of package manifests
+    directory: "/apps/trq-next" # Location of package manifests
     schedule:
       interval: "weekly"
   - package-ecosystem: "npm" # See documentation for possible values
-    directory: "/apps/triquetra-sanity" # Location of package manifests
+    directory: "/apps/trq-sanity" # Location of package manifests
     schedule:
       interval: "weekly"
