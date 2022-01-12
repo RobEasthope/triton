@@ -1,5 +1,4 @@
 import React from 'react';
-import faker from 'faker';
 import { Meta, Story } from '@storybook/react';
 import { ExampleSection as ExampleSectionProps } from '@/UI/types/sanity-schema';
 import { capitalizeFirstLetter } from '@/STORYBOOK/utils/capitalizeFirstLetter';
