@@ -1,10 +1,19 @@
 import { groq } from 'next-sanity';
-import { getSections } from '@/TRQ/sanity-api/queries';
 
 export const anyPageBySlugQuery = groq`
   *[_type in ["page", "homePage"] && slug.current == $slug]{
      ...,
-    ${getSections},
+    "sections": sections[]{
+      ...,
+      "link": rawLink[0]{..., "to": {...internalUID->{...},  }},
+      "bkg": rawBkg->,
+      "cards": rawCards[]{
+        ...,
+        "link": rawLink[0]{..., "to": {...internalUID->{...},  }},
+        "bkg": rawBkg->,
+      },
+      "muxVideo": rawMuxVideo.asset->,
+    }
   }
 `;
 
