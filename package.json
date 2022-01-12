@@ -12,7 +12,7 @@
     "sanity:build": "cd ./apps/trq-sanity && yarn sanity-build",
     "storybook": "cd ./packages/ui-components && yarn storybook",
     "storybook:build": "cd ./packages/ui-components && build-storybook",
-    "checks": "yarn lint && yarn type-check",
+    "linting": "yarn lint && yarn type-check",
     "lint": "cd ./packages/ui-components && yarn lint && cd ../../apps/trq-next && yarn lint && cd ../trq-sanity && yarn lint",
     "lint:fix": "cd ./packages/ui-components && yarn lint:fix && cd ../../apps/trq-next && yarn lint:fix && cd ../trq-sanity && yarn lint:fix",
     "type-check": "cd ./packages/ui-components && yarn type-check && cd ../../apps/trq-next && yarn type-check",
