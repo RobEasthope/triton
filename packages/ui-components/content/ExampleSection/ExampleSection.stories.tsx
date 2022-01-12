@@ -29,7 +29,9 @@ const Template: Story<ExampleSectionProps> = (args) => (
 export const Vanilla = Template.bind({}) as Record<string, unknown>;
 
 Vanilla.args = {
-  heading: capitalizeFirstLetter(faker.lorem.words()),
+  heading: capitalizeFirstLetter(
+    ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vestibulum arcu a tellus elementum, id fermentum eros ultricies. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec iaculis est a varius luctus. Nunc vitae condimentum risus, eget convallis massa. Fusce eu nisi a libero rhoncus vehicula ac ac lacus. Maecenas vel libero enim. Integer eros nibh, fermentum eu arcu in, dapibus scelerisque enim. Cras sodales auctor massa, quis tristique nisl rhoncus sodales. Nunc quis congue arcu. Pellentesque rutrum tincidunt libero vel faucibus. '
+  ),
   text: EXAMPLE_TEXT,
 };
 
