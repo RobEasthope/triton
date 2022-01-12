@@ -4,7 +4,10 @@ import { Meta, Story } from '@storybook/react';
 import * as AspectRatio from '@radix-ui/react-aspect-ratio';
 import { Picture, PictureProps } from './Picture';
 import { CenterComponent } from '@/STORYBOOK/components/CenterComponent';
-import { MOROCCO_IMAGE, RED_ARROWS } from '@/STORYBOOK/mock-data/SANITY_IMAGE';
+import {
+  BASSENTHWAITE_IMAGE,
+  RED_ARROWS,
+} from '.storybook/mock-data/sanity-images';
 
 export default {
   title: 'Utils/Media/Picture',
@@ -98,7 +101,7 @@ CoverPortrait.args = {
 // Contain - Full screen
 export const ContainFullScreen = Template.bind({}) as Record<string, unknown>;
 ContainFullScreen.args = {
-  asset: MOROCCO_IMAGE,
+  asset: BASSENTHWAITE_IMAGE,
   mode: 'contain',
 };
 
