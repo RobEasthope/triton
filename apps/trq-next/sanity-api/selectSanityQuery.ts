@@ -1,7 +1,7 @@
 import { anyPageBySlugQuery } from '@/UI/pages/Page/Page.queries';
 import { createSlugFromQuery } from '@/UTILS/sanity/createSlugFromQuery';
 
-export function selectSanityQuery(slugArray = []) {
+export function selectSanityQuery(slugArray = []): Record<string, unknown> {
   if (slugArray.length === 0) {
     return {
       sanityQuery: anyPageBySlugQuery,
