@@ -4,7 +4,7 @@ import { Header as HeaderProps } from 'types/sanity-schema';
 
 import { Header } from './Header';
 import { CenterComponent } from '@/STORYBOOK/components/CenterComponent';
-import { TRIQUETRA_LOGO } from '@/STORYBOOK/mock-data/sanity-images';
+import { TRIQUETRA_LOGO } from '@/STORYBOOK/mock-data/SANITY_IMAGES';
 
 export default {
   title: 'Navigation/Header',

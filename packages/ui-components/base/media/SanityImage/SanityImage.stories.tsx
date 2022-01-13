@@ -7,7 +7,7 @@ import { CenterComponent } from '@/STORYBOOK/components/CenterComponent';
 import {
   BASSENTHWAITE_IMAGE,
   RED_ARROWS,
-} from '.storybook/mock-data/sanity-images';
+} from '@/STORYBOOK/mock-data/SANITY_IMAGES';
 
 export default {
   title: 'Utils/Media/SanityImage',
