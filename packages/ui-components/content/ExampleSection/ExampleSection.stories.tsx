@@ -5,7 +5,7 @@ import { capitalizeFirstLetter } from '@/STORYBOOK/utils/capitalizeFirstLetter';
 
 import { ExampleSection } from './ExampleSection';
 import { CenterComponent } from '@/STORYBOOK/components/CenterComponent';
-import { EXAMPLE_TEXT } from '@/STORYBOOK/mock-data/sanity-text';
+import { EXAMPLE_TEXT } from '.storybook/mock-data/SANITY_TEXT';
 
 export default {
   title: 'Sections/ExampleSection',

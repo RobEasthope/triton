@@ -6,7 +6,7 @@ import {
   ExampleFormattedTextProps,
 } from './ExampleFormattedText';
 import { CenterComponent } from '.storybook/components/CenterComponent';
-import { EXAMPLE_TEXT } from '.storybook/mock-data/sanity-text';
+import { EXAMPLE_TEXT } from '.storybook/mock-data/SANITY_TEXT';
 
 export default {
   title: 'Utils/Formatted text/ExampleFormattedText',
