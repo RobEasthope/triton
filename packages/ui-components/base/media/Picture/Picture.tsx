@@ -8,8 +8,8 @@ import {
   SanityReference,
 } from '@/UI/types/sanity-schema';
 import { getClient } from '@/UTILS/sanity/sanity.server';
-import { SanityImage } from '../SanityImage/SanityImage';
 import { styled } from '@/UI/styles/stitches.config';
+import { SanityImage } from '../SanityImage/SanityImage';
 
 // STYLES
 export const ResponsiveImageWrapper = styled('div', {

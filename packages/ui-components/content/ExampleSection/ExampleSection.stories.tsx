@@ -3,9 +3,9 @@ import { Meta, Story } from '@storybook/react';
 import { ExampleSection as ExampleSectionProps } from '@/UI/types/sanity-schema';
 import { capitalizeFirstLetter } from '@/STORYBOOK/utils/capitalizeFirstLetter';
 
-import { ExampleSection } from './ExampleSection';
 import { CenterComponent } from '@/STORYBOOK/components/CenterComponent';
 import { EXAMPLE_TEXT } from '.storybook/mock-data/SANITY_TEXT';
+import { ExampleSection } from './ExampleSection';
 
 export default {
   title: 'Sections/ExampleSection',

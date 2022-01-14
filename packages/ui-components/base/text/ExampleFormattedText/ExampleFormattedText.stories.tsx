@@ -1,12 +1,12 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 
+import { CenterComponent } from '.storybook/components/CenterComponent';
+import { EXAMPLE_TEXT } from '.storybook/mock-data/SANITY_TEXT';
 import {
   ExampleFormattedText,
   ExampleFormattedTextProps,
 } from './ExampleFormattedText';
-import { CenterComponent } from '.storybook/components/CenterComponent';
-import { EXAMPLE_TEXT } from '.storybook/mock-data/SANITY_TEXT';
 
 export default {
   title: 'Utils/Formatted text/ExampleFormattedText',

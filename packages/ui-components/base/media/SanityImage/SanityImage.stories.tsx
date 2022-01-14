@@ -2,12 +2,12 @@ import React from 'react';
 import { Meta, Story } from '@storybook/react';
 
 import * as AspectRatio from '@radix-ui/react-aspect-ratio';
-import { SanityImage, SanityImageProps } from './SanityImage';
 import { CenterComponent } from '@/STORYBOOK/components/CenterComponent';
 import {
   BASSENTHWAITE_IMAGE,
   RED_ARROWS,
 } from '@/STORYBOOK/mock-data/SANITY_IMAGES';
+import { SanityImage, SanityImageProps } from './SanityImage';
 
 export default {
   title: 'Utils/Media/SanityImage',
