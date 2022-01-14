@@ -34,7 +34,10 @@ export const SanityImage = ({
   maxWidth,
   aspectRatio, // Default to 'natural/original' image aspect ratio
 }: SanityImageProps) => {
-  const imageBuilder = createImageUrlBuilder(sanityConfig);
+  const imageBuilder = createImageUrlBuilder({
+    dataset: 'production',
+    projectId: 'xtxdr2ns',
+  });
 
   // Abort if no asset has been passed in
   if (!asset) {
