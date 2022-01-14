@@ -7,7 +7,6 @@ import {
   SanityImageHotspot,
   SanityReference,
 } from '@/UI/types/sanity-schema';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { getClient } from '@/UTILS/sanity/sanity.server';
 import { styled } from '@/UI/styles/stitches.config';
 import { SanityImage } from '../SanityImage/SanityImage';
