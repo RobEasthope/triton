@@ -7,7 +7,8 @@
   "rules": {
     "no-unused-vars": "off",
     "no-use-before-define": "off",
-    "@typescript-eslint/no-use-before-define": "warn"
+    "@typescript-eslint/no-use-before-define": "warn",
+    "import/no-extraneous-dependencies": "off"
   },
   "overrides": [
     {
