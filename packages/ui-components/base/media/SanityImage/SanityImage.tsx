@@ -5,6 +5,7 @@ import {
   SanityImageHotspot,
   SanityReference,
 } from '@/UI/types/sanity-schema';
+import { sanityConfig } from '@/UTILS/sanity-api/sanity-config';
 import { BlurrableImage } from '../BlurrableImage/BlurrableImage';
 // eslint-disable-next-line import/no-cycle
 import { FadingImage, Wrapper } from './SanityImage.styles';
@@ -33,10 +34,7 @@ export const SanityImage = ({
   maxWidth,
   aspectRatio, // Default to 'natural/original' image aspect ratio
 }: SanityImageProps) => {
-  const imageBuilder = createImageUrlBuilder({
-    dataset: 'production',
-    projectId: 'xtxdr2ns',
-  });
+  const imageBuilder = createImageUrlBuilder(sanityConfig);
 
   // Abort if no asset has been passed in
   if (!asset) {
