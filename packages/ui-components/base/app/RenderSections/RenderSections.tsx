@@ -8,6 +8,7 @@ import { upperFirst } from 'lodash';
 import * as SectionComponents from '@/UI/base/app/RenderSections/section-index';
 
 function resolveSections(section) {
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
   const Section = SectionComponents[upperFirst(section._type)];
 
   if (Section) {
