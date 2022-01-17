@@ -9,7 +9,7 @@
         "../../packages/ui-components/*"
       ],
       "@/UTILS/*": [
-        "../../packages/utils/*"
+        "../../packages/foo/*"
       ],
       "@/STORYBOOK/*": [
         "../../packages/ui-components/.storybook/*"

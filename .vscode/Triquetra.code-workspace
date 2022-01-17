@@ -18,14 +18,14 @@
     },
     {
       "name": "Utils (Pkg)",
-      "path": "../packages/utils"
+      "path": "../packages/foo"
     },
   ],
   "settings": {
     "files.exclude": {
       "node_modules/": true,
       "apps/": true,
-      "packages/": true,
+      // "packages/": true,
       "storybook-static": true,
       ".next": true,
       "tsconfig.tsbuildinfo": true,

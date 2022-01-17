@@ -20,7 +20,7 @@ import {
   getClient,
   overlayDrafts,
   sanityClient,
-} from '@/UTILS/sanity-api/sanity.server';
+} from '../../packages/foo/sanity-api/sanity.server';
 import { selectSanityQuery } from '@/TRQ/sanity-api/selectSanityQuery';
 
 export default function PageBySlug({ data, preview }) {
