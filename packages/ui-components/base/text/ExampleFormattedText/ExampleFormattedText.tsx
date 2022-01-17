@@ -15,7 +15,7 @@ const BlockRenderer = (props: {
   node: { style: string };
   children: ReactNode;
 }) => {
-  // eslint-disable-next-line react/destructuring-assignment
+  // eslint-disable-next-line react/destructuring-assignment, no-unsafe-optional-chaining
   const { style = 'normal' } = props?.node;
   const { children } = props;
 
