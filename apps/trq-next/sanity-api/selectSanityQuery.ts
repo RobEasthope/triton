@@ -17,6 +17,7 @@ export function selectSanityQuery(slugArray = []): SelectSanityQueryProps {
   return {
     sanityQuery: anyPageBySlugQuery,
     queryParams: {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
       slug: createSlugFromQuery(slugArray),
     },
   };
