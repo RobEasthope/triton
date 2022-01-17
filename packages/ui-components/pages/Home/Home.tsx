@@ -23,13 +23,11 @@ export const Home = ({
 
     <FixedFooterLayout>
       {Object.keys(globals?.header).length > 0 && (
-        <>
-          <Header
-            logo={globals?.header?.logo}
-            navigation={globals?.header?.navigation}
-            preview={preview}
-          />
-        </>
+        <Header
+          logo={globals?.header?.logo}
+          navigation={globals?.header?.navigation}
+          preview={preview}
+        />
       )}
 
       <MainContentLayout as="main">

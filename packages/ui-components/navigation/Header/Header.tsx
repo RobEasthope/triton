@@ -54,31 +54,29 @@ export const Header = ({
   navigation,
   preview,
 }: Pick<HeaderProps, 'logo' | 'navigation' | 'preview'>) => (
-  <>
-    <PaddedComponent as="header">
-      <MaxPageWidth as="nav">
-        <HeaderLayout as="div">
-          <StyledHomeLink>
-            <Picture
-              asset={logo}
-              mode="contain"
-              maxWidth={32}
-              preview={preview}
-            />
-          </StyledHomeLink>
+  <PaddedComponent as="header">
+    <MaxPageWidth as="nav">
+      <HeaderLayout as="div">
+        <StyledHomeLink>
+          <Picture
+            asset={logo}
+            mode="contain"
+            maxWidth={32}
+            preview={preview}
+          />
+        </StyledHomeLink>
 
-          <LargeNavigation as="ul">
-            {navigation?.length > 0 &&
-              navigation.map((nav) => (
-                <li key={nav?._key}>
-                  <SuperLink link={nav}>{nav.title}</SuperLink>
-                </li>
-              ))}
-          </LargeNavigation>
+        <LargeNavigation as="ul">
+          {navigation?.length > 0 &&
+            navigation.map((nav) => (
+              <li key={nav?._key}>
+                <SuperLink link={nav}>{nav.title}</SuperLink>
+              </li>
+            ))}
+        </LargeNavigation>
 
-          <SmallNavigation navigation={navigation} />
-        </HeaderLayout>
-      </MaxPageWidth>
-    </PaddedComponent>
-  </>
+        <SmallNavigation navigation={navigation} />
+      </HeaderLayout>
+    </MaxPageWidth>
+  </PaddedComponent>
 );
