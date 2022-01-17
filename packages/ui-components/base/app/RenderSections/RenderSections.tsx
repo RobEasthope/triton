@@ -23,26 +23,22 @@ export function RenderSections({ sections, preview }) {
     return <div>Missing sections</div>;
   }
 
-  return (
-    <>
-      {sections?.map((section) => {
-        const SectionComponent = resolveSections(section);
+  return sections?.map((section) => {
+    const SectionComponent = resolveSections(section);
 
-        if (!SectionComponent) {
-          return (
-            // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-            <div key={section?._key}>Missing section {section?._type}</div>
-          );
-        }
+    if (!SectionComponent) {
+      return (
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+        <div key={section?._key}>Missing section {section?._type}</div>
+      );
+    }
 
-        return (
-          <SectionComponent
-            {...section}
-            key={`render-sections-${section._key as string}`}
-            preview={preview}
-          />
-        );
-      })}
-    </>
-  );
+    return (
+      <SectionComponent
+        {...section}
+        key={`render-sections-${section._key as string}`}
+        preview={preview}
+      />
+    );
+  });
 }
