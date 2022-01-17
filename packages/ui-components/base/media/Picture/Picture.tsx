@@ -7,7 +7,7 @@ import {
   SanityImageHotspot,
   SanityReference,
 } from '@/UI/types/sanity-schema';
-import { getClient } from '@/UTILS/sanity/sanity.server';
+import { getClient } from '@/UTILS/sanity-api/sanity.server';
 import { styled } from '@/UI/styles/stitches.config';
 import { SanityImage } from '../SanityImage/SanityImage';
 

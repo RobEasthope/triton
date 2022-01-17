@@ -15,12 +15,12 @@ import {
   pageSlugsQuery,
 } from '@/UI/pages/Page/Page.queries';
 import { globalsQuery } from '@/TRQ/sanity-api/queries';
-import { usePreviewSubscription } from '@/UTILS/sanity/sanity-utils';
+import { usePreviewSubscription } from '@/UTILS/sanity-api/sanity-utils';
 import {
   getClient,
   overlayDrafts,
   sanityClient,
-} from '@/UTILS/sanity/sanity.server';
+} from '@/UTILS/sanity-api/sanity.server';
 import { selectSanityQuery } from '@/TRQ/sanity-api/selectSanityQuery';
 
 export default function PageBySlug({ data, preview }) {

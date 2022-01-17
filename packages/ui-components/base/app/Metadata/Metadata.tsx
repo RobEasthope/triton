@@ -3,7 +3,7 @@ import { SanityImageSource } from '@sanity/image-url/lib/types/types';
 import { createImageUrlBuilder } from 'next-sanity';
 import { GlobalMetadata, Home, Page } from '@/UI/types/sanity-schema';
 import { METADATA } from '@/UI/constants/METADATA';
-// import { sanityConfig } from '@/UTILS/sanity/sanity-config';
+// import { sanityConfig } from '@/UTILS/sanity-api/sanity-config';
 
 type MetadateType = {
   page: Page | Home;

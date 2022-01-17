@@ -1,5 +1,5 @@
 import { anyPageBySlugQuery } from '@/UI/pages/Page/Page.queries';
-import { createSlugFromQuery } from '@/UTILS/sanity/createSlugFromQuery';
+import { createSlugFromQuery } from '@/UTILS/sanity-api/createSlugFromQuery';
 
 type SelectSanityQueryProps = {
   sanityQuery: string;
