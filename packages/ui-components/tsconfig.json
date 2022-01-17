@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/TRQ/*": [
+        "../../apps/trq-next/*"
+      ],
+      "@/UI/*": [
+        "../../packages/ui-components/*"
+      ],
+      "@/UTILS/*": [
+        "../../packages/utils/*"
+      ],
+      "@/STORYBOOK/*": [
+        "../../packages/ui-components/.storybook/*"
+      ]
+    },
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "downlevelIteration": true,
+    "incremental": true,
+  },
+  "extends": "eslint-config-wesbos/tsconfig.json",
+  "include": [
+    "next-env.d.ts",
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.ts",
+    "**/*.tsx"
+, ".storybook/utils/capitalizeFirstLetter.ts"  ],
+  "exclude": ["node_modules"]
+}

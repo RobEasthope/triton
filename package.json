@@ -2,29 +2,48 @@
   "name": "triquetra",
   "private": true,
   "workspaces": [
-    "apps/*"
+    "apps/*",
+    "packages/*"
   ],
+  "turbo": {
+    "baseBranch": "origin/main",
+    "pipeline": {
+      "build": {
+        "dependsOn": ["^build"],
+        "outputs": [".next/**"]
+      },
+      "test": {
+        "dependsOn": ["^build"],
+        "outputs": []
+      },
+      "dev": {
+        "cache": false
+      }
+    }
+  },
   "scripts": {
-    "dev": "cd ./apps/next && yarn dev",
-    "next": "cd ./apps/next && yarn dev",
-    "build": "cd ./apps/next && yarn build",
-    "sanity": "cd ./apps/sanity && yarn start",
-    "sanity-build": "cd ./apps/sanity && yarn sanity-build",
-    "storybook": "cd ./apps/next && yarn storybook",
-    "build-storybook": "cd ./apps/next && build-storybook",
+    "trq-next": "cd ./apps/trq-next && yarn dev",
+    "trq-next:build": "cd ./apps/trq-next && yarn build",
+    "next": "yarn trq-next",
+    "trq-sanity": "cd ./apps/trq-sanity && yarn start",
+    "trq-sanity:build": "cd ./apps/trq-sanity && yarn sanity-build",
+    "sanity": "yarn trq-sanity",
+    "sanity-upgrade": "cd ./apps/trq-sanity && sanity upgrade",
+    "trq-storybook": "cd ./packages/ui-components && yarn storybook",
+    "trq-storybook:build": "cd ./packages/ui-components && build-storybook",
+    "storybook": "yarn trq-storybook",
+    "storybook:build": "yarn trq-storybook:build",
+    "linting": "yarn lint && yarn type-check",
+    "lint": "cd ./packages/ui-components && yarn lint && cd ../../apps/trq-next && yarn lint && cd ../trq-sanity && yarn lint",
+    "lint:fix": "cd ./packages/ui-components && yarn lint:fix && cd ../../apps/trq-next && yarn lint:fix && cd ../trq-sanity && yarn lint:fix",
+    "type-check": "cd ./packages/ui-components && yarn type-check && cd ../../apps/trq-next && yarn type-check",
     "types": "npx sanity-codegen",
-    "start": "cd ./apps/next && yarn start",
-    "lint": "cd ./apps/next && yarn lint",
-    "lint:fix": "cd ./apps/next && yarn lint --fix",
-    "lint-sanity": "cd ./apps/sanity && yarn lint",
-    "lint-sanity:fix": "cd ./apps/sanity && yarn lint --fix",
-    "type-check": "cd ./apps/next && yarn type-check",
-    "test": "cd ./apps/next && yarn test",
-    "test:ci": "cd ./apps/next && yarn test:ci",
-    "cypress": "cd ./apps/next && yarn cypress",
-    "cypress:headless": "cd ./apps/next && yarn cypress:headless",
-    "e2e": "cd ./apps/next && yarn e2e",
-    "e2e:headless": "cd ./apps/next && yarn e2e:headless",
+    "test": "cd ./apps/trq-next && yarn test",
+    "test:ci": "cd ./apps/trq-next && yarn test:ci",
+    "cypress": "cd ./apps/trq-next && yarn cypress",
+    "cypress:headless": "cd ./apps/trq-next && yarn cypress:headless",
+    "e2e": "cd ./apps/trq-next && yarn e2e",
+    "e2e:headless": "cd ./apps/trq-next && yarn e2e:headless",
     "prepare": "husky install"
   },
   "devDependencies": {
@@ -36,11 +55,13 @@
     "lerna": "^4.0.0",
     "prettier": "^2.4.0",
     "sanity-codegen": "^0.9.5",
+    "turbo": "^1.0.28",
     "typescript": "^4.4.3"
   },
   "dependencies": {
     "@babel/preset-typescript": "^7.15.0",
     "dayjs": "^1.10.7",
+    "next-sanity": "^0.4.0",
     "react": "^17.0.2",
     "react-icons": "^4.3.1"
   },
