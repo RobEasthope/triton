@@ -5,6 +5,25 @@
     "apps/*",
     "packages/*"
   ],
+  "turbo": {
+    "baseBranch": "origin/main",
+    "pipeline": {
+      "build": {
+        "dependsOn": ["^build"],
+        "outputs": [".next/**"]
+      },
+      "test": {
+        "dependsOn": ["^build"],
+        "outputs": []
+      },
+      "lint": {
+        "outputs": []
+      },
+      "dev": {
+        "cache": false
+      }
+    }
+  },
   "scripts": {
     "trq-next": "cd ./apps/trq-next && yarn dev",
     "trq-next:build": "cd ./apps/trq-next && yarn build",
