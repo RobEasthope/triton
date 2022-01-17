@@ -39,6 +39,7 @@
     "lerna": "^4.0.0",
     "prettier": "^2.4.0",
     "sanity-codegen": "^0.9.5",
+    "turbo": "^1.0.28",
     "typescript": "^4.4.3"
   },
   "dependencies": {
