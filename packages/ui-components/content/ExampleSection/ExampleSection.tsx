@@ -1,5 +1,5 @@
 import { styled } from '@/UI/styles/stitches.config';
-import { ExampleFormattedText } from '@/UI/base/text/ExampleFormattedText/ExampleFormattedText';
+import { ExampleFormattedText } from '@/UI/base/formatted-text/ExampleFormattedText/ExampleFormattedText';
 import { MaxPageWidth } from '@/UI/base/layout/MaxPageWidth/MaxPageWidth';
 import { ExampleSection as rawExampleSectionProps } from '@/UI/types/sanity-schema';
 import { PaddedComponent } from '@/UI/base/layout/PaddedComponent/PaddedComponent';
