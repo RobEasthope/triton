@@ -56,6 +56,7 @@ export const { css, styled, globalCss, getCssText } = createStitches({
     },
   },
   utils: {
+    include: mixins(),
     marginX: (value: string) => ({
       marginLeft: value,
       marginRight: value,
@@ -72,7 +73,11 @@ export const { css, styled, globalCss, getCssText } = createStitches({
       paddingTop: value,
       paddingBottom: value,
     }),
-    type: ({
+    type: ({ fontSize }: TypeProps) =>
+      type({
+        fontSize,
+      }),
+    fullType: ({
       fontSize,
       mt,
       mr,
@@ -86,8 +91,8 @@ export const { css, styled, globalCss, getCssText } = createStitches({
       pl,
       px,
       py,
-    }: TypeProps) =>
-      type({
+    }: FullTypeProps) =>
+      fullType({
         fontSize,
         mt,
         mr,
@@ -105,9 +110,13 @@ export const { css, styled, globalCss, getCssText } = createStitches({
     size: ({ selector, min, max }: SizeProps) => size({ selector, min, max }),
   },
   media: {
-    bp1: '(min-width: 320px)',
-    bp2: '(min-width: 1200px)',
-    minWidth: '(min-width: 320px)',
-    maxWidth: '(min-width: 1200px)',
+    xSmall: '(min-width: 420px)',
+    small: '(min-width: 640px)',
+    medium: '(min-width: 768px)',
+    large: '(min-width: 1024px)',
+    xLarge: '(min-width: 1280px)',
+    xxLarge: '(min-width: 1536px)',
+    pageMinWidth: `(min-width: ${MAX_WIDTH.TYPE_LOWER_LIMIT}px)`,
+    pageMaxWidth: `(min-width: ${MAX_WIDTH.TYPE_UPPER_LIMIT}px)`,
   },
 });
