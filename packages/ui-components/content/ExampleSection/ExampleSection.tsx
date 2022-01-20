@@ -8,7 +8,7 @@ import { TYPE_SCALE } from '@/UI/styles/constants/TYPE_SCALE';
 
 // Styles
 export const Heading = styled('p', {
-  type: { fontSize: TYPE_SCALE.STANDARD, mb: 32 },
+  type: { fontSize: TYPE_SCALE.STANDARD },
   fontWeight: 'bold',
 });
 
