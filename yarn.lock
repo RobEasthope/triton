@@ -18716,7 +18716,7 @@ sanitize.css@^12.0.1:
   resolved "https://registry.yarnpkg.com/sanitize.css/-/sanitize.css-12.0.1.tgz#f20369357557ba2b41d7278eeb3ea691a3bee514"
   integrity sha512-QbusSBnWHaRBZeTxsJyknwI0q+q6m1NtLBmB76JfW/rdVN7Ws6Zz70w65+430/ouVcdNVT3qwrDgrM6PaYyRtw==
 
-sanity-codegen@^0.9.5, sanity-codegen@^0.9.8:
+sanity-codegen@^0.9.8:
   version "0.9.8"
   resolved "https://registry.yarnpkg.com/sanity-codegen/-/sanity-codegen-0.9.8.tgz#b09b2021e8908a0f9bd7a0db7e8f0b8e1f9ffb57"
   integrity sha512-kwyBQioWD4UJBgi1RJx8J/HQ4i753yLgnL5MUwbuAyJZrO9W33anNNawbtcePw9PK+5+IovbSLOs+xicULb2hA==
