@@ -1,11 +1,11 @@
 import { createStitches } from '@stitches/react';
+import { mixins } from 'stitches-mixins';
 
-import { SizeProps, TypeProps } from '@/UI/types/utils';
+import { SizeProps, TypeProps, FullTypeProps } from '@/UI/types/utils';
 import { type } from '@/UI/styles/utils/type';
+import { fullType } from '@/UI/styles/utils/fullType';
 import { size } from '@/UI/styles/utils/size';
-
-const minWidth = 320;
-const maxWidth = 1200;
+import { MAX_WIDTH } from '@/UI/constants/MAX_WIDTHS';
 
 export const { css, styled, globalCss, getCssText } = createStitches({
   theme: {
