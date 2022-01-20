@@ -5080,10 +5080,15 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.18.6.tgz#0ced8ba5ed72367e3f425bfd4731de26afef7849"
   integrity sha512-lrCEyAVs0sJ+uq5uPn2j1NkAHryhBA8Q1fP2hC2zRiOPyJBMB53ZsdmNX3yPo/sj29EH/3452h1DsIoPTiGELg==
 
-"@types/node@^16.11.12", "@types/node@^16.9.1":
+"@types/node@^16.11.12":
   version "16.11.20"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.20.tgz#334b116c6d41143c92599965e14b5a3dd68c5d1f"
   integrity sha512-lAKaZ0Lc1Umwd0AqLr6iy5U8u/1DpK7/JzNgQn9cMMUk2mFR8bbhEP8BQrI9Cm5CU0bOVCaWbkGBvgqKMOJHsw==
+
+"@types/node@^17.0.10":
+  version "17.0.10"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.10.tgz#616f16e9d3a2a3d618136b1be244315d95bd7cab"
+  integrity sha512-S/3xB4KzyFxYGCppyDt68yzBU9ysL88lSdIah4D6cptdcltc4NCPCAMc0+PCpg/lLIyC7IPvj2Z52OJWeIUkog==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -11902,7 +11907,7 @@ humanize-ms@^1.2.1:
   dependencies:
     ms "^2.0.0"
 
-husky@^7.0.0:
+husky@^7.0.4:
   version "7.0.4"
   resolved "https://registry.yarnpkg.com/husky/-/husky-7.0.4.tgz#242048245dc49c8fb1bf0cc7cfb98dd722531535"
   integrity sha512-vbaCKN2QLtP/vD4yvs6iz6hBEo6wkSzs8HpRah1Z6aGmF2KW5PdYuAd7uX5a+OyBZHBhd+TFLqgjUgytQr4RvQ==
@@ -16969,7 +16974,7 @@ prettier@<=2.3.0:
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.3.0.tgz#b6a5bf1284026ae640f17f7ff5658a7567fc0d18"
   integrity sha512-kXtO4s0Lz/DW/IJ9QdWhAf7/NmPWQXkFr/r/WkR3vyI+0v8amTDxiaQSLzs8NBlytfLWX/7uQUMIW677yLKl4w==
 
-prettier@^2.2.1, prettier@^2.4.0, prettier@^2.5.1:
+prettier@^2.2.1, prettier@^2.5.1:
   version "2.5.1"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.5.1.tgz#fff75fa9d519c54cf0fce328c1017d94546bc56a"
   integrity sha512-vBZcPRUR5MZJwoyi3ZoyQlc1rXeEck8KgeC9AwwOn+exuxLxq5toTRDTSaVrXHxelDMHy9zlicw8u66yxoSUFg==
@@ -18711,7 +18716,7 @@ sanitize.css@^12.0.1:
   resolved "https://registry.yarnpkg.com/sanitize.css/-/sanitize.css-12.0.1.tgz#f20369357557ba2b41d7278eeb3ea691a3bee514"
   integrity sha512-QbusSBnWHaRBZeTxsJyknwI0q+q6m1NtLBmB76JfW/rdVN7Ws6Zz70w65+430/ouVcdNVT3qwrDgrM6PaYyRtw==
 
-sanity-codegen@^0.9.5:
+sanity-codegen@^0.9.5, sanity-codegen@^0.9.8:
   version "0.9.8"
   resolved "https://registry.yarnpkg.com/sanity-codegen/-/sanity-codegen-0.9.8.tgz#b09b2021e8908a0f9bd7a0db7e8f0b8e1f9ffb57"
   integrity sha512-kwyBQioWD4UJBgi1RJx8J/HQ4i753yLgnL5MUwbuAyJZrO9W33anNNawbtcePw9PK+5+IovbSLOs+xicULb2hA==
@@ -20738,7 +20743,7 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@^4.4.3, typescript@^4.5.2:
+typescript@^4.5.2, typescript@^4.5.4:
   version "4.5.4"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.5.4.tgz#a17d3a0263bf5c8723b9c52f43c5084edf13c2e8"
   integrity sha512-VgYs2A2QIRuGphtzFV7aQJduJ2gyfTljngLzjpfW9FoYZF6xuw1W0vW9ghCKLfcWrCFxK81CSGRAvS1pn4fIUg==
