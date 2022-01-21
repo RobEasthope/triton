@@ -13,6 +13,10 @@
       "path": "../apps/trq-next"
     },
     {
+      "name": "Storybook (App)",
+      "path": "../apps/trq-storybook"
+    },
+    {
       "name": "Sanity Studio (App)",
       "path": "../apps/trq-sanity"
     },
@@ -25,7 +29,7 @@
     "files.exclude": {
       "node_modules/": true,
       "apps/": true,
-      // "packages/": true,
+      "packages/": true,
       "storybook-static": true,
       ".next": true,
       "tsconfig.tsbuildinfo": true,
