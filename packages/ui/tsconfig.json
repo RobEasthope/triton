@@ -6,13 +6,13 @@
         "../../apps/trq-next/*"
       ],
       "@/UI/*": [
-        "../../packages/ui-components/*"
+        "../../packages/ui/*"
       ],
       "@/UTILS/*": [
         "../../packages/utils/*"
       ],
       "@/STORYBOOK/*": [
-        "../../packages/ui-components/.storybook/*"
+        "../../packages/ui/.storybook/*"
       ]
     },
     "target": "es5",

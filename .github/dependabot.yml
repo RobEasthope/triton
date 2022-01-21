@@ -6,7 +6,7 @@
 version: 2
 updates:
   - package-ecosystem: "npm" # See documentation for possible values
-    directory: "/packages/ui-components" # Location of package manifests
+    directory: "/packages/ui" # Location of package manifests
     schedule:
       interval: "weekly"
   - package-ecosystem: "npm" # See documentation for possible values
