@@ -19208,6 +19208,11 @@ stealthy-require@^1.1.1:
   resolved "https://registry.yarnpkg.com/stealthy-require/-/stealthy-require-1.1.1.tgz#35b09875b4ff49f26a777e509b3090a3226bf24b"
   integrity sha1-NbCYdbT/SfJqd35QmzCQoyJr8ks=
 
+stitches-mixins@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/stitches-mixins/-/stitches-mixins-1.0.0.tgz#4112eb7af0a1f8216da116881dffd31bb4c4e5be"
+  integrity sha512-h9sHAAZL3M+CrMeBm6C1u9ncvqtnV/+U0uNTYieYediGC1z9CiutbuFMsnzhXOTCQ0ygv1cscneR5na8sdmGvA==
+
 store2@^2.12.0:
   version "2.13.1"
   resolved "https://registry.yarnpkg.com/store2/-/store2-2.13.1.tgz#fae7b5bb9d35fc53dc61cd262df3abb2f6e59022"
@@ -19939,7 +19944,7 @@ three-render-objects@^1.26:
     kapsule "^1.13"
     polished "4"
 
-three@0.119.1, "three@>=0.118 <1":
+"three@>=0.118 <1":
   version "0.119.1"
   resolved "https://registry.yarnpkg.com/three/-/three-0.119.1.tgz#9d979a082c4cd9622af8e3498a8dfa026a619332"
   integrity sha512-GHyh/RiUfQ5VTiWIVRRTANYoXc1PFB1y+jDVRTb649nif1uX1F06PT1TKU3k2+F/MN4UJ3PWvQB53fY2OqKqKw==
