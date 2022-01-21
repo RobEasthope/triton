@@ -1,8 +1,12 @@
 {
   "name": "trq-utils",
   "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "lint": "eslint . && tsc --pretty --noEmit",
+    "lint:fix": "eslint . --fix",
+    "type-check": "tsc --pretty --noEmit"
+  },
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@babel/eslint-parser": "^7.16.3",
