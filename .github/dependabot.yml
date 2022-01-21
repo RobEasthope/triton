@@ -9,11 +9,71 @@ updates:
     directory: "/packages/ui" # Location of package manifests
     schedule:
       interval: "weekly"
+    ignore:
+      - dependency-name: "@typescript-eslint/eslint-plugin"
+      - dependency-name: "@typescript-eslint/parser"
+      - dependency-name: "eslint"
+      - dependency-name: "eslint-config-airbnb"
+      - dependency-name: "eslint-config-airbnb-typescript"
+      - dependency-name: "eslint-config-prettier"
+      - dependency-name: "eslint-plugin-html"
+      - dependency-name: "eslint-plugin-import"
+      - dependency-name: "eslint-plugin-jsx-a11y"
+      - dependency-name: "eslint-plugin-prettier"
+      - dependency-name: "eslint-plugin-react"
+      - dependency-name: "eslint-plugin-react-hooks"
+      - dependency-name: "prettier"
   - package-ecosystem: "npm" # See documentation for possible values
     directory: "/apps/trq-next" # Location of package manifests
     schedule:
       interval: "weekly"
+    ignore:
+      - dependency-name: "@typescript-eslint/eslint-plugin"
+      - dependency-name: "@typescript-eslint/parser"
+      - dependency-name: "eslint"
+      - dependency-name: "eslint-config-airbnb"
+      - dependency-name: "eslint-config-airbnb-typescript"
+      - dependency-name: "eslint-config-prettier"
+      - dependency-name: "eslint-plugin-html"
+      - dependency-name: "eslint-plugin-import"
+      - dependency-name: "eslint-plugin-jsx-a11y"
+      - dependency-name: "eslint-plugin-prettier"
+      - dependency-name: "eslint-plugin-react"
+      - dependency-name: "eslint-plugin-react-hooks"
+      - dependency-name: "prettier"
+  - package-ecosystem: "npm" # See documentation for possible values
+    directory: "/apps/trq-storybook" # Location of package manifests
+    schedule:
+      interval: "weekly"
+    ignore:
+      - dependency-name: "@typescript-eslint/eslint-plugin"
+      - dependency-name: "@typescript-eslint/parser"
+      - dependency-name: "eslint"
+      - dependency-name: "eslint-config-airbnb"
+      - dependency-name: "eslint-config-airbnb-typescript"
+      - dependency-name: "eslint-config-prettier"
+      - dependency-name: "eslint-plugin-html"
+      - dependency-name: "eslint-plugin-import"
+      - dependency-name: "eslint-plugin-jsx-a11y"
+      - dependency-name: "eslint-plugin-prettier"
+      - dependency-name: "eslint-plugin-react"
+      - dependency-name: "eslint-plugin-react-hooks"
+      - dependency-name: "prettier"
   - package-ecosystem: "npm" # See documentation for possible values
     directory: "/apps/trq-sanity" # Location of package manifests
     schedule:
       interval: "weekly"
+    ignore:
+      - dependency-name: "@typescript-eslint/eslint-plugin"
+      - dependency-name: "@typescript-eslint/parser"
+      - dependency-name: "eslint"
+      - dependency-name: "eslint-config-airbnb"
+      - dependency-name: "eslint-config-airbnb-typescript"
+      - dependency-name: "eslint-config-prettier"
+      - dependency-name: "eslint-plugin-html"
+      - dependency-name: "eslint-plugin-import"
+      - dependency-name: "eslint-plugin-jsx-a11y"
+      - dependency-name: "eslint-plugin-prettier"
+      - dependency-name: "eslint-plugin-react"
+      - dependency-name: "eslint-plugin-react-hooks"
+      - dependency-name: "prettier"
