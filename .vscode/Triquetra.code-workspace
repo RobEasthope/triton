@@ -1,12 +1,12 @@
 {
   "folders": [
     {
-      "name": "Monorepo settings",
+      "name": "Monorepo",
       "path": "../"
     },
     {
       "name": "UI Components (Pkg)",
-      "path": "../packages/ui-components"
+      "path": "../packages/ui"
     },
     {
       "name": "Triquetra (App)",
@@ -25,7 +25,7 @@
     "files.exclude": {
       "node_modules/": true,
       "apps/": true,
-      "packages/": true,
+      // "packages/": true,
       "storybook-static": true,
       ".next": true,
       "tsconfig.tsbuildinfo": true,
