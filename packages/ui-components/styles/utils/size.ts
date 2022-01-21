@@ -1,4 +1,4 @@
-import { MAX_WIDTH } from '@/UI/styles/constants/MAX_WIDTHS';
+import { MAX_WIDTH } from '@/UI/constants/MAX_WIDTHS';
 import { SizeProps, SizeReturnProps } from '@/UI/types/utils';
 
 export const size = ({ selector, min, max }: SizeProps): SizeReturnProps => {
@@ -10,7 +10,7 @@ export const size = ({ selector, min, max }: SizeProps): SizeReturnProps => {
 
         // Dynamic size
         '@pageMinWidth': {
-          marginTop: `calc(${min}px + (${max} - ${min}) * ((100vw - ${MAX_WIDTH.PAGE_MIN}px) / (${MAX_WIDTH.PAGE_MAX} - ${MAX_WIDTH.PAGE_MIN})))`,
+          marginTop: `calc(${min}px + (${max} - ${min}) * ((100vw - ${MAX_WIDTH.TYPE_LOWER_LIMIT}px) / (${MAX_WIDTH.TYPE_UPPER_LIMIT} - ${MAX_WIDTH.TYPE_LOWER_LIMIT})))`,
         },
 
         // Maximum size
@@ -26,7 +26,7 @@ export const size = ({ selector, min, max }: SizeProps): SizeReturnProps => {
 
         // Dynamic size
         '@pageMinWidth': {
-          marginRight: `calc(${min}px + (${max} - ${min}) * ((100vw - ${MAX_WIDTH.PAGE_MIN}px) / (${MAX_WIDTH.PAGE_MAX} - ${MAX_WIDTH.PAGE_MIN})))`,
+          marginRight: `calc(${min}px + (${max} - ${min}) * ((100vw - ${MAX_WIDTH.TYPE_LOWER_LIMIT}px) / (${MAX_WIDTH.TYPE_UPPER_LIMIT} - ${MAX_WIDTH.TYPE_LOWER_LIMIT})))`,
         },
 
         // Maximum size
@@ -42,7 +42,7 @@ export const size = ({ selector, min, max }: SizeProps): SizeReturnProps => {
 
         // Dynamic size
         '@pageMinWidth': {
-          marginBottom: `calc(${min}px + (${max} - ${min}) * ((100vw - ${MAX_WIDTH.PAGE_MIN}px) / (${MAX_WIDTH.PAGE_MAX} - ${MAX_WIDTH.PAGE_MIN})))`,
+          marginBottom: `calc(${min}px + (${max} - ${min}) * ((100vw - ${MAX_WIDTH.TYPE_LOWER_LIMIT}px) / (${MAX_WIDTH.TYPE_UPPER_LIMIT} - ${MAX_WIDTH.TYPE_LOWER_LIMIT})))`,
         },
 
         // Maximum size
@@ -58,7 +58,7 @@ export const size = ({ selector, min, max }: SizeProps): SizeReturnProps => {
 
         // Dynamic size
         '@pageMinWidth': {
-          marginLeft: `calc(${min}px + (${max} - ${min}) * ((100vw - ${MAX_WIDTH.PAGE_MIN}px) / (${MAX_WIDTH.PAGE_MAX} - ${MAX_WIDTH.PAGE_MIN})))`,
+          marginLeft: `calc(${min}px + (${max} - ${min}) * ((100vw - ${MAX_WIDTH.TYPE_LOWER_LIMIT}px) / (${MAX_WIDTH.TYPE_UPPER_LIMIT} - ${MAX_WIDTH.TYPE_LOWER_LIMIT})))`,
         },
 
         // Maximum size
@@ -75,8 +75,8 @@ export const size = ({ selector, min, max }: SizeProps): SizeReturnProps => {
 
         // Dynamic size
         '@pageMinWidth': {
-          marginLeft: `calc(${min}px + (${max} - ${min}) * ((100vw - ${MAX_WIDTH.PAGE_MIN}px) / (${MAX_WIDTH.PAGE_MAX} - ${MAX_WIDTH.PAGE_MIN})))`,
-          marginRight: `calc(${min}px + (${max} - ${min}) * ((100vw - ${MAX_WIDTH.PAGE_MIN}px) / (${MAX_WIDTH.PAGE_MAX} - ${MAX_WIDTH.PAGE_MIN})))`,
+          marginLeft: `calc(${min}px + (${max} - ${min}) * ((100vw - ${MAX_WIDTH.TYPE_LOWER_LIMIT}px) / (${MAX_WIDTH.TYPE_UPPER_LIMIT} - ${MAX_WIDTH.TYPE_LOWER_LIMIT})))`,
+          marginRight: `calc(${min}px + (${max} - ${min}) * ((100vw - ${MAX_WIDTH.TYPE_LOWER_LIMIT}px) / (${MAX_WIDTH.TYPE_UPPER_LIMIT} - ${MAX_WIDTH.TYPE_LOWER_LIMIT})))`,
         },
 
         // Maximum size
@@ -94,8 +94,8 @@ export const size = ({ selector, min, max }: SizeProps): SizeReturnProps => {
 
         // Dynamic size
         '@pageMinWidth': {
-          marginTop: `calc(${min}px + (${max} - ${min}) * ((100vw - ${MAX_WIDTH.PAGE_MIN}px) / (${MAX_WIDTH.PAGE_MAX} - ${MAX_WIDTH.PAGE_MIN})))`,
-          marginBottom: `calc(${min}px + (${max} - ${min}) * ((100vw - ${MAX_WIDTH.PAGE_MIN}px) / (${MAX_WIDTH.PAGE_MAX} - ${MAX_WIDTH.PAGE_MIN})))`,
+          marginTop: `calc(${min}px + (${max} - ${min}) * ((100vw - ${MAX_WIDTH.TYPE_LOWER_LIMIT}px) / (${MAX_WIDTH.TYPE_UPPER_LIMIT} - ${MAX_WIDTH.TYPE_LOWER_LIMIT})))`,
+          marginBottom: `calc(${min}px + (${max} - ${min}) * ((100vw - ${MAX_WIDTH.TYPE_LOWER_LIMIT}px) / (${MAX_WIDTH.TYPE_UPPER_LIMIT} - ${MAX_WIDTH.TYPE_LOWER_LIMIT})))`,
         },
 
         // Maximum size
@@ -112,7 +112,7 @@ export const size = ({ selector, min, max }: SizeProps): SizeReturnProps => {
 
         // Dynamic size
         '@pageMinWidth': {
-          paddingTop: `calc(${min}px + (${max} - ${min}) * ((100vw - ${MAX_WIDTH.PAGE_MIN}px) / (${MAX_WIDTH.PAGE_MAX} - ${MAX_WIDTH.PAGE_MIN})))`,
+          paddingTop: `calc(${min}px + (${max} - ${min}) * ((100vw - ${MAX_WIDTH.TYPE_LOWER_LIMIT}px) / (${MAX_WIDTH.TYPE_UPPER_LIMIT} - ${MAX_WIDTH.TYPE_LOWER_LIMIT})))`,
         },
 
         // Maximum size
@@ -128,7 +128,7 @@ export const size = ({ selector, min, max }: SizeProps): SizeReturnProps => {
 
         // Dynamic size
         '@pageMinWidth': {
-          paddingRight: `calc(${min}px + (${max} - ${min}) * ((100vw - ${MAX_WIDTH.PAGE_MIN}px) / (${MAX_WIDTH.PAGE_MAX} - ${MAX_WIDTH.PAGE_MIN})))`,
+          paddingRight: `calc(${min}px + (${max} - ${min}) * ((100vw - ${MAX_WIDTH.TYPE_LOWER_LIMIT}px) / (${MAX_WIDTH.TYPE_UPPER_LIMIT} - ${MAX_WIDTH.TYPE_LOWER_LIMIT})))`,
         },
 
         // Maximum size
@@ -144,7 +144,7 @@ export const size = ({ selector, min, max }: SizeProps): SizeReturnProps => {
 
         // Dynamic size
         '@pageMinWidth': {
-          paddingBottom: `calc(${min}px + (${max} - ${min}) * ((100vw - ${MAX_WIDTH.PAGE_MIN}px) / (${MAX_WIDTH.PAGE_MAX} - ${MAX_WIDTH.PAGE_MIN})))`,
+          paddingBottom: `calc(${min}px + (${max} - ${min}) * ((100vw - ${MAX_WIDTH.TYPE_LOWER_LIMIT}px) / (${MAX_WIDTH.TYPE_UPPER_LIMIT} - ${MAX_WIDTH.TYPE_LOWER_LIMIT})))`,
         },
 
         // Maximum size
@@ -160,7 +160,7 @@ export const size = ({ selector, min, max }: SizeProps): SizeReturnProps => {
 
         // Dynamic size
         '@pageMinWidth': {
-          paddingLeft: `calc(${min}px + (${max} - ${min}) * ((100vw - ${MAX_WIDTH.PAGE_MIN}px) / (${MAX_WIDTH.PAGE_MAX} - ${MAX_WIDTH.PAGE_MIN})))`,
+          paddingLeft: `calc(${min}px + (${max} - ${min}) * ((100vw - ${MAX_WIDTH.TYPE_LOWER_LIMIT}px) / (${MAX_WIDTH.TYPE_UPPER_LIMIT} - ${MAX_WIDTH.TYPE_LOWER_LIMIT})))`,
         },
 
         // Maximum size
@@ -177,8 +177,8 @@ export const size = ({ selector, min, max }: SizeProps): SizeReturnProps => {
 
         // Dynamic size
         '@pageMinWidth': {
-          paddingLeft: `calc(${min}px + (${max} - ${min}) * ((100vw - ${MAX_WIDTH.PAGE_MIN}px) / (${MAX_WIDTH.PAGE_MAX} - ${MAX_WIDTH.PAGE_MIN})))`,
-          paddingRight: `calc(${min}px + (${max} - ${min}) * ((100vw - ${MAX_WIDTH.PAGE_MIN}px) / (${MAX_WIDTH.PAGE_MAX} - ${MAX_WIDTH.PAGE_MIN})))`,
+          paddingLeft: `calc(${min}px + (${max} - ${min}) * ((100vw - ${MAX_WIDTH.TYPE_LOWER_LIMIT}px) / (${MAX_WIDTH.TYPE_UPPER_LIMIT} - ${MAX_WIDTH.TYPE_LOWER_LIMIT})))`,
+          paddingRight: `calc(${min}px + (${max} - ${min}) * ((100vw - ${MAX_WIDTH.TYPE_LOWER_LIMIT}px) / (${MAX_WIDTH.TYPE_UPPER_LIMIT} - ${MAX_WIDTH.TYPE_LOWER_LIMIT})))`,
         },
 
         // Maximum size
@@ -196,8 +196,8 @@ export const size = ({ selector, min, max }: SizeProps): SizeReturnProps => {
 
         // Dynamic size
         '@pageMinWidth': {
-          paddingTop: `calc(${min}px + (${max} - ${min}) * ((100vw - ${MAX_WIDTH.PAGE_MIN}px) / (${MAX_WIDTH.PAGE_MAX} - ${MAX_WIDTH.PAGE_MIN})))`,
-          paddingBottom: `calc(${min}px + (${max} - ${min}) * ((100vw - ${MAX_WIDTH.PAGE_MIN}px) / (${MAX_WIDTH.PAGE_MAX} - ${MAX_WIDTH.PAGE_MIN})))`,
+          paddingTop: `calc(${min}px + (${max} - ${min}) * ((100vw - ${MAX_WIDTH.TYPE_LOWER_LIMIT}px) / (${MAX_WIDTH.TYPE_UPPER_LIMIT} - ${MAX_WIDTH.TYPE_LOWER_LIMIT})))`,
+          paddingBottom: `calc(${min}px + (${max} - ${min}) * ((100vw - ${MAX_WIDTH.TYPE_LOWER_LIMIT}px) / (${MAX_WIDTH.TYPE_UPPER_LIMIT} - ${MAX_WIDTH.TYPE_LOWER_LIMIT})))`,
         },
 
         // Maximum size
@@ -214,7 +214,7 @@ export const size = ({ selector, min, max }: SizeProps): SizeReturnProps => {
 
         // Dynamic size
         '@pageMinWidth': {
-          gap: `calc(${min}px + (${max} - ${min}) * ((100vw - ${MAX_WIDTH.PAGE_MIN}px) / (${MAX_WIDTH.PAGE_MAX} - ${MAX_WIDTH.PAGE_MIN})))`,
+          gap: `calc(${min}px + (${max} - ${min}) * ((100vw - ${MAX_WIDTH.TYPE_LOWER_LIMIT}px) / (${MAX_WIDTH.TYPE_UPPER_LIMIT} - ${MAX_WIDTH.TYPE_LOWER_LIMIT})))`,
         },
 
         // Maximum size

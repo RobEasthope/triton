@@ -1,11 +1,11 @@
 import { createStitches } from '@stitches/react';
+import { mixins } from 'stitches-mixins';
 
-import { SizeProps, TypeProps } from '@/UI/types/utils';
+import { SizeProps, TypeProps, FullTypeProps } from '@/UI/types/utils';
 import { type } from '@/UI/styles/utils/type';
+import { fullType } from '@/UI/styles/utils/fullType';
 import { size } from '@/UI/styles/utils/size';
-
-const minWidth = 320;
-const maxWidth = 1200;
+import { MAX_WIDTH } from '@/UI/constants/MAX_WIDTHS';
 
 export const { css, styled, globalCss, getCssText } = createStitches({
   theme: {
@@ -56,6 +56,7 @@ export const { css, styled, globalCss, getCssText } = createStitches({
     },
   },
   utils: {
+    include: mixins(),
     marginX: (value: string) => ({
       marginLeft: value,
       marginRight: value,
@@ -72,7 +73,11 @@ export const { css, styled, globalCss, getCssText } = createStitches({
       paddingTop: value,
       paddingBottom: value,
     }),
-    type: ({
+    type: ({ fontSize }: TypeProps) =>
+      type({
+        fontSize,
+      }),
+    fullType: ({
       fontSize,
       mt,
       mr,
@@ -86,8 +91,8 @@ export const { css, styled, globalCss, getCssText } = createStitches({
       pl,
       px,
       py,
-    }: TypeProps) =>
-      type({
+    }: FullTypeProps) =>
+      fullType({
         fontSize,
         mt,
         mr,
@@ -105,9 +110,13 @@ export const { css, styled, globalCss, getCssText } = createStitches({
     size: ({ selector, min, max }: SizeProps) => size({ selector, min, max }),
   },
   media: {
-    bp1: '(min-width: 320px)',
-    bp2: '(min-width: 1200px)',
-    minWidth: '(min-width: 320px)',
-    maxWidth: '(min-width: 1200px)',
+    xSmall: '(min-width: 420px)',
+    small: '(min-width: 640px)',
+    medium: '(min-width: 768px)',
+    large: '(min-width: 1024px)',
+    xLarge: '(min-width: 1280px)',
+    xxLarge: '(min-width: 1536px)',
+    pageMinWidth: `(min-width: ${MAX_WIDTH.TYPE_LOWER_LIMIT}px)`,
+    pageMaxWidth: `(min-width: ${MAX_WIDTH.TYPE_UPPER_LIMIT}px)`,
   },
 });

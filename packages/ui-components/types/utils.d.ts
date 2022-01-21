@@ -1,6 +1,17 @@
 export type TypeProps = {
   // Font sizes
   fontSize: { MIN: number; MAX: number };
+};
+
+export type TypeReturnProps = {
+  // Font sizes
+  fontSize: string;
+  '@pageMinWidth': { fontSize: string };
+  '@pageMaxWidth': { fontSize: string };
+};
+export type FullTypeProps = {
+  // Font sizes
+  fontSize: { MIN: number; MAX: number };
 
   // Margin
   mt?: number;
@@ -19,7 +30,7 @@ export type TypeProps = {
   py?: number;
 };
 
-export type TypeReturnProps = {
+export type FullTypeReturnProps = {
   // Font sizes
   fontSize: string;
   '@pageMinWidth': { fontSize: string };
