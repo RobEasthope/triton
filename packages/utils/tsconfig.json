@@ -1,43 +1,9 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "paths": {
-      "@/TRQ/*": [
-        "../../apps/trq-next/*"
-      ],
-      "@/UI/*": [
-        "../../packages/ui/*"
-      ],
-      "@/UTILS/*": [
-        "../../packages/utils/*"
-      ],
-      "@/STORYBOOK/*": [
-        "../../apps/trq-storybook/.storybook/*"
-      ]
-    },
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": false,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "downlevelIteration": true,
-    "incremental": true,
   },
-  "extends": "eslint-config-wesbos/tsconfig.json",
-  "include": [
-    "next-env.d.ts",
-    "**/*.js",
-    "**/*.jsx",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": ["node_modules"]
+  "extends": "../../tsconfig.json",
+  "exclude": [
+    "node_modules"
+  ]
 }
