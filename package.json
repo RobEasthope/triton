@@ -13,7 +13,9 @@
           "^build"
         ],
         "outputs": [
-          ".next/**"
+          "dist/**",
+          ".next/**",
+          "storybook-static/**"
         ]
       },
       "test": {
