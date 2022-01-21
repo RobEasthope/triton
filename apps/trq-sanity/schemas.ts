@@ -15,7 +15,7 @@ import externalLinkWithTitle from '../../packages/ui-components/base/links/Exter
 import header from '../../packages/ui-components/navigation/Header/Header.schema.js';
 
 // Formatted text
-import exampleText from '../../packages/ui-components/base/text/ExampleFormattedText/ExampleFormattedText.schema';
+import exampleText from '../../packages/ui-components/base/formatted-text/ExampleFormattedText/ExampleFormattedText.schema';
 
 // Settings
 import globalMetadata from '../../packages/ui-components/base/app/Metadata/GlobalMetadata.schema';
