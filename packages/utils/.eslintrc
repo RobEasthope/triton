@@ -1,7 +1,5 @@
 {
   "extends": [
-    "next",
-    "next/core-web-vitals",
     "wesbos/typescript"
   ],
   "rules": {
