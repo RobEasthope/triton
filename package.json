@@ -22,12 +22,17 @@
         ],
         "outputs": []
       },
+      "lint": {
+        "outputs": []
+      },
       "dev": {
         "cache": false
       }
     }
   },
   "scripts": {
+    "dev": "turbo run dev --parallel --no-cache",
+    "build": "turbo run build",
     "trq-next": "cd ./apps/trq-next && yarn dev",
     "trq-next:build": "cd ./apps/trq-next && yarn build",
     "next": "yarn trq-next",
