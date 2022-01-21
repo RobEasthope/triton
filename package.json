@@ -13,7 +13,9 @@
           "^build"
         ],
         "outputs": [
-          ".next/**"
+          "dist/**",
+          ".next/**",
+          "storybook-static/**"
         ]
       },
       "test": {
@@ -40,8 +42,8 @@
     "trq-sanity:build": "cd ./apps/trq-sanity && yarn sanity-build",
     "sanity": "yarn trq-sanity",
     "sanity-upgrade": "cd ./apps/trq-sanity && sanity upgrade",
-    "trq-storybook": "cd ./packages/ui && yarn storybook",
-    "trq-storybook:build": "cd ./packages/ui && build-storybook",
+    "trq-storybook": "cd ./apps/trq-storybook && yarn storybook",
+    "trq-storybook:build": "cd ./apps/trq-storybook && build-storybook",
     "storybook": "yarn trq-storybook",
     "storybook:build": "yarn trq-storybook:build",
     "linting": "yarn lint && yarn type-check",

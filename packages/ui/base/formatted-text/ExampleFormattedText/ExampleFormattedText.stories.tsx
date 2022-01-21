@@ -1,8 +1,8 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 
-import { CenterComponent } from '.storybook/components/CenterComponent';
-import { EXAMPLE_TEXT } from '.storybook/mock-data/SANITY_TEXT';
+import { CenterComponent } from '@/STORYBOOK/components/CenterComponent';
+import { EXAMPLE_TEXT } from '@/STORYBOOK/mock-data/SANITY_TEXT';
 import {
   ExampleFormattedText,
   ExampleFormattedTextProps,
