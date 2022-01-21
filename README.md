@@ -18,6 +18,6 @@
 
 ## Ignore build deployment rules
 
-Next: `git diff --quiet HEAD^ HEAD ./`
-Storybook: `git diff --quiet HEAD^ HEAD ./`
-Sanity: `git diff --quiet HEAD^ HEAD ./ ../next/*.schema.js ../next/utils`
+Next: `git diff --quiet HEAD^ HEAD ./ ../../packages/ui/* ../../packages/utils`
+Storybook: `git diff --quiet HEAD^ HEAD ./ ../../packages/ui/*`
+Sanity: `git diff --quiet HEAD^ HEAD ./ ../../packages/ui/*.schema.js ../../packages/ui/utils/sanity ../../packages/utils`
