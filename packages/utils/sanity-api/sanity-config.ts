@@ -1,4 +1,4 @@
-type sanityConfigProps = {
+type SanityConfigProps = {
   projectId: string;
   dataset: string;
   apiVersion: string;
@@ -7,7 +7,7 @@ type sanityConfigProps = {
   withCredentials: boolean;
 };
 
-export const sanityConfig: sanityConfigProps = {
+export const sanityConfig: SanityConfigProps = {
   projectId:
     process.env.NEXT_PUBLIC_SANITY_PROJECT_ID ||
     process.env.STORYBOOK_SANITY_PROJECT_ID,
