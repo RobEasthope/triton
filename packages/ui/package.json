@@ -3,8 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "type-check": "tsc --pretty --noEmit"
