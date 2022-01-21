@@ -5,23 +5,23 @@
       "path": "../"
     },
     {
-      "name": "UI Components (Pkg)",
+      "name": "UI",
       "path": "../packages/ui"
     },
     {
-      "name": "Triquetra (App)",
+      "name": "Next",
       "path": "../apps/trq-next"
     },
     {
-      "name": "Storybook (App)",
+      "name": "Storybook",
       "path": "../apps/trq-storybook"
     },
     {
-      "name": "Sanity Studio (App)",
+      "name": "Sanity Studio",
       "path": "../apps/trq-sanity"
     },
     {
-      "name": "Utils (Pkg)",
+      "name": "Utils",
       "path": "../packages/utils"
     },
   ],
