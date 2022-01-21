@@ -1,7 +1,7 @@
 import React from 'react';
 import { addDecorator } from '@storybook/react';
 import { withPerformance } from 'storybook-addon-performance';
-import { globalStyles } from '../styles/globalStyles';
+import { globalStyles } from '@/UI/styles/globalStyles';
 import { IdProvider } from '@radix-ui/react-id';
 
 addDecorator(withPerformance);
