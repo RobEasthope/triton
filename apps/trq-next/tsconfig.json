@@ -12,7 +12,7 @@
         "../../packages/utils/*"
       ],
       "@/STORYBOOK/*": [
-        "../../packages/ui/.storybook/*"
+        "../../apps/trq-storybook/.storybook/*"
       ]
     },
     "target": "es5",
