@@ -8,8 +8,8 @@ type sanityConfigProps = {
 }
 
 export const sanityConfig: sanityConfigProps = {
-  projectId: process.env.SANITY_PROJECT_ID,
-  dataset: process.env.SANITY_PROJECT_DATASET,
+  projectId: process.env.SANITY_PROJECT_ID || process.env.STORYBOOK_SANITY_PROJECT_ID,
+  dataset: process.env.SANITY_PROJECT_DATASET || process.env.STORYBOOK_SANITY_DATASET,
   apiVersion: process.env.SANITY_API_VERSION,
   token: process.env.SANITY_API_TOKEN,
   useCdn: false,
