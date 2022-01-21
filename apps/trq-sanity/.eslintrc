@@ -14,8 +14,6 @@
   },
   "ignorePatterns": [
     "/node_modules",
-    "/.vercel",
-    "/.turbo",
     "/dist"
   ],
   "settings": {

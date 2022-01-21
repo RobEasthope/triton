@@ -46,9 +46,11 @@
   "ignorePatterns": [
     "/node_modules",
     "/.vercel",
-    "/.turbo",
+    "/dist",
     "/static",
-    "/.next"
+    "/storybook-static",
+    "/.next",
+    "/types/sanity-schema.d.ts"
   ],
   "settings": {
     "import/resolver": {
