@@ -7,8 +7,8 @@
     "build": "build-storybook",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "lint": "eslint ./.storybook && tsc --pretty --noEmit",
-    "lint:fix": "eslint ./.storybook --fix",
+    "lint": "eslint . && tsc --pretty --noEmit",
+    "lint:fix": "eslint . --fix",
     "type-check": "tsc --pretty --noEmit"
   },
   "dependencies": {
