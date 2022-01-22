@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "start-storybook -p 6006",
-    "build": "build-storybook",
+    "dev": "start-storybook -p 6006 --quiet --no-open",
+    "build": "build-storybook --quiet",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "lint": "eslint . && tsc --pretty --noEmit",
