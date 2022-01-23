@@ -5,7 +5,7 @@ const ExampleSection = dynamic(
   () => import('../../../content/ExampleSection/ExampleSection')
 );
 
-type RenderSectionsProps = {
+export type RenderSectionsProps = {
   sections: [ExampleSectionProps];
 };
 
