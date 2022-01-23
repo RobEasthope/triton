@@ -1,5 +1,5 @@
 import { MAX_WIDTH } from '@/UI/constants/MAX_WIDTHS';
-import { FullTypeProps, FullTypeReturnProps } from '@/UI/types/utils';
+import { FullTypeProps } from '@/UI/types/utils';
 
 export const fullType = ({
   fontSize,
@@ -15,7 +15,7 @@ export const fullType = ({
   pl,
   px,
   py,
-}: FullTypeProps): FullTypeReturnProps => ({
+}: FullTypeProps) => ({
   // Minimum font fontSize
   fontSize: `${fontSize.MIN}px`,
 
@@ -31,17 +31,17 @@ export const fullType = ({
 
   // Margin
   marginTop: mt && `${mt / fontSize.MAX}em`,
-  marginBottom: `${mb ? `${mb / fontSize.MAX}em` : null}`,
-  marginLeft: `${ml ? `${ml / fontSize.MAX}em` : null}`,
-  marginRight: `${mr ? `${mr / fontSize.MAX}em` : null}`,
-  marginX: `${mx ? `${mx / fontSize.MAX}em` : null}`,
-  marginY: `${my ? `${my / fontSize.MAX}em` : null}`,
+  marginBottom: mb && `${mb / fontSize.MAX}em`,
+  marginLeft: ml && `${ml / fontSize.MAX}em`,
+  marginRight: mr && `${mr / fontSize.MAX}em`,
+  marginX: mx && `${mx / fontSize.MAX}em`,
+  marginY: my && `${my / fontSize.MAX}em`,
 
   // Padding
-  paddingTop: `${pt ? `${pt / fontSize.MAX}em` : null}`,
-  paddingBottom: `${pb ? `${pb / fontSize.MAX}em` : null}`,
-  paddingLeft: `${pl ? `${pl / fontSize.MAX}em` : null}`,
-  paddingRight: `${pr ? `${pr / fontSize.MAX}em` : null}`,
-  paddingX: `${px ? `${px / fontSize.MAX}em` : null}`,
-  paddingY: `${py ? `${py / fontSize.MAX}em` : null}`,
+  paddingTop: pt && `${pt / fontSize.MAX}em`,
+  paddingBottom: pb && `${pb / fontSize.MAX}em`,
+  paddingLeft: pl && `${pl / fontSize.MAX}em`,
+  paddingRight: pr && `${pr / fontSize.MAX}em`,
+  paddingX: px && `${px / fontSize.MAX}em`,
+  paddingY: py && `${py / fontSize.MAX}em`,
 });

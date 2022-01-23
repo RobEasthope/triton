@@ -224,6 +224,6 @@ export const size = ({ selector, min, max }: SizeProps): SizeReturnProps => {
       };
 
     default:
-      return null;
+      return {};
   }
 };
