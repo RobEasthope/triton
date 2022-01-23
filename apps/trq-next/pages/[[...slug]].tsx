@@ -61,27 +61,6 @@ export default function PageBySlug({ data, preview }: PageBySlugProps) {
   );
 }
 
-export const getStaticProps: GetStaticProps = async ({
-  params,
-  preview = false,
-}) => {
-  const globals: GlobalMetadata = await getClient(preview).fetch(globalsQuery);
-
-  const { sanityQuery, queryParams } = selectSanityQuery(params?.slug);
-
-  const page = overlayDrafts(
-    await getClient(preview).fetch(sanityQuery, queryParams)
-  );
-
-  return {
-    props: {
-      data: { page: (page[0] as PageProps | HomeProps) || null, globals },
-      preview,
-    },
-    revalidate: 60,
-  } as unknown;
-};
-
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = [];
 
@@ -100,5 +79,29 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths,
     fallback: 'blocking',
+  };
+};
+
+export const getStaticProps: GetStaticProps = async ({
+  params,
+  preview,
+}: {
+  params: { slug: any[] };
+  preview: boolean;
+}) => {
+  const globals: GlobalMetadata = await getClient(preview).fetch(globalsQuery);
+
+  const { sanityQuery, queryParams } = selectSanityQuery(params?.slug);
+
+  const page = overlayDrafts(
+    await getClient(preview).fetch(sanityQuery, queryParams)
+  );
+
+  return {
+    props: {
+      data: { page: (page[0] as PageProps | HomeProps) || null, globals },
+      preview,
+    },
+    revalidate: 60,
   };
 };
