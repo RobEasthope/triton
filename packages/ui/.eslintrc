@@ -25,7 +25,11 @@
         "./**/*.tsx"
       ],
       "rules": {
-        "@typescript-eslint/indent": "off"
+        "@typescript-eslint/indent": "off",
+        "react/jsx-no-useless-fragment": ["warn"
+        , {
+          "allowExpressions": true
+        }]
       }
     },
     {

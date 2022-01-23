@@ -16,7 +16,6 @@ export const RenderSections = ({ sections }: RenderSectionsProps) => {
   }
 
   return (
-    // eslint-disable-next-line react/jsx-no-useless-fragment
     <>
       {sections?.map((section) => {
         // eslint-disable-next-line @typescript-eslint/naming-convention
