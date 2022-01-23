@@ -42,7 +42,7 @@ export type {
  *
  */
 export interface Header extends SanityDocument {
-  _type: "header";
+  _type: "Header";
 
   /**
    * Header navigation — `array`
@@ -72,7 +72,7 @@ export interface Header extends SanityDocument {
  *
  */
 export interface GlobalMetadata extends SanityDocument {
-  _type: "globalMetadata";
+  _type: "GlobalMetadata";
 
   /**
    * Sitename — `string`
@@ -170,7 +170,7 @@ export interface Home extends SanityDocument {
    *
    *
    */
-  sections?: Array<SanityKeyed<ExampleSection>>;
+  rawSections?: Array<SanityKeyed<ExampleSection>>;
 
   /**
    * Page metadata — `string`
@@ -207,7 +207,7 @@ export interface Home extends SanityDocument {
  *
  */
 export interface Page extends SanityDocument {
-  _type: "page";
+  _type: "Page";
 
   /**
    * Page details — `string`
@@ -242,7 +242,7 @@ export interface Page extends SanityDocument {
    *
    *
    */
-  sections?: Array<SanityKeyed<ExampleSection>>;
+  rawSections?: Array<SanityKeyed<ExampleSection>>;
 
   /**
    * Page metadata — `string`
@@ -274,7 +274,7 @@ export interface Page extends SanityDocument {
 }
 
 export type InternalLink = {
-  _type: "internalLink";
+  _type: "InternalLink";
   /**
    * Page — `reference`
    *
@@ -284,7 +284,7 @@ export type InternalLink = {
 };
 
 export type InternalLinkWithTitle = {
-  _type: "internalLinkWithTitle";
+  _type: "InternalLinkWithTitle";
   /**
    * Title — `string`
    *
@@ -301,7 +301,7 @@ export type InternalLinkWithTitle = {
 };
 
 export type ExternalLink = {
-  _type: "externalLink";
+  _type: "ExternalLink";
   /**
    * URL — `url`
    *
@@ -311,7 +311,7 @@ export type ExternalLink = {
 };
 
 export type ExternalLinkWithTitle = {
-  _type: "externalLinkWithTitle";
+  _type: "ExternalLinkWithTitle";
   /**
    * Title — `string`
    *
@@ -330,7 +330,7 @@ export type ExternalLinkWithTitle = {
 export type ExampleFormattedText = Array<SanityKeyed<SanityBlock>>;
 
 export type ExampleSection = {
-  _type: "exampleSection";
+  _type: "ExampleSection";
   /**
    * Storybook — `note`
    *
@@ -346,7 +346,7 @@ export type ExampleSection = {
   heading: string;
 
   /**
-   * Text — `exampleFormattedText`
+   * Text — `ExampleFormattedText`
    *
    *
    */
