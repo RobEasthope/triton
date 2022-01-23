@@ -23,7 +23,7 @@ export function RenderSections({ sections }: RenderSectionsProps): any {
         return (
           <ExampleSection
             {...section}
-            key={`render-sections-${section._key as string}`}
+            key={`render-sections-${section._key}`}
           />
         );
 

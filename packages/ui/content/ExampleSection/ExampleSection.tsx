@@ -14,6 +14,7 @@ export const Heading = styled('p', {
 
 // Types
 export interface ExampleSectionProps extends rawExampleSectionProps {
+  _key?: string;
   preview: boolean;
 }
 
