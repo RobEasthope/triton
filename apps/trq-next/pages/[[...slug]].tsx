@@ -86,7 +86,7 @@ export const getStaticProps: GetStaticProps = async ({
   params,
   preview,
 }: {
-  params: { slug: string | string[] };
+  params: { slug: any[] };
   preview: boolean;
 }) => {
   const globals: GlobalMetadata = await getClient(preview).fetch(globalsQuery);

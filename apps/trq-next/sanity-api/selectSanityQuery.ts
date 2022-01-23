@@ -7,7 +7,7 @@ type SelectSanityQueryProps = {
 };
 
 export function selectSanityQuery(
-  slugArray = [] as string | string[]
+  slugArray = [] as string[] | []
 ): SelectSanityQueryProps {
   if (slugArray.length === 0) {
     return {
