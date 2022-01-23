@@ -3,8 +3,8 @@ import { GetStaticPaths, InferGetStaticPropsType } from 'next';
 import Custom404 from 'pages/404';
 import { useRouter } from 'next/router';
 
-import { Page } from '@/UI/pages/Page/Page';
-import { Home } from '@/UI/pages/Home/Home';
+import { Page, PageProps } from '@/UI/pages/Page/Page';
+import { Home, HomeProps } from '@/UI/pages/Home/Home';
 import { Loading } from '@/UI/base/app/Loading/Loading';
 
 import {
@@ -20,7 +20,12 @@ import {
 } from '@/UTILS/sanity-api/sanity.server';
 import { selectSanityQuery } from '@/TRQ/sanity-api/selectSanityQuery';
 
-export default function PageBySlug({ data, preview }) {
+type PageBySlugProps = {
+  data: { page: PageProps | HomeProps };
+  preview: boolean;
+};
+
+export default function PageBySlug({ data, preview }: PageBySlugProps) {
   const router = useRouter();
   const { isFallback } = router;
 
