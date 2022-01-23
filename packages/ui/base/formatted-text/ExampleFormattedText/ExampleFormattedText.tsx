@@ -1,8 +1,3 @@
-/* eslint-disable react/display-name */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/no-unsafe-return */
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { ReactNode } from 'react';
 import BlockContent from '@sanity/block-content-to-react';
 
@@ -31,6 +26,7 @@ const BlockRenderer = ({ node, children }: BlockRendererProps) => {
   }
 
   // Fall back to default handling
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
   return BlockContent.defaultSerializers.types.block([{ node, children }]);
 };
 
