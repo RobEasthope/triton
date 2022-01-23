@@ -3,7 +3,7 @@ import { groq } from 'next-sanity';
 export const anyPageBySlugQuery = groq`
   *[_type in ["page", "homePage"] && slug.current == $slug]{
      ...,
-    "sections": sections[]{
+    "sections": rawSections[]{
       ...,
       "link": rawLink[0]{..., "to": {...internalUID->{...},  }},
       "bkg": rawBkg->,

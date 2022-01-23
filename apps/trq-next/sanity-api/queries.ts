@@ -1,7 +1,7 @@
 import { groq } from 'next-sanity';
 
 export const getSections = groq`
-"sections": sections[]{
+"sections": rawSections[]{
   ...,
   "link": rawLink[0]{..., "to": {...internalUID->{...},  }},
   "bkg": rawBkg->,
