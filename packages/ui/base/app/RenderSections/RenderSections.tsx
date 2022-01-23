@@ -6,30 +6,39 @@ const ExampleSection = dynamic(
 );
 
 export type RenderSectionsProps = {
-  sections: [ExampleSectionProps];
+  sections: Record<'_type' | '_key' | string, any>[];
   preview: boolean;
 };
 
-export function RenderSections({ sections }: RenderSectionsProps): any {
+export const RenderSections = ({ sections }: RenderSectionsProps) => {
   if (!sections) {
     return <div>Missing sections</div>;
   }
 
-  return sections?.map((section) => {
-    // eslint-disable-next-line @typescript-eslint/naming-convention
-    const { _type } = section;
+  return (
+    // eslint-disable-next-line react/jsx-no-useless-fragment
+    <>
+      {sections?.map((section) => {
+        // eslint-disable-next-line @typescript-eslint/naming-convention
+        const { _type } = section;
 
-    switch (_type) {
-      case 'ExampleSection':
-        return (
-          <ExampleSection
-            {...section}
-            key={`render-sections-${section._key}`}
-          />
-        );
+        switch (_type) {
+          case 'ExampleSection':
+            return (
+              <ExampleSection
+                {...(section as ExampleSectionProps)}
+                key={`render-sections-${section._key as string}`}
+              />
+            );
 
-      default:
-        return <div key={section?._key}>Missing section {section?._type}</div>;
-    }
-  });
-}
+          default:
+            return (
+              <div key={section?._key as string}>
+                Missing section {section?._type}
+              </div>
+            );
+        }
+      })}
+    </>
+  );
+};
