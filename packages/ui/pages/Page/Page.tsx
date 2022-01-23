@@ -3,8 +3,15 @@ import { Header, HeaderProps } from '@/UI/navigation/Header/Header';
 import { FixedFooterLayout } from '@/UI/base/layout/FixedFooterLayout/FixedFooterLayout';
 import { MainContentLayout } from '@/UI/base/layout/MainContentLayout/MainContentLayout';
 import { Metadata } from '@/UI/base/app/Metadata/Metadata';
-import { RenderSections } from '@/UI/base/app/RenderSections/RenderSections';
-import { Page as PageProps, GlobalMetadata } from '@/UI/types/sanity-schema';
+import {
+  RenderSections,
+  RenderSectionsProps,
+} from '@/UI/base/app/RenderSections/RenderSections';
+import { Page as rawPageProps, GlobalMetadata } from '@/UI/types/sanity-schema';
+
+export interface PageProps extends rawPageProps {
+  sections: RenderSectionsProps;
+}
 
 export const Page = ({
   page,
