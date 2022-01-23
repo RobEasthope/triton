@@ -1,24 +1,25 @@
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable react/prop-types */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-unsafe-return */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import dynamic from 'next/dynamic';
+import { ExampleSectionProps } from '@/UI/content/ExampleSection/ExampleSection';
 
 const ExampleSection = dynamic(
   () => import('../../../content/ExampleSection/ExampleSection')
 );
 
-export function RenderSections({ sections }) {
+type RenderSectionsProps = {
+  sections: [ExampleSectionProps];
+};
+
+export function RenderSections({ sections }: RenderSectionsProps): any {
   if (!sections) {
     return <div>Missing sections</div>;
   }
 
   return sections?.map((section) => {
-    const sectionType = section?._type;
+    // eslint-disable-next-line @typescript-eslint/naming-convention
+    const { _type } = section;
 
-    switch (sectionType) {
-      case 'ExampleSection':
+    switch (_type) {
+      case 'exampleSection':
         return (
           <ExampleSection
             {...section}
