@@ -147,4 +147,5 @@ export type SizeReturnProps =
       gap: string;
       '@pageMinWidth': { gap: string };
       '@pageMaxWidth': { gap: string };
-    };
+    }
+  | null;
