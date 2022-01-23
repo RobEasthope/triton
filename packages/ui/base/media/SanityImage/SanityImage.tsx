@@ -48,7 +48,7 @@ export const SanityImage = ({
     const vectorImageUrl = imageBuilder.image(asset).url();
 
     // eslint-disable-next-line @next/next/no-img-element
-    return <img src={vectorImageUrl} alt={alt || ''} />;
+    return <img src={vectorImageUrl || ''} alt={alt || ''} />;
   }
 
   // BITMAPS
@@ -59,23 +59,23 @@ export const SanityImage = ({
   const minAssetWidth = 100;
   const BLURRING = 100;
 
-  const blurredImage = () => {
+  const blurredImage = (): string => {
     if (!aspectRatio) {
       // Generate url and push to array
-      return `${imageBuilder
+      return imageBuilder
         .image(asset)
         .auto('format')
         .width(100)
         .blur(BLURRING)
-        .url()}`;
+        .url() as string;
     }
-    return `${imageBuilder
+    return imageBuilder
       .image(asset)
       .auto('format')
       .width(100)
       .height(Math.floor(100 / aspectRatio))
       .blur(BLURRING)
-      .url()}`;
+      .url() as string;
   };
 
   const sizes = () => {
@@ -89,9 +89,7 @@ export const SanityImage = ({
       size += 100;
     }
 
-    return `(max-width: ${maxWidth}px) ${String(
-      widths.map((width) => width as string)
-    )}`;
+    return `(max-width: ${maxWidth}px) ${String(widths.map((width) => width))}`;
   };
 
   const srcSet = () => {
@@ -100,33 +98,35 @@ export const SanityImage = ({
 
     while (size <= roundedUpMaxWidth) {
       if (!aspectRatio) {
-        // Generate url and push to array
-        assetUrls.push(
-          `${imageBuilder
-            .image(asset)
-            .auto('format')
-            .fit('crop')
-            .width(size)
-            .url()} ${size}w`
-        );
+        // Generate url
+        const url = imageBuilder
+          .image(asset)
+          .auto('format')
+          .fit('crop')
+          .width(size)
+          .url() as string;
+
+        // Push to array
+        assetUrls.push(`${url} ${size}w`);
       } else {
-        // Generate url and push to array
-        assetUrls.push(
-          `${imageBuilder
-            .image(asset)
-            .auto('format')
-            .fit('crop')
-            .width(size)
-            .height(Math.floor(size / aspectRatio))
-            .url()} ${size}w`
-        );
+        // Generate url
+        const url = imageBuilder
+          .image(asset)
+          .auto('format')
+          .fit('crop')
+          .width(size)
+          .height(Math.floor(size / aspectRatio))
+          .url() as string;
+
+        // Push to array
+        assetUrls.push(`${url && url} ${size && size}w`);
       }
 
       // Bump to next asset size
       size += 100;
     }
 
-    return `${String(assetUrls.map((assetUrl) => assetUrl as string))}`;
+    return `${String(assetUrls.map((assetUrl) => assetUrl))}`;
   };
 
   return (
