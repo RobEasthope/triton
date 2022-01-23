@@ -1,6 +1,3 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 // import { GetStaticPaths, InferGetStaticPropsType } from 'next';
 
 import Custom404 from 'pages/404';
