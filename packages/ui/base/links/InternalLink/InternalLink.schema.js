@@ -4,8 +4,8 @@ import { ALL_PAGES_TYPES } from '../../../utils/sanity/ALL_PAGE_TYPES';
 const InternalLinkRender = ({ children }) => <span>{children} 🔗</span>;
 
 export default {
+  name: 'InternalLink',
   title: 'Internal link',
-  name: 'internalLink',
   type: 'object',
   description: 'Link to a page on the site',
   fields: [

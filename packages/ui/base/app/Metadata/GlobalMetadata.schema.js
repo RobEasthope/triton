@@ -1,5 +1,5 @@
 export default {
-  name: 'globalMetadata',
+  name: 'GlobalMetadata',
   type: 'document',
   title: 'Global SEO metadata',
   fields: [

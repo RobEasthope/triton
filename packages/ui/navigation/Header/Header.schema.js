@@ -1,5 +1,5 @@
 export default {
-  name: 'header',
+  name: 'Header',
   title: 'Header',
   type: 'document',
   fields: [
@@ -8,8 +8,8 @@ export default {
       title: 'Header navigation',
       type: 'array',
       of: [
-        { type: 'internalLinkWithTitle' },
-        { type: 'externalLinkWithTitle' },
+        { type: 'InternalLinkWithTitle' },
+        { type: 'ExternalLinkWithTitle' },
       ],
       codegen: { required: true },
       validation: (Rule) =>

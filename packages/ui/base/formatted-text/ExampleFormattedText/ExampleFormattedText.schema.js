@@ -1,6 +1,6 @@
 export default {
+  name: 'ExampleFormattedText',
   title: 'Example text',
-  name: 'exampleFormattedText',
   type: 'array',
   of: [
     {
@@ -17,7 +17,7 @@ export default {
           { title: 'Emphasis', value: 'em' },
           { title: 'Code', value: 'code' },
         ],
-        annotations: [{ type: 'internalLink' }, { type: 'externalLink' }],
+        annotations: [{ type: 'InternalLink' }, { type: 'ExternalLink' }],
       },
     },
   ],

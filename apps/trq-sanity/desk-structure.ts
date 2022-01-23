@@ -25,7 +25,7 @@ export default () =>
       S.listItem()
         .title('Pages')
         .icon(ImNewspaper)
-        .schemaType('page')
+        .schemaType('Page')
         .child(createSuperPane('page', S)),
       S.divider(),
       S.listItem()
@@ -40,8 +40,8 @@ export default () =>
                 .title('Header')
                 .child(
                   S.document()
-                    .schemaType('header')
-                    .documentId('header')
+                    .schemaType('Header')
+                    .documentId('Header')
                 ),
             ])
         ),
@@ -58,8 +58,8 @@ export default () =>
                 .icon(FaGlobeEurope)
                 .child(
                   S.document()
-                    .schemaType('globalMetadata')
-                    .documentId('globalMetadata')
+                    .schemaType('GlobalMetadata')
+                    .documentId('GlobalMetadata')
                 ),
             ])
         ),

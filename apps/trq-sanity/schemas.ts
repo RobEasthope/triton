@@ -11,19 +11,16 @@ import externalLink from '../../packages/ui/base/links/ExternalLink/ExternalLink
 import externalLinkWithTitle from '../../packages/ui/base/links/ExternalLink/ExternalLinkWithTitle.schema.js';
 
 // Navigation
-
-import header from '../../packages/ui/navigation/Header/Header.schema.js';
+import Header from '../../packages/ui/navigation/Header/Header.schema.js';
 
 // Formatted text
-import exampleText from '../../packages/ui/base/formatted-text/ExampleFormattedText/ExampleFormattedText.schema';
+import ExampleText from '../../packages/ui/base/formatted-text/ExampleFormattedText/ExampleFormattedText.schema';
 
 // Settings
-import globalMetadata from '../../packages/ui/base/app/Metadata/GlobalMetadata.schema';
-
-
+import GlobalMetadata from '../../packages/ui/base/app/Metadata/GlobalMetadata.schema';
 
 // Content
-import exampleSection from '../../packages/ui/content/ExampleSection/ExampleSection.schema';
+import ExampleSection from '../../packages/ui/content/ExampleSection/ExampleSection.schema';
 
 // Pages
 import Home from '../../packages/ui/pages/Home/Home.schema';
@@ -43,16 +40,16 @@ export default createSchema({
     externalLinkWithTitle,
 
     // Navigation
-    header,
+    Header,
 
     // Formatted text
-    exampleText,
+    ExampleText,
 
     // Settings
-    globalMetadata,
+    GlobalMetadata,
 
     // Content
-    exampleSection,
+    ExampleSection,
 
     // Pages
     Home,
