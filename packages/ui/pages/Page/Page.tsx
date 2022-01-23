@@ -25,13 +25,13 @@ export const Page = ({
   <>
     <Metadata page={page} globalMetadata={globals?.metadata} />
     <FixedFooterLayout>
-      {Object.keys(globals?.header).length > 0 && (
+      {Object.keys(globals?.header)?.length > 0 ? (
         <Header
           logo={globals?.header?.logo}
           navigation={globals?.header?.navigation}
           preview={preview}
         />
-      )}
+      ) : null}
 
       <MainContentLayout as="main">
         {page?.sections && (
