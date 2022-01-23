@@ -45,3 +45,5 @@ export const ExampleSection = ({
     </PaddedComponent>
   );
 };
+
+export default ExampleSection;
