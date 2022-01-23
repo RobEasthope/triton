@@ -14,26 +14,20 @@ export function RenderSections({ sections }) {
     return <div>Missing sections</div>;
   }
 
-  return (
-    <>
-      {sections?.map((section) => {
-        const sectionType = section?._type;
+  return sections?.map((section) => {
+    const sectionType = section?._type;
 
-        switch (sectionType) {
-          case 'ExampleSection':
-            return (
-              <ExampleSection
-                {...section}
-                key={`render-sections-${section._key as string}`}
-              />
-            );
+    switch (sectionType) {
+      case 'ExampleSection':
+        return (
+          <ExampleSection
+            {...section}
+            key={`render-sections-${section._key as string}`}
+          />
+        );
 
-          default:
-            return (
-              <div key={section?._key}>Missing section {section?._type}</div>
-            );
-        }
-      })}
-    </>
-  );
+      default:
+        return <div key={section?._key}>Missing section {section?._type}</div>;
+    }
+  });
 }
