@@ -148,4 +148,4 @@ export type SizeReturnProps =
       '@pageMinWidth': { gap: string };
       '@pageMaxWidth': { gap: string };
     }
-  | null;
+  | Record<string, unknown>;
