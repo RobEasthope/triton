@@ -18,9 +18,7 @@ export default {
   ],
 } as Meta;
 
-const Template: StoryProps<HeaderProps> = (args) => (
-  <Header {...args} preview={false} />
-);
+const Template: StoryProps<HeaderProps> = (args) => <Header {...args} />;
 
 // Vanilla
 export const Vanilla = Template.bind({}) as Record<string, unknown>;

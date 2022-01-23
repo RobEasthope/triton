@@ -14,11 +14,9 @@ export interface PageProps extends rawPageProps {
 export const Page = ({
   page,
   globals,
-  preview,
 }: {
   page: PageProps;
   globals: { header: HeaderProps; metadata: GlobalMetadata };
-  preview: boolean;
 }) => (
   <>
     <Metadata page={page} globalMetadata={globals?.metadata} />
@@ -27,14 +25,11 @@ export const Page = ({
         <Header
           logo={globals?.header?.logo}
           navigation={globals?.header?.navigation}
-          preview={preview}
         />
       ) : null}
 
       <MainContentLayout as="main">
-        {page?.sections && (
-          <RenderSections sections={page?.sections} preview={preview} />
-        )}
+        {page?.sections && <RenderSections sections={page?.sections} />}
       </MainContentLayout>
 
       <Footer />

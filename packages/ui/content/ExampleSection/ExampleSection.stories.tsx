@@ -20,7 +20,7 @@ export default {
 } as Meta;
 
 const Template: StoryProps<ExampleSectionProps> = (args) => (
-  <ExampleSection {...args} preview={false} />
+  <ExampleSection {...args} />
 );
 
 // Vanilla

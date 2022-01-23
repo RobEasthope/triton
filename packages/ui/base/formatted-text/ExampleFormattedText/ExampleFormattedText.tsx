@@ -3,7 +3,6 @@ import BlockContent from '@sanity/block-content-to-react';
 
 export interface ExampleFormattedTextProps {
   blocks: unknown;
-  preview: boolean;
 }
 
 type BlockRendererProps = {
@@ -36,9 +35,6 @@ const serializers = {
   },
 };
 
-export const ExampleFormattedText = ({
-  blocks,
-  preview,
-}: ExampleFormattedTextProps) => (
-  <BlockContent blocks={blocks} serializers={serializers} preview={preview} />
+export const ExampleFormattedText = ({ blocks }: ExampleFormattedTextProps) => (
+  <BlockContent blocks={blocks} serializers={serializers} />
 );

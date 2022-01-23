@@ -7,10 +7,9 @@ const ExampleSection = dynamic(
 
 export type RenderSectionsProps = {
   sections: Record<'_type' | '_key' | string, any>[];
-  preview: boolean;
 };
 
-export const RenderSections = ({ sections, preview }: RenderSectionsProps) => {
+export const RenderSections = ({ sections }: RenderSectionsProps) => {
   if (!sections) {
     return <div>Missing sections</div>;
   }
@@ -27,7 +26,6 @@ export const RenderSections = ({ sections, preview }: RenderSectionsProps) => {
               <ExampleSection
                 {...(section as ExampleSectionProps)}
                 key={`render-sections-${section._key as string}`}
-                preview={preview}
               />
             );
 

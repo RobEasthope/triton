@@ -51,11 +51,11 @@ export default function PageBySlug({ data, preview }: PageBySlugProps) {
       {isFallback && <Loading />}
 
       {!isFallback && data?.page?._type === 'Page' && (
-        <Page page={data?.page} globals={data?.globals} preview={preview} />
+        <Page page={data?.page} globals={data?.globals} />
       )}
 
       {!isFallback && data?.page?._type === 'Home' && (
-        <Home page={data?.page} globals={data?.globals} preview={preview} />
+        <Home page={data?.page} globals={data?.globals} />
       )}
     </>
   );

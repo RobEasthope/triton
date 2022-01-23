@@ -21,7 +21,7 @@ export default {
 } as Meta;
 
 const Template: StoryProps<ExampleFormattedTextProps> = (args) => (
-  <ExampleFormattedText {...args} preview={false} />
+  <ExampleFormattedText {...args} />
 );
 
 // Vanilla
