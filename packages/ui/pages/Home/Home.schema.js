@@ -30,7 +30,7 @@ export default {
 
     headingUI('Page content'),
     {
-      name: 'sections',
+      name: 'rawSections',
       title: 'Page sections',
       type: 'array',
       of: SECTIONS_INDEX,
