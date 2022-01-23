@@ -30,7 +30,7 @@ type PageBySlugProps = {
   preview: boolean;
 };
 
-export default function PageBySlug({ data, preview }: PageBySlugProps) {
+export default function PageBySlug({ data, preview = false }: PageBySlugProps) {
   const router = useRouter();
   const { isFallback } = router;
 
@@ -84,7 +84,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({
   params,
-  preview,
+  preview = false,
 }: {
   params: { slug: string[] };
   preview: boolean;
