@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react';
+import { Meta, Story as StoryProps } from '@storybook/react';
 
 import * as AspectRatio from '@radix-ui/react-aspect-ratio';
 import { CenterComponent } from '@/STORYBOOK/components/CenterComponent';
@@ -13,7 +13,6 @@ export default {
   title: 'Utils/Media/SanityImage',
   component: SanityImage,
   decorators: [
-    // eslint-disable-next-line @typescript-eslint/no-shadow, no-shadow
     (Story) => (
       <CenterComponent>
         <Story />
@@ -22,7 +21,9 @@ export default {
   ],
 } as Meta;
 
-const Template: Story<SanityImageProps> = (args) => <SanityImage {...args} />;
+const Template: StoryProps<SanityImageProps> = (args) => (
+  <SanityImage {...args} />
+);
 
 // Responsive
 export const Responsive = Template.bind({}) as Record<string, unknown>;
@@ -43,7 +44,6 @@ CoverFullSize.args = {
 // Cover - Square
 export const CoverSquare = Template.bind({}) as Record<string, unknown>;
 CoverSquare.decorators = [
-  // eslint-disable-next-line @typescript-eslint/no-shadow, no-shadow
   (Story) => (
     <div style={{ width: '100%', maxWidth: '600px' }}>
       <AspectRatio.Root ratio={1 / 1}>
@@ -60,7 +60,6 @@ CoverSquare.args = {
 // Cover - Landscape
 export const CoverLandscape = Template.bind({}) as Record<string, unknown>;
 CoverLandscape.decorators = [
-  // eslint-disable-next-line @typescript-eslint/no-shadow, no-shadow
   (Story) => (
     <div style={{ width: '100%', maxWidth: '600px' }}>
       <AspectRatio.Root ratio={16 / 9}>
@@ -77,7 +76,6 @@ CoverLandscape.args = {
 // Cover - Portrait
 export const CoverPortrait = Template.bind({}) as Record<string, unknown>;
 CoverPortrait.decorators = [
-  // eslint-disable-next-line @typescript-eslint/no-shadow, no-shadow
   (Story) => (
     <div style={{ width: '100%', maxWidth: '200px' }}>
       <AspectRatio.Root ratio={9 / 16}>

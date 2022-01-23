@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react';
+import { Meta, Story as StoryProps } from '@storybook/react';
 import { CenterComponent } from '@/STORYBOOK/components/CenterComponent';
 import { SmallNavigation, SmallNavigationProps } from './SmallNavigation';
 
@@ -7,7 +7,6 @@ export default {
   title: 'Navigation/SmallNavigation',
   component: SmallNavigation,
   decorators: [
-    // eslint-disable-next-line @typescript-eslint/no-shadow, no-shadow
     (Story) => (
       <CenterComponent>
         <Story />
@@ -16,7 +15,7 @@ export default {
   ],
 } as Meta;
 
-const Template: Story<SmallNavigationProps> = (args) => (
+const Template: StoryProps<SmallNavigationProps> = (args) => (
   <SmallNavigation {...args} />
 );
 

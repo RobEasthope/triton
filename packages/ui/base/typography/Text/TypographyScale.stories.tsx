@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react';
+import { Meta, Story as StoryProps } from '@storybook/react';
 
 import { Text } from './Text';
 

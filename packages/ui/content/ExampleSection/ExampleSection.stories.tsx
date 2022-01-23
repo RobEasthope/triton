@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react';
+import { Meta, Story as StoryProps } from '@storybook/react';
 import { ExampleSection as ExampleSectionProps } from '@/UI/types/sanity-schema';
 import { capitalizeFirstLetter } from '@/STORYBOOK/utils/capitalizeFirstLetter';
 
@@ -11,7 +11,6 @@ export default {
   title: 'Sections/ExampleSection',
   component: ExampleSection,
   decorators: [
-    // eslint-disable-next-line @typescript-eslint/no-shadow, no-shadow
     (Story) => (
       <CenterComponent>
         <Story />
@@ -20,7 +19,7 @@ export default {
   ],
 } as Meta;
 
-const Template: Story<ExampleSectionProps> = (args) => (
+const Template: StoryProps<ExampleSectionProps> = (args) => (
   <ExampleSection {...args} preview={false} />
 );
 

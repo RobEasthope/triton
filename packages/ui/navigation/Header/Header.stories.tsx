@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react';
+import { Meta, Story as StoryProps } from '@storybook/react';
 import { Header as HeaderProps } from 'types/sanity-schema';
 
 import { CenterComponent } from '@/STORYBOOK/components/CenterComponent';
@@ -10,7 +10,6 @@ export default {
   title: 'Navigation/Header',
   component: Header,
   decorators: [
-    // eslint-disable-next-line @typescript-eslint/no-shadow, no-shadow
     (Story) => (
       <CenterComponent>
         <Story />
@@ -19,7 +18,7 @@ export default {
   ],
 } as Meta;
 
-const Template: Story<HeaderProps> = (args) => (
+const Template: StoryProps<HeaderProps> = (args) => (
   <Header {...args} preview={false} />
 );
 
