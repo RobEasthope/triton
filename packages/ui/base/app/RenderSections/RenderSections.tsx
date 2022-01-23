@@ -19,7 +19,7 @@ export function RenderSections({ sections }: RenderSectionsProps): any {
     const { _type } = section;
 
     switch (_type) {
-      case 'exampleSection':
+      case 'ExampleSection':
         return (
           <ExampleSection
             {...section}
