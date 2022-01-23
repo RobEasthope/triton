@@ -61,7 +61,7 @@ export default function PageBySlug({ data, preview = false }: PageBySlugProps) {
   );
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths = async () => {
   const paths = [];
 
   const pages = (await sanityClient.fetch(pageSlugsQuery)) as [
@@ -82,7 +82,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps = async ({
+export const getStaticProps = async ({
   params,
   preview = false,
 }: {
