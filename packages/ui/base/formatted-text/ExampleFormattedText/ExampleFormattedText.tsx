@@ -27,7 +27,7 @@ const BlockRenderer = ({ node, children }: BlockRendererProps) => {
 
   // Fall back to default handling
   // eslint-disable-next-line @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
-  return BlockContent.defaultSerializers.types.block([{ node, children }]);
+  return BlockContent.defaultSerializers.types.block({ node, children });
 };
 
 const serializers = {
