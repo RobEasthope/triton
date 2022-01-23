@@ -77,8 +77,8 @@ export const getStaticProps: GetStaticProps = async ({
     props: {
       data: { page: (page[0] as PageProps | HomeProps) || null, globals },
       preview,
-      revalidate: 60,
     },
+    revalidate: 60,
   } as unknown;
 };
 
