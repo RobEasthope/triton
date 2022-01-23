@@ -1,4 +1,4 @@
-import { GetStaticPaths, InferGetStaticPropsType } from 'next';
+import { GetStaticPaths, GetStaticProps } from 'next';
 
 import Custom404 from 'pages/404';
 import { useRouter } from 'next/router';
@@ -19,9 +19,14 @@ import {
   sanityClient,
 } from '@/UTILS/sanity-api/sanity.server';
 import { selectSanityQuery } from '@/TRQ/sanity-api/selectSanityQuery';
+import { GlobalMetadata } from '@/UI/types/sanity-schema';
+import { HeaderProps } from '@/UI/navigation/Header/Header';
 
 type PageBySlugProps = {
-  data: { page: PageProps | HomeProps };
+  data: {
+    page: PageProps | HomeProps;
+    globals: { header: HeaderProps; metadata: GlobalMetadata };
+  };
   preview: boolean;
 };
 
@@ -56,16 +61,13 @@ export default function PageBySlug({ data, preview }: PageBySlugProps) {
   );
 }
 
-export const getStaticProps = async ({
+export const getStaticProps: GetStaticProps = async ({
   params,
   preview = false,
-}: {
-  params: { slug: [] };
-  preview: boolean;
 }) => {
-  const globals = await getClient(preview).fetch(globalsQuery);
+  const globals: GlobalMetadata = await getClient(preview).fetch(globalsQuery);
 
-  const { sanityQuery, queryParams } = selectSanityQuery(params.slug);
+  const { sanityQuery, queryParams } = selectSanityQuery(params?.slug);
 
   const page = overlayDrafts(
     await getClient(preview).fetch(sanityQuery, queryParams)
@@ -73,20 +75,22 @@ export const getStaticProps = async ({
 
   return {
     props: {
-      data: { page: page[0] || null, globals },
+      data: { page: (page[0] as PageProps | HomeProps) || null, globals },
       preview,
       revalidate: 60,
     },
-  };
+  } as unknown;
 };
 
-export const getStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async () => {
   const paths = [];
 
-  const pages = await sanityClient.fetch(pageSlugsQuery);
+  const pages = (await sanityClient.fetch(pageSlugsQuery)) as [
+    PageProps | HomeProps
+  ];
 
   for (const page of pages) {
-    const slug = page?.slug?.current as string;
+    const slug = page?.slug?.current;
 
     paths.push({
       params: { slug: slug?.split('/').filter((p) => p) },
