@@ -7,6 +7,7 @@ const ExampleSection = dynamic(
 
 export type RenderSectionsProps = {
   sections: [ExampleSectionProps];
+  preview: boolean;
 };
 
 export function RenderSections({ sections }: RenderSectionsProps): any {
