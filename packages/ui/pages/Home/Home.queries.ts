@@ -1,7 +1,7 @@
 import { groq } from 'next-sanity';
 
 export const HomeQuery = groq`
-  *[_type == "homePage" && slug.current == $slug][0]{
+  *[_type == "Home" && slug.current == $slug][0]{
     ...,
     "sections": rawSections[]{
       ...,
