@@ -1,4 +1,4 @@
-// import { GetStaticPaths, InferGetStaticPropsType } from 'next';
+import { GetStaticPaths, InferGetStaticPropsType } from 'next';
 
 import Custom404 from 'pages/404';
 import { useRouter } from 'next/router';
