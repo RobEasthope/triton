@@ -1,5 +1,4 @@
 import S from '@sanity/desk-tool/structure-builder';
-import { createSuperPane } from 'sanity-super-pane';
 
 import {
   RiHome4Line,
@@ -22,11 +21,11 @@ export default () =>
             .schemaType('Home')
             .documentId('Home')
         ),
-      // S.listItem()
-      //   .title('Pages')
-      //   .icon(ImNewspaper)
-      //   .schemaType('Page')
-      //   .child(createSuperPane('page', S)),
+      S.listItem()
+        .title('Pages')
+        .icon(ImNewspaper)
+        .schemaType('Page')
+        .child(S.documentTypeList('Page').title('Pages')),
       S.divider(),
       S.listItem()
         .title('Navigation')
