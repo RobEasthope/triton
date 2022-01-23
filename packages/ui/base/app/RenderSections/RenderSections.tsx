@@ -10,7 +10,7 @@ export type RenderSectionsProps = {
   preview: boolean;
 };
 
-export const RenderSections = ({ sections }: RenderSectionsProps) => {
+export const RenderSections = ({ sections, preview }: RenderSectionsProps) => {
   if (!sections) {
     return <div>Missing sections</div>;
   }
@@ -27,6 +27,7 @@ export const RenderSections = ({ sections }: RenderSectionsProps) => {
               <ExampleSection
                 {...(section as ExampleSectionProps)}
                 key={`render-sections-${section._key as string}`}
+                preview={preview}
               />
             );
 
