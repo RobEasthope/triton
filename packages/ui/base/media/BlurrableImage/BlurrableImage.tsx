@@ -69,7 +69,7 @@ export function BlurrableImage({
           src={blurredAssetUrl}
           className={img.props.className}
           alt={alt || ''}
-          visiblilty={setFullSizeImageLoaded ? 'hide' : 'show'}
+          visiblilty={fullSizeImageLoaded ? 'hide' : 'show'}
         />
       )}
       {fullSizeImage}
