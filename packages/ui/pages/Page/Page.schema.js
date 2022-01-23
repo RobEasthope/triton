@@ -2,9 +2,9 @@ import { SECTIONS_INDEX } from '../../content/SECTIONS_INDEX';
 import { headingUI } from '../../utils/sanity/headingUI';
 
 export default {
-  name: 'page',
-  type: 'document',
+  name: 'Page',
   title: 'Page',
+  type: 'document',
   fields: [
     headingUI('Page details'),
     {
@@ -29,7 +29,7 @@ export default {
 
     headingUI('Page content'),
     {
-      name: 'sections',
+      name: 'rawSections',
       title: 'Page sections',
       type: 'array',
       of: SECTIONS_INDEX,

@@ -1,5 +1,4 @@
 import S from '@sanity/desk-tool/structure-builder';
-import { createSuperPane } from 'sanity-super-pane';
 
 import {
   RiHome4Line,
@@ -25,8 +24,8 @@ export default () =>
       S.listItem()
         .title('Pages')
         .icon(ImNewspaper)
-        .schemaType('page')
-        .child(createSuperPane('page', S)),
+        .schemaType('Page')
+        .child(S.documentTypeList('Page').title('Pages')),
       S.divider(),
       S.listItem()
         .title('Navigation')
@@ -40,8 +39,8 @@ export default () =>
                 .title('Header')
                 .child(
                   S.document()
-                    .schemaType('header')
-                    .documentId('header')
+                    .schemaType('Header')
+                    .documentId('Header')
                 ),
             ])
         ),
@@ -58,8 +57,8 @@ export default () =>
                 .icon(FaGlobeEurope)
                 .child(
                   S.document()
-                    .schemaType('globalMetadata')
-                    .documentId('globalMetadata')
+                    .schemaType('GlobalMetadata')
+                    .documentId('GlobalMetadata')
                 ),
             ])
         ),

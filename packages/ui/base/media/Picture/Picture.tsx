@@ -56,7 +56,7 @@ export const Picture = ({
   alt,
   mode = 'responsive',
   aspectRatio,
-  preview,
+  preview = false,
   className,
 }: PictureProps) => {
   const configuredSanityClient = getClient(preview);

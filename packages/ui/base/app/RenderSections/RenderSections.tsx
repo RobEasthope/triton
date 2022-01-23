@@ -1,45 +1,42 @@
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable react/prop-types */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-unsafe-return */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import { upperFirst } from 'lodash';
+import dynamic from 'next/dynamic';
+import { ExampleSectionProps } from '@/UI/content/ExampleSection/ExampleSection';
 
-import * as SectionComponents from '@/UI/base/app/RenderSections/section-index';
+const ExampleSection = dynamic(
+  () => import('../../../content/ExampleSection/ExampleSection')
+);
 
-function resolveSections(section) {
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-  const Section = SectionComponents[upperFirst(section._type)];
+export type RenderSectionsProps = {
+  sections: Record<'_type' | '_key' | string, any>[];
+};
 
-  if (Section) {
-    return Section;
-  }
-
-  console.error('Cant find section', section);
-  return null;
-}
-
-export function RenderSections({ sections, preview }) {
+export const RenderSections = ({ sections }: RenderSectionsProps) => {
   if (!sections) {
     return <div>Missing sections</div>;
   }
 
-  return sections?.map((section) => {
-    const SectionComponent = resolveSections(section);
+  return (
+    <>
+      {sections?.map((section) => {
+        // eslint-disable-next-line @typescript-eslint/naming-convention
+        const { _type } = section;
 
-    if (!SectionComponent) {
-      return (
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-        <div key={section?._key}>Missing section {section?._type}</div>
-      );
-    }
+        switch (_type) {
+          case 'ExampleSection':
+            return (
+              <ExampleSection
+                {...(section as ExampleSectionProps)}
+                key={`render-sections-${section._key as string}`}
+              />
+            );
 
-    return (
-      <SectionComponent
-        {...section}
-        key={`render-sections-${section._key as string}`}
-        preview={preview}
-      />
-    );
-  });
-}
+          default:
+            return (
+              <div key={section?._key as string}>
+                Missing section {section?._type}
+              </div>
+            );
+        }
+      })}
+    </>
+  );
+};

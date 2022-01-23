@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react';
+import { Meta, Story as StoryProps } from '@storybook/react';
 
 import { Text } from './Text';
 
@@ -8,7 +8,7 @@ export default {
   component: Text,
 } as Meta;
 
-const Template: Story = (args) => (
+const Template: StoryProps = (args) => (
   <>
     <Text as="h1" typeSize="jumbotron" {...args}>
       Jumbotron

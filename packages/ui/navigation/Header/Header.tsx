@@ -45,25 +45,18 @@ export const LargeNavigation = styled('ul', {
 // Types
 export interface HeaderProps extends rawHeaderProps {
   navigation?: [ExternalLinkWithTitleProp, InternalLinkWithTitleProp];
-  preview: boolean;
 }
 
 // Markup
 export const Header = ({
   logo,
   navigation,
-  preview,
-}: Pick<HeaderProps, 'logo' | 'navigation' | 'preview'>) => (
+}: Pick<HeaderProps, 'logo' | 'navigation'>) => (
   <PaddedComponent as="header">
     <MaxPageWidth as="nav">
       <HeaderLayout as="div">
         <StyledHomeLink>
-          <Picture
-            asset={logo}
-            mode="contain"
-            maxWidth={32}
-            preview={preview}
-          />
+          <Picture asset={logo} mode="contain" maxWidth={32} />
         </StyledHomeLink>
 
         <LargeNavigation as="ul">

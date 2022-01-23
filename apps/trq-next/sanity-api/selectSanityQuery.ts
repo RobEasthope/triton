@@ -6,7 +6,9 @@ type SelectSanityQueryProps = {
   queryParams: { slug: string };
 };
 
-export function selectSanityQuery(slugArray = []): SelectSanityQueryProps {
+export function selectSanityQuery(
+  slugArray = [] as string[] | []
+): SelectSanityQueryProps {
   if (slugArray.length === 0) {
     return {
       sanityQuery: anyPageBySlugQuery,
@@ -17,7 +19,6 @@ export function selectSanityQuery(slugArray = []): SelectSanityQueryProps {
   return {
     sanityQuery: anyPageBySlugQuery,
     queryParams: {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
       slug: createSlugFromQuery(slugArray),
     },
   };

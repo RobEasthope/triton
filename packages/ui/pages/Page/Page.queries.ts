@@ -1,9 +1,9 @@
 import { groq } from 'next-sanity';
 
 export const anyPageBySlugQuery = groq`
-  *[_type in ["page", "homePage"] && slug.current == $slug]{
+  *[_type in ["Page", "Home"] && slug.current == $slug]{
      ...,
-    "sections": sections[]{
+    "sections": rawSections[]{
       ...,
       "link": rawLink[0]{..., "to": {...internalUID->{...},  }},
       "bkg": rawBkg->,
@@ -19,7 +19,7 @@ export const anyPageBySlugQuery = groq`
 
 // All page slugs
 export const pageSlugsQuery = groq`
-  *[_type == "page" || _type == "homePage" && defined(slug.current)]{
+  *[_type == "Page" || _type == "Home" && defined(slug.current)]{
     slug {
       current
     },

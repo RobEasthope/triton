@@ -1,7 +1,7 @@
 export default {
-  type: 'object',
-  name: 'exampleSection',
+  name: 'ExampleSection',
   title: 'Example',
+  type: 'object',
   fields: [
     {
       name: 'storybook',
@@ -23,7 +23,7 @@ export default {
     {
       name: 'text',
       title: 'Text',
-      type: 'exampleFormattedText',
+      type: 'ExampleFormattedText',
       validation: (Rule) =>
         Rule.required().warning('Example section: Text is missing'),
     },

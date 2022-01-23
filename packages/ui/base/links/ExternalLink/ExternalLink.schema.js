@@ -3,8 +3,8 @@ import React from 'react';
 const ExternalLinkRender = ({ children }) => <span>{children} 🔗</span>;
 
 export default {
+  name: 'ExternalLink',
   title: 'External link',
-  name: 'externalLink',
   type: 'object',
   description: 'Add a link to outside the site',
   fields: [

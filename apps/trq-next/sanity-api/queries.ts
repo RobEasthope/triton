@@ -1,18 +1,5 @@
 import { groq } from 'next-sanity';
 
-export const getSections = groq`
-"sections": sections[]{
-  ...,
-  "link": rawLink[0]{..., "to": {...internalUID->{...},  }},
-  "bkg": rawBkg->,
-  "cards": rawCards[]{
-    ...,
-    "link": rawLink[0]{..., "to": {...internalUID->{...},  }},
-    "bkg": rawBkg->,
-  },
-  "muxVideo": rawMuxVideo.asset->,
-}`;
-
 // Global meta data
 export const globalsQuery = groq`
   {

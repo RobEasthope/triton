@@ -14,7 +14,7 @@ export const Heading = styled('p', {
 
 // Types
 export interface ExampleSectionProps extends rawExampleSectionProps {
-  preview: boolean;
+  _key?: string;
 }
 
 // Markup
@@ -22,7 +22,6 @@ export const ExampleSection = ({
   heading,
   text,
   image,
-  preview,
 }: ExampleSectionProps) => {
   if (!heading && !text) {
     return null;
@@ -32,16 +31,11 @@ export const ExampleSection = ({
     <PaddedComponent as="section">
       <MaxPageWidth>
         {heading && <Heading as="h1">{heading}</Heading>}
-        {text && <ExampleFormattedText blocks={text} preview={preview} />}
-        {text && (
-          <Picture
-            asset={image}
-            mode="responsive"
-            maxWidth={800}
-            preview={preview}
-          />
-        )}
+        {text && <ExampleFormattedText blocks={text} />}
+        {text && <Picture asset={image} mode="responsive" maxWidth={800} />}
       </MaxPageWidth>
     </PaddedComponent>
   );
 };
+
+export default ExampleSection;

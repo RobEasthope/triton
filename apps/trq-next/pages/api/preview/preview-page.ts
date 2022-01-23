@@ -1,6 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { anyPageBySlugQuery } from '@/UI/pages/Page/Page.queries';
 import { previewClient } from '@/UTILS/sanity-api/sanity.server';
+import { PageProps } from '@/UI/pages/Page/Page';
+import { HomeProps } from '@/UI/pages/Home/Home';
 
 export default async function (
   req: NextApiRequest,
@@ -16,14 +18,15 @@ export default async function (
   }
   // const { sanityQuery, queryParams } = selectSanityQuery(params.slug, locale);
   // Check if the page with the given `slug` exists
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-  const pageData = await previewClient.fetch(anyPageBySlugQuery, {
-    slug: req.query.slug,
-    locale: req.query.locale,
-  });
+  const pageData: PageProps | HomeProps = await previewClient.fetch(
+    anyPageBySlugQuery,
+    {
+      slug: req.query.slug,
+      locale: req.query.locale,
+    }
+  );
 
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
-  const page = pageData[0];
+  const page = pageData[0] as PageProps | HomeProps;
 
   // If the slug doesn't exist prevent preview mode from being enabled
   if (!page) {
@@ -36,7 +39,6 @@ export default async function (
   // Redirect to the path from the fetched page
   // We don't redirect to req.query.slug as that might lead to open redirect vulnerabilities
   res.writeHead(307, {
-    // eslint-disable-next-line @typescript-eslint/restrict-template-expressions, @typescript-eslint/no-unsafe-member-access
     Location: `/${page?.slug?.current}`,
   });
   res.end();
