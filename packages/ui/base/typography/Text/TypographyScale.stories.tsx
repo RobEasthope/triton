@@ -8,7 +8,7 @@ export default {
   component: Text,
 } as Meta;
 
-const Template: Story = (args) => (
+const Template: StoryProps = (args) => (
   <>
     <Text as="h1" typeSize="jumbotron" {...args}>
       Jumbotron
