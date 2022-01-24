@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { anyPageBySlugQuery } from '@/UI/pages/Page/Page.queries';
+import { previewAnyPageBySlugQuery } from '@/UI/pages/Page/Page.queries';
 import { previewClient } from '@/UTILS/sanity-api/sanity.server';
 import { PageProps } from '@/UI/pages/Page/Page';
 import { HomeProps } from '@/UI/pages/Home/Home';
@@ -19,10 +19,9 @@ export default async function (
   // const { sanityQuery, queryParams } = selectSanityQuery(params.slug, locale);
   // Check if the page with the given `slug` exists
   const pageData: PageProps | HomeProps = await previewClient.fetch(
-    anyPageBySlugQuery,
+    previewAnyPageBySlugQuery,
     {
-      slug: req.query.slug,
-      locale: req.query.locale,
+      id: req.query._id,
     }
   );
 
