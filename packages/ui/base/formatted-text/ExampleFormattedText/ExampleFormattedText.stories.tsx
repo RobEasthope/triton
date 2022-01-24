@@ -3,6 +3,7 @@ import { Meta, Story as StoryProps } from '@storybook/react';
 
 import { CenterComponent } from '@/STORYBOOK/components/CenterComponent';
 import { EXAMPLE_TEXT } from '@/STORYBOOK/mock-data/SANITY_TEXT';
+import { StoryFauxProps } from '@/STORYBOOK/types/storybook';
 import {
   ExampleFormattedText,
   ExampleFormattedTextProps,
@@ -25,12 +26,12 @@ const Template: StoryProps<ExampleFormattedTextProps> = (args) => (
 );
 
 // Vanilla
-export const Vanilla = Template.bind({}) as Record<string, unknown>;
+export const Vanilla = Template.bind({}) as StoryFauxProps;
 
 Vanilla.args = {
   blocks: EXAMPLE_TEXT,
 };
 
 // No data
-export const NoData = Template.bind({}) as Record<string, unknown>;
+export const NoData = Template.bind({}) as StoryFauxProps;
 NoData.args = {};
