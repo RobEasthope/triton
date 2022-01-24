@@ -33,14 +33,15 @@ export const CoverImageWrapper = styled('div', {
 
 // TYPES
 export interface ImageAssetProp {
-  _type: 'image';
+  _type: 'image' | string;
   asset: SanityReference<SanityImageAsset>;
   crop?: SanityImageCrop;
   hotspot?: SanityImageHotspot;
+  caption?: string;
 }
 
 export type PictureProps = {
-  asset: ImageAssetProp;
+  asset: any;
   maxWidth: number;
   alt?: string;
   mode: 'responsive' | 'cover' | 'contain' | 'next';

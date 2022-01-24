@@ -18,7 +18,7 @@ export interface ImageAssetProp {
 }
 
 export type SanityImageProps = {
-  asset: ImageAssetProp;
+  asset: any;
   maxWidth: number;
   mode: 'responsive' | 'cover' | 'contain' | 'next';
   alt?: string;
