@@ -14,6 +14,7 @@ export const Metadata = ({ page, globalMetadata }: MetadateType) => {
   const imageBuilder = createImageUrlBuilder(sanityConfig);
   const urlForImage = (source: SanityImageSource) =>
     imageBuilder.image(source).auto('format').fit('max');
+
   return (
     <Head>
       {/* Standard HTML */}
@@ -43,10 +44,9 @@ export const Metadata = ({ page, globalMetadata }: MetadateType) => {
       {page?.metadataImage && (
         <meta
           property="og:image"
-          content={urlForImage(page?.metadataImage)
-            .width(1200)
-            .height(630)
-            .url()}
+          content={
+            urlForImage(page?.metadataImage).width(1200).height(630).url() || ''
+          }
         />
       )}
 
@@ -60,10 +60,9 @@ export const Metadata = ({ page, globalMetadata }: MetadateType) => {
       {page?.metadataImage && (
         <meta
           name="twitter:image"
-          content={urlForImage(page?.metadataImage)
-            .width(1200)
-            .height(630)
-            .url()}
+          content={
+            urlForImage(page?.metadataImage).width(1200).height(630).url() || ''
+          }
         />
       )}
     </Head>
