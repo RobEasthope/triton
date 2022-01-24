@@ -7,6 +7,7 @@ import {
   BASSENTHWAITE_IMAGE,
   RED_ARROWS,
 } from '@/STORYBOOK/mock-data/SANITY_IMAGES';
+import { StoryFauxProps } from '@/STORYBOOK/types/storybook';
 import { Picture, PictureProps } from './Picture';
 
 export default {
@@ -24,7 +25,7 @@ export default {
 const Template: StoryProps<PictureProps> = (args) => <Picture {...args} />;
 
 // Responsive
-export const Responsive = Template.bind({}) as Record<string, unknown>;
+export const Responsive = Template.bind({}) as StoryFauxProps;
 
 Responsive.args = {
   asset: {
@@ -40,14 +41,14 @@ Responsive.args = {
 };
 
 // Cover - full size
-export const CoverFullSize = Template.bind({}) as Record<string, unknown>;
+export const CoverFullSize = Template.bind({}) as StoryFauxProps;
 CoverFullSize.args = {
   asset: RED_ARROWS,
   mode: 'cover',
 };
 
 // Cover - Square
-export const CoverSquare = Template.bind({}) as Record<string, unknown>;
+export const CoverSquare = Template.bind({}) as StoryFauxProps;
 CoverSquare.decorators = [
   (Story) => (
     <div style={{ width: '100%', maxWidth: '600px' }}>
@@ -63,7 +64,7 @@ CoverSquare.args = {
 };
 
 // Cover - Landscape
-export const CoverLandscape = Template.bind({}) as Record<string, unknown>;
+export const CoverLandscape = Template.bind({}) as StoryFauxProps;
 CoverLandscape.decorators = [
   (Story) => (
     <div style={{ width: '100%', maxWidth: '600px' }}>
@@ -79,7 +80,7 @@ CoverLandscape.args = {
 };
 
 // Cover - Portrait
-export const CoverPortrait = Template.bind({}) as Record<string, unknown>;
+export const CoverPortrait = Template.bind({}) as StoryFauxProps;
 CoverPortrait.decorators = [
   (Story) => (
     <div style={{ width: '100%', maxWidth: '200px' }}>
@@ -95,12 +96,12 @@ CoverPortrait.args = {
 };
 
 // Contain - Full screen
-export const ContainFullScreen = Template.bind({}) as Record<string, unknown>;
+export const ContainFullScreen = Template.bind({}) as StoryFauxProps;
 ContainFullScreen.args = {
   asset: BASSENTHWAITE_IMAGE,
   mode: 'contain',
 };
 
 // No data
-export const NoData = Template.bind({}) as Record<string, unknown>;
+export const NoData = Template.bind({}) as StoryFauxProps;
 NoData.args = {};
