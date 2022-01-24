@@ -3,7 +3,7 @@ import { groq } from 'next-sanity';
 // Global meta data
 export const globalsQuery = groq`
   {
-    "header": *[_type== 'header'][0]{
+    "header": *[_type== 'Header'][0]{
       logo,
       "navigation": rawNavigation[]{
         _key,
