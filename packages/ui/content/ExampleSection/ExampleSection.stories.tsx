@@ -5,6 +5,7 @@ import { capitalizeFirstLetter } from '@/STORYBOOK/utils/capitalizeFirstLetter';
 
 import { CenterComponent } from '@/STORYBOOK/components/CenterComponent';
 import { EXAMPLE_TEXT } from '@/STORYBOOK/mock-data/SANITY_TEXT';
+import { StoryFauxProps } from '@/STORYBOOK/types/storybook';
 import { ExampleSection } from './ExampleSection';
 
 export default {
@@ -24,7 +25,7 @@ const Template: StoryProps<ExampleSectionProps> = (args) => (
 );
 
 // Vanilla
-export const Vanilla = Template.bind({}) as Record<string, unknown>;
+export const Vanilla = Template.bind({}) as StoryFauxProps;
 
 Vanilla.args = {
   heading: capitalizeFirstLetter(
@@ -34,5 +35,5 @@ Vanilla.args = {
 };
 
 // No data
-export const NoData = Template.bind({}) as Record<string, unknown>;
+export const NoData = Template.bind({}) as StoryFauxProps;
 NoData.args = {};

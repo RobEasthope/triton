@@ -60,7 +60,8 @@ export const Header = ({
         </StyledHomeLink>
 
         <LargeNavigation as="ul">
-          {navigation?.length > 0 &&
+          {navigation &&
+            navigation?.length > 0 &&
             navigation.map((nav) => (
               <li key={nav?._key}>
                 <SuperLink link={nav}>{nav.title}</SuperLink>

@@ -4,7 +4,7 @@ import { InternalLinkProp, InternalLinkWithTitleProp } from '@/UI/types/links';
 export type InternalLinkProps = {
   link: InternalLinkWithTitleProp | InternalLinkProp;
   className?: string;
-  children: unknown;
+  children: any;
   onClick?: VoidFunction;
 };
 
@@ -26,7 +26,7 @@ export const InternalLink = ({
       role="link"
       tabIndex={0}
     >
-      {children}
+      {children || null}
     </a>
   </Link>
 );

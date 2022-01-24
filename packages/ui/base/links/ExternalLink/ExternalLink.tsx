@@ -3,7 +3,7 @@ import { ExternalLinkProp, ExternalLinkWithTitleProp } from '@/UI/types/links';
 export type ExternalLinkProps = {
   link: ExternalLinkWithTitleProp | ExternalLinkProp;
   className?: string;
-  children: unknown;
+  children: any;
   onClick?: VoidFunction;
 };
 
@@ -20,6 +20,6 @@ export const ExternalLink = ({
     className={className}
     onClick={onClick}
   >
-    {children}
+    {children || null}
   </a>
 );

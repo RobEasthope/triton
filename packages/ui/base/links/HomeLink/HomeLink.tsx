@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 type HomeLinkProps = {
-  children: unknown;
+  children: any;
 };
 
 export const HomeLink = ({ children }: HomeLinkProps) => (

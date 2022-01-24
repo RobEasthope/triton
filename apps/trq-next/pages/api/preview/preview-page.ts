@@ -26,7 +26,7 @@ export default async function (
     }
   );
 
-  const page = pageData[0] as PageProps | HomeProps;
+  const page: PageProps | HomeProps = pageData;
 
   // If the slug doesn't exist prevent preview mode from being enabled
   if (!page) {

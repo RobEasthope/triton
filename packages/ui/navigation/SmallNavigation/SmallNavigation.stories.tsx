@@ -1,6 +1,7 @@
 import React from 'react';
 import { Meta, Story as StoryProps } from '@storybook/react';
 import { CenterComponent } from '@/STORYBOOK/components/CenterComponent';
+import { StoryFauxProps } from '@/STORYBOOK/types/storybook';
 import { SmallNavigation, SmallNavigationProps } from './SmallNavigation';
 
 export default {
@@ -20,7 +21,7 @@ const Template: StoryProps<SmallNavigationProps> = (args) => (
 );
 
 // Vanilla
-export const Vanilla = Template.bind({}) as Record<string, unknown>;
+export const Vanilla = Template.bind({}) as StoryFauxProps;
 
 Vanilla.args = {
   navigation: [
@@ -56,5 +57,5 @@ Vanilla.args = {
 };
 
 // No data
-export const NoData = Template.bind({}) as Record<string, unknown>;
+export const NoData = Template.bind({}) as StoryFauxProps;
 NoData.args = {};

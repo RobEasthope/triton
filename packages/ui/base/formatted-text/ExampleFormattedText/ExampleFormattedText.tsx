@@ -16,6 +16,7 @@ const BlockRenderer = ({ node, children }: BlockRendererProps) => {
   if (style === 'h2') {
     return <h2>{children}</h2>;
   }
+
   if (style === 'h3') {
     return <h3>{children}</h3>;
   }
@@ -24,9 +25,7 @@ const BlockRenderer = ({ node, children }: BlockRendererProps) => {
     return <h4>{children}</h4>;
   }
 
-  // Fall back to default handling
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
-  return BlockContent.defaultSerializers.types.block({ node, children });
+  return null;
 };
 
 const serializers = {

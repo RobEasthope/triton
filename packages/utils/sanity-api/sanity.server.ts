@@ -22,7 +22,7 @@ export const previewClient = createClient({
 export const getClient = (preview: boolean) =>
   preview ? previewClient : sanityClient;
 
-export function overlayDrafts(docs) {
+export function overlayDrafts(docs: any[]) {
   const documents = docs || [];
   const overlayed = documents.reduce((map, doc) => {
     if (!doc._id) {

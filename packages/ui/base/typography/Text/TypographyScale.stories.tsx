@@ -1,6 +1,7 @@
 import React from 'react';
 import { Meta, Story as StoryProps } from '@storybook/react';
 
+import { StoryFauxProps } from '@/STORYBOOK/types/storybook';
 import { Text } from './Text';
 
 export default {
@@ -38,20 +39,14 @@ const Template: StoryProps = (args) => (
 );
 
 // SerifTypographyScale
-export const SerifTypographyScale = Template.bind({}) as Record<
-  string,
-  unknown
->;
+export const SerifTypographyScale = Template.bind({}) as StoryFauxProps;
 
 SerifTypographyScale.args = {
   fontFamily: 'serif',
 };
 
 // SansSerifTypographyScale
-export const SansSerifTypographyScale = Template.bind({}) as Record<
-  string,
-  unknown
->;
+export const SansSerifTypographyScale = Template.bind({}) as StoryFauxProps;
 
 SansSerifTypographyScale.args = {
   fontFamily: 'sansSerif',

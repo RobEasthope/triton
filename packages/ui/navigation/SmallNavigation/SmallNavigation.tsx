@@ -59,7 +59,8 @@ export const SmallNavigation = ({
 
       <nav>
         <ul>
-          {navigation?.length > 0 &&
+          {navigation &&
+            navigation?.length > 0 &&
             navigation.map((nav) => (
               <li key={nav?._key} className="link">
                 <SuperLink className="" link={nav}>

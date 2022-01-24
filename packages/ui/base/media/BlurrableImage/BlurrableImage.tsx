@@ -8,7 +8,7 @@ const BlurredImage = styled('img', {
   position: 'static',
 
   variants: {
-    visiblilty: {
+    visibility: {
       show: {
         opacity: 1,
       },
@@ -69,7 +69,7 @@ export function BlurrableImage({
           src={blurredAssetUrl}
           className={img.props.className}
           alt={alt || ''}
-          visiblilty={setFullSizeImageLoaded ? 'hide' : 'show'}
+          visibility={fullSizeImageLoaded ? 'hide' : 'show'}
         />
       )}
       {fullSizeImage}
