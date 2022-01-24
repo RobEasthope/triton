@@ -1,12 +1,9 @@
-import { GetStaticPaths, GetStaticProps } from 'next';
-
 import Custom404 from 'pages/404';
 import { useRouter } from 'next/router';
 
 import { Page, PageProps } from '@/UI/pages/Page/Page';
 import { Home, HomeProps } from '@/UI/pages/Home/Home';
 import { Loading } from '@/UI/base/app/Loading/Loading';
-
 import {
   anyPageBySlugQuery,
   pageSlugsQuery,
