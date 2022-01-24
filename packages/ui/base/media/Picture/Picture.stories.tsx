@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, ComponentStory } from '@storybook/react';
+import { Meta, Story as StoryProps } from '@storybook/react';
 
 import * as AspectRatio from '@radix-ui/react-aspect-ratio';
 import { CenterComponent } from '@/STORYBOOK/components/CenterComponent';
@@ -7,7 +7,7 @@ import {
   BASSENTHWAITE_IMAGE,
   RED_ARROWS,
 } from '@/STORYBOOK/mock-data/SANITY_IMAGES';
-import { Picture } from './Picture';
+import { Picture, PictureProps } from './Picture';
 
 export default {
   title: 'Utils/Media/Picture',
@@ -21,12 +21,10 @@ export default {
   ],
 } as Meta;
 
-const Template: ComponentStory<typeof Picture> = (args) => (
-  <Picture {...args} />
-);
+const Template: StoryProps<PictureProps> = (args) => <Picture {...args} />;
 
 // Responsive
-export const Responsive = Template.bind({});
+export const Responsive = Template.bind({}) as Record<string, unknown>;
 
 Responsive.args = {
   asset: {
@@ -42,14 +40,14 @@ Responsive.args = {
 };
 
 // Cover - full size
-export const CoverFullSize = Template.bind({});
+export const CoverFullSize = Template.bind({}) as Record<string, unknown>;
 CoverFullSize.args = {
   asset: RED_ARROWS,
   mode: 'cover',
 };
 
 // Cover - Square
-export const CoverSquare = Template.bind({});
+export const CoverSquare = Template.bind({}) as Record<string, unknown>;
 CoverSquare.decorators = [
   (Story) => (
     <div style={{ width: '100%', maxWidth: '600px' }}>
@@ -65,7 +63,7 @@ CoverSquare.args = {
 };
 
 // Cover - Landscape
-export const CoverLandscape = Template.bind({});
+export const CoverLandscape = Template.bind({}) as Record<string, unknown>;
 CoverLandscape.decorators = [
   (Story) => (
     <div style={{ width: '100%', maxWidth: '600px' }}>
@@ -81,7 +79,7 @@ CoverLandscape.args = {
 };
 
 // Cover - Portrait
-export const CoverPortrait = Template.bind({});
+export const CoverPortrait = Template.bind({}) as Record<string, unknown>;
 CoverPortrait.decorators = [
   (Story) => (
     <div style={{ width: '100%', maxWidth: '200px' }}>
@@ -97,12 +95,12 @@ CoverPortrait.args = {
 };
 
 // Contain - Full screen
-export const ContainFullScreen = Template.bind({});
+export const ContainFullScreen = Template.bind({}) as Record<string, unknown>;
 ContainFullScreen.args = {
   asset: BASSENTHWAITE_IMAGE,
   mode: 'contain',
 };
 
 // No data
-export const NoData = Template.bind({});
+export const NoData = Template.bind({}) as Record<string, unknown>;
 NoData.args = {};
