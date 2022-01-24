@@ -4,6 +4,7 @@ import { Header as HeaderProps } from 'types/sanity-schema';
 
 import { CenterComponent } from '@/STORYBOOK/components/CenterComponent';
 import { TRIQUETRA_LOGO } from '@/STORYBOOK/mock-data/SANITY_IMAGES';
+import { StoryFauxProps } from '@/STORYBOOK/types/storybook';
 import { Header } from './Header';
 
 export default {
@@ -21,7 +22,7 @@ export default {
 const Template: StoryProps<HeaderProps> = (args) => <Header {...args} />;
 
 // Vanilla
-export const Vanilla = Template.bind({}) as Record<string, unknown>;
+export const Vanilla = Template.bind({}) as StoryFauxProps;
 
 Vanilla.args = {
   logo: TRIQUETRA_LOGO,
@@ -58,5 +59,5 @@ Vanilla.args = {
 };
 
 // No data
-export const NoData = Template.bind({}) as Record<string, unknown>;
+export const NoData = Template.bind({}) as StoryFauxProps;
 NoData.args = {};
