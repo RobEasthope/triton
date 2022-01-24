@@ -103,7 +103,7 @@ declare module "@sanity/block-content-to-react"
       hardBreak?: React.Component
       /** Serializer for the container wrapping the blocks */
       container?: React.Component
-    }
+    },
     /**
      * When encountering image blocks,
      * this defines which query parameters to apply in order to control size/crop mode etc.
