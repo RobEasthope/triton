@@ -38,7 +38,7 @@ export default async function (
   // Redirect to the path from the fetched page
   // We don't redirect to req.query.slug as that might lead to open redirect vulnerabilities
   res.writeHead(307, {
-    Location: `/preview/${req?.query?.id}`,
+    Location: `/preview/${page?._id}`,
   });
   res.end();
 }

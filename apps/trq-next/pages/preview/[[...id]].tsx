@@ -42,8 +42,6 @@ export default function PageBySlug({ data, preview = false }: PageBySlugProps) {
     return <Custom404 />;
   }
 
-  console.log(data.page);
-
   return (
     <>
       {isFallback && <Loading />}
@@ -73,8 +71,6 @@ export const getStaticPaths = async () => {
       params: { id: [page?._id] },
     });
   }
-
-  console.log(paths);
 
   return {
     paths,
