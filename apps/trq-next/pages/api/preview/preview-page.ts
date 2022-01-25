@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { anyPageBySlugQuery } from '@/UI/pages/Page/Page.queries';
+import { previewAnyPageByIdQuery } from '@/UI/pages/Page/Page.queries';
 import { previewClient } from '@/UTILS/sanity-api/sanity.server';
 import { PageProps } from '@/UI/pages/Page/Page';
 import { HomeProps } from '@/UI/pages/Home/Home';
@@ -10,19 +10,18 @@ export default async function (
 ): Promise<void> {
   // Check the secret and next parameters
   // This secret should only be known to this API route and the CMS
-  if (
-    req.query.secret !== process.env.SANITY_PREVIEW_SECRET ||
-    !req.query.slug
-  ) {
+  if (req.query.secret !== process.env.SANITY_PREVIEW_SECRET) {
     return res.status(401).json({ message: 'Invalid token' });
   }
-  // const { sanityQuery, queryParams } = selectSanityQuery(params.slug, locale);
+
+  // Get id from request query
+  const id = req?.query?.id;
+
   // Check if the page with the given `slug` exists
   const pageData: PageProps | HomeProps = await previewClient.fetch(
-    anyPageBySlugQuery,
+    previewAnyPageByIdQuery,
     {
-      slug: req.query.slug,
-      locale: req.query.locale,
+      id,
     }
   );
 
@@ -39,7 +38,7 @@ export default async function (
   // Redirect to the path from the fetched page
   // We don't redirect to req.query.slug as that might lead to open redirect vulnerabilities
   res.writeHead(307, {
-    Location: `/${page?.slug?.current}`,
+    Location: `/preview/${id as string}`,
   });
   res.end();
 }
