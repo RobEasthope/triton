@@ -1,4 +1,5 @@
 import S from '@sanity/desk-tool/structure-builder';
+import Iframe from 'sanity-plugin-iframe-pane'
 
 import {
   RiHome4Line,
@@ -7,6 +8,7 @@ import {
 } from 'react-icons/ri';
 import { ImNewspaper } from 'react-icons/im';
 import { FaGlobeEurope } from 'react-icons/fa';
+import resolvePreviewUrl from './utils/resolvePreviewUrl';
 
 export default () =>
   S.list()
