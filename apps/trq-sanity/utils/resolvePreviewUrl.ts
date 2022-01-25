@@ -7,13 +7,13 @@ export default function resolvePreviewUrl(document) {
     console.log('No preview site url provided');
   }
 
-  if (!document.slug.current) {
-    console.log('No slug has been provided');
+  if (!document._id) {
+    console.log('No ID has been provided');
   }
 
   return `${
     process.env.SANITY_STUDIO_PREVIEW_SITE
-  }/api/preview/preview-page?slug=${document.slug.current}&secret=${
+  }/api/preview/preview-page?id=${document._id}&secret=${
     process.env.SANITY_STUDIO_PREVIEW_SECRET
   }`;
 }
