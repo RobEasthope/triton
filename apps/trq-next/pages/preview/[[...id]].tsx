@@ -6,8 +6,6 @@ import { Home, HomeProps } from '@/UI/pages/Home/Home';
 import { Loading } from '@/UI/base/app/Loading/Loading';
 import {
   previewAnyPageByIdQuery,
-  anyPageBySlugQuery,
-  pageSlugsQuery,
   pageIdsQuery,
 } from '@/UI/pages/Page/Page.queries';
 import { globalsQuery } from '@/TRQ/sanity-api/queries';
@@ -17,7 +15,6 @@ import {
   overlayDrafts,
   sanityClient,
 } from '@/UTILS/sanity-api/sanity.server';
-import { selectSanityQuery } from '@/TRQ/sanity-api/selectSanityQuery';
 import { GlobalMetadata } from '@/UI/types/sanity-schema';
 import { HeaderProps } from '@/UI/navigation/Header/Header';
 
