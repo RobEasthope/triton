@@ -19,8 +19,6 @@ export const getDefaultDocumentNode = () => {
       .options({
         // Required: Accepts an async function
         url: (doc) => resolvePreviewUrl(doc),
-        // OR a string
-        // url: `https://sanity.io`,
         // Optional: Set the default size
         defaultSize: `mobile`, // default `desktop`
         // Optional: Add a reload button, or reload on new document revisions
