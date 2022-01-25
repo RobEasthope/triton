@@ -38,7 +38,9 @@ export default async function (
   // Redirect to the path from the fetched page
   // We don't redirect to req.query.slug as that might lead to open redirect vulnerabilities
   res.writeHead(307, {
-    Location: `/preview/${id as string}`,
+    Location: `/preview/${id as string}?key=${
+      process.env.SANITY_STUDIO_PREVIEW_SECRET as string
+    }`,
   });
   res.end();
 }
