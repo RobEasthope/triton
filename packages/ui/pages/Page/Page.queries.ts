@@ -17,7 +17,7 @@ export const anyPageBySlugQuery = groq`
   }
 `;
 
-export const previewAnyPageBySlugQuery = groq`
+export const previewAnyPageByIdQuery = groq`
   *[_type in ["Page", "Home"] && _id == $id]{
      ...,
     "sections": rawSections[]{
@@ -40,5 +40,10 @@ export const pageSlugsQuery = groq`
     slug {
       current
     },
+  }
+`;
+export const pageIdsQuery = groq`
+  *[_type == "Page" || _type == "Home" && defined(slug.current)]{
+    _id,
   }
 `;
