@@ -20,7 +20,7 @@ export const getDefaultDocumentNode = () => {
         // Required: Accepts an async function
         url: (doc) => resolvePreviewUrl(doc),
         // Optional: Set the default size
-        defaultSize: `mobile`, // default `desktop`
+        defaultSize: `desktop`, // default `desktop`
         // Optional: Add a reload button, or reload on new document revisions
         reload: {
           button: true, // default `undefined`
