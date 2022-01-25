@@ -9,7 +9,6 @@ import {
   pageIdsQuery,
 } from '@/UI/pages/Page/Page.queries';
 import { globalsQuery } from '@/TRQ/sanity-api/queries';
-import { usePreviewSubscription } from '@/UTILS/sanity-api/sanity-utils';
 import {
   getClient,
   overlayDrafts,
@@ -29,14 +28,6 @@ type PageBySlugProps = {
 export default function PageBySlug({ data, preview = false }: PageBySlugProps) {
   const router = useRouter();
   const { isFallback } = router;
-
-  const {
-    data: { page },
-  } = usePreviewSubscription(previewAnyPageByIdQuery, {
-    params: { id: data?.page?._id },
-    initialData: data,
-    // enabled: preview && slug,
-  });
 
   if (data.page === null) {
     return <Custom404 />;
