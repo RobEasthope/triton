@@ -14,14 +14,14 @@ export default async function (
     return res.status(401).json({ message: 'Invalid token' });
   }
 
-  // console.log(req?.query);
+  // Get id from request query
+  const id = req?.query?.id;
 
-  // const { sanityQuery, queryParams } = selectSanityQuery(params.slug, locale);
   // Check if the page with the given `slug` exists
   const pageData: PageProps | HomeProps = await previewClient.fetch(
     previewAnyPageByIdQuery,
     {
-      id: req?.query?.id,
+      id,
     }
   );
 
@@ -38,7 +38,7 @@ export default async function (
   // Redirect to the path from the fetched page
   // We don't redirect to req.query.slug as that might lead to open redirect vulnerabilities
   res.writeHead(307, {
-    Location: `/preview/${page?._id}`,
+    Location: `/preview/${id as string}`,
   });
   res.end();
 }
