@@ -17,15 +17,14 @@ import {
 import { GlobalMetadata } from '@/UI/types/sanity-schema';
 import { HeaderProps } from '@/UI/navigation/Header/Header';
 
-type PageBySlugProps = {
+type PreviewPageBySlugProps = {
   data: {
     page: PageProps | HomeProps;
     globals: { header: HeaderProps; metadata: GlobalMetadata };
   };
-  preview: boolean;
 };
 
-export default function PageBySlug({ data, preview = false }: PageBySlugProps) {
+export default function PageBySlug({ data }: PreviewPageBySlugProps) {
   const router = useRouter();
   const { isFallback } = router;
 
@@ -56,10 +55,10 @@ export const getStaticPaths = async () => {
   ];
 
   for (const page of pages) {
-    const id = page?._id;
+    const id = [page?._id];
 
     paths.push({
-      params: { id: [page?._id] },
+      params: { id },
     });
   }
 
