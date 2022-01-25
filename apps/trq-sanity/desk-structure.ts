@@ -10,6 +10,29 @@ import { ImNewspaper } from 'react-icons/im';
 import { FaGlobeEurope } from 'react-icons/fa';
 import resolvePreviewUrl from './utils/resolvePreviewUrl';
 
+export const getDefaultDocumentNode = () => {
+  // Return all documents with just 1 view: the form
+  return S.document().views([
+    S.view.form(),
+    S.view
+      .component(Iframe)
+      .options({
+        // Required: Accepts an async function
+        url: (doc) => resolvePreviewUrl(doc),
+        // OR a string
+        // url: `https://sanity.io`,
+        // Optional: Set the default size
+        defaultSize: `mobile`, // default `desktop`
+        // Optional: Add a reload button, or reload on new document revisions
+        reload: {
+          button: true, // default `undefined`
+          revision: true, // default `undefined`
+        },
+      })
+      .title('Preview'),
+  ])
+}
+
 export default () =>
   S.list()
     .id('__root__')
@@ -65,3 +88,4 @@ export default () =>
             ])
         ),
     ]);
+  
