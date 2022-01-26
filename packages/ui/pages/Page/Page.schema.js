@@ -1,3 +1,7 @@
+import {
+  orderRankField,
+  orderRankOrdering,
+} from '@sanity/orderable-document-list';
 import { SECTIONS_INDEX } from '../../content/SECTIONS_INDEX';
 import { headingUI } from '../../utils/sanity/headingUI';
 
@@ -71,7 +75,9 @@ export default {
           'Metadata image has not been set and will fall back to global metadata settings'
         ),
     },
+    orderRankField({ type: 'category', hidden: false }),
   ],
+  orderings: [orderRankOrdering],
   preview: {
     select: {
       title: 'title',

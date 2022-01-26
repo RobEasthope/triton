@@ -1,5 +1,6 @@
 import S from '@sanity/desk-tool/structure-builder';
-import Iframe from 'sanity-plugin-iframe-pane'
+import Iframe from 'sanity-plugin-iframe-pane';
+import {orderableDocumentListDeskItem} from '@sanity/orderable-document-list'
 
 import {
   RiHome4Line,
@@ -44,11 +45,11 @@ export default () =>
             .schemaType('Home')
             .documentId('Home')
         ),
-      S.listItem()
-        .title('Pages')
-        .icon(ImNewspaper)
-        .schemaType('Page')
-        .child(S.documentTypeList('Page').title('Pages')),
+      orderableDocumentListDeskItem({
+        type: 'Page',
+        title: 'Pages',
+        icon: ImNewspaper
+      }),
       S.divider(),
       S.listItem()
         .title('Navigation')
