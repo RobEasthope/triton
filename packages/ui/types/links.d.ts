@@ -1,7 +1,7 @@
 import { SanityReference, Page, Home } from 'types/sanity-schema';
 
 export type ExternalLinkWithTitleProp = {
-  _type: 'externalLinkWithTitle';
+  _type: 'ExternalLinkWithTitle';
   _key: string;
   title: string;
   to?: Page | Home;
@@ -9,7 +9,7 @@ export type ExternalLinkWithTitleProp = {
 };
 
 export type ExternalLinkProp = {
-  _type: 'externalLinkSansTitle';
+  _type: 'ExternalLinkSansTitle';
   _key: string;
   newTab: boolean;
   to?: Page | Home;
@@ -17,7 +17,7 @@ export type ExternalLinkProp = {
 };
 
 export type InternalLinkWithTitleProp = {
-  _type: 'internalLinkWithTitle';
+  _type: 'InternalLinkWithTitle';
   _key: string;
   internalUID: SanityReference<Page | Home>;
   title: string;
@@ -25,7 +25,7 @@ export type InternalLinkWithTitleProp = {
 };
 
 export type InternalLinkProp = {
-  _type: 'internalLinkSansTitle';
+  _type: 'InternalLinkSansTitle';
   _key: string;
   internalUID: SanityReference<Page | Home>;
   to: Page | Home;
