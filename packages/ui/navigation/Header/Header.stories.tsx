@@ -29,7 +29,7 @@ Vanilla.args = {
   navigation: [
     {
       _key: '7c4bc9de2735',
-      _type: 'internalLinkWithTitle',
+      _type: 'InternalLinkWithTitle',
       title: 'Home',
       to: {
         slug: {
@@ -40,7 +40,7 @@ Vanilla.args = {
     },
     {
       _key: '10514eca5a00',
-      _type: 'internalLinkWithTitle',
+      _type: 'InternalLinkWithTitle',
       title: 'About',
       to: {
         slug: {
@@ -51,7 +51,7 @@ Vanilla.args = {
     },
     {
       _key: 'a263b6d3ac5c',
-      _type: 'externalLinkWithTitle',
+      _type: 'ExternalLinkWithTitle',
       title: 'External',
       url: 'https://placeholder.com',
     },
