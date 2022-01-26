@@ -56,7 +56,7 @@ export const Header = ({
     <MaxPageWidth as="nav">
       <HeaderLayout as="div">
         <StyledHomeLink>
-          <Picture asset={logo} mode="contain" maxWidth={32} />
+          <Picture asset={logo} mode="responsive" maxWidth={32} />
         </StyledHomeLink>
 
         <LargeNavigation as="ul">
