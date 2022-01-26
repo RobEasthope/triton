@@ -1,7 +1,25 @@
-import { ExternalLinkProp, ExternalLinkWithTitleProp } from '@/UI/types/links';
+import { SanityReference, Page, Home } from 'types/sanity-schema';
 
+// Schema props
+export type ExternalLinkWithTitleSchemaProps = {
+  _type: 'ExternalLinkWithTitle';
+  _key: string;
+  title: string;
+  to?: Page | Home;
+  url: string;
+};
+
+export type ExternalLinkSchemaProps = {
+  _type: 'ExternalLinkSansTitle';
+  _key: string;
+  newTab: boolean;
+  to?: Page | Home;
+  url: string;
+};
+
+// Component props
 export type ExternalLinkProps = {
-  link: ExternalLinkWithTitleProp | ExternalLinkProp;
+  link: ExternalLinkWithTitleSchemaProps | ExternalLinkSchemaProps;
   className?: string;
   children: any;
   onClick?: VoidFunction;
