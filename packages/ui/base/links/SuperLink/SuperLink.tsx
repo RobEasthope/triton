@@ -1,18 +1,20 @@
 import {
-  ExternalLinkProp,
-  ExternalLinkWithTitleProp,
-  InternalLinkProp,
-  InternalLinkWithTitleProp,
-} from '@/UI/types/links';
-import { ExternalLink } from '@/UI/base/links/ExternalLink/ExternalLink';
-import { InternalLink } from '@/UI/base/links/InternalLink/InternalLink';
+  ExternalLink,
+  ExternalLinkSchemaProps,
+  ExternalLinkWithTitleSchemaProps,
+} from '@/UI/base/links/ExternalLink/ExternalLink';
+import {
+  InternalLink,
+  InternalLinkSchemaProps,
+  InternalLinkWithTitleSchemaProps,
+} from '@/UI/base/links/InternalLink/InternalLink';
 
 type SuperLinkProp = {
   link:
-    | ExternalLinkProp
-    | InternalLinkProp
-    | ExternalLinkWithTitleProp
-    | InternalLinkWithTitleProp;
+    | ExternalLinkSchemaProps
+    | InternalLinkSchemaProps
+    | ExternalLinkWithTitleSchemaProps
+    | InternalLinkWithTitleSchemaProps;
   className?: string;
   children: unknown;
   onClick?: VoidFunction;
@@ -25,14 +27,14 @@ export const SuperLink = ({
   onClick,
 }: SuperLinkProp) => {
   switch (link._type) {
-    case 'internalLinkWithTitle':
+    case 'InternalLinkWithTitle':
       return (
         <InternalLink link={link} className={className} onClick={onClick}>
           {children}
         </InternalLink>
       );
 
-    case 'externalLinkWithTitle':
+    case 'ExternalLinkWithTitle':
       return (
         <ExternalLink link={link} className={className} onClick={onClick}>
           {children}
