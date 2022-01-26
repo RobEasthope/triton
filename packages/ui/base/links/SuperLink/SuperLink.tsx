@@ -25,14 +25,14 @@ export const SuperLink = ({
   onClick,
 }: SuperLinkProp) => {
   switch (link._type) {
-    case 'internalLinkWithTitle':
+    case 'InternalLinkWithTitle':
       return (
         <InternalLink link={link} className={className} onClick={onClick}>
           {children}
         </InternalLink>
       );
 
-    case 'externalLinkWithTitle':
+    case 'ExternalLinkWithTitle':
       return (
         <ExternalLink link={link} className={className} onClick={onClick}>
           {children}
