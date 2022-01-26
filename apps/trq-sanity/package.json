@@ -24,6 +24,7 @@
     "@sanity/default-layout": "^2.25.0",
     "@sanity/default-login": "^2.24.0",
     "@sanity/desk-tool": "^2.25.0",
+    "@sanity/orderable-document-list": "^0.0.4",
     "@sanity/production-preview": "^2.15.0",
     "@sanity/vision": "^2.25.0",
     "dayjs": "^1.10.7",

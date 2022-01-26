@@ -18,7 +18,8 @@
     "asset-source-unsplash",
     "note-field",
     "@sanity/production-preview",
-    "iframe-pane"
+    "iframe-pane",
+    "@sanity/orderable-document-list"
   ],
   "env": {
     "development": {
