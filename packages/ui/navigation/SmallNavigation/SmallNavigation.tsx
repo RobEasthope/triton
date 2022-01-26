@@ -4,8 +4,8 @@ import { styled } from '@/UI/styles/stitches.config';
 import { Header as rawHeaderProps } from '@/UI/types/sanity-schema';
 
 import { SuperLink } from '@/UI/base/links/SuperLink/SuperLink';
-import { InternalLinkWithTitleSchemaProps } from 'base/links/InternalLink/InternalLink';
-import { ExternalLinkWithTitleSchemaProps } from 'base/links/ExternalLink/ExternalLink';
+import { InternalLinkWithTitleSchemaProps } from '@/UI/base/links/InternalLink/InternalLink';
+import { ExternalLinkWithTitleSchemaProps } from '@/UI/base/links/ExternalLink/ExternalLink';
 
 // Styles
 export const DialogContent = styled(DialogPrimative.Content, {

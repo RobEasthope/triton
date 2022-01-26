@@ -6,8 +6,8 @@ import { Picture } from '@/UI/base/media/Picture/Picture';
 import { SuperLink } from '@/UI/base/links/SuperLink/SuperLink';
 import { SmallNavigation } from '@/UI/navigation/SmallNavigation/SmallNavigation';
 import { HomeLink } from '@/UI/base/links/HomeLink/HomeLink';
-import { ExternalLinkWithTitleSchemaProps } from 'base/links/ExternalLink/ExternalLink';
-import { InternalLinkWithTitleSchemaProps } from 'base/links/InternalLink/InternalLink';
+import { ExternalLinkWithTitleSchemaProps } from '@/UI/base/links/ExternalLink/ExternalLink';
+import { InternalLinkWithTitleSchemaProps } from '@/UI/base/links/InternalLink/InternalLink';
 
 // Styles
 export const HeaderLayout = styled('div', {
