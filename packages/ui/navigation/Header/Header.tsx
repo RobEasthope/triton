@@ -1,16 +1,13 @@
+import Link from 'next/link';
 import { Header as rawHeaderProps } from '@/UI/types/sanity-schema';
-import {
-  ExternalLinkWithTitleProp,
-  InternalLinkWithTitleProp,
-} from '@/UI/types/links';
 import { styled } from '@/UI/styles/stitches.config';
-
 import { MaxPageWidth } from '@/UI/base/layout/MaxPageWidth/MaxPageWidth';
 import { PaddedComponent } from '@/UI/base/layout/PaddedComponent/PaddedComponent';
 import { Picture } from '@/UI/base/media/Picture/Picture';
 import { SuperLink } from '@/UI/base/links/SuperLink/SuperLink';
 import { SmallNavigation } from '@/UI/navigation/SmallNavigation/SmallNavigation';
-import { HomeLink } from '@/UI/base/links/HomeLink/HomeLink';
+import { ExternalLinkWithTitleSchemaProps } from '@/UI/base/links/ExternalLink/ExternalLink';
+import { InternalLinkWithTitleSchemaProps } from '@/UI/base/links/InternalLink/InternalLink';
 
 // Styles
 export const HeaderLayout = styled('div', {
@@ -19,7 +16,7 @@ export const HeaderLayout = styled('div', {
   justifyContent: 'space-between',
 });
 
-export const StyledHomeLink = styled(HomeLink, {
+export const StyledHomeLink = styled('span', {
   position: 'relative',
   display: 'inline-block',
   width: '32px',
@@ -44,7 +41,10 @@ export const LargeNavigation = styled('ul', {
 
 // Types
 export interface HeaderProps extends rawHeaderProps {
-  navigation?: [ExternalLinkWithTitleProp, InternalLinkWithTitleProp];
+  navigation?: [
+    ExternalLinkWithTitleSchemaProps,
+    InternalLinkWithTitleSchemaProps
+  ];
 }
 
 // Markup
@@ -56,7 +56,11 @@ export const Header = ({
     <MaxPageWidth as="nav">
       <HeaderLayout as="div">
         <StyledHomeLink>
-          <Picture asset={logo} mode="contain" maxWidth={32} />
+          <Link href="/">
+            <a>
+              <Picture asset={logo} mode="responsive" maxWidth={32} />
+            </a>
+          </Link>
         </StyledHomeLink>
 
         <LargeNavigation as="ul">
