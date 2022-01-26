@@ -2,12 +2,10 @@ import { RiMenuLine } from 'react-icons/ri';
 import * as DialogPrimative from '@radix-ui/react-dialog';
 import { styled } from '@/UI/styles/stitches.config';
 import { Header as rawHeaderProps } from '@/UI/types/sanity-schema';
-import {
-  ExternalLinkWithTitleProp,
-  InternalLinkWithTitleProp,
-} from '@/UI/types/links';
 
 import { SuperLink } from '@/UI/base/links/SuperLink/SuperLink';
+import { InternalLinkWithTitleSchemaProps } from 'base/links/InternalLink/InternalLink';
+import { ExternalLinkWithTitleSchemaProps } from 'base/links/ExternalLink/ExternalLink';
 
 // Styles
 export const DialogContent = styled(DialogPrimative.Content, {
@@ -40,7 +38,10 @@ export const CloseSmallNavigationButton = styled(DialogPrimative.Close, {
 
 // Types
 export interface SmallNavigationProps extends rawHeaderProps {
-  navigation?: [ExternalLinkWithTitleProp, InternalLinkWithTitleProp];
+  navigation?: [
+    ExternalLinkWithTitleSchemaProps,
+    InternalLinkWithTitleSchemaProps
+  ];
 }
 
 // Markup

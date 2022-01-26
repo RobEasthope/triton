@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { SanityReference, Page, Home } from 'types/sanity-schema';
 
 // Schema props
-export type InternalLinkWithTitleSchemaProp = {
+export type InternalLinkWithTitleSchemaProps = {
   _type: 'InternalLinkWithTitle';
   _key: string;
   internalUID: SanityReference<Page | Home>;
@@ -10,7 +10,7 @@ export type InternalLinkWithTitleSchemaProp = {
   to: Page | Home;
 };
 
-export type InternalLinkSchemaProp = {
+export type InternalLinkSchemaProps = {
   _type: 'InternalLinkSansTitle';
   _key: string;
   internalUID: SanityReference<Page | Home>;
@@ -19,7 +19,7 @@ export type InternalLinkSchemaProp = {
 
 // Component props
 export type InternalLinkProps = {
-  link: InternalLinkWithTitleSchemaProp | InternalLinkSchemaProp;
+  link: InternalLinkWithTitleSchemaProps | InternalLinkSchemaProps;
   className?: string;
   children: any;
   onClick?: VoidFunction;

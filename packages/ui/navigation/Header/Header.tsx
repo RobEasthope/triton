@@ -1,16 +1,13 @@
 import { Header as rawHeaderProps } from '@/UI/types/sanity-schema';
-import {
-  ExternalLinkWithTitleProp,
-  InternalLinkWithTitleProp,
-} from '@/UI/types/links';
 import { styled } from '@/UI/styles/stitches.config';
-
 import { MaxPageWidth } from '@/UI/base/layout/MaxPageWidth/MaxPageWidth';
 import { PaddedComponent } from '@/UI/base/layout/PaddedComponent/PaddedComponent';
 import { Picture } from '@/UI/base/media/Picture/Picture';
 import { SuperLink } from '@/UI/base/links/SuperLink/SuperLink';
 import { SmallNavigation } from '@/UI/navigation/SmallNavigation/SmallNavigation';
 import { HomeLink } from '@/UI/base/links/HomeLink/HomeLink';
+import { ExternalLinkWithTitleSchemaProps } from 'base/links/ExternalLink/ExternalLink';
+import { InternalLinkWithTitleSchemaProps } from 'base/links/InternalLink/InternalLink';
 
 // Styles
 export const HeaderLayout = styled('div', {
@@ -44,7 +41,10 @@ export const LargeNavigation = styled('ul', {
 
 // Types
 export interface HeaderProps extends rawHeaderProps {
-  navigation?: [ExternalLinkWithTitleProp, InternalLinkWithTitleProp];
+  navigation?: [
+    ExternalLinkWithTitleSchemaProps,
+    InternalLinkWithTitleSchemaProps
+  ];
 }
 
 // Markup
