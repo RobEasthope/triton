@@ -25,71 +25,50 @@ type PreviewPageBySlugProps = {
 };
 
 export default function PageBySlug({ data }: PreviewPageBySlugProps) {
-  const router = useRouter();
-  const { isFallback } = router;
-
   if (data.page === null) {
     return <Custom404 />;
   }
 
   return (
     <>
-      {isFallback && <Loading />}
-
-      {!isFallback && data?.page?._type === 'Page' && (
+      {data?.page?._type === 'Page' && (
         <Page page={data?.page} globals={data?.globals} />
       )}
 
-      {!isFallback && data?.page?._type === 'Home' && (
+      {data?.page?._type === 'Home' && (
         <Home page={data?.page} globals={data?.globals} />
       )}
     </>
   );
 }
 
-export const getStaticPaths = async () => {
-  const paths = [];
-
-  const pages = (await sanityClient.fetch(pageIdsQuery)) as [
-    PageProps | HomeProps
-  ];
-
-  for (const page of pages) {
-    const id = [page?._id];
-
-    paths.push({
-      params: { id },
-    });
-  }
-
-  return {
-    paths,
-    fallback: 'blocking',
-  };
-};
-
-export const getStaticProps = async ({
-  params,
+export const getServerSideProps = async ({
+  query,
   preview = false,
 }: {
-  params: { id: string[] };
+  query: { id: string[]; key: string };
   preview: boolean;
 }) => {
-  const globals: GlobalMetadata = await getClient(preview).fetch(globalsQuery);
+  // If preview key is invalid return blank props.data.page object so 404 UI kicks in
+  if (query?.key !== process.env.SANITY_STUDIO_PREVIEW_KEY) {
+    return {
+      props: {
+        data: { page: null },
+      },
+    };
+  }
 
-  // const { sanityQuery, queryParams } = selectSanityQuery(params?.slug);
+  const globals: GlobalMetadata = await getClient(preview).fetch(globalsQuery);
 
   const page = overlayDrafts(
     await getClient(preview).fetch(previewAnyPageByIdQuery, {
-      id: params?.id[0],
+      id: query?.id[0],
     })
   );
 
   return {
     props: {
       data: { page: (page[0] as PageProps | HomeProps) || null, globals },
-      preview,
     },
-    revalidate: 60,
   };
 };
