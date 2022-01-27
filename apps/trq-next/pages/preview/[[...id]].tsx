@@ -47,16 +47,26 @@ export default function PageBySlug({ data }: PreviewPageBySlugProps) {
   );
 }
 
-export async function getStaticPaths() {
+export const getStaticPaths = async () => {
+  const paths = [];
+
   const pages = (await sanityClient.fetch(pageIdsQuery)) as [
     PageProps | HomeProps
   ];
 
+  for (const page of pages) {
+    const id = [page?._id];
+
+    paths.push({
+      params: { id },
+    });
+  }
+
   return {
-    paths: pages.map((page) => `/${page?._id}`),
-    fallback: true,
+    paths,
+    fallback: 'blocking',
   };
-}
+};
 
 export const getStaticProps = async ({
   params,
