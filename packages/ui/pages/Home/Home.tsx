@@ -22,12 +22,12 @@ export const Home = ({
     <Metadata page={page} globalMetadata={globals?.metadata} />
 
     <FixedFooterLayout>
-      {Object.keys(globals?.header)?.length > 0 ? (
+      {globals?.header && (
         <Header
           logo={globals?.header?.logo}
           navigation={globals?.header?.navigation}
         />
-      ) : null}
+      )}
 
       <MainContentLayout as="main">
         {page?.sections && <RenderSections sections={page?.sections} />}
