@@ -24,7 +24,7 @@ export function BlurrableImage({
 
   React.useEffect(() => {
     if (!fullSizeImageRef.current) return;
-    // if (fullSizeImageRef.current.complete) return;
+    if (fullSizeImageRef.current.complete) return;
 
     let current = true;
     fullSizeImageRef.current.addEventListener('load', () => {
