@@ -10,7 +10,7 @@ export default async function (
 ): Promise<void> {
   // Check the secret and next parameters
   // This secret should only be known to this API route and the CMS
-  if (req.query.secret !== process.env.SANITY_PREVIEW_SECRET) {
+  if (req.query.secret !== process.env.SANITY_STUDIO_PREVIEW_KEY) {
     return res.status(401).json({ message: 'Invalid token' });
   }
 
@@ -38,7 +38,9 @@ export default async function (
   // Redirect to the path from the fetched page
   // We don't redirect to req.query.slug as that might lead to open redirect vulnerabilities
   res.writeHead(307, {
-    Location: `/preview/${id as string}`,
+    Location: `/preview/${id as string}?key=${
+      process.env.SANITY_STUDIO_PREVIEW_KEY
+    }`,
   });
   res.end();
 }
