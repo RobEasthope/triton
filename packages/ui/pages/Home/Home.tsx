@@ -3,7 +3,7 @@ import { Header, HeaderProps } from '@/UI/navigation/Header/Header';
 import { FixedFooterLayout } from '@/UI/base/layout/FixedFooterLayout/FixedFooterLayout';
 import { MainContentLayout } from '@/UI/base/layout/MainContentLayout/MainContentLayout';
 import { RenderSections } from '@/UI/base/app/RenderSections/RenderSections';
-import { Metadata } from '@/UI/base/app/Metadata/Metadata';
+import { NextMetadata } from '@/UI/base/app/Metadata/NextMetadata';
 import { Home as rawHomeProps, GlobalMetadata } from '@/UI/types/sanity-schema';
 import { ExampleSectionProps } from '@/UI/content/ExampleSection/ExampleSection';
 
@@ -26,7 +26,7 @@ export const Home = ({
 
   return (
     <>
-      <Metadata page={page} globalMetadata={metadata} />
+      <NextMetadata page={page} globalMetadata={metadata} />
 
       <FixedFooterLayout>
         {header && (
