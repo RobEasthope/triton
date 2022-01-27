@@ -1,18 +1,14 @@
 import Custom404 from 'pages/404';
-import { useRouter } from 'next/router';
 
 import { Page, PageProps } from '@/UI/pages/Page/Page';
 import { Home, HomeProps } from '@/UI/pages/Home/Home';
-import { Loading } from '@/UI/base/app/Loading/Loading';
 import {
   previewAnyPageByIdQuery,
-  pageIdsQuery,
 } from '@/UI/pages/Page/Page.queries';
 import { globalsQuery } from '@/TRQ/sanity-api/queries';
 import {
   getClient,
   overlayDrafts,
-  sanityClient,
 } from '@/UTILS/sanity-api/sanity.server';
 import { GlobalMetadata } from '@/UI/types/sanity-schema';
 import { HeaderProps } from '@/UI/navigation/Header/Header';
