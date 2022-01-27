@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic';
-import { ExampleSectionProps } from 'blocks/ExampleSection/ExampleSection';
+import { ExampleSectionProps } from '@/UI/blocks/ExampleSection/ExampleSection';
 
 const ExampleSection = dynamic(
   () => import('../../../blocks/ExampleSection/ExampleSection')
