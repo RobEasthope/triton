@@ -17,22 +17,28 @@ export const Page = ({
 }: {
   page: PageProps;
   globals: { header: HeaderProps; metadata: GlobalMetadata };
-}) => (
-  <>
-    <Metadata page={page} globalMetadata={globals?.metadata} />
-    <FixedFooterLayout>
-      {Object.keys(globals?.header)?.length > 0 ? (
-        <Header
-          logo={globals?.header?.logo}
-          navigation={globals?.header?.navigation}
-        />
-      ) : null}
+}) => {
+  // Globals props
+  const { header, metadata } = globals;
 
-      <MainContentLayout as="main">
-        {page?.sections && <RenderSections sections={page?.sections} />}
-      </MainContentLayout>
+  // Page props
+  const { sections } = page;
 
-      <Footer />
-    </FixedFooterLayout>
-  </>
-);
+  return (
+    <>
+      <Metadata page={page} globalMetadata={metadata} />
+
+      <FixedFooterLayout>
+        {header && (
+          <Header logo={header?.logo} navigation={header?.navigation} />
+        )}
+
+        <MainContentLayout as="main">
+          {sections && <RenderSections sections={sections} />}
+        </MainContentLayout>
+
+        <Footer />
+      </FixedFooterLayout>
+    </>
+  );
+};
