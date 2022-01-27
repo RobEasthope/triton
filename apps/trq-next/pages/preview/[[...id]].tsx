@@ -2,14 +2,9 @@ import Custom404 from 'pages/404';
 
 import { Page, PageProps } from '@/UI/pages/Page/Page';
 import { Home, HomeProps } from '@/UI/pages/Home/Home';
-import {
-  previewAnyPageByIdQuery,
-} from '@/UI/pages/Page/Page.queries';
+import { previewAnyPageByIdQuery } from '@/UI/pages/Page/Page.queries';
 import { globalsQuery } from '@/TRQ/sanity-api/queries';
-import {
-  getClient,
-  overlayDrafts,
-} from '@/UTILS/sanity-api/sanity.server';
+import { getClient, overlayDrafts } from '@/UTILS/sanity-api/sanity.server';
 import { GlobalMetadata } from '@/UI/types/sanity-schema';
 import { HeaderProps } from '@/UI/navigation/Header/Header';
 
