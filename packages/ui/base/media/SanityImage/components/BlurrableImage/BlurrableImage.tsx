@@ -15,20 +15,20 @@ export function BlurrableImage({
   blurredAssetUrl,
   alt,
 }: BlurrableImageProps) {
-  const [fullSizeImageLoaded, setFullSizeImageLoaded] = React.useState(false);
-  const fullSizeImageRef = React.useRef<HTMLImageElement>(null);
+  const [hiResImageLoaded, setFullSizeImageLoaded] = React.useState(false);
+  const hiResImageRef = React.useRef<HTMLImageElement>(null);
 
   useSSRLayoutEffect(() => {
-    if (fullSizeImageRef.current?.complete) setFullSizeImageLoaded(true);
+    if (hiResImageRef.current?.complete) setFullSizeImageLoaded(true);
   }, []);
 
   React.useEffect(() => {
-    if (!fullSizeImageRef.current) return;
-    if (fullSizeImageRef.current.complete) return;
+    if (!hiResImageRef.current) return;
+    if (hiResImageRef.current.complete) return;
 
     let current = true;
-    fullSizeImageRef.current.addEventListener('load', () => {
-      if (!fullSizeImageRef.current || !current) return;
+    hiResImageRef.current.addEventListener('load', () => {
+      if (!hiResImageRef.current || !current) return;
       setTimeout(() => {
         setFullSizeImageLoaded(true);
       }, 0);
@@ -37,12 +37,12 @@ export function BlurrableImage({
     return () => {
       current = false;
     };
-  }, [fullSizeImageRef, fullSizeImageLoaded]);
+  }, [hiResImageRef, hiResImageLoaded]);
 
-  const fullSizeImage = React.cloneElement(img, {
+  const hiResImage = React.cloneElement(img, {
     // @ts-expect-error no idea 🤷‍♂️
-    ref: fullSizeImageRef,
-    className: `${fullSizeImageLoaded ? 'show' : 'hide'}`,
+    ref: hiResImageRef,
+    className: `${hiResImageLoaded ? 'show' : 'hide'}`,
   });
 
   return (
@@ -52,10 +52,10 @@ export function BlurrableImage({
           src={blurredAssetUrl}
           className={img.props.className}
           alt={alt || ''}
-          visibility={fullSizeImageLoaded ? 'hide' : 'show'}
+          visibility={hiResImageLoaded ? 'hide' : 'show'}
         />
       )}
-      {fullSizeImage}
+      {hiResImage}
       <noscript>{img}</noscript>
     </>
   );
