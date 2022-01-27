@@ -4,17 +4,9 @@ import { useRouter } from 'next/router';
 import { Page, PageProps } from '@/UI/pages/Page/Page';
 import { Home, HomeProps } from '@/UI/pages/Home/Home';
 import { Loading } from '@/UI/base/app/Loading/Loading';
-import {
-  anyPageBySlugQuery,
-  pageSlugsQuery,
-} from '@/UI/pages/Page/Page.queries';
+import { pageSlugsQuery } from '@/UI/pages/Page/Page.queries';
 import { globalsQuery } from '@/TRQ/sanity-api/queries';
-import { usePreviewSubscription } from '@/UTILS/sanity-api/sanity-utils';
-import {
-  getClient,
-  overlayDrafts,
-  sanityClient,
-} from '@/UTILS/sanity-api/sanity.server';
+import { getClient, sanityClient } from '@/UTILS/sanity-api/sanity.server';
 import { selectSanityQuery } from '@/TRQ/sanity-api/selectSanityQuery';
 import { GlobalMetadata } from '@/UI/types/sanity-schema';
 import { HeaderProps } from '@/UI/navigation/Header/Header';
@@ -24,20 +16,11 @@ type PageBySlugProps = {
     page: PageProps | HomeProps;
     globals: { header: HeaderProps; metadata: GlobalMetadata };
   };
-  preview: boolean;
 };
 
-export default function PageBySlug({ data, preview = false }: PageBySlugProps) {
+export default function PageBySlug({ data }: PageBySlugProps) {
   const router = useRouter();
   const { isFallback } = router;
-
-  const {
-    data: { page },
-  } = usePreviewSubscription(anyPageBySlugQuery, {
-    params: { slug: data?.page?.slug },
-    initialData: data,
-    // enabled: preview && slug,
-  });
 
   if (data.page === null) {
     return <Custom404 />;
@@ -90,14 +73,14 @@ export const getStaticProps = async ({
 
   const { sanityQuery, queryParams } = selectSanityQuery(params?.slug);
 
-  const page = overlayDrafts(
-    await getClient(preview).fetch(sanityQuery, queryParams)
+  const page: PageProps | HomeProps = await getClient(preview).fetch(
+    sanityQuery,
+    queryParams
   );
 
   return {
     props: {
-      data: { page: (page[0] as PageProps | HomeProps) || null, globals },
-      preview,
+      data: { page: page || null, globals },
     },
     revalidate: 60,
   };
