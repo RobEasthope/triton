@@ -1,4 +1,4 @@
-import { ImageAssetProp } from '@/UI/base/media/Picture/Picture';
+import type { ImageAssetProp } from '@/UI/base/media/Picture/Picture';
 import { createImageUrlBuilder } from 'next-sanity';
 import { sanityConfig } from '@/UTILS/sanity-api/sanity-config';
 
