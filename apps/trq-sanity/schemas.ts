@@ -19,8 +19,8 @@ import ExampleText from '../../packages/ui/base/formatted-text/ExampleFormattedT
 // Settings
 import GlobalMetadata from '../../packages/ui/base/app/Metadata/GlobalMetadata.schema';
 
-// Content
-import ExampleSection from '../../packages/ui/content/ExampleSection/ExampleSection.schema';
+// Blocks
+import ExampleSection from '../../packages/ui/blocks/ExampleSection/ExampleSection.schema';
 
 // Pages
 import Home from '../../packages/ui/pages/Home/Home.schema';

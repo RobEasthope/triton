@@ -5,7 +5,7 @@ import { MainContentLayout } from '@/UI/base/layout/MainContentLayout/MainConten
 import { NextMetadata } from '@/UI/base/app/Metadata/NextMetadata';
 import { RenderSections } from '@/UI/base/app/RenderSections/RenderSections';
 import { Page as rawPageProps, GlobalMetadata } from '@/UI/types/sanity-schema';
-import { ExampleSectionProps } from '@/UI/content/ExampleSection/ExampleSection';
+import { ExampleSectionProps } from 'blocks/ExampleSection/ExampleSection';
 
 export interface PageProps extends rawPageProps {
   sections: [ExampleSectionProps];

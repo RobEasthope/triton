@@ -1,4 +1,4 @@
-import { SECTIONS_INDEX } from '../../content/SECTIONS_INDEX';
+import { SECTIONS_INDEX } from '../../blocks/SECTIONS_INDEX';
 import { headingUI } from '../../utils/sanity/headingUI';
 
 export default {
