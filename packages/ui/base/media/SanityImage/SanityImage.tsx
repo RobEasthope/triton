@@ -6,8 +6,10 @@ import {
   SanityReference,
 } from '@/UI/types/sanity-schema';
 import { sanityConfig } from '@/UTILS/sanity-api/sanity-config';
-import { BlurrableImage } from '../BlurrableImage/BlurrableImage';
-import { FadingImage, Wrapper } from './SanityImage.styles';
+import { BlurrableImage } from './components/BlurrableImage/BlurrableImage';
+import { HighResImage } from './components/HighResImage/HighResImage';
+import { Wrapper } from './SanityImage.styles';
+import { VectorImage } from './components/VectorImage/VectorImage';
 
 // TYPES
 export interface ImageAssetProp {
@@ -41,14 +43,11 @@ export const SanityImage = ({
   }
 
   // VECTORS
-  // Render a basic img element if asset is an svg
+  // Render a basic img element if the asset is an svg
   const assetRef = asset?.asset?._ref;
 
   if (assetRef.slice(-4) === '-svg') {
-    const vectorImageUrl = imageBuilder.image(asset).url();
-
-    // eslint-disable-next-line @next/next/no-img-element
-    return <img src={vectorImageUrl || ''} alt={alt || ''} />;
+    return <VectorImage asset={asset || ''} alt={alt || ''} />;
   }
 
   // BITMAPS
@@ -59,7 +58,7 @@ export const SanityImage = ({
   const minAssetWidth = 100;
   const BLURRING = 100;
 
-  const blurredImage = (): string => {
+  const blurredImageAsset = (): string => {
     if (!aspectRatio) {
       // Generate url and push to array
       return imageBuilder
@@ -78,7 +77,7 @@ export const SanityImage = ({
       .url() as string;
   };
 
-  const sizes = () => {
+  const srcSetSizes = () => {
     let size = minAssetWidth;
     const widths = [];
     while (size <= roundedUpMaxWidth) {
@@ -92,7 +91,7 @@ export const SanityImage = ({
     return `(max-width: ${maxWidth}px) ${String(widths.map((width) => width))}`;
   };
 
-  const srcSet = () => {
+  const srcSetAssets = () => {
     let size = minAssetWidth;
     const assetUrls = [];
 
@@ -132,8 +131,8 @@ export const SanityImage = ({
   return (
     <Wrapper mode={mode}>
       <BlurrableImage
-        img={<FadingImage sizes={sizes()} srcSet={srcSet()} />}
-        blurredAssetUrl={blurredImage()}
+        img={<HighResImage sizes={srcSetSizes()} srcSet={srcSetAssets()} />}
+        blurredAssetUrl={blurredImageAsset()}
         alt={alt}
       />
     </Wrapper>
