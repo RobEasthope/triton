@@ -1,5 +1,8 @@
 import S from '@sanity/desk-tool/structure-builder';
-import Iframe from 'sanity-plugin-iframe-pane'
+import Iframe from 'sanity-plugin-iframe-pane';
+import { toPlainText } from 'part:social-preview/utils';
+import SocialPreview from 'part:social-preview/component';
+
 
 import {
   RiHome4Line,
@@ -9,7 +12,6 @@ import {
 import { ImNewspaper } from 'react-icons/im';
 import { FaGlobeEurope } from 'react-icons/fa';
 import resolvePreviewUrl from './utils/resolvePreviewUrl';
-import SocialPreview from 'part:social-preview/component';
 
 export const getDefaultDocumentNode = () => {
   // Return all documents with just 1 view: the form
@@ -29,7 +31,21 @@ export const getDefaultDocumentNode = () => {
         },
       })
       .title('Preview'),
-    S.view.component(SocialPreview()).title('Social & SEO'),
+    S.view.component(SocialPreview({
+          // Overwrite prepareFunction to pick the right fields
+          prepareFunction: (
+            /* this object is the currently active document */
+            { metadataTitle, metadataDescription, title, metadataImage, slug } ,
+          ) => ({
+            title: metadataTitle || title,
+            description: metadataDescription || '',
+            siteUrl: 'https://triquetra.vercel.app/',
+            ogImage: metadataImage,
+            // Used by Google preview to render the full URL
+            // Note that this is a string, not an object (slug { current: string })
+            slug: slug?.current
+          }),
+        })).title('Social & SEO'),
   ])
 }
 
