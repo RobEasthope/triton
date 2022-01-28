@@ -26,16 +26,14 @@
           "NEXT_PUBLIC_SANITY_API_VERSION",
           "SANITY_API_TOKEN",
           "SANITY_STUDIO_PREVIEW_KEY"
-        ],
-        "outputs": [".next/**"]
+        ]
       },
       "trq-storybook": {
         "dependsOn": [
           "^build",
           "STORYBOOK_SANITY_PROJECT_ID",
           "STORYBOOK_SANITY_DATASET"
-        ],
-        "outputs": ["storybook-static/**"]
+        ]
       },
       "trq-sanity": {
         "dependsOn": [
@@ -46,8 +44,7 @@
           "SANITY_STUDIO_PREVIEW_SITE",
           "SANITY_STUDIO_API_TOKEN",
           "SANITY_STUDIO_PREVIEW_KEY"
-        ],
-        "outputs": ["storybook-static/**"]
+        ]
       },
       "test": {
         "dependsOn": [
