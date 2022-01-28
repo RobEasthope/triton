@@ -1,3 +1,4 @@
+import { ALL_PAGES_TYPES } from '../../utils/sanity/ALL_PAGE_TYPES';
 import { headingUI } from '../../utils/sanity/headingUI';
 
 export default {
@@ -5,6 +6,16 @@ export default {
   type: 'document',
   title: 'Site settings',
   fields: [
+    headingUI('Settings'),
+    {
+      name: 'rawHomePageRef',
+      title: 'Home page',
+      type: 'reference',
+      to: ALL_PAGES_TYPES,
+      description: 'Select home page (Critical requirement)',
+      codegen: { required: true },
+      validation: (Rule) => Rule.required(),
+    },
     headingUI('SEO & metadata'),
     {
       name: 'globalSitename',
