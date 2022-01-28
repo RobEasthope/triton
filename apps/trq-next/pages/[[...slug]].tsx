@@ -8,7 +8,6 @@ import {
   anyPageBySlugQuery,
   pageSlugsQuery,
 } from '@/UI/pages/Page/Page.queries';
-import { globalsQuery } from '@/TRQ/sanity-api/queries';
 import { usePreviewSubscription } from '@/UTILS/sanity-api/sanity-utils';
 import {
   getClient,
@@ -18,6 +17,7 @@ import {
 import { selectSanityQuery } from '@/TRQ/sanity-api/selectSanityQuery';
 import { GlobalMetadata } from '@/UI/types/sanity-schema';
 import { HeaderProps } from '@/UI/navigation/Header/Header';
+import { appGlobalsQuery } from '@/UI/base/settings/app-globals.queries';
 
 type PageBySlugProps = {
   data: {
@@ -77,7 +77,9 @@ export const getStaticProps = async ({
   params: { slug: string[] };
   preview: boolean;
 }) => {
-  const globals: GlobalMetadata = await getClient(preview).fetch(globalsQuery);
+  const globals: GlobalMetadata = await getClient(preview).fetch(
+    appGlobalsQuery
+  );
 
   const { sanityQuery, queryParams } = selectSanityQuery(params?.slug);
 

@@ -1,7 +1,7 @@
 import { groq } from 'next-sanity';
 
 // Global meta data
-export const globalsQuery = groq`
+export const appGlobalsQuery = groq`
   {
     "header": *[_type== 'Header'][0]{
       logo,
