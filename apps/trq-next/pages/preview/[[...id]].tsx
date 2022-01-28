@@ -53,7 +53,7 @@ export const getServerSideProps = async ({
 
   return {
     props: {
-      data: { page: page[0] || null, globals },
+      data: { page: (page[0] as PageProps) || null, globals },
     },
   };
 };

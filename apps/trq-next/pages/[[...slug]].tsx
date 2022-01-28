@@ -89,7 +89,7 @@ export const getStaticProps = async ({
 
   return {
     props: {
-      data: { page: page[0] || null, globals },
+      data: { page: (page[0] as PageProps) || null, globals },
       preview,
     },
     revalidate: 60,
