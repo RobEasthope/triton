@@ -18485,6 +18485,13 @@ sanity-plugin-note-field@^1.1.1:
     "@babel/runtime" "^7.12.5"
     "@sanity/ui" "^0.36.9"
 
+sanity-plugin-social-preview@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.npmjs.org/sanity-plugin-social-preview/-/sanity-plugin-social-preview-0.1.5.tgz#4f1f10e9078b9906b6d0924f99f7c79d379efb07"
+  integrity sha512-xHmFcEYlNQI3E3ICCBi+cc4m1YkYymOq9I7VFJRGm9ggrHWeq+ZOG50jDDVwX5sFXWQh/aWr91RmYJgPqMkS3A==
+  dependencies:
+    "@sanity/image-url" "^0.140.22"
+
 sax@>=0.6.0, sax@~1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
