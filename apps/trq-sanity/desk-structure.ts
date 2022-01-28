@@ -46,6 +46,10 @@ export const getDefaultDocumentNode = () => {
             // Note that this is a string, not an object (slug { current: string })
             slug: slug?.current
           }),
+          google: true,
+          facebook: true,
+          twitter: true,
+          linkedin: false,
         })).title('Social & SEO'),
   ])
 }
