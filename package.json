@@ -18,6 +18,34 @@
           "storybook-static/**"
         ]
       },
+      "trq-next": {
+        "dependsOn": [
+          "^build",
+          "NEXT_PUBLIC_SANITY_PROJECT_ID",
+          "NEXT_PUBLIC_SANITY_PROJECT_DATASET",
+          "NEXT_PUBLIC_SANITY_API_VERSION",
+          "SANITY_API_TOKEN",
+          "SANITY_STUDIO_PREVIEW_KEY"
+        ]
+      },
+      "trq-storybook": {
+        "dependsOn": [
+          "^build",
+          "STORYBOOK_SANITY_PROJECT_ID",
+          "STORYBOOK_SANITY_DATASET"
+        ]
+      },
+      "trq-sanity": {
+        "dependsOn": [
+          "^build",
+          "SANITY_PROJECT_ID",
+          "SANITY_PROJECT_DATASET",
+          "SANITY_API_VERSION",
+          "SANITY_STUDIO_PREVIEW_SITE",
+          "SANITY_STUDIO_API_TOKEN",
+          "SANITY_STUDIO_PREVIEW_KEY"
+        ]
+      },
       "test": {
         "dependsOn": [
           "^build"
