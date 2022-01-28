@@ -17,7 +17,7 @@ import Header from '../../packages/ui/navigation/Header/Header.schema.js';
 import ExampleText from '../../packages/ui/base/formatted-text/ExampleFormattedText/ExampleFormattedText.schema';
 
 // Settings
-import GlobalMetadata from '../../packages/ui/base/app/Metadata/GlobalMetadata.schema';
+import Settings from '../../packages/ui/base/settings/Settings.schema';
 
 // Content
 import ExampleSection from '../../packages/ui/content/ExampleSection/ExampleSection.schema';
@@ -46,7 +46,7 @@ export default createSchema({
     ExampleText,
 
     // Settings
-    GlobalMetadata,
+    Settings,
 
     // Content
     ExampleSection,

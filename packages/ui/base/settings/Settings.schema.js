@@ -1,8 +1,11 @@
+import { headingUI } from '../../utils/sanity/headingUI';
+
 export default {
-  name: 'GlobalMetadata',
+  name: 'Settings',
   type: 'document',
-  title: 'Global SEO metadata',
+  title: 'Site settings',
   fields: [
+    headingUI('SEO & metadata'),
     {
       name: 'globalSitename',
       title: 'Sitename',
@@ -64,7 +67,7 @@ export default {
   preview: {
     prepare() {
       return {
-        title: 'Global metadata',
+        title: 'Settings',
       };
     },
   },
