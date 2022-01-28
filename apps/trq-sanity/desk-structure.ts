@@ -44,7 +44,7 @@ export const getDefaultDocumentNode = () => {
             ogImage: metadataImage,
             // Used by Google preview to render the full URL
             // Note that this is a string, not an object (slug { current: string })
-            slug: slug?.current
+            slug: `/${slug?.current}` || ''
           }),
           google: true,
           facebook: true,
