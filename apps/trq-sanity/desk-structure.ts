@@ -5,7 +5,6 @@ import SocialPreview from 'part:social-preview/component';
 
 
 import {
-  RiHome4Line,
   RiCompasses2Line,
   RiListSettingsLine,
 } from 'react-icons/ri';
@@ -60,14 +59,6 @@ export default () =>
     .title('Triquetra')
     .items([
       S.listItem()
-        .title('Home page')
-        .icon(RiHome4Line)
-        .child(
-          S.document()
-            .schemaType('Home')
-            .documentId('Home')
-        ),
-      S.listItem()
         .title('Pages')
         .icon(ImNewspaper)
         .schemaType('Page')
@@ -99,7 +90,15 @@ export default () =>
             .title('Site details')
             .items([
               S.listItem()
-                .title('Site details')
+                .title('App settings')
+                .icon(FaGlobeEurope)
+                .child(
+                  S.document()
+                    .schemaType('Settings')
+                    .documentId('Settings')
+                ),
+              S.listItem()
+                .title('SEO & metadata')
                 .icon(FaGlobeEurope)
                 .child(
                   S.document()

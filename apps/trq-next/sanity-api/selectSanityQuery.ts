@@ -7,12 +7,13 @@ type SelectSanityQueryProps = {
 };
 
 export function selectSanityQuery(
-  slugArray = [] as string[] | []
+  slugArray: string[] | [],
+  homePageSlug: string
 ): SelectSanityQueryProps {
   if (slugArray.length === 0) {
     return {
       sanityQuery: anyPageBySlugQuery,
-      queryParams: { slug: 'root' },
+      queryParams: { slug: homePageSlug },
     };
   }
 

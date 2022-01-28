@@ -17,13 +17,13 @@ import Header from '../../packages/ui/navigation/Header/Header.schema.js';
 import ExampleText from '../../packages/ui/base/formatted-text/ExampleFormattedText/ExampleFormattedText.schema';
 
 // Settings
-import GlobalMetadata from '../../packages/ui/base/app/Metadata/GlobalMetadata.schema';
+import Settings from '../../packages/ui/base/settings/Settings.schema';
+import GlobalMetadata from '../../packages/ui/base/settings/GlobalMetadata.schema';
 
 // Content
 import ExampleSection from '../../packages/ui/content/ExampleSection/ExampleSection.schema';
 
 // Pages
-import Home from '../../packages/ui/pages/Home/Home.schema';
 import page from '../../packages/ui/pages/Page/Page.schema';
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -46,13 +46,13 @@ export default createSchema({
     ExampleText,
 
     // Settings
+    Settings,
     GlobalMetadata,
 
     // Content
     ExampleSection,
 
     // Pages
-    Home,
     page
   ]),
 })

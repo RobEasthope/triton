@@ -1,7 +1,7 @@
 import { groq } from 'next-sanity';
 
 export const anyPageBySlugQuery = groq`
-  *[_type in ["Page", "Home"] && slug.current == $slug]{
+  *[_type in ["Page"] && slug.current == $slug]{
      ...,
     "sections": rawSections[]{
       ...,
@@ -18,7 +18,7 @@ export const anyPageBySlugQuery = groq`
 `;
 
 export const previewAnyPageByIdQuery = groq`
-  *[_type in ["Page", "Home"] && _id == $id]{
+  *[_type in ["Page"] && _id == $id]{
      ...,
     "sections": rawSections[]{
       ...,
@@ -36,14 +36,14 @@ export const previewAnyPageByIdQuery = groq`
 
 // All page slugs
 export const pageSlugsQuery = groq`
-  *[_type == "Page" || _type == "Home" && defined(slug.current)]{
+  *[_type == "Page" && defined(slug.current)]{
     slug {
       current
     },
   }
 `;
 export const pageIdsQuery = groq`
-  *[_type == "Page" || _type == "Home" && defined(slug.current)]{
+  *[_type == "Page" && defined(slug.current)]{
     _id,
   }
 `;

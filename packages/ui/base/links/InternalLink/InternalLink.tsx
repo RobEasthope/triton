@@ -1,20 +1,20 @@
 import Link from 'next/link';
-import { SanityReference, Page, Home } from '@/UI/types/sanity-schema';
+import { SanityReference, Page } from '@/UI/types/sanity-schema';
 
 // Schema props
 export type InternalLinkWithTitleSchemaProps = {
   _type: 'InternalLinkWithTitle';
   _key: string;
-  internalUID: SanityReference<Page | Home>;
+  internalUID: SanityReference<Page>;
   title: string;
-  to: Page | Home;
+  to: Page;
 };
 
 export type InternalLinkSchemaProps = {
   _type: 'InternalLinkSansTitle';
   _key: string;
-  internalUID: SanityReference<Page | Home>;
-  to: Page | Home;
+  internalUID: SanityReference<Page>;
+  to: Page;
 };
 
 // Component props

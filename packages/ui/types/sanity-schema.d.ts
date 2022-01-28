@@ -67,6 +67,22 @@ export interface Header extends SanityDocument {
 }
 
 /**
+ * Site settings
+ *
+ *
+ */
+export interface Settings extends SanityDocument {
+  _type: "Settings";
+
+  /**
+   * Home page — `reference`
+   *
+   * Select home page (Critical requirement)
+   */
+  rawHomePageRef: SanityReference<Page>;
+}
+
+/**
  * Global SEO metadata
  *
  *
@@ -194,11 +210,16 @@ export interface Home extends SanityDocument {
   metadataDescription: string;
 
   /**
-   * Metadata image — `text`
+   * Metadata image — `image`
    *
    * Used in social media and search engine listings
    */
-  metadataImage: string;
+  metadataImage: {
+    _type: "image";
+    asset: SanityReference<SanityImageAsset>;
+    crop?: SanityImageCrop;
+    hotspot?: SanityImageHotspot;
+  };
 }
 
 /**
@@ -266,11 +287,16 @@ export interface Page extends SanityDocument {
   metadataDescription: string;
 
   /**
-   * Metadata image — `text`
+   * Metadata image — `image`
    *
    * Used in social media and search engine listings.
    */
-  metadataImage: string;
+  metadataImage: {
+    _type: "image";
+    asset: SanityReference<SanityImageAsset>;
+    crop?: SanityImageCrop;
+    hotspot?: SanityImageHotspot;
+  };
 }
 
 export type InternalLink = {
@@ -280,7 +306,7 @@ export type InternalLink = {
    *
    *
    */
-  internalUID: SanityReference<Page | Home>;
+  internalUID: SanityReference<Page>;
 };
 
 export type InternalLinkWithTitle = {
@@ -297,7 +323,7 @@ export type InternalLinkWithTitle = {
    *
    *
    */
-  internalUID: SanityReference<Page | Home>;
+  internalUID: SanityReference<Page>;
 };
 
 export type ExternalLink = {
@@ -379,7 +405,7 @@ export type ExampleSection = {
   };
 };
 
-export type Documents = Header | GlobalMetadata | Home | Page;
+export type Documents = Header | Settings | GlobalMetadata | Home | Page;
 
 /**
  * This interface is a stub. It was referenced in your sanity schema but
