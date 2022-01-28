@@ -2,7 +2,6 @@ import Custom404 from 'pages/404';
 import { useRouter } from 'next/router';
 
 import { Page, PageProps } from '@/UI/pages/Page/Page';
-import { Home, HomeProps } from '@/UI/pages/Home/Home';
 import { Loading } from '@/UI/base/app/Loading/Loading';
 import {
   anyPageBySlugQuery,
@@ -23,7 +22,7 @@ import { GlobalMetadata, Settings } from '@/UI/types/sanity-schema';
 
 type PageBySlugProps = {
   data: {
-    page: PageProps | HomeProps;
+    page: PageProps;
     globals: AppGlobalsProps;
   };
 };
@@ -43,10 +42,6 @@ export default function PageBySlug({ data }: PageBySlugProps) {
       {!isFallback && data?.page?._type === 'Page' && (
         <Page page={data?.page} globals={data?.globals} />
       )}
-
-      {!isFallback && data?.page?._type === 'Home' && (
-        <Home page={data?.page} globals={data?.globals} />
-      )}
     </>
   );
 }
@@ -54,9 +49,7 @@ export default function PageBySlug({ data }: PageBySlugProps) {
 export const getStaticPaths = async () => {
   const paths = [];
 
-  const pages = (await sanityClient.fetch(pageSlugsQuery)) as [
-    PageProps | HomeProps
-  ];
+  const pages = (await sanityClient.fetch(pageSlugsQuery)) as [PageProps];
 
   for (const page of pages) {
     const slug = page?.slug?.current;
@@ -96,7 +89,7 @@ export const getStaticProps = async ({
 
   return {
     props: {
-      data: { page: (page[0] as PageProps | HomeProps) || null, globals },
+      data: { page: page[0] || null, globals },
       preview,
     },
     revalidate: 60,

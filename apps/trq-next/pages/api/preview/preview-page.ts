@@ -2,7 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { previewAnyPageByIdQuery } from '@/UI/pages/Page/Page.queries';
 import { previewClient } from '@/UTILS/sanity-api/sanity.server';
 import { PageProps } from '@/UI/pages/Page/Page';
-import { HomeProps } from '@/UI/pages/Home/Home';
 
 export default async function (
   req: NextApiRequest,
@@ -18,14 +17,14 @@ export default async function (
   const id = req?.query?.id;
 
   // Check if the page with the given `slug` exists
-  const pageData: PageProps | HomeProps = await previewClient.fetch(
+  const pageData: PageProps = await previewClient.fetch(
     previewAnyPageByIdQuery,
     {
       id,
     }
   );
 
-  const page: PageProps | HomeProps = pageData;
+  const page: PageProps = pageData;
 
   // If the slug doesn't exist prevent preview mode from being enabled
   if (!page) {

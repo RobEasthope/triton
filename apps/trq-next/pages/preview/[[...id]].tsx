@@ -1,7 +1,6 @@
 import Custom404 from 'pages/404';
 
 import { Page, PageProps } from '@/UI/pages/Page/Page';
-import { Home, HomeProps } from '@/UI/pages/Home/Home';
 import { previewAnyPageByIdQuery } from '@/UI/pages/Page/Page.queries';
 import { appGlobalsQuery } from '@/UI/base/settings/app-globals.queries';
 import { getClient, overlayDrafts } from '@/UTILS/sanity-api/sanity.server';
@@ -9,7 +8,7 @@ import { AppGlobalsProps } from '@/UI/base/settings/Globals';
 
 type PreviewPageBySlugProps = {
   data: {
-    page: PageProps | HomeProps;
+    page: PageProps;
     globals: AppGlobalsProps;
   };
 };
@@ -20,15 +19,9 @@ export default function PageBySlug({ data }: PreviewPageBySlugProps) {
   }
 
   return (
-    <>
-      {data?.page?._type === 'Page' && (
-        <Page page={data?.page} globals={data?.globals} />
-      )}
-
-      {data?.page?._type === 'Home' && (
-        <Home page={data?.page} globals={data?.globals} />
-      )}
-    </>
+    data?.page?._type === 'Page' && (
+      <Page page={data?.page} globals={data?.globals} />
+    )
   );
 }
 
@@ -60,7 +53,7 @@ export const getServerSideProps = async ({
 
   return {
     props: {
-      data: { page: (page[0] as PageProps | HomeProps) || null, globals },
+      data: { page: page[0] || null, globals },
     },
   };
 };

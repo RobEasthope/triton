@@ -24,7 +24,6 @@ import GlobalMetadata from '../../packages/ui/base/settings/GlobalMetadata.schem
 import ExampleSection from '../../packages/ui/content/ExampleSection/ExampleSection.schema';
 
 // Pages
-import Home from '../../packages/ui/pages/Home/Home.schema';
 import page from '../../packages/ui/pages/Page/Page.schema';
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -54,7 +53,6 @@ export default createSchema({
     ExampleSection,
 
     // Pages
-    Home,
     page
   ]),
 })

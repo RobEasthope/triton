@@ -1,11 +1,11 @@
-import { Page, Home } from '@/UI/types/sanity-schema';
+import { Page } from '@/UI/types/sanity-schema';
 
 // Schema props
 export type ExternalLinkWithTitleSchemaProps = {
   _type: 'ExternalLinkWithTitle';
   _key: string;
   title: string;
-  to?: Page | Home;
+  to?: Page;
   url: string;
 };
 
@@ -13,7 +13,7 @@ export type ExternalLinkSchemaProps = {
   _type: 'ExternalLinkSansTitle';
   _key: string;
   newTab: boolean;
-  to?: Page | Home;
+  to?: Page;
   url: string;
 };
 

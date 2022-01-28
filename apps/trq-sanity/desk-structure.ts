@@ -5,7 +5,6 @@ import SocialPreview from 'part:social-preview/component';
 
 
 import {
-  RiHome4Line,
   RiCompasses2Line,
   RiListSettingsLine,
 } from 'react-icons/ri';
