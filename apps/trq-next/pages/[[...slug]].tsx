@@ -17,7 +17,9 @@ import {
 import { selectSanityQuery } from '@/TRQ/sanity-api/selectSanityQuery';
 
 import { appGlobalsQuery } from '@/UI/base/settings/app-globals.queries';
-import { AppGlobalsProps } from '@/UI/base/settings/Globals';
+import { AppGlobalsProps, SettingsProps } from '@/UI/base/settings/Globals';
+import { HeaderProps } from '@/UI/navigation/Header/Header';
+import { GlobalMetadata, Settings } from '@/UI/types/sanity-schema';
 
 type PageBySlugProps = {
   data: {
@@ -80,12 +82,12 @@ export const getStaticProps = async ({
   const globals: {
     header: HeaderProps;
     globals: GlobalMetadata;
-    settings: Settings;
+    settings: SettingsProps;
   } = await getClient(preview).fetch(appGlobalsQuery);
 
   const { sanityQuery, queryParams } = selectSanityQuery(
     params?.slug || [],
-    globals?.settings?.homePageSlug?.current
+    globals?.settings?.homePageSlug
   );
 
   const page = overlayDrafts(

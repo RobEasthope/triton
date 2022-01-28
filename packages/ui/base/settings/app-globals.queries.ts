@@ -17,7 +17,7 @@ export const appGlobalsQuery = groq`
       ...
     },
     "settings": *[_type== 'Settings'][0]{
-      "homePageSlug": rawHomePageRef->slug
+      "homePageSlug": rawHomePageRef->slug.current
     }
   }
 `;
