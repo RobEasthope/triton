@@ -6,12 +6,12 @@ import { previewAnyPageByIdQuery } from '@/UI/pages/Page/Page.queries';
 import { appGlobalsQuery } from '@/UI/base/settings/app-globals.queries';
 import { getClient, overlayDrafts } from '@/UTILS/sanity-api/sanity.server';
 import { GlobalMetadata } from '@/UI/types/sanity-schema';
-import { HeaderProps } from '@/UI/navigation/Header/Header';
+import { AppGlobalsProps } from '@/UI/base/settings/Globals';
 
 type PreviewPageBySlugProps = {
   data: {
     page: PageProps | HomeProps;
-    globals: { header: HeaderProps; metadata: GlobalMetadata };
+    globals: AppGlobalsProps;
   };
 };
 
@@ -49,7 +49,7 @@ export const getServerSideProps = async ({
     };
   }
 
-  const globals: GlobalMetadata = await getClient(preview).fetch(
+  const globals: AppGlobalsProps = await getClient(preview).fetch(
     appGlobalsQuery
   );
 
