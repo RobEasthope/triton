@@ -12,6 +12,7 @@ import {
 import { ImNewspaper } from 'react-icons/im';
 import { FaGlobeEurope } from 'react-icons/fa';
 import resolvePreviewUrl from './utils/resolvePreviewUrl';
+import { METADATA } from './constants/METADATA';
 
 export const getDefaultDocumentNode = () => {
   // Return all documents with just 1 view: the form
@@ -39,7 +40,7 @@ export const getDefaultDocumentNode = () => {
           ) => ({
             title: metadataTitle || title,
             description: metadataDescription || '',
-            siteUrl: 'https://triquetra.vercel.app/',
+            siteUrl: METADATA.SITE_URL || '',
             ogImage: metadataImage,
             // Used by Google preview to render the full URL
             // Note that this is a string, not an object (slug { current: string })
