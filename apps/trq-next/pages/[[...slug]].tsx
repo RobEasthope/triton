@@ -81,7 +81,10 @@ export const getStaticProps = async ({
     appGlobalsQuery
   );
 
-  const { sanityQuery, queryParams } = selectSanityQuery(params?.slug);
+  const { sanityQuery, queryParams } = selectSanityQuery(
+    params?.slug || [],
+    globals?.settings?.homePageSlug?.current
+  );
 
   const page = overlayDrafts(
     await getClient(preview).fetch(sanityQuery, queryParams)
