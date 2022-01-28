@@ -18,6 +18,7 @@ import ExampleText from '../../packages/ui/base/formatted-text/ExampleFormattedT
 
 // Settings
 import Settings from '../../packages/ui/base/settings/Settings.schema';
+import GlobalMetadata from '../../packages/ui/base/settings/GlobalMetadata.schema';
 
 // Content
 import ExampleSection from '../../packages/ui/content/ExampleSection/ExampleSection.schema';
@@ -47,6 +48,7 @@ export default createSchema({
 
     // Settings
     Settings,
+    GlobalMetadata,
 
     // Content
     ExampleSection,
