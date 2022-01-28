@@ -106,7 +106,7 @@ export const SanityImage = ({
           .url() as string;
 
         // Push to array
-        assetUrls.push(`${url} ${size}w`);
+        assetUrls.push(`${url && url} ${size && size}w`);
       } else {
         // Generate url
         const url = imageBuilder
@@ -131,7 +131,13 @@ export const SanityImage = ({
   return (
     <Wrapper mode={mode}>
       <BlurrableImage
-        img={<HighResImage sizes={srcSetSizes()} srcSet={srcSetAssets()} />}
+        img={
+          <HighResImage
+            sizes={srcSetSizes()}
+            srcSet={srcSetAssets()}
+            loading="lazy"
+          />
+        }
         blurredAssetUrl={blurredImageAsset()}
         alt={alt}
       />
