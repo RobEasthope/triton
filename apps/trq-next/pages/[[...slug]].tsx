@@ -3,11 +3,7 @@ import { useRouter } from 'next/router';
 
 import { Page, PageProps } from '@/UI/pages/Page/Page';
 import { Loading } from '@/UI/base/app/Loading/Loading';
-import {
-  anyPageBySlugQuery,
-  pageSlugsQuery,
-} from '@/UI/pages/Page/Page.queries';
-import { usePreviewSubscription } from '@/UTILS/sanity-api/sanity-utils';
+import { pageSlugsQuery } from '@/UI/pages/Page/Page.queries';
 import {
   getClient,
   overlayDrafts,
@@ -18,7 +14,7 @@ import { selectSanityQuery } from '@/TRQ/sanity-api/selectSanityQuery';
 import { appGlobalsQuery } from '@/UI/base/settings/app-globals.queries';
 import { AppGlobalsProps, SettingsProps } from '@/UI/base/settings/Globals';
 import { HeaderProps } from '@/UI/navigation/Header/Header';
-import { GlobalMetadata, Settings } from '@/UI/types/sanity-schema';
+import { GlobalMetadata } from '@/UI/types/sanity-schema';
 
 type PageBySlugProps = {
   data: {
