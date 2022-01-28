@@ -9,8 +9,8 @@ export default async function (
   res: NextApiResponse
 ): Promise<void> {
   // Check the secret and next parameters
-  // This secret should only be known to this API route and the CMS
-  if (req.query.secret !== process.env.SANITY_STUDIO_PREVIEW_KEY) {
+  // This key should only be known to this API route and the CMS
+  if (req.query.key !== process.env.SANITY_STUDIO_PREVIEW_KEY) {
     return res.status(401).json({ message: 'Invalid token' });
   }
 
