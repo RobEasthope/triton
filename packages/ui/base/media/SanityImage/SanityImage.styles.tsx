@@ -15,17 +15,3 @@ export const Wrapper = styled('div', {
     },
   },
 });
-
-export const FadingImage = styled('img', {
-  display: 'block',
-  position: 'absolute',
-  top: 0,
-  transition: 'opacity 0.2s',
-
-  '&.show': {
-    opacity: 1,
-  },
-  '&.hide': {
-    opacity: 0,
-  },
-});

@@ -5,12 +5,12 @@ import { GlobalMetadata, Home, Page } from '@/UI/types/sanity-schema';
 import { METADATA } from '@/UI/constants/METADATA';
 import { sanityConfig } from '@/UTILS/sanity-api/sanity-config';
 
-type MetadateType = {
+type NextMetadataType = {
   page: Page | Home;
   globalMetadata: GlobalMetadata;
 };
 
-export const Metadata = ({ page, globalMetadata }: MetadateType) => {
+export const NextMetadata = ({ page, globalMetadata }: NextMetadataType) => {
   const imageBuilder = createImageUrlBuilder(sanityConfig);
   const urlForImage = (source: SanityImageSource) =>
     imageBuilder.image(source).auto('format').fit('max');
