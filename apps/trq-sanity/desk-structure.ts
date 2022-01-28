@@ -91,7 +91,15 @@ export default () =>
             .title('Site details')
             .items([
               S.listItem()
-                .title('Site details')
+                .title('App settings')
+                .icon(FaGlobeEurope)
+                .child(
+                  S.document()
+                    .schemaType('Settings')
+                    .documentId('Settings')
+                ),
+              S.listItem()
+                .title('SEO & metadata')
                 .icon(FaGlobeEurope)
                 .child(
                   S.document()
