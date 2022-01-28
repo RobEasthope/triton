@@ -9,6 +9,7 @@ import {
 import { ImNewspaper } from 'react-icons/im';
 import { FaGlobeEurope } from 'react-icons/fa';
 import resolvePreviewUrl from './utils/resolvePreviewUrl';
+import SocialPreview from 'part:social-preview/component';
 
 export const getDefaultDocumentNode = () => {
   // Return all documents with just 1 view: the form
@@ -28,6 +29,7 @@ export const getDefaultDocumentNode = () => {
         },
       })
       .title('Preview'),
+    S.view.component(SocialPreview()).title('Social & SEO'),
   ])
 }
 
