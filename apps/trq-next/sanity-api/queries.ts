@@ -15,6 +15,9 @@ export const globalsQuery = groq`
     },
     "metadata": *[_type== 'globalMetadata'][0]{
       ...
+    },
+    "settings": *[_type== 'Settings'][0]{
+      homePageSlug: rawHomePageRef->slug
     }
   }
 `;
