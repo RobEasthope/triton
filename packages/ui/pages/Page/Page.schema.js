@@ -64,7 +64,7 @@ export default {
       name: 'metadataImage',
       title: 'Metadata image',
       description: 'Used in social media and search engine listings.',
-      type: 'text',
+      type: 'image',
       codegen: { required: true },
       validation: (Rule) =>
         Rule.required().warning(
