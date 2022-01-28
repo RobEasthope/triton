@@ -82,14 +82,23 @@ export default () =>
                 ),
             ])
         ),
-      S.divider(),
+        S.divider(),
       S.listItem()
         .title('Settings')
         .icon(RiListSettingsLine)
         .child(
-          S.document()
-            .schemaType('Settings')
-            .documentId('Settings')
+          S.list()
+            .title('Site details')
+            .items([
+              S.listItem()
+                .title('Site details')
+                .icon(FaGlobeEurope)
+                .child(
+                  S.document()
+                    .schemaType('GlobalMetadata')
+                    .documentId('GlobalMetadata')
+                ),
+            ])
         ),
     ]);
   
