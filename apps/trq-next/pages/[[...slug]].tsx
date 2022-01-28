@@ -24,20 +24,11 @@ type PageBySlugProps = {
     page: PageProps | HomeProps;
     globals: { header: HeaderProps; metadata: GlobalMetadata };
   };
-  preview: boolean;
 };
 
-export default function PageBySlug({ data, preview = false }: PageBySlugProps) {
+export default function PageBySlug({ data }: PageBySlugProps) {
   const router = useRouter();
   const { isFallback } = router;
-
-  const {
-    data: { page },
-  } = usePreviewSubscription(anyPageBySlugQuery, {
-    params: { slug: data?.page?.slug },
-    initialData: data,
-    // enabled: preview && slug,
-  });
 
   if (data.page === null) {
     return <Custom404 />;
