@@ -60,14 +60,6 @@ export default () =>
     .title('Triquetra')
     .items([
       S.listItem()
-        .title('Home page')
-        .icon(RiHome4Line)
-        .child(
-          S.document()
-            .schemaType('Home')
-            .documentId('Home')
-        ),
-      S.listItem()
         .title('Pages')
         .icon(ImNewspaper)
         .schemaType('Page')
