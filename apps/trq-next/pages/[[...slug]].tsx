@@ -15,14 +15,14 @@ import {
   sanityClient,
 } from '@/UTILS/sanity-api/sanity.server';
 import { selectSanityQuery } from '@/TRQ/sanity-api/selectSanityQuery';
-import { GlobalMetadata } from '@/UI/types/sanity-schema';
-import { HeaderProps } from '@/UI/navigation/Header/Header';
+
 import { appGlobalsQuery } from '@/UI/base/settings/app-globals.queries';
+import { AppGlobalsProps } from '@/UI/base/settings/Globals';
 
 type PageBySlugProps = {
   data: {
     page: PageProps | HomeProps;
-    globals: { header: HeaderProps; metadata: GlobalMetadata };
+    globals: AppGlobalsProps;
   };
 };
 
@@ -77,9 +77,11 @@ export const getStaticProps = async ({
   params: { slug: string[] };
   preview: boolean;
 }) => {
-  const globals: GlobalMetadata = await getClient(preview).fetch(
-    appGlobalsQuery
-  );
+  const globals: {
+    header: HeaderProps;
+    globals: GlobalMetadata;
+    settings: Settings;
+  } = await getClient(preview).fetch(appGlobalsQuery);
 
   const { sanityQuery, queryParams } = selectSanityQuery(
     params?.slug || [],

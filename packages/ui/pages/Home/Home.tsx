@@ -4,8 +4,9 @@ import { FixedFooterLayout } from '@/UI/base/layout/FixedFooterLayout/FixedFoote
 import { MainContentLayout } from '@/UI/base/layout/MainContentLayout/MainContentLayout';
 import { RenderSections } from '@/UI/base/app/RenderSections/RenderSections';
 import { NextMetadata } from '@/UI/base/app/Metadata/NextMetadata';
-import { Home as rawHomeProps, GlobalMetadata } from '@/UI/types/sanity-schema';
+import { Home as rawHomeProps } from '@/UI/types/sanity-schema';
 import { ExampleSectionProps } from '@/UI/content/ExampleSection/ExampleSection';
+import { AppGlobalsProps } from '@/UI/base/settings/Globals';
 
 export interface HomeProps extends rawHomeProps {
   sections: [ExampleSectionProps];
@@ -16,7 +17,7 @@ export const Home = ({
   globals,
 }: {
   page: HomeProps;
-  globals: { header: HeaderProps; metadata: GlobalMetadata };
+  globals: AppGlobalsProps;
 }) => {
   // Globals props
   const { header, metadata } = globals;
