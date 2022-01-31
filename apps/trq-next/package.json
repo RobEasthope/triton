@@ -5,8 +5,6 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "sanity": "cd ./.sanity-studio && sanity start",
-    "sanity-build": "cd ./.sanity-studio && sanity build",
     "start": "next start",
     "lint": "eslint . && tsc --pretty --noEmit",
     "lint:fix": "eslint . --fix",
