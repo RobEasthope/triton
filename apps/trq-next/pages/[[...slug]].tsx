@@ -15,6 +15,7 @@ import { appGlobalsQuery } from '@/UI/base/settings/app-globals.queries';
 import { AppGlobalsProps, SettingsProps } from '@/UI/base/settings/Globals';
 import { HeaderProps } from '@/UI/navigation/Header/Header';
 import { GlobalMetadata } from '@/UI/types/sanity-schema';
+import { pageRenderChecks } from '@/TRQ/utils/pageRenderChecks';
 
 type PageBySlugProps = {
   data: {
@@ -29,33 +30,7 @@ export default function PageBySlug({ data }: PageBySlugProps) {
 
   console.log(router.asPath);
 
-  const pageRenderChecks = () => {
-    // No data
-    if (data?.page === null) {
-      return false;
-    }
-
-    // Root and valid home page slug
-    if (
-      router.asPath === '/' &&
-      data?.page?.slug?.current === data?.globals?.settings.homePageSlug
-    ) {
-      return true;
-    }
-
-    // Don't render homepage as a standard page
-    if (
-      router.asPath !== '/' &&
-      data?.page?.slug.current === data?.globals?.settings.homePageSlug
-    ) {
-      return false;
-    }
-
-    // Green light
-    return true;
-  };
-
-  if (!pageRenderChecks()) {
+  if (!pageRenderChecks({ data, currentRoute: router.asPath })) {
     return <Custom404 />;
   }
 
