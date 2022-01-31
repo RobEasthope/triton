@@ -1,4 +1,4 @@
-# Free Flight Academy
+# Triquetra
 
 ## Getting started
 
