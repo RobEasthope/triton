@@ -27,7 +27,35 @@ export default function PageBySlug({ data }: PageBySlugProps) {
   const router = useRouter();
   const { isFallback } = router;
 
-  if (data.page === null) {
+  console.log(router.asPath);
+
+  const pageRenderChecks = () => {
+    // No data
+    if (data.page === null) {
+      return false;
+    }
+
+    // Root and valid home page slug
+    if (
+      router.asPath === '/' &&
+      data.page.slug.current === data.globals.settings.homePageSlug
+    ) {
+      return true;
+    }
+
+    // Don't render homepage as a standard page
+    if (
+      router.asPath !== '/' &&
+      data.page.slug.current === data.globals.settings.homePageSlug
+    ) {
+      return false;
+    }
+
+    // Green light
+    return true;
+  };
+
+  if (!pageRenderChecks()) {
     return <Custom404 />;
   }
 
