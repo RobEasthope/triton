@@ -46,13 +46,20 @@ export const getStaticPaths = async () => {
   const paths = [];
 
   const pages = (await sanityClient.fetch(pageSlugsQuery)) as [PageProps];
+  const homePageRoute: { homePageSlug: string } = await sanityClient.fetch(
+    `*[_type== 'Settings'][0]{
+      "homePageSlug": rawHomePageRef->slug.current
+    }`
+  );
 
   for (const page of pages) {
     const slug = page?.slug?.current;
 
-    paths.push({
-      params: { slug: slug?.split('/').filter((p) => p) },
-    });
+    if (slug !== homePageRoute.homePageSlug) {
+      paths.push({
+        params: { slug: slug?.split('/').filter((p) => p) },
+      });
+    }
   }
 
   return {
