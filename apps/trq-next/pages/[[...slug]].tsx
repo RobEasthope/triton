@@ -9,12 +9,13 @@ import {
   overlayDrafts,
   sanityClient,
 } from '@/UTILS/sanity-api/sanity.server';
-import { selectSanityQuery } from '@/TRQ/sanity-api/selectSanityQuery';
+import { selectSanityQuery } from '@/NEXT/sanity-api/selectSanityQuery';
 
 import { appGlobalsQuery } from '@/UI/base/settings/app-globals.queries';
 import { AppGlobalsProps, SettingsProps } from '@/UI/base/settings/Globals';
 import { HeaderProps } from '@/UI/navigation/Header/Header';
 import { GlobalMetadata } from '@/UI/types/sanity-schema';
+import { pageRenderChecks } from '@/NEXT/utils/pageRenderChecks';
 
 type PageBySlugProps = {
   data: {
@@ -27,7 +28,9 @@ export default function PageBySlug({ data }: PageBySlugProps) {
   const router = useRouter();
   const { isFallback } = router;
 
-  if (data.page === null) {
+  console.log(router.asPath);
+
+  if (!pageRenderChecks({ data, currentRoute: router.asPath })) {
     return <Custom404 />;
   }
 
@@ -46,13 +49,20 @@ export const getStaticPaths = async () => {
   const paths = [];
 
   const pages = (await sanityClient.fetch(pageSlugsQuery)) as [PageProps];
+  const homePageRoute: { homePageSlug: string } = await sanityClient.fetch(
+    `*[_type== 'Settings'][0]{
+      "homePageSlug": rawHomePageRef->slug.current
+    }`
+  );
 
   for (const page of pages) {
     const slug = page?.slug?.current;
 
-    paths.push({
-      params: { slug: slug?.split('/').filter((p) => p) },
-    });
+    if (slug !== homePageRoute.homePageSlug) {
+      paths.push({
+        params: { slug: slug?.split('/').filter((p) => p) },
+      });
+    }
   }
 
   return {

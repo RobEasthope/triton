@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/TRQ/*": [
+      "@/NEXT/*": [
         "../../apps/trq-next/*"
       ],
       "@/UI/*": [
