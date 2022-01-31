@@ -31,14 +31,14 @@ export default function PageBySlug({ data }: PageBySlugProps) {
 
   const pageRenderChecks = () => {
     // No data
-    if (data.page === null) {
+    if (data?.page === null) {
       return false;
     }
 
     // Root and valid home page slug
     if (
       router.asPath === '/' &&
-      data.page.slug.current === data.globals.settings.homePageSlug
+      data?.page?.slug?.current === data?.globals?.settings.homePageSlug
     ) {
       return true;
     }
@@ -46,7 +46,7 @@ export default function PageBySlug({ data }: PageBySlugProps) {
     // Don't render homepage as a standard page
     if (
       router.asPath !== '/' &&
-      data.page.slug.current === data.globals.settings.homePageSlug
+      data?.page?.slug.current === data?.globals?.settings.homePageSlug
     ) {
       return false;
     }
