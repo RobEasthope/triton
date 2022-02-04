@@ -1,4 +1,3 @@
-import Custom404 from 'pages/404';
 import { useRouter } from 'next/router';
 
 import { Page, PageProps } from '@/UI/pages/Page/Page';
@@ -10,12 +9,12 @@ import {
   sanityClient,
 } from '@/UTILS/sanity-api/sanity.server';
 import { selectSanityQuery } from '@/NEXT/sanity-api/selectSanityQuery';
-
 import { appGlobalsQuery } from '@/UI/base/settings/app-globals.queries';
 import { AppGlobalsProps, SettingsProps } from '@/UI/base/settings/Globals';
 import { HeaderProps } from '@/UI/navigation/Header/Header';
 import { GlobalMetadata } from '@/UI/types/sanity-schema';
 import { pageRenderChecks } from '@/NEXT/utils/pageRenderChecks';
+import { Error404 } from '@/UI/pages/Error404/Error404';
 
 type PageBySlugProps = {
   data: {
@@ -31,7 +30,7 @@ export default function PageBySlug({ data }: PageBySlugProps) {
   console.log(router.asPath);
 
   if (!pageRenderChecks({ data, currentRoute: router.asPath })) {
-    return <Custom404 />;
+    return <Error404 />;
   }
 
   return (
