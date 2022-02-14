@@ -70,8 +70,6 @@
     "storybook": "npx turbo run dev --scope=trq-storybook --include-dependencies --no-deps",
     "storybook:build": "npx turbo run build --scope=trq-storybook --include-dependencies --no-deps",
     "lint": "clear && turbo run lint",
-    "eslint": "cd ./packages/ui && yarn lint && cd ../../apps/trq-next && yarn lint && cd ../trq-sanity && yarn lint",
-    "eslint:fix": "cd ./packages/ui && yarn lint:fix && cd ../../apps/trq-next && yarn lint:fix && cd ../trq-sanity && yarn lint:fix",
     "sanity-upgrade": "cd ./apps/trq-sanity && sanity upgrade",
     "type-check": "cd ./packages/ui && yarn type-check && cd ../../apps/trq-next && yarn type-check",
     "types": "npx sanity-codegen",
