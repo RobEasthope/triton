@@ -13,6 +13,10 @@
       "path": "../apps/trq-next"
     },
     {
+      "name": "Remix",
+      "path": "../apps/trq-remix"
+    },
+    {
       "name": "Storybook",
       "path": "../apps/trq-storybook"
     },
