@@ -28,6 +28,11 @@
           "SANITY_STUDIO_PREVIEW_KEY"
         ]
       },
+      "trq-remix": {
+        "dependsOn": [
+          "^build"
+        ]
+      },
       "trq-storybook": {
         "dependsOn": [
           "^build",
@@ -65,6 +70,8 @@
     "build": "turbo run build",
     "next": "npx turbo run dev --scope=trq-next --include-dependencies --no-deps",
     "next:build": "npx turbo run build --scope=trq-next --include-dependencies --no-deps",
+    "remix": "npx turbo run dev --scope=trq-remix --include-dependencies --no-deps",
+    "remix:build": "npx turbo run build --scope=trq-remix --include-dependencies --no-deps",
     "sanity": "npx turbo run dev --scope=trq-sanity --include-dependencies --no-deps",
     "sanity:build": "npx turbo run build --scope=trq-sanity --include-dependencies --no-deps",
     "storybook": "npx turbo run dev --scope=trq-storybook --include-dependencies --no-deps",
