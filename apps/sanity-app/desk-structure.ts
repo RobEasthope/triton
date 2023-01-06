@@ -53,7 +53,7 @@ export const getDefaultDocumentNode = ({ schemaType }) => {
 export default () =>
   S.list()
     .id("__root__")
-    .title("Free Flight Academy")
+    .title("Triton")
     .items([
       S.listItem()
         .title("Pages")

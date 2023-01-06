@@ -25,7 +25,7 @@
     }
   ],
   "project": {
-    "name": "Free Flight Academy"
+    "name": "Triton"
   },
   "plugins": [
     "@sanity/base",
