@@ -1,6 +1,6 @@
 import { RiFileList2Line } from "react-icons/ri";
 
-import BlogIndex from "ui-pkg/blocks/BlogIndex/BlogIndex.schema";
+import ArticleIndex from "ui-pkg/blocks/ArticleIndex/ArticleIndex.schema";
 import CourseHero from "ui-pkg/blocks/CourseHero/CourseHero.schema";
 import CourseIndex from "ui-pkg/blocks/CourseIndex/CourseIndex.schema";
 import Details from "ui-pkg/blocks/Details/Details.schema";
@@ -60,7 +60,7 @@ export default {
       title: "Page sections",
       type: "array",
       of: [
-        { type: BlogIndex.name },
+        { type: ArticleIndex.name },
         { type: CourseHero.name },
         { type: CourseIndex.name },
         { type: Details.name },

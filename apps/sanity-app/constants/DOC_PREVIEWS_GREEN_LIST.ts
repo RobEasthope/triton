@@ -1,1 +1,1 @@
-export const DOC_PREVIEWS_GREEN_LIST = ["Page", "Course", "BlogPost"];
+export const DOC_PREVIEWS_GREEN_LIST = ["Page", "Course", "Article"];

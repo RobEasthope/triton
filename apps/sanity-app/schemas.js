@@ -39,9 +39,9 @@ import YoutubeVideo from "ui-pkg/blocks/YoutubeVideo/YoutubeVideo.schema";
 import CourseType from "ui-pkg/pages/Course/schemas/CourseType.schema";
 import Trip from "ui-pkg/pages/Course/schemas/Trip.schema";
 import Course from "ui-pkg/pages/Course/Course.schema";
-import BlogAuthor from "ui-pkg/pages/BlogPost/schemas/BlogAuthor.schema";
-import BlogCategory from "ui-pkg/pages/BlogPost/schemas/BlogCategory.schema";
-import BlogPost from "ui-pkg/pages/BlogPost/BlogPost.schema";
+import ArticleAuthor from "ui-pkg/pages/Article/schemas/ArticleAuthor.schema";
+import ArticleCategory from "ui-pkg/pages/Article/schemas/ArticleCategory.schema";
+import Article from "ui-pkg/pages/Article/Article.schema";
 import Page from "ui-pkg/pages/Page/Page.schema";
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -79,10 +79,10 @@ export default createSchema({
     TextAndMedia,
     YoutubeVideo,
 
-    // Blog
-    BlogAuthor,
-    BlogCategory,
-    BlogPost,
+    // Article
+    ArticleAuthor,
+    ArticleCategory,
+    Article,
 
     // Pages
     Error404NavCard,

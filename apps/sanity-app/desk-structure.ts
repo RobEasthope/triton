@@ -101,30 +101,30 @@ export default () =>
         .child(S.documentTypeList("CourseType").title("Course types").showIcons(false)),
       S.divider(),
       S.listItem()
-        .title("Blog posts")
+        .title("Article posts")
         .icon(RiQuillPenLine)
         .child(
           S.list()
-            .title("Blog")
+            .title("Article")
             .items([
               S.listItem()
-                .title("Blog posts")
+                .title("Article posts")
                 .icon(RiQuillPenLine)
-                .schemaType("BlogPost")
-                .child(S.documentTypeList("BlogPost").title("Blog posts")),
+                .schemaType("Article")
+                .child(S.documentTypeList("Article").title("Article posts")),
               S.divider(),
               S.listItem()
-                .title("Blog authors")
+                .title("Article authors")
                 .icon(RiUserLine)
-                .schemaType("BlogAuthor")
-                .child(S.documentTypeList("BlogAuthor").title("Blog authors")),
+                .schemaType("ArticleAuthor")
+                .child(S.documentTypeList("ArticleAuthor").title("Article authors")),
               S.listItem()
-                .title("Blog categories")
+                .title("Article categories")
                 .icon(AiOutlineTags)
-                .schemaType("BlogCategory")
+                .schemaType("ArticleCategory")
                 .child(
-                  S.documentTypeList("BlogCategory")
-                    .title("Blog categories")
+                  S.documentTypeList("ArticleCategory")
+                    .title("Article categories")
                     .showIcons(false)
                 ),
             ])

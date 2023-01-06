@@ -1,5 +1,5 @@
-import { BLOG_CTA_QUERY } from "ui-pkg/blocks/BlogCTA/BlogCTA.query";
-import { BLOG_INDEX_QUERY } from "ui-pkg/blocks/BlogIndex/BlogIndex.query";
+import { BLOG_CTA_QUERY } from "ui-pkg/blocks/ArticleCTA/ArticleCTA.query";
+import { BLOG_INDEX_QUERY } from "ui-pkg/blocks/ArticleIndex/ArticleIndex.query";
 import { CENTRED_CTA_QUERY } from "ui-pkg/blocks/CentredCTA/CentredCTA.query";
 import { COURSE_INDEX_QUERY } from "ui-pkg/blocks/CourseIndex/CourseIndex.query";
 import { DETAILS_QUERY } from "ui-pkg/blocks/Details/Details.query";
@@ -20,8 +20,8 @@ import { VIMEO_VIDEO_QUERY } from "ui-pkg/blocks/VimeoVideo/VimeoVideo.query";
 import { YOUTUBE_VIDEO_QUERY } from "ui-pkg/blocks/YoutubeVideo/YoutubeVideo.query";
 
 export const BLOCK_QUERIES: Record<string, string> = {
-  BlogCTA: BLOG_CTA_QUERY,
-  BlogIndex: BLOG_INDEX_QUERY,
+  ArticleCTA: BLOG_CTA_QUERY,
+  ArticleIndex: BLOG_INDEX_QUERY,
   CentredCTA: CENTRED_CTA_QUERY,
   CourseIndex: COURSE_INDEX_QUERY,
   Details: DETAILS_QUERY,

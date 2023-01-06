@@ -2,8 +2,8 @@ import dynamic from "next/dynamic";
 
 // Type imports
 import { TripCardProps } from "ui-pkg/blocks/TripIndex/components/TripCard/TripCard";
-import { BlogCTAProps } from "ui-pkg/blocks/BlogCTA/BlogCTA";
-import { BlogIndexProps } from "ui-pkg/blocks/BlogIndex/BlogIndex";
+import { ArticleCTAProps } from "ui-pkg/blocks/ArticleCTA/ArticleCTA";
+import { ArticleIndexProps } from "ui-pkg/blocks/ArticleIndex/ArticleIndex";
 import { CentredCTAProps } from "ui-pkg/blocks/CentredCTA/CentredCTA";
 import { CourseIndexProps } from "ui-pkg/blocks/CourseIndex/CourseIndex";
 import { CourseHeroProps } from "ui-pkg/blocks/CourseHero/CourseHero";
@@ -24,8 +24,8 @@ import { VimeoVideoProps } from "ui-pkg/blocks/VimeoVideo/VimeoVideo";
 import { YoutubeVideoProps } from "ui-pkg/blocks/YoutubeVideo/YoutubeVideo";
 
 // Dynamic component imports
-const BlogCTA = dynamic(() => import("ui-pkg/blocks/BlogCTA/BlogCTA"));
-const BlogIndex = dynamic(() => import("ui-pkg/blocks/BlogIndex/BlogIndex"));
+const ArticleCTA = dynamic(() => import("ui-pkg/blocks/ArticleCTA/ArticleCTA"));
+const ArticleIndex = dynamic(() => import("ui-pkg/blocks/ArticleIndex/ArticleIndex"));
 const CentredCTA = dynamic(() => import("ui-pkg/blocks/CentredCTA/CentredCTA"));
 const CourseHero = dynamic(() => import("ui-pkg/blocks/CourseHero/CourseHero"));
 const CourseIndex = dynamic(() => import("ui-pkg/blocks/CourseIndex/CourseIndex"));
@@ -62,18 +62,18 @@ export function renderBlocks({ blocks }: RenderBlocksProps) {
     const { _type } = section;
 
     switch (_type) {
-      case "BlogCTA":
+      case "ArticleCTA":
         return (
-          <BlogCTA
-            {...(section as BlogCTAProps)}
+          <ArticleCTA
+            {...(section as ArticleCTAProps)}
             key={`render-blocks-${section._key as string}`}
           />
         );
 
-      case "BlogIndex":
+      case "ArticleIndex":
         return (
-          <BlogIndex
-            {...(section as BlogIndexProps)}
+          <ArticleIndex
+            {...(section as ArticleIndexProps)}
             key={`render-blocks-${section._key as string}`}
           />
         );
