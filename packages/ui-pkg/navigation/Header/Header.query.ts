@@ -10,12 +10,5 @@ export const HEADER_QUERY = groq`
       url,
       "to": internalUID->{slug},
     },
-    "secondaryNavigation": rawSecondaryNavigation[]{
-      _type,
-      _key,
-      title,
-      url,
-      "to": internalUID->{slug},
-    },
   }
 `;
