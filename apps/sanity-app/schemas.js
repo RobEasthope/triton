@@ -11,9 +11,6 @@ import ExternalLink from "ui-pkg/base/ExternalLink/ExternalLink.schema";
 import ExternalLinkWithTitle from "ui-pkg/base/ExternalLink/ExternalLinkWithTitle.schema";
 
 // Navigation
-import LinksList from "ui-pkg/navigation/LinksList/LinksList.schema";
-import Announcement from "ui-pkg/navigation/AnnouncementsBar/components/Announcement/Announcement.schema";
-import AnnouncementsBar from "ui-pkg/navigation/AnnouncementsBar/AnnouncementsBar.schema";
 import Header from "ui-pkg/navigation/Header/Header.schema";
 import Footer from "ui-pkg/navigation/Footer/Footer.schema";
 
@@ -53,11 +50,8 @@ export default createSchema({
     InternalLinkWithTitle,
     ExternalLink,
     ExternalLinkWithTitle,
-    LinksList,
 
     // Navigation
-    Announcement,
-    AnnouncementsBar,
     Header,
     Footer,
 
