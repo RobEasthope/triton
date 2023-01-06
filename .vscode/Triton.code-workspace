@@ -1,0 +1,51 @@
+{
+  "folders": [
+    {
+      "name": "Next App 🚀",
+      "path": "../apps/next-app"
+    },
+    {
+      "name": "Storybook App 🚀",
+      "path": "../apps/storybook-app"
+    },
+    {
+      "name": "Sanity Studio App 🚀",
+      "path": "../apps/sanity-app"
+    },
+    {
+      "name": "UI Package 📦",
+      "path": "../packages/ui-pkg"
+    },
+    {
+      "name": "APIs Package 📦",
+      "path": "../packages/apis-pkg"
+    },
+    {
+      "name": "Project config ⚙️",
+      "path": "../"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "node_modules/": true,
+      "apps/": true,
+      "packages/": true,
+      "storybook-static": true,
+      ".next": true,
+      ".vercel": true,
+      ".turbo": true,
+      "tsconfig.tsbuildinfo": true,
+      "dist": true
+    },
+    "workbench.colorCustomizations": {
+      "activityBar.activeBackground": "#ffffff",
+      "activityBar.activeBorder": "#60ff68",
+      "activityBar.background": "#ffffff",
+      "activityBar.foreground": "#15202b",
+      "activityBar.inactiveForeground": "#15202b99",
+      "activityBarBadge.background": "#df9f9f",
+      "activityBarBadge.foreground": "#15202b"
+    },
+    "peacock.color": "#FFFFFF"
+  }
+}
