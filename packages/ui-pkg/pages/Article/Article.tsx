@@ -4,7 +4,6 @@ import { Prose } from "ui-pkg/base/Prose/Prose";
 import { ArticleCategory, Article as rawArticleProps } from "ui-pkg/types/sanity-schema";
 import { ArticleTextComponents } from "ui-pkg/base/Prose/components/ArticleText/ArticleText";
 import { Box } from "ui-pkg/base/Box/Box";
-import { ArticleTitle } from "./components/ArticleTitle/ArticleTitle";
 
 // TYPES
 export type ArticleProps = {
@@ -23,16 +22,7 @@ export const Article = ({ page, header, footer }: ArticleProps) => (
     <Header header={header} />
 
     <Box as="main">
-      <ArticleTitle
-        title={page?.title}
-        author={page.author}
-        articleCategories={page?.articleCategories}
-        estimatedReadingTime={page?.estimatedReadingTime}
-        metadataDescription={page?.metadataDescription}
-      />
-      <Box as="section">
-        <Prose as="div" content={page?.text} components={ArticleTextComponents} />
-      </Box>
+      <Prose as="div" content={page?.text} components={ArticleTextComponents} />
     </Box>
 
     <Footer footer={footer} />
