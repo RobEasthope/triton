@@ -1,0 +1,62 @@
+{
+  "name": "triton",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "clear && turbo run dev --no-cache --parallel --continue",
+    "start": "yarn dev",
+    "build": "clear && turbo run build",
+    "next": "clear && npx turbo run dev --scope=next-app --include-dependencies --no-deps",
+    "next:build": "clear && npx turbo run build --scope=next-app --include-dependencies --no-deps",
+    "storybook": "clear && npx turbo run dev --scope=storybook-app --include-dependencies --no-deps",
+    "storybook:build": "clear && npx turbo run build --scope=storybook-app --include-dependencies --no-deps",
+    "sanity": "npx turbo run dev --scope=sanity-app --include-dependencies --no-deps",
+    "sanity:build": "npx turbo run build --scope=sanity-app --include-dependencies --no-deps",
+    "types": "npx sanity-codegen",
+    "types:watch": "yarn types && npm-watch types",
+    "sanity-upgrade": "npm install -g @sanity/cli && cd ./apps/sanity-app && sanity upgrade",
+    "lint": "yarn types && clear && turbo run lint",
+    "lint:fix": "clear && turbo run lint:fix",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "prepare": "husky install && yarn types"
+  },
+  "watch": {
+    "types": {
+      "patterns": [
+        "packages/ui"
+      ],
+      "extensions": "schema.js",
+      "quiet": true,
+      "runOnChangeOnly": true
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@types/node": "^16.9.1",
+    "husky": "^7.0.4",
+    "npm-watch": "^0.11.0",
+    "prettier": "^2.5.1",
+    "sanity-codegen": "^0.9.8",
+    "turbo": "^1.6.3",
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "@babel/preset-typescript": "^7.16.7",
+    "dayjs": "^1.10.7",
+    "node-fetch": "^3.2.0",
+    "react-icons": "^4.3.1",
+    "react-map-gl": "^7.0.4",
+    "sanity-pills": "^1.11.0"
+  },
+  "resolutions": {
+    "**/three": "0.119.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "packageManager": "yarn@1.22.19"
+}
