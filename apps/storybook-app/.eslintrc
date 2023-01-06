@@ -1,0 +1,25 @@
+{
+  "extends": ["wesbos/typescript"],
+  "rules": {
+    "no-console": 1,
+    "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": "es5",
+        "singleQuote": false,
+        "printWidth": 90,
+        "tabWidth": 2
+      }
+    ],
+    "quotes": [1, "double"],
+    "import/no-extraneous-dependencies": "off"
+  },
+  "ignorePatterns": ["/node_modules", "/storybook-static"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["./"]
+      }
+    }
+  }
+}

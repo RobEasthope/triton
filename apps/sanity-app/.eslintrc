@@ -1,0 +1,32 @@
+{
+  "extends": ["wesbos"],
+  "rules": {
+    "import/no-unresolved": [
+      2,
+      {
+        "ignore": ["^(all|part|config):"]
+      }
+    ],
+    "@typescript-eslint/no-unused-vars": "off",
+    "no-console": 1,
+    "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": "es5",
+        "singleQuote": false,
+        "printWidth": 90,
+        "tabWidth": 2
+      }
+    ],
+    "quotes": [1, "double"],
+    "import/no-extraneous-dependencies": "off"
+  },
+  "ignorePatterns": ["/node_modules", "/dist"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["./"]
+      }
+    }
+  }
+}
