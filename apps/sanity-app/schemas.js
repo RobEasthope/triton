@@ -36,9 +36,6 @@ import TextAndMedia from "ui-pkg/blocks/TextAndMedia/TextAndMedia.schema";
 import YoutubeVideo from "ui-pkg/blocks/YoutubeVideo/YoutubeVideo.schema";
 
 // Docs
-import CourseType from "ui-pkg/pages/Course/schemas/CourseType.schema";
-import Trip from "ui-pkg/pages/Course/schemas/Trip.schema";
-import Course from "ui-pkg/pages/Course/Course.schema";
 import ArticleAuthor from "ui-pkg/pages/Article/schemas/ArticleAuthor.schema";
 import ArticleCategory from "ui-pkg/pages/Article/schemas/ArticleCategory.schema";
 import Article from "ui-pkg/pages/Article/Article.schema";

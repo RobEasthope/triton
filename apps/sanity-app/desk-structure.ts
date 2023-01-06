@@ -1,6 +1,5 @@
 import S from "@sanity/desk-tool/structure-builder";
 import Iframe from "sanity-plugin-iframe-pane";
-import SocialPreview from "part:social-preview/component";
 
 import {
   RiCompasses2Line,
@@ -8,13 +7,9 @@ import {
   RiQuillPenLine,
   RiUserLine,
   RiFileList2Line,
-  RiTreasureMapLine,
   RiSettings2Line,
 } from "react-icons/ri";
-import { MdParagliding } from "react-icons/md";
-import { FaGraduationCap } from "react-icons/fa";
 import { AiOutlineTags } from "react-icons/ai";
-import { VscQuote } from "react-icons/vsc";
 
 import resolvePreviewUrl from "./utils/resolvePreviewUrl";
 import { DOC_PREVIEWS_GREEN_LIST } from "./constants/DOC_PREVIEWS_GREEN_LIST";
@@ -62,45 +57,6 @@ export default () =>
         .child(S.documentTypeList("Page").title("Pages")),
       S.divider(),
       S.listItem()
-        .title("Trips")
-        .icon(MdParagliding)
-        .child(
-          S.list()
-            .title("Trips")
-            .items([
-              S.listItem()
-                .title("All trips")
-                .icon(MdParagliding)
-                .schemaType("Trip")
-                .child(S.documentTypeList("Trip").title("Trips")),
-              S.listItem()
-                .title("Trips by course")
-                .icon(RiTreasureMapLine)
-                .child(
-                  S.documentTypeList("Course")
-                    .title("Trips by course")
-                    .child((courseId) =>
-                      S.documentList()
-                        .schemaType("Trip")
-                        .title("Trips")
-                        .filter('_type == "Trip" && rawCourse._ref == $courseId')
-                        .params({ courseId })
-                    )
-                ),
-            ])
-        ),
-      S.listItem()
-        .title("Courses")
-        .icon(RiTreasureMapLine)
-        .schemaType("Course")
-        .child(S.documentTypeList("Course").title("Courses")),
-      S.listItem()
-        .title("Course types")
-        .icon(FaGraduationCap)
-        .schemaType("CourseType")
-        .child(S.documentTypeList("CourseType").title("Course types").showIcons(false)),
-      S.divider(),
-      S.listItem()
         .title("Article posts")
         .icon(RiQuillPenLine)
         .child(
@@ -129,12 +85,6 @@ export default () =>
                 ),
             ])
         ),
-      S.divider(),
-      S.listItem()
-        .title("Testimonials")
-        .icon(VscQuote)
-        .schemaType("Testimonial")
-        .child(S.documentTypeList("Testimonial").title("Testimonials").showIcons(false)),
       S.divider(),
       S.listItem()
         .title("Navigation")

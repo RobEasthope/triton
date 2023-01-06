@@ -1,25 +1,11 @@
 import { RiFileList2Line } from "react-icons/ri";
-
-import ArticleIndex from "ui-pkg/blocks/ArticleIndex/ArticleIndex.schema";
-import CourseHero from "ui-pkg/blocks/CourseHero/CourseHero.schema";
-import CourseIndex from "ui-pkg/blocks/CourseIndex/CourseIndex.schema";
-import Details from "ui-pkg/blocks/Details/Details.schema";
-import Gallery from "ui-pkg/blocks/Gallery/Gallery.schema";
+import { headingUI } from "sanity-app/utils/headingUI";
 import Hero from "ui-pkg/blocks/Hero/Hero.schema";
 import Image from "ui-pkg/blocks/Image/Image.schema";
-import LandingHero from "ui-pkg/blocks/LandingHero/LandingHero.schema";
-import MuxVideo from "ui-pkg/blocks/MuxVideo/MuxVideo.schema";
-import Profiles from "ui-pkg/blocks/Profiles/Profiles.schema";
-import Questions from "ui-pkg/blocks/Questions/Questions.schema";
 import Spacer from "ui-pkg/blocks/Spacer/Spacer.schema";
 import Text from "ui-pkg/blocks/Text/Text.schema";
 import TextAndMedia from "ui-pkg/blocks/TextAndMedia/TextAndMedia.schema";
-import TripIndex from "ui-pkg/blocks/TripIndex/TripIndex.schema";
-import Quote from "ui-pkg/blocks/Quote/Quote.schema";
-import Quotes from "ui-pkg/blocks/Quotes/Quotes.schema";
 import YoutubeVideo from "ui-pkg/blocks/YoutubeVideo/YoutubeVideo.schema";
-import VimeoVideo from "ui-pkg/blocks/VimeoVideo/VimeoVideo.schema";
-import { headingUI } from "sanity-app/utils/headingUI";
 
 export default {
   name: "Page",
@@ -60,24 +46,11 @@ export default {
       title: "Page sections",
       type: "array",
       of: [
-        { type: ArticleIndex.name },
-        { type: CourseHero.name },
-        { type: CourseIndex.name },
-        { type: Details.name },
-        { type: Gallery.name },
         { type: Hero.name },
         { type: Image.name },
-        { type: LandingHero.name },
-        { type: MuxVideo.name },
-        { type: Profiles.name },
-        { type: Questions.name },
-        { type: Text.name },
         { type: Spacer.name },
+        { type: Text.name },
         { type: TextAndMedia.name },
-        { type: TripIndex.name },
-        { type: Quote.name },
-        { type: Quotes.name },
-        { type: VimeoVideo.name },
         { type: YoutubeVideo.name },
       ],
       options: { editModal: "fullscreen" },
@@ -123,7 +96,6 @@ export default {
       return {
         title: title || "Page",
         subtitle: title ? subtitle : null,
-        // subtitle: title ? "Page" : null,
       };
     },
   },

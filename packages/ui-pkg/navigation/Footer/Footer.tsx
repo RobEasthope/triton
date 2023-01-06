@@ -1,16 +1,11 @@
-import Link from "next/link";
-import { Course, Footer as rawFooterProps } from "ui-pkg/types/sanity-schema";
+import { Footer as rawFooterProps } from "ui-pkg/types/sanity-schema";
 import { Box } from "ui-pkg/base/Box/Box";
 import { SuperLink } from "ui-pkg/base/SuperLink/SuperLink";
 import { Picture } from "ui-pkg/base/Picture/Picture";
 import { METADATA_FALLBACK } from "ui-pkg/constants/METADATA";
 import { Text } from "ui-pkg/base/Text/Text";
-import {
-  ExternalLink,
-  ExternalLinkWithTitleSchemaProps,
-} from "ui-pkg/base/ExternalLink/ExternalLink";
+import { ExternalLinkWithTitleSchemaProps } from "ui-pkg/base/ExternalLink/ExternalLink";
 import { InternalLinkWithTitleSchemaProps } from "ui-pkg/base/InternalLink/InternalLink";
-import { FooterCourseList } from "./components/FooterCourseList/FooterCourseList";
 
 // TYPES
 export type FooterProps = {

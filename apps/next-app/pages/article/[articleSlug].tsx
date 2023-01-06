@@ -34,10 +34,8 @@ export default function ArticleRoute({
         thumbnail={page?.metadataImage}
         fallbacks={fallbacks}
       />
-      {/* Loading spinner */}
       {isFallback && <Loading />}
 
-      {/* Blog post layout */}
       {!isFallback && <Article page={page} header={header} footer={footer} />}
     </>
   );
