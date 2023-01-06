@@ -4,31 +4,19 @@ export default {
   type: "document",
   fields: [
     {
+      name: "logo",
+      title: "Logo",
+      type: "image",
+      codegen: { required: true },
+      validation: (Rule) => Rule.required().error("Logo is missing"),
+    },
+    {
       name: "rawPrimaryNavigation",
       title: "Primary header navigation",
       type: "array",
       of: [{ type: "InternalLinkWithTitle" }, { type: "ExternalLinkWithTitle" }],
       codegen: { required: true },
       validation: (Rule) => Rule.required().error("No navigation links have been added"),
-    },
-    // {
-    //   name: 'rawSecondaryNavigation',
-    //   title: 'Secondary header navigation',
-    //   type: 'array',
-    //   of: [
-    //     { type: 'InternalLinkWithTitle' },
-    //     { type: 'ExternalLinkWithTitle' },
-    //   ],
-    //   codegen: { required: true },
-    //   validation: (Rule) =>
-    //     Rule.required().warning('No navigation links have been added'),
-    // },
-    {
-      name: "logo",
-      title: "Logo",
-      type: "image",
-      codegen: { required: true },
-      validation: (Rule) => Rule.required().error("Logo is missing"),
     },
   ],
   preview: {
