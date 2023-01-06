@@ -5,12 +5,12 @@
       "path": "../apps/next-app"
     },
     {
-      "name": "Storybook App 🚀",
-      "path": "../apps/storybook-app"
-    },
-    {
       "name": "Sanity Studio App 🚀",
       "path": "../apps/sanity-app"
+    },
+        {
+      "name": "Storybook App 🚀",
+      "path": "../apps/storybook-app"
     },
     {
       "name": "UI Package 📦",
