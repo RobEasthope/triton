@@ -20,7 +20,6 @@
     "@radix-ui/react-id": "^0.1.4",
     "@sanity/image-url": "^1.0.1",
     "@tailwindcss/typography": "^0.5.8",
-    "@u-wave/react-vimeo": "^0.9.10",
     "apis-pkg": "*",
     "autoprefixer": "^10.4.13",
     "dayjs": "^1.10.7",
@@ -35,7 +34,6 @@
     "react-map-gl": "^7.0.4",
     "react-youtube": "^10.1.0",
     "sanitize.css": "^13.0.0",
-    "sanity-mux-player": "^0.0.27",
     "tailwindcss": "^3.2.4",
     "ui-pkg": "*"
   },

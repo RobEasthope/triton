@@ -27,8 +27,6 @@ export default {
       options: {
         list: [
           { title: "Image", value: "image" },
-          { title: "Mux video", value: "mux" },
-          { title: "Vimeo video", value: "vimeo" },
           { title: "Youtube video", value: "youtube" },
         ],
         layout: "radio",
@@ -51,19 +49,6 @@ export default {
         },
       ],
       hidden: ({ parent }) => parent?.mediaType !== "image",
-    },
-
-    {
-      name: "rawMuxVideo",
-      title: "Mux video",
-      type: "mux.video",
-      hidden: ({ parent }) => parent?.mediaType !== "mux",
-    },
-    {
-      name: "vimeoUrl",
-      title: "Vimeo URL",
-      type: "string",
-      hidden: ({ parent }) => parent?.mediaType !== "vimeo",
     },
     {
       name: "youtubeUrl",

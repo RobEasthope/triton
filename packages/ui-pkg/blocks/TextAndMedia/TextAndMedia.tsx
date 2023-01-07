@@ -1,6 +1,4 @@
-import Vimeo from "@u-wave/react-vimeo";
 import YouTube from "react-youtube";
-import SanityMuxPlayer from "sanity-mux-player";
 import { Box } from "ui-pkg/base/Box/Box";
 import { TextAndMedia as rawTextAndMediaProps } from "ui-pkg/types/sanity-schema";
 import { Picture } from "ui-pkg/base/Picture/Picture";
@@ -10,9 +8,7 @@ import { Prose } from "ui-pkg/base/Prose/Prose";
 import { BasicTextComponents } from "ui-pkg/base/Prose/components/BasicText/BasicText";
 
 // TYPES
-export interface TextAndMediaProps extends rawTextAndMediaProps {
-  muxVideo?: Record<string, unknown>;
-}
+export type TextAndMediaProps = rawTextAndMediaProps;
 
 // MARKUP
 export const TextAndMedia = ({
@@ -20,8 +16,6 @@ export const TextAndMedia = ({
   text,
   mediaType,
   image,
-  muxVideo,
-  vimeoUrl,
   youtubeUrl,
   // alignment,
   mediaCaption,
@@ -49,27 +43,7 @@ export const TextAndMedia = ({
           </>
         )}
 
-        {mediaType === "mux" && muxVideo && (
-          <>
-            <SanityMuxPlayer
-              assetDocument={muxVideo}
-              autoload={false}
-              autoplay={false}
-              loop={false}
-              showControls
-            />
-            {mediaCaption && <div>{mediaCaption}</div>}
-          </>
-        )}
-
-        {mediaType === "vimeo" && vimeoUrl && (
-          <>
-            <Vimeo video={vimeoUrl} responsive />
-            {mediaCaption && <div>{mediaCaption}</div>}
-          </>
-        )}
-
-        {mediaType === "vimeo" && youtubeUrl && (
+        {mediaType === "youtube" && youtubeUrl && (
           <>
             <Box as="div">
               <YouTube videoId={getYoutubeIdfromUrl(youtubeUrl)} className="video" />

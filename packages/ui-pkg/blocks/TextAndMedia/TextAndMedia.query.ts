@@ -7,8 +7,6 @@ export const TEXT_AND_MEDIA_QUERY = groq`{
   text,
   mediaType,
   media,
-  "muxVideo": rawMuxVideo.asset->,
-  vimeoUrl,
   youtubeUrl,
   mediaCaption,
   alignment,

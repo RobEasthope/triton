@@ -1,6 +1,5 @@
 import { RiFileList2Line } from "react-icons/ri";
 import { headingUI } from "sanity-app/utils/headingUI";
-import Hero from "ui-pkg/blocks/Hero/Hero.schema";
 import Image from "ui-pkg/blocks/Image/Image.schema";
 import Spacer from "ui-pkg/blocks/Spacer/Spacer.schema";
 import Text from "ui-pkg/blocks/Text/Text.schema";
@@ -46,7 +45,6 @@ export default {
       title: "Page sections",
       type: "array",
       of: [
-        { type: Hero.name },
         { type: Image.name },
         { type: Spacer.name },
         { type: Text.name },

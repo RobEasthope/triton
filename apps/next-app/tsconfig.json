@@ -18,6 +18,5 @@
   },
   "extends": "eslint-config-wesbos/tsconfig.json",
   "include": ["next-env.d.ts", "**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"],
-  "files": ["../../@types/typescript-band-aids.d.ts"]
+  "exclude": ["node_modules"]
 }

@@ -38,7 +38,6 @@
     "asset-source-unsplash",
     "note-field",
     "@sanity/production-preview",
-    "mux-input",
     "iframe-pane",
     "social-preview"
   ],
