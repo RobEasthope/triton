@@ -1,8 +1,6 @@
 import dynamic from "next/dynamic";
 
 // Type imports
-
-import { HeroProps } from "ui-pkg/blocks/Hero/Hero";
 import { ImageProps } from "ui-pkg/blocks/Image/Image";
 import { SpacerProps } from "ui-pkg/blocks/Spacer/Spacer";
 import { TextProps } from "ui-pkg/blocks/Text/Text";
@@ -10,7 +8,6 @@ import { TextAndMediaProps } from "ui-pkg/blocks/TextAndMedia/TextAndMedia";
 import { YoutubeVideoProps } from "ui-pkg/blocks/YoutubeVideo/YoutubeVideo";
 
 // Dynamic component imports
-const Hero = dynamic(() => import("ui-pkg/blocks/Hero/Hero"));
 const Image = dynamic(() => import("ui-pkg/blocks/Image/Image"));
 const Spacer = dynamic(() => import("ui-pkg/blocks/Spacer/Spacer"));
 const Text = dynamic(() => import("ui-pkg/blocks/Text/Text"));
@@ -33,14 +30,6 @@ export function renderBlocks({ blocks }: RenderBlocksProps) {
     const { _type } = section;
 
     switch (_type) {
-      case "Hero":
-        return (
-          <Hero
-            {...(section as HeroProps)}
-            key={`render-blocks-${section._key as string}`}
-          />
-        );
-
       case "Image":
         return (
           <Image

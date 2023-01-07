@@ -26,7 +26,6 @@ import MetadataSettings from "ui-pkg/settings/MetadataSettings.schema";
 // Sections
 
 import Image from "ui-pkg/blocks/Image/Image.schema";
-import Hero from "ui-pkg/blocks/Hero/Hero.schema";
 import Spacer from "ui-pkg/blocks/Spacer/Spacer.schema";
 import Text from "ui-pkg/blocks/Text/Text.schema";
 import TextAndMedia from "ui-pkg/blocks/TextAndMedia/TextAndMedia.schema";
@@ -63,7 +62,6 @@ export default createSchema({
     ArticleText,
 
     // Content
-    Hero,
     Image,
     Spacer,
     Text,
