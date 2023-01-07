@@ -1,0 +1,42 @@
+@import "./components/BlurrableImage/BlurrableImage.css";
+@import "./components/SanityImage/SanityImage.css";
+
+/* Responsive images */
+.responsive-image-wrapper,
+.responsive-image-wrapper img {
+  width: 100%;
+}
+
+.responsive-image-element,
+.responsive-image-element img {
+  width: 100%;
+}
+
+/* Cover images */
+.cover-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.cover-image-wrapper img,
+.cover-image-element img {
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Contain images */
+.contain-image-wrapper {
+  position: relative;
+}
+
+.cover-image-element {
+  object-fit: contain;
+}
+
+.contain-image-wrapper img,
+.contain-image-element img {
+  object-fit: contain;
+  width: 100%;
+}

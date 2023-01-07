@@ -1,0 +1,47 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [".next/**", "dist/**", "storybook-static/**"]
+    },
+    "next-app": {
+      "env": [
+        "NEXT_PUBLIC_SANITY_PROJECT_ID",
+        "NEXT_PUBLIC_SANITY_PROJECT_DATASET",
+        "NEXT_PUBLIC_SANITY_API_VERSION",
+        "SANITY_API_TOKEN",
+        "SANITY_STUDIO_PREVIEW_KEY"
+      ],
+      "outputs": [".next/**"]
+    },
+    "storybook-app": {
+      "env": ["STORYBOOK_SANITY_PROJECT_ID", "STORYBOOK_SANITY_DATASET"],
+      "outputs": ["storybook-static/**"]
+    },
+    "sanity-app": {
+      "env": [
+        "SANITY_PROJECT_ID",
+        "SANITY_PROJECT_DATASET",
+        "SANITY_API_VERSION",
+        "SANITY_STUDIO_PREVIEW_SITE",
+        "SANITY_STUDIO_API_TOKEN",
+        "SANITY_STUDIO_PREVIEW_KEY"
+      ],
+      "outputs": ["dist/**"]
+    },
+    "lint": {
+      "outputs": []
+    },
+    "lint:fix": {
+      "outputs": []
+    },
+    "dev": {
+      "cache": false
+    },
+    "clean": {
+      "cache": false
+    }
+  },
+  "globalDependencies": [".env", ".env.development", "tsconfig.json"]
+}

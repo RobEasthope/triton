@@ -1,0 +1,33 @@
+/* Blurred image */
+.blurred-image {
+  display: block;
+  width: 100%;
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
+.blurred-image--show {
+  opacity: 1;
+}
+
+.blurred-image--hide {
+  opacity: 0;
+}
+
+/* High resolution image styles */
+.high-res-image {
+  display: block;
+  width: 100%;
+  margin-left: -100%;
+  top: 0;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.high-res-image--show {
+  opacity: 1;
+}
+
+.high-res-image--hide {
+  opacity: 0;
+}
