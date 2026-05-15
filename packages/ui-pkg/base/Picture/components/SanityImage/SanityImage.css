@@ -1,0 +1,17 @@
+/* Base styles */
+.sanity-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+
+/* Variants */
+.sanity-image-wrapper--cover {
+  height: 100%;
+}
+
+.sanity-image-wrapper--contain {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}

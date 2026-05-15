@@ -1,0 +1,41 @@
+{
+  "extends": ["next", "next/core-web-vitals", "wesbos/typescript"],
+  "root": true,
+  "rules": {
+    "no-console": 1,
+    "quotes": [1, "double"],
+    "prettier/prettier": [
+      "warn",
+      {
+        "trailingComma": "es5",
+        "singleQuote": false,
+        "printWidth": 90,
+        "tabWidth": 2
+      }
+    ]
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "node": {
+        "paths": ["./"]
+      },
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    }
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "ignorePatterns": [
+    "/node_modules",
+    "/.vercel",
+    "/static",
+    "/.next",
+    "next.config.js",
+    "*.d.ts"
+  ]
+}

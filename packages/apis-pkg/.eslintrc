@@ -1,0 +1,34 @@
+{
+  "extends": ["wesbos/typescript"],
+  "rules": {
+    "no-console": 1,
+    "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": "es5",
+        "singleQuote": false,
+        "printWidth": 90,
+        "tabWidth": 2
+      }
+    ],
+    "quotes": [1, "double"],
+    "import/no-extraneous-dependencies": "off"
+  },
+  "ignorePatterns": ["/node_modules", "/.vercel", "*.d.ts"],
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "node": {
+        "paths": ["./"]
+      },
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    }
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  }
+}

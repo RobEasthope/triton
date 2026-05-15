@@ -1,0 +1,57 @@
+{
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "wesbos/typescript",
+    "plugin:storybook/recommended"
+  ],
+  "plugins": ["react-hooks"],
+  "rules": {
+    "no-console": 1,
+    "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": "es5",
+        "singleQuote": false,
+        "printWidth": 90,
+        "tabWidth": 2
+      }
+    ],
+    "quotes": [1, "double"],
+    "import/no-extraneous-dependencies": "off",
+    "@typescript-eslint/no-unused-vars": "off"
+  },
+  "overrides": [
+    {
+      "files": ["./**/*.schema.js"],
+      "rules": {
+        "react/prop-types": "off",
+        "@typescript-eslint/restrict-template-expressions": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/no-unsafe-assignment": "off",
+        "@typescript-eslint/no-unsafe-call": "off",
+        "@typescript-eslint/no-unsafe-member-access": "off",
+        "@typescript-eslint/no-unsafe-return": "off",
+        "@typescript-eslint/no-unsafe-argument": "off",
+        "import/no-relative-packages": "off"
+      }
+    }
+  ],
+  "ignorePatterns": ["/node_modules", "/.vercel", "*.d.ts"],
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "node": {
+        "paths": ["./"]
+      },
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    }
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  }
+}
